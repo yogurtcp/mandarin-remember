@@ -95,21 +95,60 @@
     "zh": "睡觉",
     "pinyin": "shuìjiào",
     "meaning": "sleep / go to bed",
-    "category": "Home & Routine"
+    "category": "Home & Routine",
+    "usage": "Sleeping or going to bed. “Sleepy” is 困 (kùn).",
+    "examples": [
+      {
+        "zh": "我想睡觉。",
+        "pinyin": "wǒ xiǎng shuìjiào.",
+        "meaning": "I want to sleep."
+      },
+      {
+        "zh": "该睡觉了。",
+        "pinyin": "gāi shuìjiào le.",
+        "meaning": "It's time for bed."
+      }
+    ]
   },
   {
     "id": "zh-96f512f980046bf6",
     "zh": "起床",
     "pinyin": "qǐchuáng",
-    "meaning": "get up",
-    "category": "Home & Routine"
+    "meaning": "get up / get out of bed",
+    "category": "Home & Routine",
+    "usage": "Getting out of bed, not standing up from a chair. The same verb works in a statement or a command; Mandarin does not conjugate it.",
+    "examples": [
+      {
+        "zh": "我每天早上六点起床。",
+        "pinyin": "wǒ měitiān zǎoshang liù diǎn qǐchuáng.",
+        "meaning": "I get up at six every morning."
+      },
+      {
+        "zh": "亚历克斯，起床了！",
+        "pinyin": "Yàlìkèsī, qǐchuáng le!",
+        "meaning": "Alex, time to get up!"
+      }
+    ]
   },
   {
     "id": "zh-9a6ce4cf2cab6307",
     "zh": "回家",
     "pinyin": "huí jiā",
-    "meaning": "go home",
-    "category": "Home & Routine"
+    "meaning": "go / come home",
+    "category": "Home & Routine",
+    "usage": "Returning home. English “go” or “come” depends on the speaker's viewpoint.",
+    "examples": [
+      {
+        "zh": "我先回家了。",
+        "pinyin": "wǒ xiān huí jiā le.",
+        "meaning": "I'm heading home now."
+      },
+      {
+        "zh": "你几点回家？",
+        "pinyin": "nǐ jǐ diǎn huí jiā?",
+        "meaning": "What time are you coming home?"
+      }
+    ]
   },
   {
     "id": "zh-6e2c77f393e41e1b",
@@ -137,7 +176,20 @@
     "zh": "多少",
     "pinyin": "duōshao",
     "meaning": "how much / how many",
-    "category": "Common Phrases"
+    "category": "Common Phrases",
+    "usage": "Asks about quantity. Add 钱 (qián) when asking a price.",
+    "examples": [
+      {
+        "zh": "你家有多少本书？",
+        "pinyin": "nǐ jiā yǒu duōshao běn shū?",
+        "meaning": "How many books do you have at home?"
+      },
+      {
+        "zh": "这个多少钱？",
+        "pinyin": "zhège duōshao qián?",
+        "meaning": "How much does this cost?"
+      }
+    ]
   },
   {
     "id": "zh-31b86e9372ca7d41",
@@ -151,7 +203,15 @@
     "zh": "我知道",
     "pinyin": "wǒ zhīdào",
     "meaning": "I know",
-    "category": "Common Phrases"
+    "category": "Common Phrases",
+    "usage": "Knowing a fact. Recognizing or knowing a person uses 认识 (rènshi).",
+    "examples": [
+      {
+        "zh": "我知道他住在哪儿。",
+        "pinyin": "wǒ zhīdào tā zhù zài nǎr.",
+        "meaning": "I know where he lives."
+      }
+    ]
   },
   {
     "id": "zh-4f617edf450f4b3f",
@@ -193,21 +253,50 @@
     "zh": "没关系",
     "pinyin": "méiguānxi",
     "meaning": "it's okay / no problem",
-    "category": "Common Phrases"
+    "category": "Common Phrases",
+    "usage": "Reassures someone after an apology or minor problem. It does not literally mean “no relationship” in this use.",
+    "examples": [
+      {
+        "zh": "没关系，下次小心一点。",
+        "pinyin": "méi guānxi, xià cì xiǎoxīn yìdiǎn.",
+        "meaning": "It's okay. Be more careful next time."
+      }
+    ]
   },
   {
     "id": "zh-0ef5c86fab94f13a",
     "zh": "可以",
     "pinyin": "kěyǐ",
-    "meaning": "can / okay",
-    "category": "Common Phrases"
+    "meaning": "can / may; okay (permission or possibility)",
+    "category": "Common Phrases",
+    "usage": "Often permission or an acceptable option. Learned ability, such as speaking a language, usually uses 会 (huì).",
+    "examples": [
+      {
+        "zh": "我可以坐这里吗？",
+        "pinyin": "wǒ kěyǐ zuò zhèlǐ ma?",
+        "meaning": "May I sit here?"
+      },
+      {
+        "zh": "可以。",
+        "pinyin": "kěyǐ.",
+        "meaning": "Yes, that's fine."
+      }
+    ]
   },
   {
     "id": "zh-aaf6f7c76d350c53",
     "zh": "不可以",
     "pinyin": "bù kěyǐ",
-    "meaning": "can't / not allowed",
-    "category": "Common Phrases"
+    "meaning": "not allowed / not okay",
+    "category": "Common Phrases",
+    "usage": "Usually a restriction, rather than lack of skill. “I can't swim” is 我不会游泳 (wǒ bú huì yóuyǒng).",
+    "examples": [
+      {
+        "zh": "这里不可以停车。",
+        "pinyin": "zhèlǐ bù kěyǐ tíngchē.",
+        "meaning": "Parking isn't allowed here."
+      }
+    ]
   },
   {
     "id": "zh-c0ad5411b19cfcba",
@@ -389,7 +478,20 @@
     "zh": "菜",
     "pinyin": "cài",
     "meaning": "vegetable / dish",
-    "category": "Food"
+    "category": "Food",
+    "usage": "Can mean vegetables or a prepared dish, including meat dishes.",
+    "examples": [
+      {
+        "zh": "多吃点菜。",
+        "pinyin": "duō chī diǎn cài.",
+        "meaning": "Eat some more vegetables."
+      },
+      {
+        "zh": "我们点了三个菜。",
+        "pinyin": "wǒmen diǎn le sān ge cài.",
+        "meaning": "We ordered three dishes."
+      }
+    ]
   },
   {
     "id": "zh-27c180751ad60f8c",
@@ -451,8 +553,16 @@
     "id": "zh-b1e179f5622eeea5",
     "zh": "疼",
     "pinyin": "téng",
-    "meaning": "hurt / painful",
-    "category": "Feelings"
+    "meaning": "hurt / ache; painful",
+    "category": "Feelings",
+    "usage": "For physical pain. To injure someone or get injured, use other expressions, such as 受伤 (shòushāng).",
+    "examples": [
+      {
+        "zh": "我的脚很疼。",
+        "pinyin": "wǒ de jiǎo hěn téng.",
+        "meaning": "My foot really hurts."
+      }
+    ]
   },
   {
     "id": "zh-653b04330b75751f",
@@ -473,7 +583,20 @@
     "zh": "家",
     "pinyin": "jiā",
     "meaning": "home / family",
-    "category": "Home & Routine"
+    "category": "Home & Routine",
+    "usage": "Can refer to a home or the family living there. 家人 (jiārén) means family members.",
+    "examples": [
+      {
+        "zh": "我在家。",
+        "pinyin": "wǒ zài jiā.",
+        "meaning": "I'm at home."
+      },
+      {
+        "zh": "我家有四口人。",
+        "pinyin": "wǒ jiā yǒu sì kǒu rén.",
+        "meaning": "There are four people in my family."
+      }
+    ]
   },
   {
     "id": "zh-96b2d406041bbf38",
@@ -501,7 +624,15 @@
     "zh": "洗澡",
     "pinyin": "xǐzǎo",
     "meaning": "take a bath / shower",
-    "category": "Home & Routine"
+    "category": "Home & Routine",
+    "usage": "Covers showering and bathing; it does not specify a bathtub.",
+    "examples": [
+      {
+        "zh": "我每天晚上洗澡。",
+        "pinyin": "wǒ měitiān wǎnshang xǐzǎo.",
+        "meaning": "I shower every evening."
+      }
+    ]
   },
   {
     "id": "zh-b4ffef701723d1f3",
@@ -515,28 +646,65 @@
     "zh": "穿衣服",
     "pinyin": "chuān yīfu",
     "meaning": "get dressed",
-    "category": "Home & Routine"
+    "category": "Home & Routine",
+    "usage": "Can describe putting clothes on or wearing them; context tells you which.",
+    "examples": [
+      {
+        "zh": "快穿衣服，我们要走了。",
+        "pinyin": "kuài chuān yīfu, wǒmen yào zǒu le.",
+        "meaning": "Get dressed quickly; we're leaving."
+      },
+      {
+        "zh": "他今天穿黑色的衣服。",
+        "pinyin": "tā jīntiān chuān hēisè de yīfu.",
+        "meaning": "He's wearing black today."
+      }
+    ]
   },
   {
     "id": "zh-d1147b647ff1a523",
     "zh": "出去",
     "pinyin": "chūqù",
     "meaning": "go out",
-    "category": "Home & Routine"
+    "category": "Home & Routine",
+    "usage": "Moving out, away from where the speaker is. “Come out” is 出来 (chūlai).",
+    "examples": [
+      {
+        "zh": "我出去买点东西。",
+        "pinyin": "wǒ chūqù mǎi diǎn dōngxi.",
+        "meaning": "I'm going out to buy a few things."
+      }
+    ]
   },
   {
     "id": "zh-5a490d99246de50a",
     "zh": "进来",
     "pinyin": "jìnlái",
     "meaning": "come in",
-    "category": "Home & Routine"
+    "category": "Home & Routine",
+    "usage": "Moving in toward the speaker, who is inside. “Go in” is 进去 (jìnqu).",
+    "examples": [
+      {
+        "zh": "请进来。",
+        "pinyin": "qǐng jìnlai.",
+        "meaning": "Please come in."
+      }
+    ]
   },
   {
     "id": "zh-30d4711445a2d3f9",
     "zh": "坐下",
     "pinyin": "zuòxià",
     "meaning": "sit down",
-    "category": "Home & Routine"
+    "category": "Home & Routine",
+    "usage": "The action of sitting down. Add 请 (qǐng) for a polite invitation.",
+    "examples": [
+      {
+        "zh": "请坐下。",
+        "pinyin": "qǐng zuò xià.",
+        "meaning": "Please sit down."
+      }
+    ]
   },
   {
     "id": "zh-670d9743542cae3e",
@@ -578,7 +746,15 @@
     "zh": "没事",
     "pinyin": "méishì",
     "meaning": "it's nothing / I'm okay",
-    "category": "Common Phrases"
+    "category": "Common Phrases",
+    "usage": "Can reassure someone that you are okay or that nothing is wrong. It can also mean having nothing to do.",
+    "examples": [
+      {
+        "zh": "别担心，我没事。",
+        "pinyin": "bié dānxīn, wǒ méi shì.",
+        "meaning": "Don't worry. I'm okay."
+      }
+    ]
   },
   {
     "id": "zh-ae0317813dba8fef",
@@ -598,8 +774,16 @@
     "id": "zh-22e840cf333b0beb",
     "zh": "给我",
     "pinyin": "gěi wǒ",
-    "meaning": "give it to me",
-    "category": "Common Phrases"
+    "meaning": "give it to me (direct request)",
+    "category": "Common Phrases",
+    "usage": "On its own this can sound demanding. Add 请 (qǐng) or phrase it as a question to soften it.",
+    "examples": [
+      {
+        "zh": "请把那本书给我。",
+        "pinyin": "qǐng bǎ nà běn shū gěi wǒ.",
+        "meaning": "Please give me that book."
+      }
+    ]
   },
   {
     "id": "zh-239c77bec946e7a8",
@@ -711,14 +895,30 @@
     "zh": "叔叔",
     "pinyin": "shūshu",
     "meaning": "father's younger brother; uncle (also a friendly address for an adult man)",
-    "category": "Family"
+    "category": "Family",
+    "usage": "Your father's younger brother; children also use it politely for unrelated adult men. Father's older brother is 伯伯 (bóbo).",
+    "examples": [
+      {
+        "zh": "这是我叔叔，他是我爸爸的弟弟。",
+        "pinyin": "zhè shì wǒ shūshu, tā shì wǒ bàba de dìdi.",
+        "meaning": "This is my uncle, my dad's younger brother."
+      }
+    ]
   },
   {
     "id": "zh-1574b2157a28a423",
     "zh": "阿姨",
     "pinyin": "āyí",
     "meaning": "auntie (an adult woman); maternal aunt in some usage",
-    "category": "Family"
+    "category": "Family",
+    "usage": "Used by children for adult women, and for some caregivers or household helpers. It can also mean a maternal aunt; usage varies.",
+    "examples": [
+      {
+        "zh": "阿姨好！",
+        "pinyin": "āyí hǎo!",
+        "meaning": "Hello, Auntie! (A child's polite greeting to an adult woman.)"
+      }
+    ]
   },
   {
     "id": "zh-677aad1a0ee44cd6",
@@ -781,14 +981,35 @@
     "zh": "打开",
     "pinyin": "dǎkāi",
     "meaning": "open / turn on",
-    "category": "Home & Routine"
+    "category": "Home & Routine",
+    "usage": "Open something, or switch on a device. The object supplies the meaning.",
+    "examples": [
+      {
+        "zh": "请打开窗户。",
+        "pinyin": "qǐng dǎkāi chuānghu.",
+        "meaning": "Please open the window."
+      },
+      {
+        "zh": "打开电视吧。",
+        "pinyin": "dǎkāi diànshì ba.",
+        "meaning": "Turn on the TV."
+      }
+    ]
   },
   {
     "id": "zh-419d02bc528bcc3a",
     "zh": "关上",
     "pinyin": "guānshàng",
     "meaning": "close / shut",
-    "category": "Home & Routine"
+    "category": "Home & Routine",
+    "usage": "Close a door, window or similar opening. For switching off a device, use 关 (guān) or 关掉 (guāndiào).",
+    "examples": [
+      {
+        "zh": "请关上门。",
+        "pinyin": "qǐng guānshàng mén.",
+        "meaning": "Please close the door."
+      }
+    ]
   },
   {
     "id": "zh-2504ff16dd4cce10",
@@ -864,22 +1085,51 @@
     "id": "zh-6e87e42fbc222f49",
     "zh": "冷",
     "pinyin": "lěng",
-    "meaning": "cold",
-    "category": "Feelings"
+    "meaning": "cold (temperature)",
+    "category": "Feelings",
+    "usage": "Temperature or feeling cold. Having a cold is 感冒 (gǎnmào).",
+    "examples": [
+      {
+        "zh": "我有点冷。",
+        "pinyin": "wǒ yǒudiǎn lěng.",
+        "meaning": "I'm a little cold."
+      }
+    ]
   },
   {
     "id": "zh-312490eda9072580",
     "zh": "热",
     "pinyin": "rè",
-    "meaning": "hot",
-    "category": "Feelings"
+    "meaning": "hot (temperature)",
+    "category": "Feelings",
+    "usage": "For weather or feeling hot. Something too hot to touch or eat is 烫 (tàng).",
+    "examples": [
+      {
+        "zh": "今天很热。",
+        "pinyin": "jīntiān hěn rè.",
+        "meaning": "It's hot today."
+      }
+    ]
   },
   {
     "id": "zh-3a470adc4813cb22",
     "zh": "舒服",
     "pinyin": "shūfu",
-    "meaning": "comfortable",
-    "category": "Feelings"
+    "meaning": "comfortable / feel well",
+    "category": "Feelings",
+    "usage": "Can describe physical comfort or how your body feels.",
+    "examples": [
+      {
+        "zh": "这把椅子很舒服。",
+        "pinyin": "zhè bǎ yǐzi hěn shūfu.",
+        "meaning": "This chair is comfortable."
+      },
+      {
+        "zh": "我今天不太舒服。",
+        "pinyin": "wǒ jīntiān bú tài shūfu.",
+        "meaning": "I'm not feeling very well today."
+      }
+    ]
   },
   {
     "id": "zh-bc91c3832c6c4fcb",
@@ -893,14 +1143,40 @@
     "zh": "想",
     "pinyin": "xiǎng",
     "meaning": "want to / would like to; think; miss (depending on context)",
-    "category": "Actions"
+    "category": "Actions",
+    "usage": "Before a verb: want to. Before a person: miss. 想一下 means think for a moment.",
+    "examples": [
+      {
+        "zh": "我想喝茶。",
+        "pinyin": "wǒ xiǎng hē chá.",
+        "meaning": "I'd like some tea."
+      },
+      {
+        "zh": "我很想你。",
+        "pinyin": "wǒ hěn xiǎng nǐ.",
+        "meaning": "I miss you a lot."
+      }
+    ]
   },
   {
     "id": "zh-975f35218ed8782e",
     "zh": "要",
     "pinyin": "yào",
-    "meaning": "want / need",
-    "category": "Actions"
+    "meaning": "want / need; be going to (context dependent)",
+    "category": "Actions",
+    "usage": "Can express a request, a need or an intention. It does not always translate as “want.”",
+    "examples": [
+      {
+        "zh": "我要一杯咖啡。",
+        "pinyin": "wǒ yào yì bēi kāfēi.",
+        "meaning": "I'd like a coffee."
+      },
+      {
+        "zh": "我要走了。",
+        "pinyin": "wǒ yào zǒu le.",
+        "meaning": "I'm leaving now."
+      }
+    ]
   },
   {
     "id": "zh-99ae21ea6c39ccc1",
@@ -920,36 +1196,96 @@
     "id": "zh-61f43315f98a4b16",
     "zh": "看",
     "pinyin": "kàn",
-    "meaning": "look / watch",
-    "category": "Actions"
+    "meaning": "look at / watch / read",
+    "category": "Actions",
+    "usage": "Use with the thing viewed: 看电视 = watch TV, 看书 = read. Seeing successfully is 看见 (kànjiàn).",
+    "examples": [
+      {
+        "zh": "我在看书。",
+        "pinyin": "wǒ zài kàn shū.",
+        "meaning": "I'm reading."
+      },
+      {
+        "zh": "你看这个！",
+        "pinyin": "nǐ kàn zhège!",
+        "meaning": "Look at this!"
+      }
+    ]
   },
   {
     "id": "zh-1f2eb2608d236247",
     "zh": "听",
     "pinyin": "tīng",
-    "meaning": "listen",
-    "category": "Actions"
+    "meaning": "listen (to)",
+    "category": "Actions",
+    "usage": "Listening is 听; successfully hearing is 听见 (tīngjiàn); understanding what you hear is 听懂 (tīngdǒng).",
+    "examples": [
+      {
+        "zh": "我喜欢听音乐。",
+        "pinyin": "wǒ xǐhuan tīng yīnyuè.",
+        "meaning": "I like listening to music."
+      }
+    ]
   },
   {
     "id": "zh-ccca74461399d2a0",
     "zh": "说",
     "pinyin": "shuō",
     "meaning": "speak / say",
-    "category": "Actions"
+    "category": "Actions",
+    "usage": "Can mean say words or speak a language. Talking with someone is often 跟…说话 (gēn…shuōhuà).",
+    "examples": [
+      {
+        "zh": "你说什么？",
+        "pinyin": "nǐ shuō shénme?",
+        "meaning": "What did you say?"
+      },
+      {
+        "zh": "她会说中文。",
+        "pinyin": "tā huì shuō Zhōngwén.",
+        "meaning": "She can speak Chinese."
+      }
+    ]
   },
   {
     "id": "zh-867a739542a8b697",
     "zh": "拿",
     "pinyin": "ná",
     "meaning": "take / hold",
-    "category": "Actions"
+    "category": "Actions",
+    "usage": "Taking something in your hand or holding it. Bringing it along is usually 带 (dài).",
+    "examples": [
+      {
+        "zh": "帮我拿一下手机。",
+        "pinyin": "bāng wǒ ná yíxià shǒujī.",
+        "meaning": "Get my phone for me, please."
+      },
+      {
+        "zh": "她手里拿着一本书。",
+        "pinyin": "tā shǒu lǐ ná zhe yì běn shū.",
+        "meaning": "She's holding a book."
+      }
+    ]
   },
   {
     "id": "zh-6e55fb9d8a3dacc1",
     "zh": "给",
     "pinyin": "gěi",
     "meaning": "give",
-    "category": "Actions"
+    "category": "Actions",
+    "usage": "As a verb: give. Before a person and another verb, it can mean “for” or identify the recipient.",
+    "examples": [
+      {
+        "zh": "请给我一杯水。",
+        "pinyin": "qǐng gěi wǒ yì bēi shuǐ.",
+        "meaning": "Please give me a glass of water."
+      },
+      {
+        "zh": "我给你买了面包。",
+        "pinyin": "wǒ gěi nǐ mǎi le miànbāo.",
+        "meaning": "I bought you some bread."
+      }
+    ]
   },
   {
     "id": "zh-2cd2507d65de178f",
@@ -963,28 +1299,70 @@
     "zh": "做",
     "pinyin": "zuò",
     "meaning": "do / make",
-    "category": "Actions"
+    "category": "Actions",
+    "usage": "Both doing an activity and making something; the object tells you which.",
+    "examples": [
+      {
+        "zh": "你在做什么？",
+        "pinyin": "nǐ zài zuò shénme?",
+        "meaning": "What are you doing?"
+      },
+      {
+        "zh": "我在做饭。",
+        "pinyin": "wǒ zài zuò fàn.",
+        "meaning": "I'm cooking."
+      }
+    ]
   },
   {
     "id": "zh-7d6739abb05e1090",
     "zh": "玩",
     "pinyin": "wán",
-    "meaning": "play",
-    "category": "Actions"
+    "meaning": "play / have fun",
+    "category": "Actions",
+    "usage": "Play or enjoy yourself. Specific activities may use another verb: play basketball is 打篮球 (dǎ lánqiú).",
+    "examples": [
+      {
+        "zh": "孩子们在外面玩。",
+        "pinyin": "háizimen zài wàimian wán.",
+        "meaning": "The children are playing outside."
+      }
+    ]
   },
   {
     "id": "zh-f66de6c4cd41cdff",
     "zh": "走",
     "pinyin": "zǒu",
     "meaning": "walk / leave",
-    "category": "Actions"
+    "category": "Actions",
+    "usage": "Can mean walking or leaving. “Get up” from bed is 起床, not 走.",
+    "examples": [
+      {
+        "zh": "我们走路去吧。",
+        "pinyin": "wǒmen zǒulù qù ba.",
+        "meaning": "Let's walk there."
+      },
+      {
+        "zh": "我先走了。",
+        "pinyin": "wǒ xiān zǒu le.",
+        "meaning": "I'm heading off now."
+      }
+    ]
   },
   {
     "id": "zh-d674691cdfbcd9ba",
     "zh": "跑",
     "pinyin": "pǎo",
-    "meaning": "run",
-    "category": "Actions"
+    "meaning": "run (on foot)",
+    "category": "Actions",
+    "usage": "Here, physically running. English “run a business” or “run a program” uses different verbs.",
+    "examples": [
+      {
+        "zh": "别跑，小心！",
+        "pinyin": "bié pǎo, xiǎoxīn!",
+        "meaning": "Don't run. Be careful!"
+      }
+    ]
   },
   {
     "id": "zh-b2d7b4bbf6bcf133",
@@ -1011,15 +1389,31 @@
     "id": "zh-597ae23d84d4eac2",
     "zh": "长",
     "pinyin": "cháng",
-    "meaning": "long",
-    "category": "Descriptions"
+    "meaning": "long (length)",
+    "category": "Descriptions",
+    "usage": "Here pronounced cháng. The same character pronounced zhǎng can mean grow or grow up.",
+    "examples": [
+      {
+        "zh": "这条裤子太长了。",
+        "pinyin": "zhè tiáo kùzi tài cháng le.",
+        "meaning": "These trousers are too long."
+      }
+    ]
   },
   {
     "id": "zh-4ca8d4f77574e43a",
     "zh": "短",
     "pinyin": "duǎn",
-    "meaning": "short",
-    "category": "Descriptions"
+    "meaning": "short (length or duration)",
+    "category": "Descriptions",
+    "usage": "Short hair, clothing or time. For a person's short height, use 矮 (ǎi).",
+    "examples": [
+      {
+        "zh": "她的头发很短。",
+        "pinyin": "tā de tóufa hěn duǎn.",
+        "meaning": "Her hair is short."
+      }
+    ]
   },
   {
     "id": "zh-3cc493bc5b3b9b51",
@@ -1032,8 +1426,16 @@
     "id": "zh-4fbc8134f6d04d80",
     "zh": "旧",
     "pinyin": "jiù",
-    "meaning": "old / used",
-    "category": "Descriptions"
+    "meaning": "old / used (things)",
+    "category": "Descriptions",
+    "usage": "Used or no longer new. For an elderly person, use 老 (lǎo), not 旧.",
+    "examples": [
+      {
+        "zh": "这是我的旧手机。",
+        "pinyin": "zhè shì wǒ de jiù shǒujī.",
+        "meaning": "This is my old phone."
+      }
+    ]
   },
   {
     "id": "zh-7f932e007e2c5e55",
@@ -1046,8 +1448,21 @@
     "id": "zh-2846d63055754517",
     "zh": "快",
     "pinyin": "kuài",
-    "meaning": "fast",
-    "category": "Descriptions"
+    "meaning": "fast / quick; soon (in context)",
+    "category": "Descriptions",
+    "usage": "Can describe speed. 快…了 means something will happen soon.",
+    "examples": [
+      {
+        "zh": "他跑得很快。",
+        "pinyin": "tā pǎo de hěn kuài.",
+        "meaning": "He runs fast."
+      },
+      {
+        "zh": "快下雨了。",
+        "pinyin": "kuài xià yǔ le.",
+        "meaning": "It's going to rain soon."
+      }
+    ]
   },
   {
     "id": "zh-42269e2627f4916c",
@@ -1124,7 +1539,20 @@
     "zh": "以后",
     "pinyin": "yǐhòu",
     "meaning": "later / afterwards",
-    "category": "Time & Routine"
+    "category": "Time & Routine",
+    "usage": "On its own: later or in the future. After an event or time: after that.",
+    "examples": [
+      {
+        "zh": "我们以后再说吧。",
+        "pinyin": "wǒmen yǐhòu zài shuō ba.",
+        "meaning": "Let's talk about it later."
+      },
+      {
+        "zh": "下班以后，我去买菜。",
+        "pinyin": "xiàbān yǐhòu, wǒ qù mǎi cài.",
+        "meaning": "After work, I'm going grocery shopping."
+      }
+    ]
   },
   {
     "id": "zh-3a28422f1f71d7f5",
@@ -1383,7 +1811,15 @@
     "zh": "我来了",
     "pinyin": "wǒ lái le",
     "meaning": "I'm here / I've arrived; Coming! (when answering a call)",
-    "category": "Common Phrases"
+    "category": "Common Phrases",
+    "usage": "Can announce arrival or answer someone calling you. 了 does not automatically make a sentence past tense.",
+    "examples": [
+      {
+        "zh": "等一下，我来了！",
+        "pinyin": "děng yíxià, wǒ lái le!",
+        "meaning": "Just a moment. Coming!"
+      }
+    ]
   },
   {
     "id": "zh-cdfbe4d753f5466e",
@@ -2132,7 +2568,15 @@
     "zh": "我会说中文",
     "pinyin": "wǒ huì shuō Zhōngwén",
     "meaning": "I can speak Chinese",
-    "category": "Common Phrases"
+    "category": "Common Phrases",
+    "usage": "会 (huì) expresses learned ability here, not “will.”",
+    "examples": [
+      {
+        "zh": "我会说中文，但是说得不太好。",
+        "pinyin": "wǒ huì shuō Zhōngwén, dànshì shuō de bú tài hǎo.",
+        "meaning": "I can speak Chinese, but not very well."
+      }
+    ]
   },
   {
     "id": "zh-55324a742b9b066a",
@@ -2348,43 +2792,91 @@
     "id": "zh-dcc9a6de78928563",
     "zh": "我拿这个",
     "pinyin": "wǒ ná zhège",
-    "meaning": "I take this",
-    "category": "Everyday Sentences"
+    "meaning": "I'll take this one (take / carry)",
+    "category": "Everyday Sentences",
+    "usage": "Taking an object, for example when choosing which bag to carry. For a purchase, 我要这个 is often more natural.",
+    "examples": [
+      {
+        "zh": "我拿这个，你拿那个。",
+        "pinyin": "wǒ ná zhège, nǐ ná nàge.",
+        "meaning": "I'll take this one; you take that one."
+      }
+    ]
   },
   {
     "id": "zh-3c3ab329e50a3aec",
     "zh": "我买这个",
     "pinyin": "wǒ mǎi zhège",
-    "meaning": "I buy this",
-    "category": "Everyday Sentences"
+    "meaning": "I'll buy this one",
+    "category": "Everyday Sentences",
+    "usage": "Can express a choice to buy. Mandarin does not change the verb for present or future tense.",
+    "examples": [
+      {
+        "zh": "我买这个，那个太贵了。",
+        "pinyin": "wǒ mǎi zhège, nàge tài guì le.",
+        "meaning": "I'll buy this one. That one's too expensive."
+      }
+    ]
   },
   {
     "id": "zh-970c25d79d51bab4",
     "zh": "我找这个",
     "pinyin": "wǒ zhǎo zhège",
-    "meaning": "I look for this",
-    "category": "Everyday Sentences"
+    "meaning": "I'm looking for this",
+    "category": "Everyday Sentences",
+    "usage": "Useful while showing someone a photo or an item name. 找 means search; 找到 means find successfully.",
+    "examples": [
+      {
+        "zh": "我找这个，你们有吗？",
+        "pinyin": "wǒ zhǎo zhège, nǐmen yǒu ma?",
+        "meaning": "I'm looking for this. Do you have it?"
+      }
+    ]
   },
   {
     "id": "zh-ba42ccc3186c9b97",
     "zh": "你看这个",
     "pinyin": "nǐ kàn zhège",
-    "meaning": "you look at this",
-    "category": "Everyday Sentences"
+    "meaning": "Look at this (directing attention)",
+    "category": "Everyday Sentences",
+    "usage": "With an inviting or insistent tone, this is a request, not just a statement about what you look at.",
+    "examples": [
+      {
+        "zh": "你看这个，好漂亮！",
+        "pinyin": "nǐ kàn zhège, hǎo piàoliang!",
+        "meaning": "Look at this. It's so pretty!"
+      }
+    ]
   },
   {
     "id": "zh-d28d89cf8f9b7602",
     "zh": "你拿书",
     "pinyin": "nǐ ná shū",
-    "meaning": "you take the book",
-    "category": "Everyday Sentences"
+    "meaning": "You take / carry the books (assigning a task)",
+    "category": "Everyday Sentences",
+    "usage": "In a division of tasks, this tells someone what to carry. Chinese does not require plural marking on 书.",
+    "examples": [
+      {
+        "zh": "你拿书，我拿包。",
+        "pinyin": "nǐ ná shū, wǒ ná bāo.",
+        "meaning": "You carry the books; I'll carry the bag."
+      }
+    ]
   },
   {
     "id": "zh-61f784e8dfc26c3d",
     "zh": "你买书",
     "pinyin": "nǐ mǎi shū",
-    "meaning": "you buy the book",
-    "category": "Everyday Sentences"
+    "meaning": "You buy the books (assigning a task)",
+    "category": "Everyday Sentences",
+    "usage": "Context can make this an instruction or a statement. Here it assigns part of a shopping task.",
+    "examples": [
+      {
+        "zh": "你买书，我买笔。",
+        "pinyin": "nǐ mǎi shū, wǒ mǎi bǐ.",
+        "meaning": "You buy the books; I'll buy the pens."
+      }
+    ]
   },
   {
     "id": "zh-7327f4f41c58d6e8",
@@ -2482,7 +2974,15 @@
     "zh": "我看得见",
     "pinyin": "wǒ kàn de jiàn",
     "meaning": "I can see.",
-    "category": "Common Phrases"
+    "category": "Common Phrases",
+    "usage": "Being able to see something visually, not understanding what it means.",
+    "examples": [
+      {
+        "zh": "字太小了，但我看得见。",
+        "pinyin": "zì tài xiǎo le, dàn wǒ kàn de jiàn.",
+        "meaning": "The writing is very small, but I can see it."
+      }
+    ]
   },
   {
     "id": "zh-8b08f86ac226433c",
@@ -2496,7 +2996,15 @@
     "zh": "我听不见",
     "pinyin": "wǒ tīng bu jiàn",
     "meaning": "I can't hear.",
-    "category": "Common Phrases"
+    "category": "Common Phrases",
+    "usage": "The sound is inaudible. If you hear it but don't understand it, use 我听不懂 (wǒ tīng bu dǒng).",
+    "examples": [
+      {
+        "zh": "这里太吵了，我听不见。",
+        "pinyin": "zhèlǐ tài chǎo le, wǒ tīng bu jiàn.",
+        "meaning": "It's too noisy here. I can't hear."
+      }
+    ]
   },
   {
     "id": "zh-7e608b96f83e1cf9",
@@ -2524,7 +3032,15 @@
     "zh": "我听不懂",
     "pinyin": "wǒ tīng bu dǒng",
     "meaning": "I don't understand what I hear.",
-    "category": "Common Phrases"
+    "category": "Common Phrases",
+    "usage": "You hear the speech but cannot understand it. This is different from being unable to hear the sound.",
+    "examples": [
+      {
+        "zh": "你说得太快了，我听不懂。",
+        "pinyin": "nǐ shuō de tài kuài le, wǒ tīng bu dǒng.",
+        "meaning": "You're speaking too fast. I can't understand."
+      }
+    ]
   },
   {
     "id": "zh-58127cc9b1e9ab4d",
@@ -2636,7 +3152,15 @@
     "zh": "吐司",
     "pinyin": "tǔsī",
     "meaning": "toast / sliced sandwich bread",
-    "category": "Breakfast"
+    "category": "Breakfast",
+    "usage": "Can mean sliced sandwich bread, even when it has not been toasted.",
+    "examples": [
+      {
+        "zh": "我要两片吐司。",
+        "pinyin": "wǒ yào liǎng piàn tǔsī.",
+        "meaning": "I'd like two slices of sandwich bread."
+      }
+    ]
   },
   {
     "id": "zh-d2283ad932b89e62",
@@ -2741,7 +3265,15 @@
     "zh": "红茶",
     "pinyin": "hóngchá",
     "meaning": "black tea",
-    "category": "Breakfast"
+    "category": "Breakfast",
+    "usage": "Called “red tea” in Chinese because of the brewed color; the usual English name is black tea.",
+    "examples": [
+      {
+        "zh": "我想喝红茶，不加奶。",
+        "pinyin": "wǒ xiǎng hē hóngchá, bù jiā nǎi.",
+        "meaning": "I'd like black tea, without milk."
+      }
+    ]
   },
   {
     "id": "zh-7ded36aec25c40c8",
@@ -3189,7 +3721,15 @@
     "zh": "炸",
     "pinyin": "zhá",
     "meaning": "deep-fry",
-    "category": "Cooking"
+    "category": "Cooking",
+    "usage": "For deep-frying, pronounced zhá. The reading zhà belongs to other meanings, including exploding.",
+    "examples": [
+      {
+        "zh": "我不常吃油炸食品。",
+        "pinyin": "wǒ bù cháng chī yóuzhá shípǐn.",
+        "meaning": "I don't often eat deep-fried food."
+      }
+    ]
   },
   {
     "id": "zh-3b821da9380b626d",
@@ -3336,7 +3876,15 @@
     "zh": "熟了",
     "pinyin": "shú le",
     "meaning": "it's cooked / done",
-    "category": "Cooking"
+    "category": "Cooking",
+    "usage": "For food, cooked or done; fruit can also be ripe. 熟 can describe familiarity in other contexts.",
+    "examples": [
+      {
+        "zh": "鸡肉熟了，可以吃了。",
+        "pinyin": "jīròu shú le, kěyǐ chī le.",
+        "meaning": "The chicken is cooked. It's ready to eat."
+      }
+    ]
   },
   {
     "id": "zh-e4dd9f27075746cc",
@@ -3672,14 +4220,30 @@
     "zh": "老朋友",
     "pinyin": "lǎopéngyou",
     "meaning": "old friend (known for a long time)",
-    "category": "Friends & social life"
+    "category": "Friends & social life",
+    "usage": "A friend you've known a long time, regardless of age.",
+    "examples": [
+      {
+        "zh": "我们是老朋友。",
+        "pinyin": "wǒmen shì lǎopéngyou.",
+        "meaning": "We've been friends for a long time."
+      }
+    ]
   },
   {
     "id": "zh-8dd49b2272ea8020",
     "zh": "客人",
     "pinyin": "kèrén",
     "meaning": "guest / customer",
-    "category": "Friends & social life"
+    "category": "Friends & social life",
+    "usage": "A visitor at home or a customer in a business. Context decides.",
+    "examples": [
+      {
+        "zh": "今天家里有客人。",
+        "pinyin": "jīntiān jiā lǐ yǒu kèrén.",
+        "meaning": "We have guests at home today."
+      }
+    ]
   },
   {
     "id": "zh-6773310492a96fcf",
@@ -3693,7 +4257,20 @@
     "zh": "认识",
     "pinyin": "rènshi",
     "meaning": "know / meet (a person)",
-    "category": "Friends & social life"
+    "category": "Friends & social life",
+    "usage": "Knowing or recognizing someone or something; also meeting someone for the first time. Knowing a fact is 知道 (zhīdào).",
+    "examples": [
+      {
+        "zh": "你认识他吗？",
+        "pinyin": "nǐ rènshi tā ma?",
+        "meaning": "Do you know him?"
+      },
+      {
+        "zh": "很高兴认识你。",
+        "pinyin": "hěn gāoxìng rènshi nǐ.",
+        "meaning": "Nice to meet you."
+      }
+    ]
   },
   {
     "id": "zh-66a66f52a2b114b5",
@@ -3714,7 +4291,15 @@
     "zh": "见面",
     "pinyin": "jiànmiàn",
     "meaning": "meet in person",
-    "category": "Friends & social life"
+    "category": "Friends & social life",
+    "usage": "Meeting face to face, including someone you already know. Meeting a new person can be expressed with 认识 (rènshi).",
+    "examples": [
+      {
+        "zh": "我们明天见面吧。",
+        "pinyin": "wǒmen míngtiān jiànmiàn ba.",
+        "meaning": "Let's meet tomorrow."
+      }
+    ]
   },
   {
     "id": "zh-bfc967329e10188c",
@@ -3952,7 +4537,20 @@
     "zh": "工作",
     "pinyin": "gōngzuò",
     "meaning": "work / a job",
-    "category": "Work & coworkers"
+    "category": "Work & coworkers",
+    "usage": "Both the activity “work” and the noun “job.”",
+    "examples": [
+      {
+        "zh": "我在家工作。",
+        "pinyin": "wǒ zài jiā gōngzuò.",
+        "meaning": "I work from home."
+      },
+      {
+        "zh": "我在找工作。",
+        "pinyin": "wǒ zài zhǎo gōngzuò.",
+        "meaning": "I'm looking for a job."
+      }
+    ]
   },
   {
     "id": "zh-e06ff957ed48e868",
@@ -3973,14 +4571,35 @@
     "zh": "上班",
     "pinyin": "shàngbān",
     "meaning": "go to work / be at work",
-    "category": "Work & coworkers"
+    "category": "Work & coworkers",
+    "usage": "Going to work or being on duty. The trip itself is not always meant.",
+    "examples": [
+      {
+        "zh": "我九点上班。",
+        "pinyin": "wǒ jiǔ diǎn shàngbān.",
+        "meaning": "I start work at nine."
+      },
+      {
+        "zh": "我今天不上班。",
+        "pinyin": "wǒ jīntiān bú shàngbān.",
+        "meaning": "I'm not working today."
+      }
+    ]
   },
   {
     "id": "zh-e3d3afd884be213e",
     "zh": "下班",
     "pinyin": "xiàbān",
     "meaning": "finish work / get off work",
-    "category": "Work & coworkers"
+    "category": "Work & coworkers",
+    "usage": "Finishing a work shift; it doesn't necessarily mean going home.",
+    "examples": [
+      {
+        "zh": "下班以后，我们去吃饭吧。",
+        "pinyin": "xiàbān yǐhòu, wǒmen qù chī fàn ba.",
+        "meaning": "Let's go eat after work."
+      }
+    ]
   },
   {
     "id": "zh-a270e67b50f45bc2",
@@ -3994,14 +4613,30 @@
     "zh": "请假",
     "pinyin": "qǐngjià",
     "meaning": "ask for time off",
-    "category": "Work & coworkers"
+    "category": "Work & coworkers",
+    "usage": "Asking for or taking authorized leave, including a sick day. It doesn't by itself mean a holiday trip.",
+    "examples": [
+      {
+        "zh": "我想请一天假。",
+        "pinyin": "wǒ xiǎng qǐng yì tiān jià.",
+        "meaning": "I'd like to take a day off."
+      }
+    ]
   },
   {
     "id": "zh-314a2ccd4636f4ff",
     "zh": "放假",
     "pinyin": "fàngjià",
     "meaning": "have time off / be on holiday",
-    "category": "Work & coworkers"
+    "category": "Work & coworkers",
+    "usage": "Having time off from work or school, such as a public holiday or school break.",
+    "examples": [
+      {
+        "zh": "学校下周放假。",
+        "pinyin": "xuéxiào xià zhōu fàngjià.",
+        "meaning": "School is on break next week."
+      }
+    ]
   },
   {
     "id": "zh-fff33732fc978a09",
@@ -4050,7 +4685,15 @@
     "zh": "有空",
     "pinyin": "yǒu kòng",
     "meaning": "have free time / be available",
-    "category": "Work & coworkers"
+    "category": "Work & coworkers",
+    "usage": "Having time available. 空 is kòng here; “free of charge” is 免费 (miǎnfèi).",
+    "examples": [
+      {
+        "zh": "你明天有空吗？",
+        "pinyin": "nǐ míngtiān yǒu kòng ma?",
+        "meaning": "Are you free tomorrow?"
+      }
+    ]
   },
   {
     "id": "zh-de8f371434589d64",
@@ -4078,7 +4721,20 @@
     "zh": "问题",
     "pinyin": "wèntí",
     "meaning": "question / problem",
-    "category": "Work & coworkers"
+    "category": "Work & coworkers",
+    "usage": "Both a question to ask and a problem to solve.",
+    "examples": [
+      {
+        "zh": "我想问一个问题。",
+        "pinyin": "wǒ xiǎng wèn yí ge wèntí.",
+        "meaning": "I'd like to ask a question."
+      },
+      {
+        "zh": "我的手机有问题。",
+        "pinyin": "wǒ de shǒujī yǒu wèntí.",
+        "meaning": "There's something wrong with my phone."
+      }
+    ]
   },
   {
     "id": "zh-d48f1dcf88d2ca0d",
@@ -4183,7 +4839,15 @@
     "zh": "辛苦了。",
     "pinyin": "xīnkǔ le.",
     "meaning": "Thanks for your hard work.",
-    "category": "Work & coworkers"
+    "category": "Work & coworkers",
+    "usage": "Acknowledges someone's effort: “Thanks for your hard work.” It is not a literal claim that they are tired.",
+    "examples": [
+      {
+        "zh": "今天辛苦了，早点休息。",
+        "pinyin": "jīntiān xīnkǔ le, zǎo diǎn xiūxi.",
+        "meaning": "Thanks for your hard work today. Get some rest early."
+      }
+    ]
   },
   {
     "id": "zh-e8ec877c8da553d3",
@@ -4246,7 +4910,15 @@
     "zh": "会计",
     "pinyin": "kuàijì",
     "meaning": "accountant / accounting",
-    "category": "Professions"
+    "category": "Professions",
+    "usage": "An accountant or the field of accounting. 会 is pronounced kuài in this word, not huì.",
+    "examples": [
+      {
+        "zh": "她是会计。",
+        "pinyin": "tā shì kuàijì.",
+        "meaning": "She's an accountant."
+      }
+    ]
   },
   {
     "id": "zh-8b9a36a968cd1890",
@@ -4372,7 +5044,20 @@
     "zh": "翻译",
     "pinyin": "fānyì",
     "meaning": "translator / interpreter; translate",
-    "category": "Professions"
+    "category": "Professions",
+    "usage": "The act of translating or interpreting, or a person doing that work.",
+    "examples": [
+      {
+        "zh": "她是翻译。",
+        "pinyin": "tā shì fānyì.",
+        "meaning": "She's a translator / interpreter."
+      },
+      {
+        "zh": "请帮我翻译一下。",
+        "pinyin": "qǐng bāng wǒ fānyì yíxià.",
+        "meaning": "Please translate this for me."
+      }
+    ]
   },
   {
     "id": "zh-64c9568e6a842083",
@@ -4470,7 +5155,15 @@
     "zh": "找钱",
     "pinyin": "zhǎo qián",
     "meaning": "give change (after a payment)",
-    "category": "Shopping & errands"
+    "category": "Shopping & errands",
+    "usage": "Giving back change after payment. 找 by itself usually means look for.",
+    "examples": [
+      {
+        "zh": "不用找钱了。",
+        "pinyin": "bú yòng zhǎo qián le.",
+        "meaning": "Keep the change."
+      }
+    ]
   },
   {
     "id": "zh-a6345ffb8bf6bfb4",
@@ -4498,7 +5191,15 @@
     "zh": "打折",
     "pinyin": "dǎzhé",
     "meaning": "be discounted / offer a discount",
-    "category": "Shopping & errands"
+    "category": "Shopping & errands",
+    "usage": "Chinese discounts often state the fraction you pay: 八折 means pay 80%, or 20% off.",
+    "examples": [
+      {
+        "zh": "这件衣服打八折。",
+        "pinyin": "zhè jiàn yīfu dǎ bā zhé.",
+        "meaning": "This item of clothing is 20% off."
+      }
+    ]
   },
   {
     "id": "zh-303a288691f82c62",
@@ -4519,7 +5220,15 @@
     "zh": "合适",
     "pinyin": "héshì",
     "meaning": "suitable / the right fit",
-    "category": "Shopping & errands"
+    "category": "Shopping & errands",
+    "usage": "Suitable for the situation or the right fit; not necessarily physically comfortable (舒服).",
+    "examples": [
+      {
+        "zh": "这双鞋大小很合适。",
+        "pinyin": "zhè shuāng xié dàxiǎo hěn héshì.",
+        "meaning": "These shoes are just the right size."
+      }
+    ]
   },
   {
     "id": "zh-50db7447b966f5ef",
@@ -4645,14 +5354,30 @@
     "zh": "打包",
     "pinyin": "dǎbāo",
     "meaning": "pack up food to take away",
-    "category": "Eating out"
+    "category": "Eating out",
+    "usage": "In a restaurant, packing food to take away. Elsewhere it can mean packing or bundling things.",
+    "examples": [
+      {
+        "zh": "这些菜可以打包吗？",
+        "pinyin": "zhèxiē cài kěyǐ dǎbāo ma?",
+        "meaning": "Could we take these dishes to go?"
+      }
+    ]
   },
   {
     "id": "zh-f42db5493d75fdb3",
     "zh": "外卖",
     "pinyin": "wàimài",
     "meaning": "takeaway / food delivery",
-    "category": "Eating out"
+    "category": "Eating out",
+    "usage": "Food sold to eat elsewhere, often delivered. Picking it up yourself is 自取 (zìqǔ).",
+    "examples": [
+      {
+        "zh": "我们今天点外卖吧。",
+        "pinyin": "wǒmen jīntiān diǎn wàimài ba.",
+        "meaning": "Let's order food delivery today."
+      }
+    ]
   },
   {
     "id": "zh-2016927e720e3ff5",
@@ -4666,7 +5391,15 @@
     "zh": "预订",
     "pinyin": "yùdìng",
     "meaning": "reserve / book",
-    "category": "Eating out"
+    "category": "Eating out",
+    "usage": "Booking in advance, such as a table or hotel room. Ordering dishes at a restaurant is 点菜 (diǎn cài).",
+    "examples": [
+      {
+        "zh": "我想预订一个房间。",
+        "pinyin": "wǒ xiǎng yùdìng yí ge fángjiān.",
+        "meaning": "I'd like to book a room."
+      }
+    ]
   },
   {
     "id": "zh-7bd9d53b62f054cb",
@@ -4707,8 +5440,21 @@
     "id": "zh-1f7e2cd98eae238a",
     "zh": "不太辣",
     "pinyin": "bú tài là",
-    "meaning": "not too spicy",
-    "category": "Eating out"
+    "meaning": "not very spicy",
+    "category": "Eating out",
+    "usage": "Describes mild spiciness. To request less chili, say 少放点辣椒; 不太辣 alone is a description, not a full request.",
+    "examples": [
+      {
+        "zh": "这个菜不太辣。",
+        "pinyin": "zhège cài bú tài là.",
+        "meaning": "This dish isn't very spicy."
+      },
+      {
+        "zh": "少放点辣椒。",
+        "pinyin": "shǎo fàng diǎn làjiāo.",
+        "meaning": "Please use less chili."
+      }
+    ]
   },
   {
     "id": "zh-1f88337baf2604f1",
@@ -4890,7 +5636,15 @@
     "zh": "上车",
     "pinyin": "shàng chē",
     "meaning": "get on / into a vehicle",
-    "category": "Getting around"
+    "category": "Getting around",
+    "usage": "Getting into a car or boarding a bus or train. The same verb works for all of them.",
+    "examples": [
+      {
+        "zh": "快上车，我们要迟到了。",
+        "pinyin": "kuài shàng chē, wǒmen yào chídào le.",
+        "meaning": "Get in. We're going to be late."
+      }
+    ]
   },
   {
     "id": "zh-ed4d6094fad18d10",
@@ -5037,7 +5791,15 @@
     "zh": "背",
     "pinyin": "bèi",
     "meaning": "back (body part)",
-    "category": "Health & body"
+    "category": "Health & body",
+    "usage": "The body part, pronounced bèi. Carrying something on your back uses the same character pronounced bēi.",
+    "examples": [
+      {
+        "zh": "我的背有点疼。",
+        "pinyin": "wǒ de bèi yǒudiǎn téng.",
+        "meaning": "My back hurts a little."
+      }
+    ]
   },
   {
     "id": "zh-db6f7a66b1cfafad",
@@ -5114,7 +5876,15 @@
     "zh": "量体温",
     "pinyin": "liáng tǐwēn",
     "meaning": "take someone's temperature",
-    "category": "Health & body"
+    "category": "Health & body",
+    "usage": "量 means measure and is pronounced liáng here. 体温 is body temperature.",
+    "examples": [
+      {
+        "zh": "先量一下体温。",
+        "pinyin": "xiān liáng yíxià tǐwēn.",
+        "meaning": "Take your temperature first."
+      }
+    ]
   },
   {
     "id": "zh-ac8d4fd31fec2f80",
@@ -5149,14 +5919,40 @@
     "zh": "准备",
     "pinyin": "zhǔnbèi",
     "meaning": "prepare / get ready",
-    "category": "Useful verbs"
+    "category": "Useful verbs",
+    "usage": "Preparing something or intending to do something next.",
+    "examples": [
+      {
+        "zh": "我在准备晚饭。",
+        "pinyin": "wǒ zài zhǔnbèi wǎnfàn.",
+        "meaning": "I'm preparing dinner."
+      },
+      {
+        "zh": "我准备明天去。",
+        "pinyin": "wǒ zhǔnbèi míngtiān qù.",
+        "meaning": "I'm planning to go tomorrow."
+      }
+    ]
   },
   {
     "id": "zh-805b2ab19aaa8f37",
     "zh": "记得",
     "pinyin": "jìde",
     "meaning": "remember",
-    "category": "Useful verbs"
+    "category": "Useful verbs",
+    "usage": "Remembering a fact or remembering to do something. 记住 stresses keeping something in memory.",
+    "examples": [
+      {
+        "zh": "我记得他的名字。",
+        "pinyin": "wǒ jìde tā de míngzi.",
+        "meaning": "I remember his name."
+      },
+      {
+        "zh": "记得带钥匙。",
+        "pinyin": "jìde dài yàoshi.",
+        "meaning": "Remember to bring your keys."
+      }
+    ]
   },
   {
     "id": "zh-73b08832981088d3",
@@ -5226,35 +6022,90 @@
     "zh": "找",
     "pinyin": "zhǎo",
     "meaning": "look for",
-    "category": "Useful verbs"
+    "category": "Useful verbs",
+    "usage": "Looking for something, not necessarily finding it. 找到 (zhǎodào) means find successfully.",
+    "examples": [
+      {
+        "zh": "我在找钥匙。",
+        "pinyin": "wǒ zài zhǎo yàoshi.",
+        "meaning": "I'm looking for my keys."
+      }
+    ]
   },
   {
     "id": "zh-fd5db2cf36a92942",
     "zh": "带",
     "pinyin": "dài",
     "meaning": "bring / take along",
-    "category": "Useful verbs"
+    "category": "Useful verbs",
+    "usage": "Bringing or taking a person or object along. English “bring” or “take” depends on the destination and viewpoint.",
+    "examples": [
+      {
+        "zh": "别忘了带伞。",
+        "pinyin": "bié wàng le dài sǎn.",
+        "meaning": "Don't forget to take an umbrella."
+      },
+      {
+        "zh": "你能带我去车站吗？",
+        "pinyin": "nǐ néng dài wǒ qù chēzhàn ma?",
+        "meaning": "Can you take me to the station?"
+      }
+    ]
   },
   {
     "id": "zh-50272827b8e2c1bd",
     "zh": "放",
     "pinyin": "fàng",
     "meaning": "put / place",
-    "category": "Useful verbs"
+    "category": "Useful verbs",
+    "usage": "Here, placing something somewhere. With 音乐 (music), 放 can also mean play a recording.",
+    "examples": [
+      {
+        "zh": "把手机放在桌子上。",
+        "pinyin": "bǎ shǒujī fàng zài zhuōzi shàng.",
+        "meaning": "Put your phone on the table."
+      }
+    ]
   },
   {
     "id": "zh-2b264025e323409f",
     "zh": "借",
     "pinyin": "jiè",
     "meaning": "borrow / lend (depends on context)",
-    "category": "Useful verbs"
+    "category": "Useful verbs",
+    "usage": "Both borrow and lend. 跟…借 identifies who you borrow from; 借给 identifies who you lend to.",
+    "examples": [
+      {
+        "zh": "我想跟你借一本书。",
+        "pinyin": "wǒ xiǎng gēn nǐ jiè yì běn shū.",
+        "meaning": "I'd like to borrow a book from you."
+      },
+      {
+        "zh": "这本书可以借给你。",
+        "pinyin": "zhè běn shū kěyǐ jiè gěi nǐ.",
+        "meaning": "I can lend you this book."
+      }
+    ]
   },
   {
     "id": "zh-1bc709b8bf6c9706",
     "zh": "还",
     "pinyin": "huán",
     "meaning": "return something / give back",
-    "category": "Useful verbs"
+    "category": "Useful verbs",
+    "usage": "Returning something, pronounced huán. The reading hái means “still / also”; isolated-character audio may choose the wrong reading.",
+    "examples": [
+      {
+        "zh": "我明天还你钱。",
+        "pinyin": "wǒ míngtiān huán nǐ qián.",
+        "meaning": "I'll pay you back tomorrow."
+      },
+      {
+        "zh": "这本书该还了。",
+        "pinyin": "zhè běn shū gāi huán le.",
+        "meaning": "It's time to return this book."
+      }
+    ]
   },
   {
     "id": "zh-bd5d0f6169394c03",
@@ -5268,14 +6119,35 @@
     "zh": "换",
     "pinyin": "huàn",
     "meaning": "change / replace / exchange",
-    "category": "Useful verbs"
+    "category": "Useful verbs",
+    "usage": "Replacing, exchanging or changing from one thing to another. Changing your mind is a different expression.",
+    "examples": [
+      {
+        "zh": "我想换一个座位。",
+        "pinyin": "wǒ xiǎng huàn yí ge zuòwèi.",
+        "meaning": "I'd like to change seats."
+      }
+    ]
   },
   {
     "id": "zh-71da8c2ee37e7a7f",
     "zh": "收拾",
     "pinyin": "shōushi",
     "meaning": "tidy up / pack up",
-    "category": "Useful verbs"
+    "category": "Useful verbs",
+    "usage": "Putting things in order, including tidying a room or packing luggage. Cleaning dirt is usually 打扫 (dǎsǎo).",
+    "examples": [
+      {
+        "zh": "我在收拾房间。",
+        "pinyin": "wǒ zài shōushi fángjiān.",
+        "meaning": "I'm tidying my room."
+      },
+      {
+        "zh": "我在收拾行李。",
+        "pinyin": "wǒ zài shōushi xíngli.",
+        "meaning": "I'm packing my luggage."
+      }
+    ]
   },
   {
     "id": "zh-dca3ee9e2c7de0e3",
@@ -5289,28 +6161,60 @@
     "zh": "照顾",
     "pinyin": "zhàogu",
     "meaning": "look after / take care of",
-    "category": "Useful verbs"
+    "category": "Useful verbs",
+    "usage": "Practical care or looking after someone, rather than just worrying about them.",
+    "examples": [
+      {
+        "zh": "我今天要照顾孩子。",
+        "pinyin": "wǒ jīntiān yào zhàogu háizi.",
+        "meaning": "I need to look after the children today."
+      }
+    ]
   },
   {
     "id": "zh-0b2df726920c8e73",
     "zh": "关心",
     "pinyin": "guānxīn",
     "meaning": "care about / be concerned about",
-    "category": "Useful verbs"
+    "category": "Useful verbs",
+    "usage": "Taking an interest in someone's wellbeing. 担心 (dānxīn) specifically expresses worry.",
+    "examples": [
+      {
+        "zh": "谢谢你关心我。",
+        "pinyin": "xièxie nǐ guānxīn wǒ.",
+        "meaning": "Thank you for caring about me."
+      }
+    ]
   },
   {
     "id": "zh-7f22105b7fbb0150",
     "zh": "担心",
     "pinyin": "dānxīn",
     "meaning": "worry / be worried",
-    "category": "Useful verbs"
+    "category": "Useful verbs",
+    "usage": "Feeling worried, rather than providing practical care (照顾).",
+    "examples": [
+      {
+        "zh": "别担心，我没事。",
+        "pinyin": "bié dānxīn, wǒ méi shì.",
+        "meaning": "Don't worry. I'm okay."
+      }
+    ]
   },
   {
     "id": "zh-b98f15ba3a59178e",
     "zh": "记住",
     "pinyin": "jìzhù",
     "meaning": "remember / keep in mind",
-    "category": "Useful verbs"
+    "category": "Useful verbs",
+    "usage": "Getting something into memory or keeping it in mind, rather than simply recalling a fact.",
+    "examples": [
+      {
+        "zh": "请记住这个号码。",
+        "pinyin": "qǐng jìzhù zhège hàomǎ.",
+        "meaning": "Please remember this number."
+      }
+    ]
   },
   {
     "id": "zh-3b2e57ba5da52476",
@@ -5373,14 +6277,40 @@
     "zh": "方便",
     "pinyin": "fāngbiàn",
     "meaning": "convenient",
-    "category": "Useful descriptions"
+    "category": "Useful descriptions",
+    "usage": "Can mean convenient, or suitable for someone's circumstances at that moment.",
+    "examples": [
+      {
+        "zh": "这里坐车很方便。",
+        "pinyin": "zhèlǐ zuò chē hěn fāngbiàn.",
+        "meaning": "It's easy to get transport here."
+      },
+      {
+        "zh": "你现在方便说话吗？",
+        "pinyin": "nǐ xiànzài fāngbiàn shuōhuà ma?",
+        "meaning": "Is now a good time to talk?"
+      }
+    ]
   },
   {
     "id": "zh-6cd606c9aa3f7fab",
     "zh": "麻烦",
     "pinyin": "máfan",
     "meaning": "troublesome / a hassle",
-    "category": "Useful descriptions"
+    "category": "Useful descriptions",
+    "usage": "A hassle; also a polite way to ask someone to do something, acknowledging the trouble.",
+    "examples": [
+      {
+        "zh": "这件事很麻烦。",
+        "pinyin": "zhè jiàn shì hěn máfan.",
+        "meaning": "This is a hassle."
+      },
+      {
+        "zh": "麻烦你帮我一下。",
+        "pinyin": "máfan nǐ bāng wǒ yíxià.",
+        "meaning": "Could you help me for a moment, please?"
+      }
+    ]
   },
   {
     "id": "zh-01805727314e4def",
@@ -5436,28 +6366,65 @@
     "zh": "清楚",
     "pinyin": "qīngchu",
     "meaning": "clear",
-    "category": "Useful descriptions"
+    "category": "Useful descriptions",
+    "usage": "Clear or clearly understood. 不清楚 can mean “I don't know / I'm not sure.”",
+    "examples": [
+      {
+        "zh": "我不太清楚。",
+        "pinyin": "wǒ bú tài qīngchu.",
+        "meaning": "I'm not quite sure."
+      },
+      {
+        "zh": "请说清楚一点。",
+        "pinyin": "qǐng shuō qīngchu yìdiǎn.",
+        "meaning": "Please say it more clearly."
+      }
+    ]
   },
   {
     "id": "zh-c8051ef2e9c0e573",
     "zh": "认真",
     "pinyin": "rènzhēn",
-    "meaning": "serious / conscientious",
-    "category": "Useful descriptions"
+    "meaning": "conscientious / attentive; take seriously",
+    "category": "Useful descriptions",
+    "usage": "Taking a task seriously and doing it carefully. It does not mean a serious illness or a severe problem.",
+    "examples": [
+      {
+        "zh": "她工作很认真。",
+        "pinyin": "tā gōngzuò hěn rènzhēn.",
+        "meaning": "She's very conscientious at work."
+      }
+    ]
   },
   {
     "id": "zh-38a76a478c18c520",
     "zh": "耐心",
     "pinyin": "nàixīn",
     "meaning": "patient / patience",
-    "category": "Useful descriptions"
+    "category": "Useful descriptions",
+    "usage": "Patience or being patient. A medical patient is 病人 (bìngrén).",
+    "examples": [
+      {
+        "zh": "她对孩子很有耐心。",
+        "pinyin": "tā duì háizi hěn yǒu nàixīn.",
+        "meaning": "She's very patient with children."
+      }
+    ]
   },
   {
     "id": "zh-6dc3c72f4c3d1934",
     "zh": "热情",
     "pinyin": "rèqíng",
     "meaning": "friendly and enthusiastic",
-    "category": "Useful descriptions"
+    "category": "Useful descriptions",
+    "usage": "Warm, welcoming or enthusiastic toward people or activities; not a high temperature.",
+    "examples": [
+      {
+        "zh": "这里的人很热情。",
+        "pinyin": "zhèlǐ de rén hěn rèqíng.",
+        "meaning": "The people here are very welcoming."
+      }
+    ]
   },
   {
     "id": "zh-b09958f8d9bd99ee",
@@ -5478,14 +6445,35 @@
     "zh": "有意思",
     "pinyin": "yǒu yìsi",
     "meaning": "interesting",
-    "category": "Useful descriptions"
+    "category": "Useful descriptions",
+    "usage": "Interesting or entertaining. To say “meaningful / worthwhile,” 有意义 (yǒu yìyì) is often the better choice.",
+    "examples": [
+      {
+        "zh": "这本书很有意思。",
+        "pinyin": "zhè běn shū hěn yǒu yìsi.",
+        "meaning": "This book is interesting."
+      }
+    ]
   },
   {
     "id": "zh-43932aa17701f5f4",
     "zh": "无聊",
     "pinyin": "wúliáo",
     "meaning": "boring / bored",
-    "category": "Useful descriptions"
+    "category": "Useful descriptions",
+    "usage": "Can describe a boring thing or the feeling of being bored.",
+    "examples": [
+      {
+        "zh": "这个电影很无聊。",
+        "pinyin": "zhège diànyǐng hěn wúliáo.",
+        "meaning": "This movie is boring."
+      },
+      {
+        "zh": "我一个人在家，很无聊。",
+        "pinyin": "wǒ yí ge rén zài jiā, hěn wúliáo.",
+        "meaning": "I'm home alone and bored."
+      }
+    ]
   },
   {
     "id": "zh-3bd3de5492af8970",
@@ -5499,7 +6487,15 @@
     "zh": "合得来",
     "pinyin": "hédelái",
     "meaning": "get along well / compatible",
-    "category": "Useful descriptions"
+    "category": "Useful descriptions",
+    "usage": "People getting along well, rather than things fitting together physically.",
+    "examples": [
+      {
+        "zh": "我跟室友很合得来。",
+        "pinyin": "wǒ gēn shìyǒu hěn hédelái.",
+        "meaning": "My roommate and I get along well."
+      }
+    ]
   },
   {
     "id": "zh-85d05ed00cc3eab2",

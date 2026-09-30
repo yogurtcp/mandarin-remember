@@ -73,6 +73,31 @@ assert.equal(E.validate(s,deck).items[id].introducedAt,s.items[id].introducedAt)
 sandbox.ONLINE_VOICE_ENABLED=false;speech.getVoices=()=>[{name:'Mandarin test',lang:'zh-CN'}];run('audioSettings();play({id:"test",zh:"你想喝水吗？"},false,false,true)');assert.equal(spoken.at(-1).rate,1);wall+=2000;spoken.at(-1).onend();
 run('play({id:"test",zh:"你想喝水吗？"},true,false,true)');assert.equal(spoken.at(-1).rate,.4);wall+=2050;spoken.at(-1).onend();assert(get('settingsAudioStatus').textContent.includes('may ignore speed'));
 run('play({id:"test",zh:"你想喝水吗？"},true,false,true)');wall+=5000;spoken.at(-1).onend();assert(!get('settingsAudioStatus').textContent.includes('may ignore speed'));
+// Context is optional, safely rendered, searchable, and only inside the revealed answer.
+const annotated=deck.filter(c=>c.usage);assert.equal(annotated.length,102);
+assert.equal(annotated.reduce((n,c)=>n+c.examples.length,0),138);
+for(const c of annotated){
+ assert(c.usage.trim());assert(c.examples.length>=1&&c.examples.length<=2);
+ for(const example of c.examples){for(const field of ['zh','pinyin','meaning'])assert.equal(typeof example[field],'string');assert(/[\u3400-\u9fff]/u.test(example.zh));assert(example.pinyin.trim()&&example.meaning.trim());}
+}
+const wake=deck.find(c=>c.zh==='起床');
+run('home();state=E.empty();beginSession([{id:'+JSON.stringify(wake.id)+',direction:"intro",readyAt:Date.now()}],false)');
+assert(!get('answer').hidden);assert(!get('usageDetails').hidden);assert.equal(get('usageDetails').open,false);
+assert(get('usageContent').innerHTML.includes('亚历克斯'));assert(get('usageContent').innerHTML.includes('qǐchuáng'));
+const exampleLinks=[...get('usageContent').innerHTML.matchAll(/href="([^"]+)"/g)].map(m=>new URL(m[1].replaceAll('&amp;','&')));
+assert.deepEqual(exampleLinks.map(u=>u.searchParams.get('text')),wake.examples.map(e=>e.zh));
+get('usageDetails').open=true;run('studied();advance()');wall+=E.MIN;run('advance()');
+assert.equal(run('current.direction'),'produce');assert(get('answer').hidden);assert.equal(get('usageDetails').open,false);assert.equal(get('prompt').textContent,wake.meaning);
+run('reveal()');assert(!get('answer').hidden);assert(!get('usageDetails').hidden);
+run('home();beginSession([{id:DECK[0].id,direction:"intro",readyAt:Date.now()}],false)');
+assert(get('usageDetails').hidden);assert.equal(get('usageContent').innerHTML,'');run('home()');
+assert(!run('usageHTML({usage:"<img src=x>",examples:[{zh:"<script>",pinyin:"<b>",meaning:"<svg>"}]})').includes('<img'));
+get('search').value='亚历克斯';run('renderLibrary()');assert(get('libraryCount').textContent.startsWith('1 items'));assert(get('libraryList').innerHTML.includes('Usage & examples'));assert(get('libraryList').innerHTML.includes('get out of bed'));
+get('search').value='';
+// Confirm the disclosure is physically inside #answer, not merely hidden by the test DOM mock.
+assert(html.indexOf('id="usageDetails"')>html.indexOf('id="answer"'));assert(html.indexOf('id="usageDetails"')<html.indexOf('id="ratings"'));
+console.log('PASS context: 102 annotated cards / 138 examples, full-sentence links, hidden recall, closed disclosures on advance, empty-card cleanup, escaping, and example search.');
+
 let promptCalls=0;run('show("install");renderInstall()');assert(get('requestInstall').hidden);assert(!get('installSteps').hidden);
 windowEvents.beforeinstallprompt({preventDefault(){},prompt:async()=>{promptCalls++},userChoice:Promise.resolve({outcome:'dismissed'})});assert(!get('requestInstall').hidden);
 (async()=>{await get('requestInstall').events.click();await get('requestInstall').events.click();assert.equal(promptCalls,1);assert(get('installStatus').textContent.includes('later'));windowEvents.appinstalled();assert(get('requestInstall').hidden);assert(get('installSteps').hidden);console.log('PASS new features: extra batches, old progress, category filters, distinct speech rates, speed diagnostics, and install prompt/fallback.');})().catch(e=>{console.error(e);process.exitCode=1});

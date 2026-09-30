@@ -6,7 +6,7 @@ A small mobile learning app for everyday Mandarin, with 788 cards, English promp
 
 Visit **https://yogurtcp.github.io/mandarin-remember/** in Chrome on Android. Tap **Install** in the app for a direct install prompt when available, or instructions showing where Chrome’s **⋮ → Add to Home screen** menu is. You can share the same URL with anyone; no account is needed to study.
 
-Use **Audio & backup → Play a test sentence**. This hosted version uses your phone/browser’s Mandarin speech voice. If none is available, select or install Mandarin in the phone’s text-to-speech settings, reopen the app, and test again. Voice availability and quality vary by device. This static site does not run a cloud speech service or the separate Linux speech helper.
+Use **Menu → Audio & backup → Test normal / Test slow**. This hosted version uses your phone/browser’s Mandarin speech voice. If none is available, select or install Mandarin in the phone’s text-to-speech settings, reopen the app, and test again. Voice availability and quality vary by device. This static site does not run a cloud speech service or the separate Linux speech helper.
 
 After an initial successful online load and service-worker installation, lessons are available offline. Speech may still need internet or an installed voice. There are no prerecorded audio files.
 
@@ -52,3 +52,11 @@ Normal device speech now requests rate 1.0 and Slow requests 0.4. Audio settings
 ## Compare pronunciations
 
 Revealed cards and phrasebook entries offer **Copy Chinese** and **Google Translate**. The link opens the Chinese text in Google Translate; tap the speaker beside the Chinese text to hear it. Only clicking the link sends that card text to Google. Copy also provides a selectable-text fallback when clipboard permission is unavailable. Google speech is a useful comparison, but ambiguous characters can still need context.
+
+## Meanings in context (v1.3)
+
+102 cards now include short sense or usage notes and 138 original example sentences, each with pinyin and English. Expand **Usage & examples** after revealing an answer or in the phrasebook. The examples also link to Google Translate with the full sentence, useful when an isolated character has multiple readings. Phrasebook search includes this context. English prompts were clarified where a bare gloss could mislead; IDs and review history are unchanged.
+
+For example, 起床 means getting out of bed and can be used both in a statement and in a wake-up call. Other notes distinguish borrowing/lending, listening/hearing/understanding, physical and figurative English meanings, polite requests, and context-dependent pronunciations. Read the examples when a sense is unclear; on reviews, attempt the card before opening its answer. These are selected everyday senses, not exhaustive dictionary entries or a native-speaker/audio certification.
+
+Lexical reference: [CC-CEDICT](https://cc-cedict.org/wiki/). The borrow/lend distinction was also checked against the [Ministry of Education's entry for 借](https://dict.mini.moe.edu.tw/SearchIndex/word_detail?breadcrumbs=Search_%E5%80%9F_one&dictSearchField=%E5%80%9F&wordID=D0003074). Examples are authored for this app.
