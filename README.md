@@ -1,10 +1,10 @@
 # Mandarin Remember
 
-A small mobile learning app for everyday Mandarin, with 366 reviewed cards, English prompts, pinyin, spoken recall, listening/reading practice, and spaced reviews.
+A small mobile learning app for everyday Mandarin, with 788 cards, English prompts, pinyin, spoken recall, listening/reading practice, and spaced reviews.
 
 ## Open on your phone
 
-Visit **https://yogurtcp.github.io/mandarin-remember/** in Chrome on Android. In the browser menu choose **Add to Home screen** or **Install app**, when offered. You can share the same URL with anyone; no account is needed to study.
+Visit **https://yogurtcp.github.io/mandarin-remember/** in Chrome on Android. Tap **Install** in the app for a direct install prompt when available, or instructions showing where Chrome’s **⋮ → Add to Home screen** menu is. You can share the same URL with anyone; no account is needed to study.
 
 Use **Audio & backup → Play a test sentence**. This hosted version uses your phone/browser’s Mandarin speech voice. If none is available, select or install Mandarin in the phone’s text-to-speech settings, reopen the app, and test again. Voice availability and quality vary by device. This static site does not run a cloud speech service or the separate Linux speech helper.
 
@@ -14,8 +14,8 @@ After an initial successful online load and service-worker installation, lessons
 
 - Spend around 10 minutes most days, starting with due cards.
 - Attempt the Mandarin aloud, or recall the meaning of what you hear, **before revealing**.
-- Rate the original attempt honestly. Using a hint counts as assistance.
-- Start with five new cards daily; lower the limit if reviews pile up.
+- Rate the original attempt. Using a hint counts as assistance.
+- Use the daily plan, or tap Learn 5 more for another batch whenever you want.
 - Use one phrase in real life; get feedback from a Mandarin speaker on your tones.
 - Export a progress backup weekly.
 
@@ -42,3 +42,9 @@ node verify-pwa.cjs
 ```
 
 Preserve card IDs when correcting wording. Bump the service-worker cache version when changing cached assets. Publish GitHub Pages from the root of the `main` branch. No build service, API key or backend is needed.
+
+## September 2026 update
+
+422 new cards cover breakfast, fruit and vegetables, cooking, relatives, friends, coworkers, professions, errands, eating out, transport, health, useful verbs and descriptions. Existing card IDs and saved progress remain compatible. New lexical pronunciations were cross-checked with [CC-CEDICT](https://cc-cedict.org/wiki/); phrases were reviewed separately. Colloquial neutral tones are retained, and 一/不 use spoken tone changes.
+
+Normal device speech now requests rate 1.0 and Slow requests 0.4. Audio settings provide both test buttons; actual speed depends on the device voice. Online helper playback also applies pitch-preserving slowdown.

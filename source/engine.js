@@ -34,6 +34,7 @@ function plan(state,now,deck,category='',practice=false){
  const n=newAllowance(state,now,deck).count;
  const fresh=deck.filter(c=>!state.items[c.id]&&(!category||c.category===category)).slice(0,n).map(c=>({id:c.id,direction:'intro',readyAt:now}));return tasks.concat(fresh);
 }
+function extraPlan(state,now,deck,category=''){return deck.filter(c=>!state.items[c.id]&&(!category||c.category===category)).slice(0,5).map(c=>({id:c.id,direction:'intro',readyAt:now,extra:true}))}
 function holding(item){return !item.suspended&&directions.every(d=>item[d].phase==='review'&&item[d].interval>=7&&item[d].delayedPasses>=2&&item[d].lastGrade>0)}
 function validate(raw,deck){
  if(!raw||raw.schema!==1||raw.deckId!==DECK_ID||!raw.items||typeof raw.items!=='object'||Array.isArray(raw.items)||!Array.isArray(raw.logs))throw Error('Not a compatible Family Coach backup');
@@ -50,5 +51,5 @@ function validate(raw,deck){
  for(const e of raw.logs){if(!e||!ids.has(e.id)||!directions.includes(e.direction)||!num(e.at,0,1e15)||![0,1,2,3].includes(e.grade)||![0,1,2,3].includes(e.requestedGrade)||!['assisted','practice','delayed'].every(k=>typeof e[k]==='boolean')||!['spoken','listening','reading'].includes(e.input))throw Error('Invalid review history');state.logs.push({id:e.id,direction:e.direction,at:e.at,grade:e.grade,requestedGrade:e.requestedGrade,assisted:e.assisted,practice:e.practice,delayed:e.delayed,input:e.input})}
  const s=raw.settings||{};state.settings={newLimit:Number.isInteger(s.newLimit)&&s.newLimit>=0&&s.newLimit<=15?s.newLimit:5,reviewLimit:[10,20,30].includes(s.reviewLimit)?s.reviewLimit:20,audioMode:['auto','device','online'].includes(s.audioMode)?s.audioMode:'auto',voice:typeof s.voice==='string'?s.voice.slice(0,200):''};return state;
 }
-const api={DAY,MIN,DECK_ID,directions,localDay,empty,introduce,dueTasks,retention,newAllowance,schedule,review,plan,holding,validate};if(typeof module!=='undefined'&&module.exports)module.exports=api;else root.CoachEngine=api;
+const api={DAY,MIN,DECK_ID,directions,localDay,empty,introduce,dueTasks,retention,newAllowance,schedule,review,plan,extraPlan,holding,validate};if(typeof module!=='undefined'&&module.exports)module.exports=api;else root.CoachEngine=api;
 })(typeof window!=='undefined'?window:globalThis);

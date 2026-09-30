@@ -2560,5 +2560,2959 @@
     "pinyin": "zhège tài tàng le",
     "meaning": "This is too hot to touch / eat.",
     "category": "Food"
+  },
+  {
+    "id": "zh-9c61c36d4df7f909",
+    "zh": "豆浆",
+    "pinyin": "dòujiāng",
+    "meaning": "soy milk",
+    "category": "Breakfast"
+  },
+  {
+    "id": "zh-8f89b12a0cc0e4bf",
+    "zh": "粥",
+    "pinyin": "zhōu",
+    "meaning": "congee / rice porridge",
+    "category": "Breakfast"
+  },
+  {
+    "id": "zh-e6f945b4f47b24a1",
+    "zh": "燕麦片",
+    "pinyin": "yànmàipiàn",
+    "meaning": "rolled oats / oatmeal flakes",
+    "category": "Breakfast"
+  },
+  {
+    "id": "zh-787d89bb2ba8a2c6",
+    "zh": "包子",
+    "pinyin": "bāozi",
+    "meaning": "steamed stuffed bun",
+    "category": "Breakfast"
+  },
+  {
+    "id": "zh-04e9839104379d3b",
+    "zh": "馒头",
+    "pinyin": "mántou",
+    "meaning": "plain steamed bun",
+    "category": "Breakfast"
+  },
+  {
+    "id": "zh-1c21b306263d2cfd",
+    "zh": "油条",
+    "pinyin": "yóutiáo",
+    "meaning": "Chinese fried dough stick",
+    "category": "Breakfast"
+  },
+  {
+    "id": "zh-db52a7d37b7ebb35",
+    "zh": "煎饼",
+    "pinyin": "jiānbǐng",
+    "meaning": "Chinese pancake / crêpe",
+    "category": "Breakfast"
+  },
+  {
+    "id": "zh-446a3148f2c4ba17",
+    "zh": "煎蛋",
+    "pinyin": "jiāndàn",
+    "meaning": "fried egg",
+    "category": "Breakfast"
+  },
+  {
+    "id": "zh-55a098283c4984bf",
+    "zh": "水煮蛋",
+    "pinyin": "shuǐzhǔdàn",
+    "meaning": "boiled egg",
+    "category": "Breakfast"
+  },
+  {
+    "id": "zh-7c3d627461c2158e",
+    "zh": "炒鸡蛋",
+    "pinyin": "chǎo jīdàn",
+    "meaning": "scrambled eggs",
+    "category": "Breakfast"
+  },
+  {
+    "id": "zh-921acd914acd6c57",
+    "zh": "吐司",
+    "pinyin": "tǔsī",
+    "meaning": "toast / sliced sandwich bread",
+    "category": "Breakfast"
+  },
+  {
+    "id": "zh-d2283ad932b89e62",
+    "zh": "全麦面包",
+    "pinyin": "quánmài miànbāo",
+    "meaning": "wholewheat bread",
+    "category": "Breakfast"
+  },
+  {
+    "id": "zh-2aef3d11527dea46",
+    "zh": "黄油",
+    "pinyin": "huángyóu",
+    "meaning": "butter",
+    "category": "Breakfast"
+  },
+  {
+    "id": "zh-0a6a7439ce266e3c",
+    "zh": "果酱",
+    "pinyin": "guǒjiàng",
+    "meaning": "jam",
+    "category": "Breakfast"
+  },
+  {
+    "id": "zh-0265340a04a1a610",
+    "zh": "花生酱",
+    "pinyin": "huāshēngjiàng",
+    "meaning": "peanut butter",
+    "category": "Breakfast"
+  },
+  {
+    "id": "zh-7b026c56a42424b6",
+    "zh": "蜂蜜",
+    "pinyin": "fēngmì",
+    "meaning": "honey",
+    "category": "Breakfast"
+  },
+  {
+    "id": "zh-9af9bd8ab9c684ed",
+    "zh": "酸奶",
+    "pinyin": "suānnǎi",
+    "meaning": "yogurt",
+    "category": "Breakfast"
+  },
+  {
+    "id": "zh-04081d3010badeed",
+    "zh": "奶酪",
+    "pinyin": "nǎilào",
+    "meaning": "cheese",
+    "category": "Breakfast"
+  },
+  {
+    "id": "zh-06930b2fa5f101d8",
+    "zh": "培根",
+    "pinyin": "péigēn",
+    "meaning": "bacon",
+    "category": "Breakfast"
+  },
+  {
+    "id": "zh-8fa7820b4c667210",
+    "zh": "香肠",
+    "pinyin": "xiāngcháng",
+    "meaning": "sausage",
+    "category": "Breakfast"
+  },
+  {
+    "id": "zh-828d5640ee422883",
+    "zh": "三明治",
+    "pinyin": "sānmíngzhì",
+    "meaning": "sandwich",
+    "category": "Breakfast"
+  },
+  {
+    "id": "zh-64c25f038caae862",
+    "zh": "果汁",
+    "pinyin": "guǒzhī",
+    "meaning": "fruit juice",
+    "category": "Breakfast"
+  },
+  {
+    "id": "zh-da95779b1cd45daf",
+    "zh": "橙汁",
+    "pinyin": "chéngzhī",
+    "meaning": "orange juice",
+    "category": "Breakfast"
+  },
+  {
+    "id": "zh-647d2c502d390a04",
+    "zh": "热可可",
+    "pinyin": "rè kěkě",
+    "meaning": "hot cocoa",
+    "category": "Breakfast"
+  },
+  {
+    "id": "zh-d4a87835d5d71468",
+    "zh": "拿铁",
+    "pinyin": "nátiě",
+    "meaning": "latte",
+    "category": "Breakfast"
+  },
+  {
+    "id": "zh-252a9a8f569801e8",
+    "zh": "红茶",
+    "pinyin": "hóngchá",
+    "meaning": "black tea",
+    "category": "Breakfast"
+  },
+  {
+    "id": "zh-7ded36aec25c40c8",
+    "zh": "绿茶",
+    "pinyin": "lǜchá",
+    "meaning": "green tea",
+    "category": "Breakfast"
+  },
+  {
+    "id": "zh-33e934d5eab50d6a",
+    "zh": "无糖",
+    "pinyin": "wútáng",
+    "meaning": "sugar-free",
+    "category": "Breakfast"
+  },
+  {
+    "id": "zh-0a32b8dacbddb456",
+    "zh": "早餐吃什么？",
+    "pinyin": "zǎocān chī shénme?",
+    "meaning": "What's for breakfast?",
+    "category": "Breakfast"
+  },
+  {
+    "id": "zh-79b549013c8e8922",
+    "zh": "咖啡要加奶吗？",
+    "pinyin": "kāfēi yào jiā nǎi ma?",
+    "meaning": "Would you like milk in your coffee?",
+    "category": "Breakfast"
+  },
+  {
+    "id": "zh-7fba09e399ae00b8",
+    "zh": "不加糖，谢谢。",
+    "pinyin": "bù jiā táng, xièxie.",
+    "meaning": "No sugar, thanks.",
+    "category": "Breakfast"
+  },
+  {
+    "id": "zh-76cdbeee504609b2",
+    "zh": "面包烤好了。",
+    "pinyin": "miànbāo kǎo hǎo le.",
+    "meaning": "The toast is ready.",
+    "category": "Breakfast"
+  },
+  {
+    "id": "zh-c76f6a79f6dbcf63",
+    "zh": "草莓",
+    "pinyin": "cǎoméi",
+    "meaning": "strawberry",
+    "category": "Fruit & vegetables"
+  },
+  {
+    "id": "zh-ae86f9a1daef052f",
+    "zh": "葡萄",
+    "pinyin": "pútao",
+    "meaning": "grapes",
+    "category": "Fruit & vegetables"
+  },
+  {
+    "id": "zh-3e3f03caa0435a00",
+    "zh": "西瓜",
+    "pinyin": "xīguā",
+    "meaning": "watermelon",
+    "category": "Fruit & vegetables"
+  },
+  {
+    "id": "zh-c8d3209aaa4aaf12",
+    "zh": "橙子",
+    "pinyin": "chéngzi",
+    "meaning": "orange (fruit)",
+    "category": "Fruit & vegetables"
+  },
+  {
+    "id": "zh-d8816dfefa548859",
+    "zh": "橘子",
+    "pinyin": "júzi",
+    "meaning": "mandarin / tangerine",
+    "category": "Fruit & vegetables"
+  },
+  {
+    "id": "zh-a5a79a17f934dde7",
+    "zh": "梨",
+    "pinyin": "lí",
+    "meaning": "pear",
+    "category": "Fruit & vegetables"
+  },
+  {
+    "id": "zh-0fe9ed3a6b78600f",
+    "zh": "桃子",
+    "pinyin": "táozi",
+    "meaning": "peach",
+    "category": "Fruit & vegetables"
+  },
+  {
+    "id": "zh-2e2eadd9e41c4e05",
+    "zh": "柠檬",
+    "pinyin": "níngméng",
+    "meaning": "lemon",
+    "category": "Fruit & vegetables"
+  },
+  {
+    "id": "zh-d23250b7c80a03ce",
+    "zh": "蓝莓",
+    "pinyin": "lánméi",
+    "meaning": "blueberry",
+    "category": "Fruit & vegetables"
+  },
+  {
+    "id": "zh-b8246e4fd8938af7",
+    "zh": "芒果",
+    "pinyin": "mángguǒ",
+    "meaning": "mango",
+    "category": "Fruit & vegetables"
+  },
+  {
+    "id": "zh-1e93a661562a8926",
+    "zh": "菠萝",
+    "pinyin": "bōluó",
+    "meaning": "pineapple",
+    "category": "Fruit & vegetables"
+  },
+  {
+    "id": "zh-6743bd96fb2dc0d3",
+    "zh": "猕猴桃",
+    "pinyin": "míhóutáo",
+    "meaning": "kiwifruit",
+    "category": "Fruit & vegetables"
+  },
+  {
+    "id": "zh-09f00a522e023e1d",
+    "zh": "牛油果",
+    "pinyin": "niúyóuguǒ",
+    "meaning": "avocado",
+    "category": "Fruit & vegetables"
+  },
+  {
+    "id": "zh-9f1aa4ba71d8a145",
+    "zh": "樱桃",
+    "pinyin": "yīngtáo",
+    "meaning": "cherry",
+    "category": "Fruit & vegetables"
+  },
+  {
+    "id": "zh-b597151f9e9cb7ee",
+    "zh": "葡萄干",
+    "pinyin": "pútaogān",
+    "meaning": "raisins",
+    "category": "Fruit & vegetables"
+  },
+  {
+    "id": "zh-bb6da11cdcdf24ad",
+    "zh": "西红柿",
+    "pinyin": "xīhóngshì",
+    "meaning": "tomato",
+    "category": "Fruit & vegetables"
+  },
+  {
+    "id": "zh-e1337e15ca73d20d",
+    "zh": "黄瓜",
+    "pinyin": "huángguā",
+    "meaning": "cucumber",
+    "category": "Fruit & vegetables"
+  },
+  {
+    "id": "zh-dd1a68cb2c35fb78",
+    "zh": "胡萝卜",
+    "pinyin": "húluóbo",
+    "meaning": "carrot",
+    "category": "Fruit & vegetables"
+  },
+  {
+    "id": "zh-a64a92c865302906",
+    "zh": "土豆",
+    "pinyin": "tǔdòu",
+    "meaning": "potato",
+    "category": "Fruit & vegetables"
+  },
+  {
+    "id": "zh-edc855182ce2f997",
+    "zh": "洋葱",
+    "pinyin": "yángcōng",
+    "meaning": "onion",
+    "category": "Fruit & vegetables"
+  },
+  {
+    "id": "zh-2053d8521c937de2",
+    "zh": "大蒜",
+    "pinyin": "dàsuàn",
+    "meaning": "garlic",
+    "category": "Fruit & vegetables"
+  },
+  {
+    "id": "zh-4685ff1a62239a62",
+    "zh": "生姜",
+    "pinyin": "shēngjiāng",
+    "meaning": "fresh ginger",
+    "category": "Fruit & vegetables"
+  },
+  {
+    "id": "zh-9a5267bf4b3a8a82",
+    "zh": "生菜",
+    "pinyin": "shēngcài",
+    "meaning": "lettuce",
+    "category": "Fruit & vegetables"
+  },
+  {
+    "id": "zh-2babb323b7140a33",
+    "zh": "菠菜",
+    "pinyin": "bōcài",
+    "meaning": "spinach",
+    "category": "Fruit & vegetables"
+  },
+  {
+    "id": "zh-9b8bc1b61d692685",
+    "zh": "白菜",
+    "pinyin": "báicài",
+    "meaning": "Chinese cabbage",
+    "category": "Fruit & vegetables"
+  },
+  {
+    "id": "zh-1fdb83f31be268d5",
+    "zh": "西兰花",
+    "pinyin": "xīlánhuā",
+    "meaning": "broccoli",
+    "category": "Fruit & vegetables"
+  },
+  {
+    "id": "zh-9519349f65a7addd",
+    "zh": "蘑菇",
+    "pinyin": "mógu",
+    "meaning": "mushroom",
+    "category": "Fruit & vegetables"
+  },
+  {
+    "id": "zh-8ac7c1f48e3134b0",
+    "zh": "茄子",
+    "pinyin": "qiézi",
+    "meaning": "eggplant",
+    "category": "Fruit & vegetables"
+  },
+  {
+    "id": "zh-dfa4670a83c67131",
+    "zh": "玉米",
+    "pinyin": "yùmǐ",
+    "meaning": "corn",
+    "category": "Fruit & vegetables"
+  },
+  {
+    "id": "zh-85bc0873e2450c0b",
+    "zh": "南瓜",
+    "pinyin": "nánguā",
+    "meaning": "pumpkin",
+    "category": "Fruit & vegetables"
+  },
+  {
+    "id": "zh-98fe6354d015ccb6",
+    "zh": "猪肉",
+    "pinyin": "zhūròu",
+    "meaning": "pork",
+    "category": "Cooking"
+  },
+  {
+    "id": "zh-70099ea01925d3da",
+    "zh": "牛肉",
+    "pinyin": "niúròu",
+    "meaning": "beef",
+    "category": "Cooking"
+  },
+  {
+    "id": "zh-e2fd6979c0a125f8",
+    "zh": "羊肉",
+    "pinyin": "yángròu",
+    "meaning": "lamb / mutton",
+    "category": "Cooking"
+  },
+  {
+    "id": "zh-86902fa0e945aac8",
+    "zh": "虾",
+    "pinyin": "xiā",
+    "meaning": "shrimp / prawns",
+    "category": "Cooking"
+  },
+  {
+    "id": "zh-4fc10d8f397780f3",
+    "zh": "豆腐",
+    "pinyin": "dòufu",
+    "meaning": "tofu",
+    "category": "Cooking"
+  },
+  {
+    "id": "zh-21eaff4331362c33",
+    "zh": "面粉",
+    "pinyin": "miànfěn",
+    "meaning": "flour",
+    "category": "Cooking"
+  },
+  {
+    "id": "zh-9c4b23d6a0b97bfc",
+    "zh": "大米",
+    "pinyin": "dàmǐ",
+    "meaning": "uncooked rice",
+    "category": "Cooking"
+  },
+  {
+    "id": "zh-9e3e97236c4ecaf2",
+    "zh": "盐",
+    "pinyin": "yán",
+    "meaning": "salt",
+    "category": "Cooking"
+  },
+  {
+    "id": "zh-c86bc88f26043273",
+    "zh": "糖",
+    "pinyin": "táng",
+    "meaning": "sugar",
+    "category": "Cooking"
+  },
+  {
+    "id": "zh-d07cd4b0a23b3a37",
+    "zh": "油",
+    "pinyin": "yóu",
+    "meaning": "oil",
+    "category": "Cooking"
+  },
+  {
+    "id": "zh-afabf88f5c614160",
+    "zh": "酱油",
+    "pinyin": "jiàngyóu",
+    "meaning": "soy sauce",
+    "category": "Cooking"
+  },
+  {
+    "id": "zh-56796b44de6a25a8",
+    "zh": "醋",
+    "pinyin": "cù",
+    "meaning": "vinegar",
+    "category": "Cooking"
+  },
+  {
+    "id": "zh-a7d91150c3f46be8",
+    "zh": "胡椒",
+    "pinyin": "hújiāo",
+    "meaning": "pepper (seasoning)",
+    "category": "Cooking"
+  },
+  {
+    "id": "zh-fc12e809f6355354",
+    "zh": "辣椒",
+    "pinyin": "làjiāo",
+    "meaning": "chili pepper",
+    "category": "Cooking"
+  },
+  {
+    "id": "zh-7739ff2ac7a8c5f7",
+    "zh": "花生",
+    "pinyin": "huāshēng",
+    "meaning": "peanut",
+    "category": "Cooking"
+  },
+  {
+    "id": "zh-c5d1ccaf9c312ee5",
+    "zh": "坚果",
+    "pinyin": "jiānguǒ",
+    "meaning": "nuts",
+    "category": "Cooking"
+  },
+  {
+    "id": "zh-f00ffdf5cd1b6828",
+    "zh": "饺子",
+    "pinyin": "jiǎozi",
+    "meaning": "dumplings",
+    "category": "Cooking"
+  },
+  {
+    "id": "zh-a3fb9bc3abb90f1f",
+    "zh": "炒饭",
+    "pinyin": "chǎofàn",
+    "meaning": "fried rice",
+    "category": "Cooking"
+  },
+  {
+    "id": "zh-5b5b96fd0623a039",
+    "zh": "沙拉",
+    "pinyin": "shālā",
+    "meaning": "salad",
+    "category": "Cooking"
+  },
+  {
+    "id": "zh-56ad9259e3e1c67d",
+    "zh": "饼干",
+    "pinyin": "bǐnggān",
+    "meaning": "cookies / biscuits",
+    "category": "Cooking"
+  },
+  {
+    "id": "zh-0b8c4bb849e089dd",
+    "zh": "蛋糕",
+    "pinyin": "dàngāo",
+    "meaning": "cake",
+    "category": "Cooking"
+  },
+  {
+    "id": "zh-7ea01af14f934746",
+    "zh": "冰淇淋",
+    "pinyin": "bīngqílín",
+    "meaning": "ice cream",
+    "category": "Cooking"
+  },
+  {
+    "id": "zh-f9314cddee051b28",
+    "zh": "切菜",
+    "pinyin": "qiē cài",
+    "meaning": "cut up vegetables",
+    "category": "Cooking"
+  },
+  {
+    "id": "zh-ec8f27578ea58a37",
+    "zh": "炒菜",
+    "pinyin": "chǎo cài",
+    "meaning": "stir-fry / cook dishes",
+    "category": "Cooking"
+  },
+  {
+    "id": "zh-b606bf981ff8f416",
+    "zh": "煮",
+    "pinyin": "zhǔ",
+    "meaning": "boil / cook in liquid",
+    "category": "Cooking"
+  },
+  {
+    "id": "zh-5b8dca68e725d658",
+    "zh": "蒸",
+    "pinyin": "zhēng",
+    "meaning": "steam (cook)",
+    "category": "Cooking"
+  },
+  {
+    "id": "zh-f5a8e63b6f63b48e",
+    "zh": "烤",
+    "pinyin": "kǎo",
+    "meaning": "bake / roast / grill",
+    "category": "Cooking"
+  },
+  {
+    "id": "zh-34c5155a43fbfd7a",
+    "zh": "炸",
+    "pinyin": "zhá",
+    "meaning": "deep-fry",
+    "category": "Cooking"
+  },
+  {
+    "id": "zh-3b821da9380b626d",
+    "zh": "加热",
+    "pinyin": "jiārè",
+    "meaning": "heat up",
+    "category": "Cooking"
+  },
+  {
+    "id": "zh-820d4c40793a56ea",
+    "zh": "搅拌",
+    "pinyin": "jiǎobàn",
+    "meaning": "stir / mix",
+    "category": "Cooking"
+  },
+  {
+    "id": "zh-b682b7d2db666ec4",
+    "zh": "去皮",
+    "pinyin": "qù pí",
+    "meaning": "peel (remove the skin)",
+    "category": "Cooking"
+  },
+  {
+    "id": "zh-7069445b3b54a4bf",
+    "zh": "尝一下",
+    "pinyin": "cháng yíxià",
+    "meaning": "have a taste",
+    "category": "Cooking"
+  },
+  {
+    "id": "zh-f8781a5f97ced96e",
+    "zh": "冰箱",
+    "pinyin": "bīngxiāng",
+    "meaning": "refrigerator",
+    "category": "Cooking"
+  },
+  {
+    "id": "zh-dd63d785bf0432a6",
+    "zh": "微波炉",
+    "pinyin": "wēibōlú",
+    "meaning": "microwave",
+    "category": "Cooking"
+  },
+  {
+    "id": "zh-c9a4f4a60bc9e4c1",
+    "zh": "烤箱",
+    "pinyin": "kǎoxiāng",
+    "meaning": "oven",
+    "category": "Cooking"
+  },
+  {
+    "id": "zh-9599983cb9485db8",
+    "zh": "锅",
+    "pinyin": "guō",
+    "meaning": "cooking pot / pan",
+    "category": "Cooking"
+  },
+  {
+    "id": "zh-f7bff9ed8550c861",
+    "zh": "刀",
+    "pinyin": "dāo",
+    "meaning": "knife",
+    "category": "Cooking"
+  },
+  {
+    "id": "zh-399893f69b9b91c9",
+    "zh": "筷子",
+    "pinyin": "kuàizi",
+    "meaning": "chopsticks",
+    "category": "Cooking"
+  },
+  {
+    "id": "zh-72407ec665b596b8",
+    "zh": "勺子",
+    "pinyin": "sháozi",
+    "meaning": "spoon",
+    "category": "Cooking"
+  },
+  {
+    "id": "zh-c2d259d7c66746ff",
+    "zh": "叉子",
+    "pinyin": "chāzi",
+    "meaning": "fork",
+    "category": "Cooking"
+  },
+  {
+    "id": "zh-41bb76350c7ec2d8",
+    "zh": "碗",
+    "pinyin": "wǎn",
+    "meaning": "bowl",
+    "category": "Cooking"
+  },
+  {
+    "id": "zh-f13de7aaabf88374",
+    "zh": "盘子",
+    "pinyin": "pánzi",
+    "meaning": "plate",
+    "category": "Cooking"
+  },
+  {
+    "id": "zh-95f9e8e79208082d",
+    "zh": "杯子",
+    "pinyin": "bēizi",
+    "meaning": "cup / glass",
+    "category": "Cooking"
+  },
+  {
+    "id": "zh-7ac9481614ba2e08",
+    "zh": "剩菜",
+    "pinyin": "shèngcài",
+    "meaning": "leftover dishes / leftovers",
+    "category": "Cooking"
+  },
+  {
+    "id": "zh-773d6bfc831da6fb",
+    "zh": "新鲜",
+    "pinyin": "xīnxiān",
+    "meaning": "fresh",
+    "category": "Cooking"
+  },
+  {
+    "id": "zh-9f8c9685ea0178b6",
+    "zh": "咸",
+    "pinyin": "xián",
+    "meaning": "salty",
+    "category": "Cooking"
+  },
+  {
+    "id": "zh-859ba3e78006453c",
+    "zh": "酸",
+    "pinyin": "suān",
+    "meaning": "sour",
+    "category": "Cooking"
+  },
+  {
+    "id": "zh-0e63c34d213f6f60",
+    "zh": "苦",
+    "pinyin": "kǔ",
+    "meaning": "bitter",
+    "category": "Cooking"
+  },
+  {
+    "id": "zh-5a9daab9822823b2",
+    "zh": "熟了",
+    "pinyin": "shú le",
+    "meaning": "it's cooked / done",
+    "category": "Cooking"
+  },
+  {
+    "id": "zh-e4dd9f27075746cc",
+    "zh": "我对花生过敏。",
+    "pinyin": "wǒ duì huāshēng guòmǐn.",
+    "meaning": "I'm allergic to peanuts.",
+    "category": "Cooking"
+  },
+  {
+    "id": "zh-e0c2d2a70949e468",
+    "zh": "少放一点盐。",
+    "pinyin": "shǎo fàng yìdiǎn yán.",
+    "meaning": "Use a little less salt.",
+    "category": "Cooking"
+  },
+  {
+    "id": "zh-79ac90ebd0ff3601",
+    "zh": "要不要再来一点？",
+    "pinyin": "yào bu yào zài lái yìdiǎn?",
+    "meaning": "Would you like some more?",
+    "category": "Cooking"
+  },
+  {
+    "id": "zh-8a64be87a03f2c13",
+    "zh": "放冰箱里吧。",
+    "pinyin": "fàng bīngxiāng lǐ ba.",
+    "meaning": "Put it in the fridge.",
+    "category": "Cooking"
+  },
+  {
+    "id": "zh-69cbf81b567f576f",
+    "zh": "我来洗碗。",
+    "pinyin": "wǒ lái xǐ wǎn.",
+    "meaning": "I'll do the dishes.",
+    "category": "Cooking"
+  },
+  {
+    "id": "zh-37042cdb90ebde28",
+    "zh": "父母",
+    "pinyin": "fùmǔ",
+    "meaning": "parents",
+    "category": "Relatives"
+  },
+  {
+    "id": "zh-148cd7e46021e7fd",
+    "zh": "亲戚",
+    "pinyin": "qīnqi",
+    "meaning": "relatives",
+    "category": "Relatives"
+  },
+  {
+    "id": "zh-8d85fca3c58e1345",
+    "zh": "兄弟姐妹",
+    "pinyin": "xiōngdì jiěmèi",
+    "meaning": "siblings",
+    "category": "Relatives"
+  },
+  {
+    "id": "zh-19db0f2f50792998",
+    "zh": "老公",
+    "pinyin": "lǎogōng",
+    "meaning": "husband (informal)",
+    "category": "Relatives"
+  },
+  {
+    "id": "zh-120a3a2fc2bf8f33",
+    "zh": "老婆",
+    "pinyin": "lǎopo",
+    "meaning": "wife (informal)",
+    "category": "Relatives"
+  },
+  {
+    "id": "zh-a2c135e7e0890800",
+    "zh": "伯伯",
+    "pinyin": "bóbo",
+    "meaning": "uncle (dad's older brother)",
+    "category": "Relatives"
+  },
+  {
+    "id": "zh-85e8fccb36a5ad63",
+    "zh": "婶婶",
+    "pinyin": "shěnshen",
+    "meaning": "aunt (wife of dad's younger brother)",
+    "category": "Relatives"
+  },
+  {
+    "id": "zh-2605e3afd09d8413",
+    "zh": "姑姑",
+    "pinyin": "gūgu",
+    "meaning": "aunt (dad's sister)",
+    "category": "Relatives"
+  },
+  {
+    "id": "zh-5741a5bc2468738b",
+    "zh": "姑父",
+    "pinyin": "gūfu",
+    "meaning": "uncle (husband of dad's sister)",
+    "category": "Relatives"
+  },
+  {
+    "id": "zh-bf665739f1689a68",
+    "zh": "舅舅",
+    "pinyin": "jiùjiu",
+    "meaning": "uncle (mom's brother)",
+    "category": "Relatives"
+  },
+  {
+    "id": "zh-82d281e75018fb52",
+    "zh": "舅妈",
+    "pinyin": "jiùmā",
+    "meaning": "aunt (wife of mom's brother)",
+    "category": "Relatives"
+  },
+  {
+    "id": "zh-9dcbe12a5bcaa496",
+    "zh": "姨妈",
+    "pinyin": "yímā",
+    "meaning": "aunt (mom's sister)",
+    "category": "Relatives"
+  },
+  {
+    "id": "zh-f674a5d3972b9331",
+    "zh": "姨父",
+    "pinyin": "yífu",
+    "meaning": "uncle (husband of mom's sister)",
+    "category": "Relatives"
+  },
+  {
+    "id": "zh-2c4befbdb6a998eb",
+    "zh": "堂哥",
+    "pinyin": "tánggē",
+    "meaning": "older male cousin (son of dad's brother)",
+    "category": "Relatives"
+  },
+  {
+    "id": "zh-154decaca3ea2dee",
+    "zh": "堂姐",
+    "pinyin": "tángjiě",
+    "meaning": "older female cousin (daughter of dad's brother)",
+    "category": "Relatives"
+  },
+  {
+    "id": "zh-faba64b6d8d9fea9",
+    "zh": "堂弟",
+    "pinyin": "tángdì",
+    "meaning": "younger male cousin (son of dad's brother)",
+    "category": "Relatives"
+  },
+  {
+    "id": "zh-ffcaf49b1e2ed81c",
+    "zh": "堂妹",
+    "pinyin": "tángmèi",
+    "meaning": "younger female cousin (daughter of dad's brother)",
+    "category": "Relatives"
+  },
+  {
+    "id": "zh-dcb40d4f7950ae56",
+    "zh": "表哥",
+    "pinyin": "biǎogē",
+    "meaning": "older male cousin (mom's side or dad's sister's son)",
+    "category": "Relatives"
+  },
+  {
+    "id": "zh-e4779c50e1a586d3",
+    "zh": "表姐",
+    "pinyin": "biǎojiě",
+    "meaning": "older female cousin (mom's side or dad's sister's daughter)",
+    "category": "Relatives"
+  },
+  {
+    "id": "zh-399fbf552440f9c7",
+    "zh": "表弟",
+    "pinyin": "biǎodì",
+    "meaning": "younger male cousin (mom's side or dad's sister's son)",
+    "category": "Relatives"
+  },
+  {
+    "id": "zh-8fe7cafdc6440e12",
+    "zh": "表妹",
+    "pinyin": "biǎomèi",
+    "meaning": "younger female cousin (mom's side or dad's sister's daughter)",
+    "category": "Relatives"
+  },
+  {
+    "id": "zh-051d985b233f310d",
+    "zh": "侄子",
+    "pinyin": "zhízi",
+    "meaning": "nephew (brother's son)",
+    "category": "Relatives"
+  },
+  {
+    "id": "zh-ca634ed5ca96a4e8",
+    "zh": "侄女",
+    "pinyin": "zhínǚ",
+    "meaning": "niece (brother's daughter)",
+    "category": "Relatives"
+  },
+  {
+    "id": "zh-db76e3520afb2977",
+    "zh": "外甥",
+    "pinyin": "wàisheng",
+    "meaning": "nephew (sister's son)",
+    "category": "Relatives"
+  },
+  {
+    "id": "zh-e94d8b8b34879373",
+    "zh": "外甥女",
+    "pinyin": "wàishengnǚ",
+    "meaning": "niece (sister's daughter)",
+    "category": "Relatives"
+  },
+  {
+    "id": "zh-42a49b81be0d92c7",
+    "zh": "孙子",
+    "pinyin": "sūnzi",
+    "meaning": "grandson (son's son)",
+    "category": "Relatives"
+  },
+  {
+    "id": "zh-4fe498fffc2f6f46",
+    "zh": "孙女",
+    "pinyin": "sūnnǚ",
+    "meaning": "granddaughter (son's daughter)",
+    "category": "Relatives"
+  },
+  {
+    "id": "zh-a3134ca257f4fc65",
+    "zh": "外孙",
+    "pinyin": "wàisūn",
+    "meaning": "grandson (daughter's son)",
+    "category": "Relatives"
+  },
+  {
+    "id": "zh-adf99f17bf265f4d",
+    "zh": "外孙女",
+    "pinyin": "wàisūnnǚ",
+    "meaning": "granddaughter (daughter's daughter)",
+    "category": "Relatives"
+  },
+  {
+    "id": "zh-ed7486a07a29fff1",
+    "zh": "结婚",
+    "pinyin": "jiéhūn",
+    "meaning": "get married",
+    "category": "Relatives"
+  },
+  {
+    "id": "zh-93619bc860a58a44",
+    "zh": "离婚",
+    "pinyin": "líhūn",
+    "meaning": "get divorced",
+    "category": "Relatives"
+  },
+  {
+    "id": "zh-3a35683fe9358976",
+    "zh": "单身",
+    "pinyin": "dānshēn",
+    "meaning": "single (not in a relationship)",
+    "category": "Relatives"
+  },
+  {
+    "id": "zh-8efaf5fbb8725f21",
+    "zh": "婚礼",
+    "pinyin": "hūnlǐ",
+    "meaning": "wedding",
+    "category": "Relatives"
+  },
+  {
+    "id": "zh-8f5ecd9fc26937ef",
+    "zh": "生日",
+    "pinyin": "shēngrì",
+    "meaning": "birthday",
+    "category": "Relatives"
+  },
+  {
+    "id": "zh-fe6c66e50260199d",
+    "zh": "你家有几口人？",
+    "pinyin": "nǐ jiā yǒu jǐ kǒu rén?",
+    "meaning": "How many people are in your family?",
+    "category": "Relatives"
+  },
+  {
+    "id": "zh-02278993d296bc20",
+    "zh": "你有兄弟姐妹吗？",
+    "pinyin": "nǐ yǒu xiōngdì jiěmèi ma?",
+    "meaning": "Do you have any siblings?",
+    "category": "Relatives"
+  },
+  {
+    "id": "zh-1e7af13fe7bece0a",
+    "zh": "这是我表姐。",
+    "pinyin": "zhè shì wǒ biǎojiě.",
+    "meaning": "This is my older female cousin (表姐).",
+    "category": "Relatives"
+  },
+  {
+    "id": "zh-b8f27f90d943cb45",
+    "zh": "同学",
+    "pinyin": "tóngxué",
+    "meaning": "classmate / schoolmate",
+    "category": "Friends & social life"
+  },
+  {
+    "id": "zh-58cf5de1eb45dbcc",
+    "zh": "邻居",
+    "pinyin": "línjū",
+    "meaning": "neighbor",
+    "category": "Friends & social life"
+  },
+  {
+    "id": "zh-1ccc6d5e902c877f",
+    "zh": "室友",
+    "pinyin": "shìyǒu",
+    "meaning": "roommate",
+    "category": "Friends & social life"
+  },
+  {
+    "id": "zh-8da927115e674aad",
+    "zh": "男朋友",
+    "pinyin": "nánpéngyou",
+    "meaning": "boyfriend",
+    "category": "Friends & social life"
+  },
+  {
+    "id": "zh-f7d17744be2297c2",
+    "zh": "女朋友",
+    "pinyin": "nǚpéngyou",
+    "meaning": "girlfriend",
+    "category": "Friends & social life"
+  },
+  {
+    "id": "zh-dad1d07890a7fd57",
+    "zh": "老朋友",
+    "pinyin": "lǎopéngyou",
+    "meaning": "old friend (known for a long time)",
+    "category": "Friends & social life"
+  },
+  {
+    "id": "zh-8dd49b2272ea8020",
+    "zh": "客人",
+    "pinyin": "kèrén",
+    "meaning": "guest / customer",
+    "category": "Friends & social life"
+  },
+  {
+    "id": "zh-6773310492a96fcf",
+    "zh": "名字",
+    "pinyin": "míngzi",
+    "meaning": "name",
+    "category": "Friends & social life"
+  },
+  {
+    "id": "zh-1c17dc403125481f",
+    "zh": "认识",
+    "pinyin": "rènshi",
+    "meaning": "know / meet (a person)",
+    "category": "Friends & social life"
+  },
+  {
+    "id": "zh-66a66f52a2b114b5",
+    "zh": "介绍",
+    "pinyin": "jièshào",
+    "meaning": "introduce",
+    "category": "Friends & social life"
+  },
+  {
+    "id": "zh-4b3510b8d86ea785",
+    "zh": "聊天",
+    "pinyin": "liáotiān",
+    "meaning": "chat",
+    "category": "Friends & social life"
+  },
+  {
+    "id": "zh-65a7e6d1d31fc4b9",
+    "zh": "见面",
+    "pinyin": "jiànmiàn",
+    "meaning": "meet in person",
+    "category": "Friends & social life"
+  },
+  {
+    "id": "zh-bfc967329e10188c",
+    "zh": "联系",
+    "pinyin": "liánxì",
+    "meaning": "contact / keep in touch",
+    "category": "Friends & social life"
+  },
+  {
+    "id": "zh-1955b265d56843b1",
+    "zh": "邀请",
+    "pinyin": "yāoqǐng",
+    "meaning": "invite",
+    "category": "Friends & social life"
+  },
+  {
+    "id": "zh-fbea6dae56e40199",
+    "zh": "聚会",
+    "pinyin": "jùhuì",
+    "meaning": "get-together / party",
+    "category": "Friends & social life"
+  },
+  {
+    "id": "zh-390161338aed5f78",
+    "zh": "约会",
+    "pinyin": "yuēhuì",
+    "meaning": "date (romantic meeting)",
+    "category": "Friends & social life"
+  },
+  {
+    "id": "zh-bd2214d95e800c4f",
+    "zh": "礼物",
+    "pinyin": "lǐwù",
+    "meaning": "gift",
+    "category": "Friends & social life"
+  },
+  {
+    "id": "zh-4da199fae933d4fa",
+    "zh": "消息",
+    "pinyin": "xiāoxi",
+    "meaning": "message / news",
+    "category": "Friends & social life"
+  },
+  {
+    "id": "zh-7b50017ae47eca32",
+    "zh": "照片",
+    "pinyin": "zhàopiàn",
+    "meaning": "photo",
+    "category": "Friends & social life"
+  },
+  {
+    "id": "zh-41dee9b11f5ff7f9",
+    "zh": "爱好",
+    "pinyin": "àihào",
+    "meaning": "hobby / interest",
+    "category": "Friends & social life"
+  },
+  {
+    "id": "zh-709b90ebf308c71e",
+    "zh": "周末",
+    "pinyin": "zhōumò",
+    "meaning": "weekend",
+    "category": "Friends & social life"
+  },
+  {
+    "id": "zh-d4e25a7e386b8808",
+    "zh": "散步",
+    "pinyin": "sànbù",
+    "meaning": "go for a walk",
+    "category": "Friends & social life"
+  },
+  {
+    "id": "zh-6e3a10ade7c74955",
+    "zh": "拍照",
+    "pinyin": "pāizhào",
+    "meaning": "take photos",
+    "category": "Friends & social life"
+  },
+  {
+    "id": "zh-86d347aaa30d1b43",
+    "zh": "唱歌",
+    "pinyin": "chànggē",
+    "meaning": "sing",
+    "category": "Friends & social life"
+  },
+  {
+    "id": "zh-d345d9a2fbf60ae0",
+    "zh": "跳舞",
+    "pinyin": "tiàowǔ",
+    "meaning": "dance",
+    "category": "Friends & social life"
+  },
+  {
+    "id": "zh-a9d130d79595672c",
+    "zh": "运动",
+    "pinyin": "yùndòng",
+    "meaning": "exercise / sport",
+    "category": "Friends & social life"
+  },
+  {
+    "id": "zh-f864303afb4e4a85",
+    "zh": "游泳",
+    "pinyin": "yóuyǒng",
+    "meaning": "swim",
+    "category": "Friends & social life"
+  },
+  {
+    "id": "zh-03a3a327af684099",
+    "zh": "电影",
+    "pinyin": "diànyǐng",
+    "meaning": "movie",
+    "category": "Friends & social life"
+  },
+  {
+    "id": "zh-db95142124934467",
+    "zh": "音乐",
+    "pinyin": "yīnyuè",
+    "meaning": "music",
+    "category": "Friends & social life"
+  },
+  {
+    "id": "zh-220ac6c5a3602b71",
+    "zh": "一起",
+    "pinyin": "yìqǐ",
+    "meaning": "together",
+    "category": "Friends & social life"
+  },
+  {
+    "id": "zh-da5f7e0ff07cb3dd",
+    "zh": "你叫什么名字？",
+    "pinyin": "nǐ jiào shénme míngzi?",
+    "meaning": "What's your name?",
+    "category": "Friends & social life"
+  },
+  {
+    "id": "zh-8442c46475aada3f",
+    "zh": "很高兴认识你。",
+    "pinyin": "hěn gāoxìng rènshi nǐ.",
+    "meaning": "Nice to meet you.",
+    "category": "Friends & social life"
+  },
+  {
+    "id": "zh-629ea9185c275193",
+    "zh": "好久不见！",
+    "pinyin": "hǎojiǔ bú jiàn!",
+    "meaning": "Long time no see!",
+    "category": "Friends & social life"
+  },
+  {
+    "id": "zh-00bb0ae669338c5a",
+    "zh": "最近怎么样？",
+    "pinyin": "zuìjìn zěnmeyàng?",
+    "meaning": "How have you been lately?",
+    "category": "Friends & social life"
+  },
+  {
+    "id": "zh-1667d2f7acb84327",
+    "zh": "你周末有空吗？",
+    "pinyin": "nǐ zhōumò yǒu kòng ma?",
+    "meaning": "Are you free this weekend?",
+    "category": "Friends & social life"
+  },
+  {
+    "id": "zh-dba415e0cb969514",
+    "zh": "我们在哪儿见？",
+    "pinyin": "wǒmen zài nǎr jiàn?",
+    "meaning": "Where shall we meet?",
+    "category": "Friends & social life"
+  },
+  {
+    "id": "zh-5a71113b34da573b",
+    "zh": "我给你发消息。",
+    "pinyin": "wǒ gěi nǐ fā xiāoxi.",
+    "meaning": "I'll message you.",
+    "category": "Friends & social life"
+  },
+  {
+    "id": "zh-29ee90e91c0802da",
+    "zh": "到家了告诉我。",
+    "pinyin": "dào jiā le gàosu wǒ.",
+    "meaning": "Let me know when you get home.",
+    "category": "Friends & social life"
+  },
+  {
+    "id": "zh-8ac2474853411e9d",
+    "zh": "替我问好。",
+    "pinyin": "tì wǒ wèn hǎo.",
+    "meaning": "Say hello for me.",
+    "category": "Friends & social life"
+  },
+  {
+    "id": "zh-a0c6a2aa1cf7c96b",
+    "zh": "下次见！",
+    "pinyin": "xià cì jiàn!",
+    "meaning": "See you next time!",
+    "category": "Friends & social life"
+  },
+  {
+    "id": "zh-0665433f7bb1954a",
+    "zh": "不用客气。",
+    "pinyin": "bú yòng kèqi.",
+    "meaning": "You're welcome / no need to be so polite.",
+    "category": "Friends & social life"
+  },
+  {
+    "id": "zh-6ae62af4619f6486",
+    "zh": "同事",
+    "pinyin": "tóngshì",
+    "meaning": "coworker / colleague",
+    "category": "Work & coworkers"
+  },
+  {
+    "id": "zh-04060a0dcdb93881",
+    "zh": "老板",
+    "pinyin": "lǎobǎn",
+    "meaning": "boss / business owner",
+    "category": "Work & coworkers"
+  },
+  {
+    "id": "zh-d2c8576739e011e1",
+    "zh": "经理",
+    "pinyin": "jīnglǐ",
+    "meaning": "manager",
+    "category": "Work & coworkers"
+  },
+  {
+    "id": "zh-a1f5d5fcbdc4d510",
+    "zh": "员工",
+    "pinyin": "yuángōng",
+    "meaning": "employee / staff member",
+    "category": "Work & coworkers"
+  },
+  {
+    "id": "zh-bc62d1b6b936c78d",
+    "zh": "工作",
+    "pinyin": "gōngzuò",
+    "meaning": "work / a job",
+    "category": "Work & coworkers"
+  },
+  {
+    "id": "zh-e06ff957ed48e868",
+    "zh": "公司",
+    "pinyin": "gōngsī",
+    "meaning": "company",
+    "category": "Work & coworkers"
+  },
+  {
+    "id": "zh-e8bfbc191cd79e44",
+    "zh": "办公室",
+    "pinyin": "bàngōngshì",
+    "meaning": "office",
+    "category": "Work & coworkers"
+  },
+  {
+    "id": "zh-fbb0f7cc70d4bb48",
+    "zh": "上班",
+    "pinyin": "shàngbān",
+    "meaning": "go to work / be at work",
+    "category": "Work & coworkers"
+  },
+  {
+    "id": "zh-e3d3afd884be213e",
+    "zh": "下班",
+    "pinyin": "xiàbān",
+    "meaning": "finish work / get off work",
+    "category": "Work & coworkers"
+  },
+  {
+    "id": "zh-a270e67b50f45bc2",
+    "zh": "加班",
+    "pinyin": "jiābān",
+    "meaning": "work overtime",
+    "category": "Work & coworkers"
+  },
+  {
+    "id": "zh-e2c0262fb6c5d2fc",
+    "zh": "请假",
+    "pinyin": "qǐngjià",
+    "meaning": "ask for time off",
+    "category": "Work & coworkers"
+  },
+  {
+    "id": "zh-314a2ccd4636f4ff",
+    "zh": "放假",
+    "pinyin": "fàngjià",
+    "meaning": "have time off / be on holiday",
+    "category": "Work & coworkers"
+  },
+  {
+    "id": "zh-fff33732fc978a09",
+    "zh": "休息",
+    "pinyin": "xiūxi",
+    "meaning": "rest / take a break",
+    "category": "Work & coworkers"
+  },
+  {
+    "id": "zh-df4fb745c4abdc7e",
+    "zh": "午休",
+    "pinyin": "wǔxiū",
+    "meaning": "lunch break / midday rest",
+    "category": "Work & coworkers"
+  },
+  {
+    "id": "zh-b406359aa585c4bc",
+    "zh": "开会",
+    "pinyin": "kāihuì",
+    "meaning": "have a meeting",
+    "category": "Work & coworkers"
+  },
+  {
+    "id": "zh-1e9edcf99729b47b",
+    "zh": "出差",
+    "pinyin": "chūchāi",
+    "meaning": "go on a business trip",
+    "category": "Work & coworkers"
+  },
+  {
+    "id": "zh-f7b592d50acbbcc7",
+    "zh": "迟到",
+    "pinyin": "chídào",
+    "meaning": "be late",
+    "category": "Work & coworkers"
+  },
+  {
+    "id": "zh-963e4f4abf641ba9",
+    "zh": "忙",
+    "pinyin": "máng",
+    "meaning": "busy",
+    "category": "Work & coworkers"
+  },
+  {
+    "id": "zh-f973d5ac51a2c220",
+    "zh": "有空",
+    "pinyin": "yǒu kòng",
+    "meaning": "have free time / be available",
+    "category": "Work & coworkers"
+  },
+  {
+    "id": "zh-de8f371434589d64",
+    "zh": "帮忙",
+    "pinyin": "bāngmáng",
+    "meaning": "help out",
+    "category": "Work & coworkers"
+  },
+  {
+    "id": "zh-7ad924a1c328e13c",
+    "zh": "安排",
+    "pinyin": "ānpái",
+    "meaning": "arrange / make arrangements",
+    "category": "Work & coworkers"
+  },
+  {
+    "id": "zh-5253040db8643c85",
+    "zh": "任务",
+    "pinyin": "rènwu",
+    "meaning": "task",
+    "category": "Work & coworkers"
+  },
+  {
+    "id": "zh-33a8618cb6710e43",
+    "zh": "问题",
+    "pinyin": "wèntí",
+    "meaning": "question / problem",
+    "category": "Work & coworkers"
+  },
+  {
+    "id": "zh-d48f1dcf88d2ca0d",
+    "zh": "电脑",
+    "pinyin": "diànnǎo",
+    "meaning": "computer",
+    "category": "Work & coworkers"
+  },
+  {
+    "id": "zh-39932f24fe11a6ba",
+    "zh": "文件",
+    "pinyin": "wénjiàn",
+    "meaning": "document / file",
+    "category": "Work & coworkers"
+  },
+  {
+    "id": "zh-3d708e8e8b1f9247",
+    "zh": "邮件",
+    "pinyin": "yóujiàn",
+    "meaning": "mail / email",
+    "category": "Work & coworkers"
+  },
+  {
+    "id": "zh-d7bfe7b5055c225a",
+    "zh": "打印",
+    "pinyin": "dǎyìn",
+    "meaning": "print (a document)",
+    "category": "Work & coworkers"
+  },
+  {
+    "id": "zh-11547412b4531891",
+    "zh": "工资",
+    "pinyin": "gōngzī",
+    "meaning": "salary / wages",
+    "category": "Work & coworkers"
+  },
+  {
+    "id": "zh-205f3859abe469be",
+    "zh": "面试",
+    "pinyin": "miànshì",
+    "meaning": "job interview / have an interview",
+    "category": "Work & coworkers"
+  },
+  {
+    "id": "zh-09c982b54552ca2d",
+    "zh": "辞职",
+    "pinyin": "cízhí",
+    "meaning": "resign / quit a job",
+    "category": "Work & coworkers"
+  },
+  {
+    "id": "zh-3ef4eea6a85cd2a3",
+    "zh": "你做什么工作？",
+    "pinyin": "nǐ zuò shénme gōngzuò?",
+    "meaning": "What do you do for work?",
+    "category": "Work & coworkers"
+  },
+  {
+    "id": "zh-464c120fe585dec7",
+    "zh": "你几点下班？",
+    "pinyin": "nǐ jǐ diǎn xiàbān?",
+    "meaning": "What time do you finish work?",
+    "category": "Work & coworkers"
+  },
+  {
+    "id": "zh-9ca2fce5df690d62",
+    "zh": "我今天在家办公。",
+    "pinyin": "wǒ jīntiān zài jiā bàngōng.",
+    "meaning": "I'm working from home today.",
+    "category": "Work & coworkers"
+  },
+  {
+    "id": "zh-d081cc6e1ffa02a3",
+    "zh": "我现在有点忙。",
+    "pinyin": "wǒ xiànzài yǒudiǎn máng.",
+    "meaning": "I'm a bit busy right now.",
+    "category": "Work & coworkers"
+  },
+  {
+    "id": "zh-3e5e7b4d76309104",
+    "zh": "你能帮我一下吗？",
+    "pinyin": "nǐ néng bāng wǒ yíxià ma?",
+    "meaning": "Could you help me for a moment?",
+    "category": "Work & coworkers"
+  },
+  {
+    "id": "zh-176a2fde17a91d56",
+    "zh": "我晚点回复你。",
+    "pinyin": "wǒ wǎn diǎn huífù nǐ.",
+    "meaning": "I'll get back to you later.",
+    "category": "Work & coworkers"
+  },
+  {
+    "id": "zh-8a8011e47597de8b",
+    "zh": "这个怎么用？",
+    "pinyin": "zhège zěnme yòng?",
+    "meaning": "How do you use this?",
+    "category": "Work & coworkers"
+  },
+  {
+    "id": "zh-2f747fdfd41fdd19",
+    "zh": "辛苦了。",
+    "pinyin": "xīnkǔ le.",
+    "meaning": "Thanks for your hard work.",
+    "category": "Work & coworkers"
+  },
+  {
+    "id": "zh-e8ec877c8da553d3",
+    "zh": "医生",
+    "pinyin": "yīshēng",
+    "meaning": "doctor",
+    "category": "Professions"
+  },
+  {
+    "id": "zh-33ebf04d5d994404",
+    "zh": "护士",
+    "pinyin": "hùshi",
+    "meaning": "nurse",
+    "category": "Professions"
+  },
+  {
+    "id": "zh-3493ce63b9ebcbb0",
+    "zh": "牙医",
+    "pinyin": "yáyī",
+    "meaning": "dentist",
+    "category": "Professions"
+  },
+  {
+    "id": "zh-c9a31a3f670b7f99",
+    "zh": "老师",
+    "pinyin": "lǎoshī",
+    "meaning": "teacher",
+    "category": "Professions"
+  },
+  {
+    "id": "zh-13a58ec2074e014a",
+    "zh": "学生",
+    "pinyin": "xuésheng",
+    "meaning": "student",
+    "category": "Professions"
+  },
+  {
+    "id": "zh-bc2f82f27d245369",
+    "zh": "工程师",
+    "pinyin": "gōngchéngshī",
+    "meaning": "engineer",
+    "category": "Professions"
+  },
+  {
+    "id": "zh-69e1e8d520ee5bc8",
+    "zh": "程序员",
+    "pinyin": "chéngxùyuán",
+    "meaning": "programmer",
+    "category": "Professions"
+  },
+  {
+    "id": "zh-ec07c4199f684206",
+    "zh": "设计师",
+    "pinyin": "shèjìshī",
+    "meaning": "designer",
+    "category": "Professions"
+  },
+  {
+    "id": "zh-d649e95568caf62d",
+    "zh": "会计",
+    "pinyin": "kuàijì",
+    "meaning": "accountant / accounting",
+    "category": "Professions"
+  },
+  {
+    "id": "zh-8b9a36a968cd1890",
+    "zh": "律师",
+    "pinyin": "lǜshī",
+    "meaning": "lawyer",
+    "category": "Professions"
+  },
+  {
+    "id": "zh-f3b0cec1fb28bb53",
+    "zh": "厨师",
+    "pinyin": "chúshī",
+    "meaning": "cook / chef",
+    "category": "Professions"
+  },
+  {
+    "id": "zh-cf80aba698b91219",
+    "zh": "服务员",
+    "pinyin": "fúwùyuán",
+    "meaning": "waiter / service attendant",
+    "category": "Professions"
+  },
+  {
+    "id": "zh-fcf9d3057b108532",
+    "zh": "收银员",
+    "pinyin": "shōuyínyuán",
+    "meaning": "cashier",
+    "category": "Professions"
+  },
+  {
+    "id": "zh-a8992c29918049ed",
+    "zh": "售货员",
+    "pinyin": "shòuhuòyuán",
+    "meaning": "shop assistant",
+    "category": "Professions"
+  },
+  {
+    "id": "zh-6687e5e0d4b16ed0",
+    "zh": "司机",
+    "pinyin": "sījī",
+    "meaning": "driver",
+    "category": "Professions"
+  },
+  {
+    "id": "zh-5d5169da72ad0722",
+    "zh": "快递员",
+    "pinyin": "kuàidìyuán",
+    "meaning": "courier / parcel delivery worker",
+    "category": "Professions"
+  },
+  {
+    "id": "zh-ebcfddd741c97a67",
+    "zh": "外卖员",
+    "pinyin": "wàimàiyuán",
+    "meaning": "food delivery worker",
+    "category": "Professions"
+  },
+  {
+    "id": "zh-910a3de487b5956f",
+    "zh": "警察",
+    "pinyin": "jǐngchá",
+    "meaning": "police officer",
+    "category": "Professions"
+  },
+  {
+    "id": "zh-3ea3df578027a60c",
+    "zh": "消防员",
+    "pinyin": "xiāofángyuán",
+    "meaning": "firefighter",
+    "category": "Professions"
+  },
+  {
+    "id": "zh-73632c37fd078f4f",
+    "zh": "保安",
+    "pinyin": "bǎo'ān",
+    "meaning": "security guard",
+    "category": "Professions"
+  },
+  {
+    "id": "zh-35b73c8648e9d187",
+    "zh": "清洁工",
+    "pinyin": "qīngjiégōng",
+    "meaning": "cleaner",
+    "category": "Professions"
+  },
+  {
+    "id": "zh-dfc95b75f3e87d83",
+    "zh": "电工",
+    "pinyin": "diàngōng",
+    "meaning": "electrician",
+    "category": "Professions"
+  },
+  {
+    "id": "zh-10e818a42ea64b2d",
+    "zh": "水管工",
+    "pinyin": "shuǐguǎngōng",
+    "meaning": "plumber",
+    "category": "Professions"
+  },
+  {
+    "id": "zh-dc5be31ba8cd6811",
+    "zh": "理发师",
+    "pinyin": "lǐfàshī",
+    "meaning": "hairdresser / barber",
+    "category": "Professions"
+  },
+  {
+    "id": "zh-5df8707c1e58ee5d",
+    "zh": "记者",
+    "pinyin": "jìzhě",
+    "meaning": "reporter / journalist",
+    "category": "Professions"
+  },
+  {
+    "id": "zh-66eedcb516e36163",
+    "zh": "摄影师",
+    "pinyin": "shèyǐngshī",
+    "meaning": "photographer",
+    "category": "Professions"
+  },
+  {
+    "id": "zh-a52a08335185f048",
+    "zh": "翻译",
+    "pinyin": "fānyì",
+    "meaning": "translator / interpreter; translate",
+    "category": "Professions"
+  },
+  {
+    "id": "zh-64c9568e6a842083",
+    "zh": "演员",
+    "pinyin": "yǎnyuán",
+    "meaning": "actor",
+    "category": "Professions"
+  },
+  {
+    "id": "zh-cfb624b8a25bf9de",
+    "zh": "歌手",
+    "pinyin": "gēshǒu",
+    "meaning": "singer",
+    "category": "Professions"
+  },
+  {
+    "id": "zh-89a51e0645a33ba6",
+    "zh": "农民",
+    "pinyin": "nóngmín",
+    "meaning": "farmer",
+    "category": "Professions"
+  },
+  {
+    "id": "zh-fc63db3dd42214b4",
+    "zh": "超市",
+    "pinyin": "chāoshì",
+    "meaning": "supermarket",
+    "category": "Shopping & errands"
+  },
+  {
+    "id": "zh-9c1e8bd22488de3b",
+    "zh": "市场",
+    "pinyin": "shìchǎng",
+    "meaning": "market",
+    "category": "Shopping & errands"
+  },
+  {
+    "id": "zh-3a6fb85d363923e6",
+    "zh": "便利店",
+    "pinyin": "biànlìdiàn",
+    "meaning": "convenience store",
+    "category": "Shopping & errands"
+  },
+  {
+    "id": "zh-c3459d2c9e6a064d",
+    "zh": "药店",
+    "pinyin": "yàodiàn",
+    "meaning": "pharmacy",
+    "category": "Shopping & errands"
+  },
+  {
+    "id": "zh-920e88c5a602df57",
+    "zh": "银行",
+    "pinyin": "yínháng",
+    "meaning": "bank",
+    "category": "Shopping & errands"
+  },
+  {
+    "id": "zh-880007cf458bed6f",
+    "zh": "邮局",
+    "pinyin": "yóujú",
+    "meaning": "post office",
+    "category": "Shopping & errands"
+  },
+  {
+    "id": "zh-118f18e6840546c1",
+    "zh": "现金",
+    "pinyin": "xiànjīn",
+    "meaning": "cash",
+    "category": "Shopping & errands"
+  },
+  {
+    "id": "zh-063b78481d2eab5f",
+    "zh": "银行卡",
+    "pinyin": "yínhángkǎ",
+    "meaning": "bank card",
+    "category": "Shopping & errands"
+  },
+  {
+    "id": "zh-9194c55390726478",
+    "zh": "手机支付",
+    "pinyin": "shǒujī zhīfù",
+    "meaning": "paying by phone / mobile payment",
+    "category": "Shopping & errands"
+  },
+  {
+    "id": "zh-6f0546de73d1c9b0",
+    "zh": "付款",
+    "pinyin": "fùkuǎn",
+    "meaning": "pay / make a payment",
+    "category": "Shopping & errands"
+  },
+  {
+    "id": "zh-dda252f97b8e98a1",
+    "zh": "找钱",
+    "pinyin": "zhǎo qián",
+    "meaning": "give change (after a payment)",
+    "category": "Shopping & errands"
+  },
+  {
+    "id": "zh-a6345ffb8bf6bfb4",
+    "zh": "小票",
+    "pinyin": "xiǎopiào",
+    "meaning": "receipt (shop / till receipt)",
+    "category": "Shopping & errands"
+  },
+  {
+    "id": "zh-cb80c6c08902f0b2",
+    "zh": "袋子",
+    "pinyin": "dàizi",
+    "meaning": "bag",
+    "category": "Shopping & errands"
+  },
+  {
+    "id": "zh-0f4371a7a9cf224a",
+    "zh": "价格",
+    "pinyin": "jiàgé",
+    "meaning": "price",
+    "category": "Shopping & errands"
+  },
+  {
+    "id": "zh-de09154c7f908158",
+    "zh": "打折",
+    "pinyin": "dǎzhé",
+    "meaning": "be discounted / offer a discount",
+    "category": "Shopping & errands"
+  },
+  {
+    "id": "zh-303a288691f82c62",
+    "zh": "便宜",
+    "pinyin": "piányi",
+    "meaning": "cheap / inexpensive",
+    "category": "Shopping & errands"
+  },
+  {
+    "id": "zh-0c9640c83aa92be3",
+    "zh": "贵",
+    "pinyin": "guì",
+    "meaning": "expensive",
+    "category": "Shopping & errands"
+  },
+  {
+    "id": "zh-d3f6574ca0849f9d",
+    "zh": "合适",
+    "pinyin": "héshì",
+    "meaning": "suitable / the right fit",
+    "category": "Shopping & errands"
+  },
+  {
+    "id": "zh-50db7447b966f5ef",
+    "zh": "大小",
+    "pinyin": "dàxiǎo",
+    "meaning": "size",
+    "category": "Shopping & errands"
+  },
+  {
+    "id": "zh-f6cf9450af7cd636",
+    "zh": "试穿",
+    "pinyin": "shìchuān",
+    "meaning": "try on clothes",
+    "category": "Shopping & errands"
+  },
+  {
+    "id": "zh-28ea9851fa65ab4d",
+    "zh": "退货",
+    "pinyin": "tuìhuò",
+    "meaning": "return a purchase",
+    "category": "Shopping & errands"
+  },
+  {
+    "id": "zh-c024a40f1f8b7775",
+    "zh": "换货",
+    "pinyin": "huànhuò",
+    "meaning": "exchange a purchase",
+    "category": "Shopping & errands"
+  },
+  {
+    "id": "zh-00e7e040d4c9c50e",
+    "zh": "送货",
+    "pinyin": "sònghuò",
+    "meaning": "deliver goods",
+    "category": "Shopping & errands"
+  },
+  {
+    "id": "zh-e382bf8374c92954",
+    "zh": "包裹",
+    "pinyin": "bāoguǒ",
+    "meaning": "parcel / package",
+    "category": "Shopping & errands"
+  },
+  {
+    "id": "zh-37aac5b4e639b93b",
+    "zh": "地址",
+    "pinyin": "dìzhǐ",
+    "meaning": "address",
+    "category": "Shopping & errands"
+  },
+  {
+    "id": "zh-5af2af08d079d94f",
+    "zh": "可以刷卡吗？",
+    "pinyin": "kěyǐ shuā kǎ ma?",
+    "meaning": "Can I pay by card?",
+    "category": "Shopping & errands"
+  },
+  {
+    "id": "zh-054b696587da5cce",
+    "zh": "有小一点的吗？",
+    "pinyin": "yǒu xiǎo yìdiǎn de ma?",
+    "meaning": "Do you have a smaller one?",
+    "category": "Shopping & errands"
+  },
+  {
+    "id": "zh-44bf79566d6072b5",
+    "zh": "我先看看。",
+    "pinyin": "wǒ xiān kànkan.",
+    "meaning": "I'm just looking for now.",
+    "category": "Shopping & errands"
+  },
+  {
+    "id": "zh-852ec5de14bc5adb",
+    "zh": "不用袋子。",
+    "pinyin": "bú yòng dàizi.",
+    "meaning": "I don't need a bag.",
+    "category": "Shopping & errands"
+  },
+  {
+    "id": "zh-5d8e01c37dd3a530",
+    "zh": "我要退这个。",
+    "pinyin": "wǒ yào tuì zhège.",
+    "meaning": "I'd like to return this.",
+    "category": "Shopping & errands"
+  },
+  {
+    "id": "zh-8d6642f67358f8bf",
+    "zh": "请给我小票。",
+    "pinyin": "qǐng gěi wǒ xiǎopiào.",
+    "meaning": "Please give me the receipt.",
+    "category": "Shopping & errands"
+  },
+  {
+    "id": "zh-e3e38b7716d60060",
+    "zh": "餐厅",
+    "pinyin": "cāntīng",
+    "meaning": "restaurant / dining room",
+    "category": "Eating out"
+  },
+  {
+    "id": "zh-4ce4cafdd0561280",
+    "zh": "菜单",
+    "pinyin": "càidān",
+    "meaning": "menu",
+    "category": "Eating out"
+  },
+  {
+    "id": "zh-111bb0cd52189d59",
+    "zh": "点菜",
+    "pinyin": "diǎn cài",
+    "meaning": "order food",
+    "category": "Eating out"
+  },
+  {
+    "id": "zh-811fe0719f385336",
+    "zh": "买单",
+    "pinyin": "mǎidān",
+    "meaning": "pay the bill",
+    "category": "Eating out"
+  },
+  {
+    "id": "zh-a9a49c817394f8e9",
+    "zh": "打包",
+    "pinyin": "dǎbāo",
+    "meaning": "pack up food to take away",
+    "category": "Eating out"
+  },
+  {
+    "id": "zh-f42db5493d75fdb3",
+    "zh": "外卖",
+    "pinyin": "wàimài",
+    "meaning": "takeaway / food delivery",
+    "category": "Eating out"
+  },
+  {
+    "id": "zh-2016927e720e3ff5",
+    "zh": "堂食",
+    "pinyin": "tángshí",
+    "meaning": "eat in (at a restaurant)",
+    "category": "Eating out"
+  },
+  {
+    "id": "zh-a0170dc9aafae25e",
+    "zh": "预订",
+    "pinyin": "yùdìng",
+    "meaning": "reserve / book",
+    "category": "Eating out"
+  },
+  {
+    "id": "zh-7bd9d53b62f054cb",
+    "zh": "座位",
+    "pinyin": "zuòwèi",
+    "meaning": "seat",
+    "category": "Eating out"
+  },
+  {
+    "id": "zh-117c113c3b45cf89",
+    "zh": "排队",
+    "pinyin": "páiduì",
+    "meaning": "queue / wait in line",
+    "category": "Eating out"
+  },
+  {
+    "id": "zh-091ef162c8ed3e4a",
+    "zh": "卫生间",
+    "pinyin": "wèishēngjiān",
+    "meaning": "restroom / bathroom",
+    "category": "Eating out"
+  },
+  {
+    "id": "zh-1b07c1415d206fd4",
+    "zh": "纸巾",
+    "pinyin": "zhǐjīn",
+    "meaning": "tissue / paper napkin",
+    "category": "Eating out"
+  },
+  {
+    "id": "zh-6f11ed20eb709140",
+    "zh": "吸管",
+    "pinyin": "xīguǎn",
+    "meaning": "drinking straw",
+    "category": "Eating out"
+  },
+  {
+    "id": "zh-1f7e2cd98eae238a",
+    "zh": "不太辣",
+    "pinyin": "bú tài là",
+    "meaning": "not too spicy",
+    "category": "Eating out"
+  },
+  {
+    "id": "zh-1f88337baf2604f1",
+    "zh": "素食",
+    "pinyin": "sùshí",
+    "meaning": "vegetarian food / vegetarian diet",
+    "category": "Eating out"
+  },
+  {
+    "id": "zh-8e8336b045542f7c",
+    "zh": "还有位子吗？",
+    "pinyin": "hái yǒu wèizi ma?",
+    "meaning": "Do you still have a table / any seats?",
+    "category": "Eating out"
+  },
+  {
+    "id": "zh-e4a2e7996fb86644",
+    "zh": "我们两个人。",
+    "pinyin": "wǒmen liǎng ge rén.",
+    "meaning": "A table for two / there are two of us.",
+    "category": "Eating out"
+  },
+  {
+    "id": "zh-eb2510958d2e05c9",
+    "zh": "请问卫生间在哪儿？",
+    "pinyin": "qǐngwèn wèishēngjiān zài nǎr?",
+    "meaning": "Excuse me, where is the bathroom?",
+    "category": "Eating out"
+  },
+  {
+    "id": "zh-f7a20115b398e6ce",
+    "zh": "请给我一杯水。",
+    "pinyin": "qǐng gěi wǒ yì bēi shuǐ.",
+    "meaning": "Could I have a glass of water, please?",
+    "category": "Eating out"
+  },
+  {
+    "id": "zh-8cfc15574a22aa00",
+    "zh": "不要放辣椒。",
+    "pinyin": "bú yào fàng làjiāo.",
+    "meaning": "Please don't add chili.",
+    "category": "Eating out"
+  },
+  {
+    "id": "zh-72c6dd8c7435c3b6",
+    "zh": "我不吃肉。",
+    "pinyin": "wǒ bù chī ròu.",
+    "meaning": "I don't eat meat.",
+    "category": "Eating out"
+  },
+  {
+    "id": "zh-3fd933e87638022e",
+    "zh": "麻烦帮我打包。",
+    "pinyin": "máfan bāng wǒ dǎbāo.",
+    "meaning": "Could you pack this to go, please?",
+    "category": "Eating out"
+  },
+  {
+    "id": "zh-ed42d3949d27b9cd",
+    "zh": "我们分开付。",
+    "pinyin": "wǒmen fēnkāi fù.",
+    "meaning": "We'll pay separately.",
+    "category": "Eating out"
+  },
+  {
+    "id": "zh-b8466cd555e68992",
+    "zh": "地铁",
+    "pinyin": "dìtiě",
+    "meaning": "subway / metro",
+    "category": "Getting around"
+  },
+  {
+    "id": "zh-a009d2a251780ef1",
+    "zh": "出租车",
+    "pinyin": "chūzūchē",
+    "meaning": "taxi",
+    "category": "Getting around"
+  },
+  {
+    "id": "zh-4851e1ac595a3f73",
+    "zh": "自行车",
+    "pinyin": "zìxíngchē",
+    "meaning": "bicycle",
+    "category": "Getting around"
+  },
+  {
+    "id": "zh-c05f7cd6ed3587a2",
+    "zh": "飞机",
+    "pinyin": "fēijī",
+    "meaning": "airplane",
+    "category": "Getting around"
+  },
+  {
+    "id": "zh-6a5347ac5f65e5be",
+    "zh": "机场",
+    "pinyin": "jīchǎng",
+    "meaning": "airport",
+    "category": "Getting around"
+  },
+  {
+    "id": "zh-abee017e1b03833b",
+    "zh": "车站",
+    "pinyin": "chēzhàn",
+    "meaning": "station / bus stop",
+    "category": "Getting around"
+  },
+  {
+    "id": "zh-536be9b372bbf17f",
+    "zh": "车票",
+    "pinyin": "chēpiào",
+    "meaning": "bus / train ticket",
+    "category": "Getting around"
+  },
+  {
+    "id": "zh-4f986690b0dad778",
+    "zh": "路口",
+    "pinyin": "lùkǒu",
+    "meaning": "intersection / road junction",
+    "category": "Getting around"
+  },
+  {
+    "id": "zh-eb80747dbecd82d4",
+    "zh": "红绿灯",
+    "pinyin": "hónglǜdēng",
+    "meaning": "traffic lights",
+    "category": "Getting around"
+  },
+  {
+    "id": "zh-f2f8a7bf68b870b3",
+    "zh": "人行道",
+    "pinyin": "rénxíngdào",
+    "meaning": "sidewalk / pavement",
+    "category": "Getting around"
+  },
+  {
+    "id": "zh-b4e5f1bb23425ef3",
+    "zh": "过马路",
+    "pinyin": "guò mǎlù",
+    "meaning": "cross the road",
+    "category": "Getting around"
+  },
+  {
+    "id": "zh-6a0ef384c814c9e5",
+    "zh": "左边",
+    "pinyin": "zuǒbian",
+    "meaning": "left side",
+    "category": "Getting around"
+  },
+  {
+    "id": "zh-0838dcc59823278c",
+    "zh": "右边",
+    "pinyin": "yòubian",
+    "meaning": "right side",
+    "category": "Getting around"
+  },
+  {
+    "id": "zh-263fa7d8fffddabe",
+    "zh": "附近",
+    "pinyin": "fùjìn",
+    "meaning": "nearby / in the neighborhood",
+    "category": "Getting around"
+  },
+  {
+    "id": "zh-057c8f784250d8dd",
+    "zh": "远",
+    "pinyin": "yuǎn",
+    "meaning": "far",
+    "category": "Getting around"
+  },
+  {
+    "id": "zh-03aeb7c768b4cb8e",
+    "zh": "近",
+    "pinyin": "jìn",
+    "meaning": "near",
+    "category": "Getting around"
+  },
+  {
+    "id": "zh-d9e6af5a2b64d2af",
+    "zh": "上车",
+    "pinyin": "shàng chē",
+    "meaning": "get on / into a vehicle",
+    "category": "Getting around"
+  },
+  {
+    "id": "zh-ed4d6094fad18d10",
+    "zh": "下车",
+    "pinyin": "xià chē",
+    "meaning": "get off / out of a vehicle",
+    "category": "Getting around"
+  },
+  {
+    "id": "zh-8d1e3c04c8c969a2",
+    "zh": "换乘",
+    "pinyin": "huànchéng",
+    "meaning": "transfer (between transport services)",
+    "category": "Getting around"
+  },
+  {
+    "id": "zh-00fe848d37656f68",
+    "zh": "堵车",
+    "pinyin": "dǔchē",
+    "meaning": "be stuck in traffic / traffic jam",
+    "category": "Getting around"
+  },
+  {
+    "id": "zh-840df6bbbe282b1f",
+    "zh": "迷路",
+    "pinyin": "mílù",
+    "meaning": "get lost",
+    "category": "Getting around"
+  },
+  {
+    "id": "zh-6c7403e98c26f15a",
+    "zh": "走路",
+    "pinyin": "zǒulù",
+    "meaning": "walk / go on foot",
+    "category": "Getting around"
+  },
+  {
+    "id": "zh-e81b626b21aa722b",
+    "zh": "开车",
+    "pinyin": "kāichē",
+    "meaning": "drive a car",
+    "category": "Getting around"
+  },
+  {
+    "id": "zh-427653d70d4badc9",
+    "zh": "往前走。",
+    "pinyin": "wǎng qián zǒu.",
+    "meaning": "Go straight ahead.",
+    "category": "Getting around"
+  },
+  {
+    "id": "zh-bcce97a404b54282",
+    "zh": "在这里右转。",
+    "pinyin": "zài zhèlǐ yòuzhuǎn.",
+    "meaning": "Turn right here.",
+    "category": "Getting around"
+  },
+  {
+    "id": "zh-09aa76db47b50099",
+    "zh": "到那里要多久？",
+    "pinyin": "dào nàlǐ yào duōjiǔ?",
+    "meaning": "How long does it take to get there?",
+    "category": "Getting around"
+  },
+  {
+    "id": "zh-e1ffb29327d68772",
+    "zh": "这趟车到机场吗？",
+    "pinyin": "zhè tàng chē dào jīchǎng ma?",
+    "meaning": "Does this bus / train go to the airport?",
+    "category": "Getting around"
+  },
+  {
+    "id": "zh-2741111794addb60",
+    "zh": "我坐过站了。",
+    "pinyin": "wǒ zuò guò zhàn le.",
+    "meaning": "I missed my stop.",
+    "category": "Getting around"
+  },
+  {
+    "id": "zh-5f64ab008929fdb5",
+    "zh": "头",
+    "pinyin": "tóu",
+    "meaning": "head",
+    "category": "Health & body"
+  },
+  {
+    "id": "zh-9069cc8f2c62b4b4",
+    "zh": "眼睛",
+    "pinyin": "yǎnjing",
+    "meaning": "eyes",
+    "category": "Health & body"
+  },
+  {
+    "id": "zh-86d7bf2d358bd82c",
+    "zh": "耳朵",
+    "pinyin": "ěrduo",
+    "meaning": "ear",
+    "category": "Health & body"
+  },
+  {
+    "id": "zh-ba582ff45de430b3",
+    "zh": "鼻子",
+    "pinyin": "bízi",
+    "meaning": "nose",
+    "category": "Health & body"
+  },
+  {
+    "id": "zh-a41c8546580c47bb",
+    "zh": "嘴",
+    "pinyin": "zuǐ",
+    "meaning": "mouth",
+    "category": "Health & body"
+  },
+  {
+    "id": "zh-7ee56603f63d6423",
+    "zh": "牙齿",
+    "pinyin": "yáchǐ",
+    "meaning": "teeth",
+    "category": "Health & body"
+  },
+  {
+    "id": "zh-48e3a023f8997977",
+    "zh": "手",
+    "pinyin": "shǒu",
+    "meaning": "hand",
+    "category": "Health & body"
+  },
+  {
+    "id": "zh-94bf1ba00c1b0cfa",
+    "zh": "脚",
+    "pinyin": "jiǎo",
+    "meaning": "foot",
+    "category": "Health & body"
+  },
+  {
+    "id": "zh-460aab4222452c4d",
+    "zh": "肚子",
+    "pinyin": "dùzi",
+    "meaning": "belly / stomach",
+    "category": "Health & body"
+  },
+  {
+    "id": "zh-eb686da0c82dcbeb",
+    "zh": "背",
+    "pinyin": "bèi",
+    "meaning": "back (body part)",
+    "category": "Health & body"
+  },
+  {
+    "id": "zh-db6f7a66b1cfafad",
+    "zh": "感冒",
+    "pinyin": "gǎnmào",
+    "meaning": "have a cold / a cold",
+    "category": "Health & body"
+  },
+  {
+    "id": "zh-c003cb2f88b424e4",
+    "zh": "发烧",
+    "pinyin": "fāshāo",
+    "meaning": "have a fever",
+    "category": "Health & body"
+  },
+  {
+    "id": "zh-dd05a455a629d14c",
+    "zh": "咳嗽",
+    "pinyin": "késou",
+    "meaning": "cough",
+    "category": "Health & body"
+  },
+  {
+    "id": "zh-95d4c7fbbd6fa571",
+    "zh": "头疼",
+    "pinyin": "tóuténg",
+    "meaning": "headache / have a headache",
+    "category": "Health & body"
+  },
+  {
+    "id": "zh-9d6e1705b31327cf",
+    "zh": "肚子疼",
+    "pinyin": "dùzi téng",
+    "meaning": "stomachache / have a stomachache",
+    "category": "Health & body"
+  },
+  {
+    "id": "zh-d15e59749f17c37c",
+    "zh": "受伤",
+    "pinyin": "shòushāng",
+    "meaning": "get hurt / injured",
+    "category": "Health & body"
+  },
+  {
+    "id": "zh-a37e871663985f82",
+    "zh": "过敏",
+    "pinyin": "guòmǐn",
+    "meaning": "be allergic / allergy",
+    "category": "Health & body"
+  },
+  {
+    "id": "zh-b0c89b2ff5b84327",
+    "zh": "药",
+    "pinyin": "yào",
+    "meaning": "medicine",
+    "category": "Health & body"
+  },
+  {
+    "id": "zh-1f6835c0d878fa0e",
+    "zh": "医院",
+    "pinyin": "yīyuàn",
+    "meaning": "hospital",
+    "category": "Health & body"
+  },
+  {
+    "id": "zh-f2452d52a3ce3bbc",
+    "zh": "看医生",
+    "pinyin": "kàn yīshēng",
+    "meaning": "see a doctor",
+    "category": "Health & body"
+  },
+  {
+    "id": "zh-e048ae24028ea666",
+    "zh": "量体温",
+    "pinyin": "liáng tǐwēn",
+    "meaning": "take someone's temperature",
+    "category": "Health & body"
+  },
+  {
+    "id": "zh-ac8d4fd31fec2f80",
+    "zh": "我有点不舒服。",
+    "pinyin": "wǒ yǒudiǎn bù shūfu.",
+    "meaning": "I'm not feeling very well.",
+    "category": "Health & body"
+  },
+  {
+    "id": "zh-563b219c87cb4ee9",
+    "zh": "这里疼。",
+    "pinyin": "zhèlǐ téng.",
+    "meaning": "It hurts here.",
+    "category": "Health & body"
+  },
+  {
+    "id": "zh-2ceb63a171477eb1",
+    "zh": "一天吃几次？",
+    "pinyin": "yì tiān chī jǐ cì?",
+    "meaning": "How many times a day should I take it? (medicine)",
+    "category": "Health & body"
+  },
+  {
+    "id": "zh-c9e9a062f5d588f3",
+    "zh": "需要",
+    "pinyin": "xūyào",
+    "meaning": "need",
+    "category": "Useful verbs"
+  },
+  {
+    "id": "zh-ddcf6e77b0ee1000",
+    "zh": "准备",
+    "pinyin": "zhǔnbèi",
+    "meaning": "prepare / get ready",
+    "category": "Useful verbs"
+  },
+  {
+    "id": "zh-805b2ab19aaa8f37",
+    "zh": "记得",
+    "pinyin": "jìde",
+    "meaning": "remember",
+    "category": "Useful verbs"
+  },
+  {
+    "id": "zh-73b08832981088d3",
+    "zh": "忘记",
+    "pinyin": "wàngjì",
+    "meaning": "forget",
+    "category": "Useful verbs"
+  },
+  {
+    "id": "zh-2118cbc109880ac8",
+    "zh": "学习",
+    "pinyin": "xuéxí",
+    "meaning": "study / learn",
+    "category": "Useful verbs"
+  },
+  {
+    "id": "zh-3cae1f75ef711370",
+    "zh": "练习",
+    "pinyin": "liànxí",
+    "meaning": "practise / practice",
+    "category": "Useful verbs"
+  },
+  {
+    "id": "zh-7948c2fd28e11eda",
+    "zh": "解释",
+    "pinyin": "jiěshì",
+    "meaning": "explain",
+    "category": "Useful verbs"
+  },
+  {
+    "id": "zh-f3f512648742020f",
+    "zh": "回答",
+    "pinyin": "huídá",
+    "meaning": "answer / reply",
+    "category": "Useful verbs"
+  },
+  {
+    "id": "zh-f4aafaba3be7ad87",
+    "zh": "决定",
+    "pinyin": "juédìng",
+    "meaning": "decide / decision",
+    "category": "Useful verbs"
+  },
+  {
+    "id": "zh-c11330b85234f9c0",
+    "zh": "选择",
+    "pinyin": "xuǎnzé",
+    "meaning": "choose / choice",
+    "category": "Useful verbs"
+  },
+  {
+    "id": "zh-41afea934e9531af",
+    "zh": "试试",
+    "pinyin": "shìshi",
+    "meaning": "give it a try",
+    "category": "Useful verbs"
+  },
+  {
+    "id": "zh-385a845b6094b687",
+    "zh": "等",
+    "pinyin": "děng",
+    "meaning": "wait",
+    "category": "Useful verbs"
+  },
+  {
+    "id": "zh-c277be8a4b92ee42",
+    "zh": "找",
+    "pinyin": "zhǎo",
+    "meaning": "look for",
+    "category": "Useful verbs"
+  },
+  {
+    "id": "zh-fd5db2cf36a92942",
+    "zh": "带",
+    "pinyin": "dài",
+    "meaning": "bring / take along",
+    "category": "Useful verbs"
+  },
+  {
+    "id": "zh-50272827b8e2c1bd",
+    "zh": "放",
+    "pinyin": "fàng",
+    "meaning": "put / place",
+    "category": "Useful verbs"
+  },
+  {
+    "id": "zh-2b264025e323409f",
+    "zh": "借",
+    "pinyin": "jiè",
+    "meaning": "borrow / lend (depends on context)",
+    "category": "Useful verbs"
+  },
+  {
+    "id": "zh-1bc709b8bf6c9706",
+    "zh": "还",
+    "pinyin": "huán",
+    "meaning": "return something / give back",
+    "category": "Useful verbs"
+  },
+  {
+    "id": "zh-bd5d0f6169394c03",
+    "zh": "修",
+    "pinyin": "xiū",
+    "meaning": "repair / fix",
+    "category": "Useful verbs"
+  },
+  {
+    "id": "zh-1b5fdf01a42e830a",
+    "zh": "换",
+    "pinyin": "huàn",
+    "meaning": "change / replace / exchange",
+    "category": "Useful verbs"
+  },
+  {
+    "id": "zh-71da8c2ee37e7a7f",
+    "zh": "收拾",
+    "pinyin": "shōushi",
+    "meaning": "tidy up / pack up",
+    "category": "Useful verbs"
+  },
+  {
+    "id": "zh-dca3ee9e2c7de0e3",
+    "zh": "打扫",
+    "pinyin": "dǎsǎo",
+    "meaning": "clean / sweep",
+    "category": "Useful verbs"
+  },
+  {
+    "id": "zh-eb9bc7e8e961b040",
+    "zh": "照顾",
+    "pinyin": "zhàogu",
+    "meaning": "look after / take care of",
+    "category": "Useful verbs"
+  },
+  {
+    "id": "zh-0b2df726920c8e73",
+    "zh": "关心",
+    "pinyin": "guānxīn",
+    "meaning": "care about / be concerned about",
+    "category": "Useful verbs"
+  },
+  {
+    "id": "zh-7f22105b7fbb0150",
+    "zh": "担心",
+    "pinyin": "dānxīn",
+    "meaning": "worry / be worried",
+    "category": "Useful verbs"
+  },
+  {
+    "id": "zh-b98f15ba3a59178e",
+    "zh": "记住",
+    "pinyin": "jìzhù",
+    "meaning": "remember / keep in mind",
+    "category": "Useful verbs"
+  },
+  {
+    "id": "zh-3b2e57ba5da52476",
+    "zh": "忘带钥匙了。",
+    "pinyin": "wàng dài yàoshi le.",
+    "meaning": "I forgot to bring my keys.",
+    "category": "Useful verbs"
+  },
+  {
+    "id": "zh-2854a7a265e723b5",
+    "zh": "能借我一支笔吗？",
+    "pinyin": "néng jiè wǒ yì zhī bǐ ma?",
+    "meaning": "Could you lend me a pen?",
+    "category": "Useful verbs"
+  },
+  {
+    "id": "zh-afb9587a4a2e99fb",
+    "zh": "我来试试。",
+    "pinyin": "wǒ lái shìshi.",
+    "meaning": "Let me try.",
+    "category": "Useful verbs"
+  },
+  {
+    "id": "zh-e5958617b8ba6586",
+    "zh": "让我想一下。",
+    "pinyin": "ràng wǒ xiǎng yíxià.",
+    "meaning": "Let me think for a moment.",
+    "category": "Useful verbs"
+  },
+  {
+    "id": "zh-535f2282f8c05490",
+    "zh": "干净",
+    "pinyin": "gānjìng",
+    "meaning": "clean",
+    "category": "Useful descriptions"
+  },
+  {
+    "id": "zh-f1906ce054494ea3",
+    "zh": "脏",
+    "pinyin": "zāng",
+    "meaning": "dirty",
+    "category": "Useful descriptions"
+  },
+  {
+    "id": "zh-04403982ac176961",
+    "zh": "安静",
+    "pinyin": "ānjìng",
+    "meaning": "quiet",
+    "category": "Useful descriptions"
+  },
+  {
+    "id": "zh-93c3ad464def053b",
+    "zh": "吵",
+    "pinyin": "chǎo",
+    "meaning": "noisy",
+    "category": "Useful descriptions"
+  },
+  {
+    "id": "zh-6d80ef35db6962ac",
+    "zh": "方便",
+    "pinyin": "fāngbiàn",
+    "meaning": "convenient",
+    "category": "Useful descriptions"
+  },
+  {
+    "id": "zh-6cd606c9aa3f7fab",
+    "zh": "麻烦",
+    "pinyin": "máfan",
+    "meaning": "troublesome / a hassle",
+    "category": "Useful descriptions"
+  },
+  {
+    "id": "zh-01805727314e4def",
+    "zh": "简单",
+    "pinyin": "jiǎndān",
+    "meaning": "simple / easy",
+    "category": "Useful descriptions"
+  },
+  {
+    "id": "zh-d890780a7397c0ca",
+    "zh": "复杂",
+    "pinyin": "fùzá",
+    "meaning": "complicated",
+    "category": "Useful descriptions"
+  },
+  {
+    "id": "zh-2d945fb37d9aeb26",
+    "zh": "容易",
+    "pinyin": "róngyì",
+    "meaning": "easy",
+    "category": "Useful descriptions"
+  },
+  {
+    "id": "zh-de73e9045636fb33",
+    "zh": "难",
+    "pinyin": "nán",
+    "meaning": "difficult",
+    "category": "Useful descriptions"
+  },
+  {
+    "id": "zh-a8cd9642aa48cd9f",
+    "zh": "重要",
+    "pinyin": "zhòngyào",
+    "meaning": "important",
+    "category": "Useful descriptions"
+  },
+  {
+    "id": "zh-afb63a620bdcff15",
+    "zh": "安全",
+    "pinyin": "ānquán",
+    "meaning": "safe / safety",
+    "category": "Useful descriptions"
+  },
+  {
+    "id": "zh-bf2aee38a21b9db6",
+    "zh": "危险",
+    "pinyin": "wēixiǎn",
+    "meaning": "dangerous / danger",
+    "category": "Useful descriptions"
+  },
+  {
+    "id": "zh-3754e7935633b577",
+    "zh": "清楚",
+    "pinyin": "qīngchu",
+    "meaning": "clear",
+    "category": "Useful descriptions"
+  },
+  {
+    "id": "zh-c8051ef2e9c0e573",
+    "zh": "认真",
+    "pinyin": "rènzhēn",
+    "meaning": "serious / conscientious",
+    "category": "Useful descriptions"
+  },
+  {
+    "id": "zh-38a76a478c18c520",
+    "zh": "耐心",
+    "pinyin": "nàixīn",
+    "meaning": "patient / patience",
+    "category": "Useful descriptions"
+  },
+  {
+    "id": "zh-6dc3c72f4c3d1934",
+    "zh": "热情",
+    "pinyin": "rèqíng",
+    "meaning": "friendly and enthusiastic",
+    "category": "Useful descriptions"
+  },
+  {
+    "id": "zh-b09958f8d9bd99ee",
+    "zh": "友好",
+    "pinyin": "yǒuhǎo",
+    "meaning": "friendly",
+    "category": "Useful descriptions"
+  },
+  {
+    "id": "zh-573b6344531f1e6d",
+    "zh": "害羞",
+    "pinyin": "hàixiū",
+    "meaning": "shy",
+    "category": "Useful descriptions"
+  },
+  {
+    "id": "zh-892c00b426951bb1",
+    "zh": "有意思",
+    "pinyin": "yǒu yìsi",
+    "meaning": "interesting",
+    "category": "Useful descriptions"
+  },
+  {
+    "id": "zh-43932aa17701f5f4",
+    "zh": "无聊",
+    "pinyin": "wúliáo",
+    "meaning": "boring / bored",
+    "category": "Useful descriptions"
+  },
+  {
+    "id": "zh-3bd3de5492af8970",
+    "zh": "奇怪",
+    "pinyin": "qíguài",
+    "meaning": "strange",
+    "category": "Useful descriptions"
+  },
+  {
+    "id": "zh-f68544a00d203678",
+    "zh": "合得来",
+    "pinyin": "hédelái",
+    "meaning": "get along well / compatible",
+    "category": "Useful descriptions"
+  },
+  {
+    "id": "zh-85d05ed00cc3eab2",
+    "zh": "可靠",
+    "pinyin": "kěkào",
+    "meaning": "reliable",
+    "category": "Useful descriptions"
+  },
+  {
+    "id": "zh-6646e35b10ef6e78",
+    "zh": "准时",
+    "pinyin": "zhǔnshí",
+    "meaning": "on time / punctual",
+    "category": "Useful descriptions"
   }
 ]

@@ -1,7 +1,7 @@
 const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),vm=require('node:vm');
 const E=require('./source/engine.js'),deck=JSON.parse(fs.readFileSync(path.join(__dirname,'deck.json'),'utf8'));
 let now=new Date(2026,8,29,10).getTime();const id=deck[0].id,id2=deck[1].id;
-let s=E.empty();assert.equal(deck.length,366);assert.equal(new Set(deck.map(c=>c.id)).size,366);
+let s=E.empty();assert.equal(deck.length,788);assert.equal(new Set(deck.map(c=>c.id)).size,788);
 assert.equal(E.plan(s,now,deck).length,5);E.introduce(s,id,now);assert(!E.introduce(s,id,now));assert.equal(E.newAllowance(s,now,deck).count,4);
 assert.equal(E.dueTasks(s,now,null,deck).length,0);assert.equal(E.dueTasks(s,now+E.MIN,null,deck).length,1);
 E.review(s,id,'produce',2,now+E.MIN);assert.equal(s.items[id].produce.interval,1);assert.equal(s.logs.at(-1).delayed,false);
@@ -28,9 +28,9 @@ function el(id){return {id,hidden:false,disabled:false,textContent:'',innerHTML:
 const get=id=>{if(!elements.has(id))elements.set(id,el(id));return elements.get(id)};get('deck-data').textContent=JSON.stringify(deck);get('category').value='';
 const grades=[0,1,2,3].map(n=>{let e=el('grade'+n);e.dataset.grade=String(n);return e});
 const document={getElementById:get,querySelectorAll(sel){return sel==='[data-grade]'?grades:[]},createElement:()=>el('new')};
-let wall=now;class FakeDate extends Date{constructor(...args){super(...(args.length?args:[wall]))}static now(){return wall}}
+const windowEvents={};let wall=now;class FakeDate extends Date{constructor(...args){super(...(args.length?args:[wall]))}static now(){return wall}}
 const speech={getVoices:()=>[{name:'Mandarin test',lang:'zh-CN'}],cancel(){},resume(){},addEventListener(){},speak(u){spoken.push(u);u.onstart?.()}};
-const sandbox={document,Date:FakeDate,console,Blob,URL,location:{protocol:'file:'},navigator:{},setTimeout(fn){timers.set(++tick,fn);return tick},clearTimeout(id){timers.delete(id)},setInterval(){},scrollTo(){},addEventListener(){},localStorage:{getItem:k=>storage.get(k)||null,setItem:(k,v)=>storage.set(k,v)},speechSynthesis:speech,SpeechSynthesisUtterance:function(text){this.text=text}};sandbox.window=sandbox;
+const sandbox={document,Date:FakeDate,console,Blob,URL,location:{protocol:'file:'},navigator:{},setTimeout(fn){timers.set(++tick,fn);return tick},clearTimeout(id){timers.delete(id)},setInterval(){},scrollTo(){},addEventListener(n,fn){windowEvents[n]=fn},localStorage:{getItem:k=>storage.get(k)||null,setItem:(k,v)=>storage.set(k,v)},speechSynthesis:speech,SpeechSynthesisUtterance:function(text){this.text=text}};sandbox.window=sandbox;
 const context=vm.createContext(sandbox),run=x=>vm.runInContext(x,context);scripts.forEach(script=>run(script));
 run('start()');assert.equal(run('current.direction'),'intro');run('studied();studied()');assert.equal(run('session.studied'),1);assert.equal(run('Object.keys(state.items).length'),1);
 run('advance()');assert.equal(run('current.direction'),'intro');run('studied()');wall+=E.MIN;run('advance()');assert.equal(run('current.direction'),'produce');assert(get('answer').hidden);
@@ -40,8 +40,8 @@ run('finish()');assert.equal(run('session'),null);assert(!get('done').hidden);
 wall+=2*E.DAY;run("state.settings.newLimit=0;start()");run("current.direction='understand';revealed=false;heard=false;inputMode='listening';reveal()");assert.equal(run('revealed'),false);
 run('readInstead();reveal();rate(2)');assert.equal(run('state.logs.at(-1).input'),'reading');
 run('audioSettings();play({id:"test",zh:"你想喝水吗？"},false,false,true)');assert.equal(spoken.at(-1).text,'你想喝水吗？');assert(get('settingsAudioStatus').textContent.includes('Test sentence'));
-run('play(byId.get(DECK[0].id),true)');assert.equal(spoken.at(-1).rate,.65);
-run('stopAudio()');const before=spoken.length;speech.getVoices=()=>[{name:'Cantonese',lang:'zh-HK'}];run('play(byId.get(DECK[0].id))');for(let i=0;i<8&&timers.size;i++){const callbacks=[...timers.values()];timers.clear();callbacks.forEach(fn=>fn())}assert.equal(spoken.length,before);assert(get('notice').textContent.includes('No Mandarin'));
+run('play(byId.get(DECK[0].id),true)');assert.equal(spoken.at(-1).rate,.4);
+run('stopAudio()');const before=spoken.length;speech.getVoices=()=>[{name:'Cantonese',lang:'zh-HK'}];run('play(byId.get(DECK[0].id))');for(let i=0;i<8&&timers.size;i++){const callbacks=[...timers.values()];timers.clear();callbacks.forEach(fn=>fn())}assert.equal(spoken.length,before);assert(get('settingsAudioStatus').textContent.includes('No Mandarin'));
 const beforeImport=run('JSON.stringify(state)');run('importCandidate=null;confirmImport()');assert.equal(run('JSON.stringify(state)'),beforeImport);
 assert.equal(run('esc("<img onerror=bad()>")'),'&lt;img onerror=bad()&gt;');
 console.log('PASS UI logic: actual bundled scripts, new-card introduction, hidden recall, hint cap, repeated-tap guard, session exit, reading fallback, whole-phrase speech, Mandarin voice filtering and safe rendering.');
@@ -56,5 +56,23 @@ run('confirmImport()');assert.equal(run('importCandidate'),null);assert(storage.
 // Cancelled online playback must not unlock the next listening question.
 let media=[];sandbox.ONLINE_VOICE_ENABLED=true;sandbox.Audio=function(url){this.url=url;this.play=()=>({catch(){}});this.pause=()=>{};this.removeAttribute=()=>{};this.load=()=>{};media.push(this)};
 run('play(byId.get(DECK[0].id),true)');assert(media.at(-1).url.endsWith('&slow=1'));const stale=media.at(-1);run('stopAudio()');get('notice').textContent='unchanged';stale.onplaying();assert.equal(get('notice').textContent,'unchanged');
-run('play(byId.get(DECK[0].id))');media.at(-1).onerror();assert(get('notice').textContent.includes('Online audio could not load'));
+run('play(byId.get(DECK[0].id))');media.at(-1).onerror();assert(get('settingsAudioStatus').textContent.includes('Online audio could not load'));
 console.log('PASS resilience: future timestamps, corrupt storage preservation/recovery, quota failures, confirmed backup restore and cancelled/failed online audio.');
+
+// Explicit extra batches ignore the daily intake limit without moving existing reviews.
+let capped=E.empty();capped.settings.newLimit=0;for(const c of deck.slice(0,12))E.introduce(capped,c.id,now-2*E.DAY);
+const oldSchedule=JSON.stringify(capped.items),extra=E.extraPlan(capped,now,deck);assert.equal(extra.length,5);assert(extra.every(t=>t.extra&&!capped.items[t.id]));assert.equal(JSON.stringify(capped.items),oldSchedule);
+assert(E.extraPlan(capped,now,deck,'Breakfast').every(t=>deck.find(c=>c.id===t.id).category==='Breakfast'));
+run('home();state=E.empty();state.settings.newLimit=0;startExtra()');
+for(let i=0;i<5;i++){assert.equal(run('current.direction'),'intro');run('studied();advance()')}
+assert.equal(run('Object.keys(state.items).length'),5);assert.equal(run('state.settings.newLimit'),0);assert.equal(run('current'),null);
+run('finish();startExtra()');assert(!run('state.items[current.id]'));assert.equal(run('session.queue.length'),4);run('finish()');
+// A v1 backup remains valid with the expanded deck.
+assert.equal(E.validate(s,deck).items[id].introducedAt,s.items[id].introducedAt);
+// Speech uses whole phrases at clearly distinct rates; late callbacks cannot mark a newer prompt heard.
+sandbox.ONLINE_VOICE_ENABLED=false;speech.getVoices=()=>[{name:'Mandarin test',lang:'zh-CN'}];run('audioSettings();play({id:"test",zh:"你想喝水吗？"},false,false,true)');assert.equal(spoken.at(-1).rate,1);wall+=2000;spoken.at(-1).onend();
+run('play({id:"test",zh:"你想喝水吗？"},true,false,true)');assert.equal(spoken.at(-1).rate,.4);wall+=2050;spoken.at(-1).onend();assert(get('settingsAudioStatus').textContent.includes('may ignore speed'));
+run('play({id:"test",zh:"你想喝水吗？"},true,false,true)');wall+=5000;spoken.at(-1).onend();assert(!get('settingsAudioStatus').textContent.includes('may ignore speed'));
+let promptCalls=0;run('show("install");renderInstall()');assert(get('requestInstall').hidden);assert(!get('installSteps').hidden);
+windowEvents.beforeinstallprompt({preventDefault(){},prompt:async()=>{promptCalls++},userChoice:Promise.resolve({outcome:'dismissed'})});assert(!get('requestInstall').hidden);
+(async()=>{await get('requestInstall').events.click();await get('requestInstall').events.click();assert.equal(promptCalls,1);assert(get('installStatus').textContent.includes('later'));windowEvents.appinstalled();assert(get('requestInstall').hidden);assert(get('installSteps').hidden);console.log('PASS new features: extra batches, old progress, category filters, distinct speech rates, speed diagnostics, and install prompt/fallback.');})().catch(e=>{console.error(e);process.exitCode=1});
