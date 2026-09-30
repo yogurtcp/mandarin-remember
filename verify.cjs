@@ -76,3 +76,14 @@ run('play({id:"test",zh:"你想喝水吗？"},true,false,true)');wall+=5000;spok
 let promptCalls=0;run('show("install");renderInstall()');assert(get('requestInstall').hidden);assert(!get('installSteps').hidden);
 windowEvents.beforeinstallprompt({preventDefault(){},prompt:async()=>{promptCalls++},userChoice:Promise.resolve({outcome:'dismissed'})});assert(!get('requestInstall').hidden);
 (async()=>{await get('requestInstall').events.click();await get('requestInstall').events.click();assert.equal(promptCalls,1);assert(get('installStatus').textContent.includes('later'));windowEvents.appinstalled();assert(get('requestInstall').hidden);assert(get('installSteps').hidden);console.log('PASS new features: extra batches, old progress, category filters, distinct speech rates, speed diagnostics, and install prompt/fallback.');})().catch(e=>{console.error(e);process.exitCode=1});
+// Copy works with and without clipboard access; translation keeps exactly the Chinese text.
+(async()=>{
+ const sample='还书？ A&B #1';const url=new URL(run('translateURL('+JSON.stringify(sample)+')'));
+ assert.equal(url.origin,'https://translate.google.com');assert.equal(url.searchParams.get('text'),sample);assert.equal(url.searchParams.get('sl'),'zh-CN');assert.equal(url.searchParams.get('tl'),'en');
+ let copied='';sandbox.navigator.clipboard={writeText:async text=>{copied=text}};await run('copyChinese(DECK[0])');assert.equal(copied,deck[0].zh);assert(get('copyFallback').hidden);
+ let focused=false,selected=false;get('copyText').focus=()=>focused=true;get('copyText').select=()=>selected=true;get('copyFallback').scrollIntoView=()=>{};
+ sandbox.navigator.clipboard.writeText=async()=>{throw Error('denied')};await run('copyChinese(DECK[1])');assert.equal(get('copyText').value,deck[1].zh);assert(!get('copyFallback').hidden);assert(focused&&selected);get('copyDone').click();assert(get('copyFallback').hidden);
+ delete sandbox.navigator.clipboard;await run('copyChinese(DECK[2])');assert.equal(get('copyText').value,deck[2].zh);run('show("home")');assert(get('copyFallback').hidden);
+ run('renderLibrary()');assert(get('libraryList').innerHTML.includes('data-copy='));assert(get('libraryList').innerHTML.includes('rel="noopener noreferrer"'));
+ console.log('PASS reference tools: exact encoded Chinese, clipboard success/denial/unavailability, manual copy dismissal and phrasebook links.');
+})().catch(e=>{console.error(e);process.exitCode=1});

@@ -48,3 +48,7 @@ Preserve card IDs when correcting wording. Bump the service-worker cache version
 422 new cards cover breakfast, fruit and vegetables, cooking, relatives, friends, coworkers, professions, errands, eating out, transport, health, useful verbs and descriptions. Existing card IDs and saved progress remain compatible. New lexical pronunciations were cross-checked with [CC-CEDICT](https://cc-cedict.org/wiki/); phrases were reviewed separately. Colloquial neutral tones are retained, and 一/不 use spoken tone changes.
 
 Normal device speech now requests rate 1.0 and Slow requests 0.4. Audio settings provide both test buttons; actual speed depends on the device voice. Online helper playback also applies pitch-preserving slowdown.
+
+## Compare pronunciations
+
+Revealed cards and phrasebook entries offer **Copy Chinese** and **Google Translate**. The link opens the Chinese text in Google Translate; tap the speaker beside the Chinese text to hear it. Only clicking the link sends that card text to Google. Copy also provides a selectable-text fallback when clipboard permission is unavailable. Google speech is a useful comparison, but ambiguous characters can still need context.
