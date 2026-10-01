@@ -21,6 +21,13 @@
     "category": "Family"
   },
   {
+    "id": "zh-44dd6014a532924b",
+    "zh": "大人",
+    "pinyin": "dàren",
+    "meaning": "adult / grown-up",
+    "category": "Family"
+  },
+  {
     "id": "zh-da5a634993e1ba9b",
     "zh": "宝宝",
     "pinyin": "bǎobao",
@@ -28,17 +35,91 @@
     "category": "Family"
   },
   {
+    "id": "zh-6d9120865dc58fe4",
+    "zh": "尿布",
+    "pinyin": "niàobù",
+    "meaning": "diaper / nappy",
+    "category": "Kids & Play"
+  },
+  {
+    "id": "zh-1831dbd6e20e64bd",
+    "zh": "婴儿车",
+    "pinyin": "yīng'érchē",
+    "meaning": "stroller / pram",
+    "category": "Kids & Play"
+  },
+  {
     "id": "zh-b50dde9bb88540ba",
     "zh": "奶奶",
     "pinyin": "nǎinai",
-    "meaning": "grandma (dad's mother)",
-    "category": "Family"
+    "meaning": "grandma / grandmother (dad's mother; paternal)",
+    "category": "Family",
+    "usage": "Dad's mother: paternal grandmother. Mom's mother is 外婆 (wàipó), also called 姥姥 (lǎolao).",
+    "examples": [
+      {
+        "zh": "这是我奶奶。",
+        "pinyin": "zhè shì wǒ nǎinai.",
+        "meaning": "This is my grandma (dad's mother)."
+      }
+    ]
   },
   {
     "id": "zh-05a394a5779b1ee5",
     "zh": "爷爷",
     "pinyin": "yéye",
-    "meaning": "grandpa (dad's father)",
+    "meaning": "grandpa / grandfather (dad's father; paternal)",
+    "category": "Family",
+    "usage": "Dad's father: paternal grandfather. Mom's father is 外公 (wàigōng), also called 姥爷 (lǎoye).",
+    "examples": [
+      {
+        "zh": "这是我爷爷。",
+        "pinyin": "zhè shì wǒ yéye.",
+        "meaning": "This is my grandpa (dad's father)."
+      }
+    ]
+  },
+  {
+    "id": "zh-88e9f2870ecc116d",
+    "zh": "外婆",
+    "pinyin": "wàipó",
+    "meaning": "grandma / grandmother (mom's mother; maternal)",
+    "category": "Family",
+    "usage": "Mom's mother: maternal grandmother. 姥姥 (lǎolao) is another common name, especially in northern China. Family and regional preferences vary.",
+    "examples": [
+      {
+        "zh": "这是我外婆。",
+        "pinyin": "zhè shì wǒ wàipó.",
+        "meaning": "This is my grandma (mom's mother)."
+      }
+    ]
+  },
+  {
+    "id": "zh-7f6df41f6d33eb2e",
+    "zh": "这是我外婆。",
+    "pinyin": "zhè shì wǒ wàipó.",
+    "meaning": "This is my grandma (mom's mother).",
+    "category": "Family"
+  },
+  {
+    "id": "zh-ef0cdc594035bea0",
+    "zh": "外公",
+    "pinyin": "wàigōng",
+    "meaning": "grandpa / grandfather (mom's father; maternal)",
+    "category": "Family",
+    "usage": "Mom's father: maternal grandfather. 姥爷 (lǎoye) is another common name, especially in northern China. Family and regional preferences vary.",
+    "examples": [
+      {
+        "zh": "这是我外公。",
+        "pinyin": "zhè shì wǒ wàigōng.",
+        "meaning": "This is my grandpa (mom's father)."
+      }
+    ]
+  },
+  {
+    "id": "zh-b61af699e9ba612a",
+    "zh": "这是我外公。",
+    "pinyin": "zhè shì wǒ wàigōng.",
+    "meaning": "This is my grandpa (mom's father).",
     "category": "Family"
   },
   {
@@ -56,6 +137,13 @@
     "category": "Food"
   },
   {
+    "id": "zh-fdaa26ac8943d4a4",
+    "zh": "我想喝水",
+    "pinyin": "wǒ xiǎng hē shuǐ",
+    "meaning": "I want to drink water",
+    "category": "Food"
+  },
+  {
     "id": "zh-0148aa8ffb7148d8",
     "zh": "好吃",
     "pinyin": "hǎochī",
@@ -70,10 +158,38 @@
     "category": "Feelings"
   },
   {
+    "id": "zh-a218fbeb5e09defb",
+    "zh": "饱",
+    "pinyin": "bǎo",
+    "meaning": "full (after eating)",
+    "category": "Feelings"
+  },
+  {
+    "id": "zh-0e3a6bb16bb0daf1",
+    "zh": "我吃饱了。",
+    "pinyin": "wǒ chī bǎo le.",
+    "meaning": "I've had enough to eat / I'm full.",
+    "category": "Feelings"
+  },
+  {
+    "id": "zh-61dd48f58b0707c0",
+    "zh": "我饿了",
+    "pinyin": "wǒ è le",
+    "meaning": "I'm hungry",
+    "category": "Feelings"
+  },
+  {
     "id": "zh-3dcae0ae0b0e7af5",
     "zh": "渴",
     "pinyin": "kě",
     "meaning": "thirsty",
+    "category": "Feelings"
+  },
+  {
+    "id": "zh-73ed236004d3e7c6",
+    "zh": "我渴了",
+    "pinyin": "wǒ kě le",
+    "meaning": "I'm thirsty",
     "category": "Feelings"
   },
   {
@@ -84,10 +200,31 @@
     "category": "Feelings"
   },
   {
+    "id": "zh-df6a19a0c7a5ac78",
+    "zh": "我累了",
+    "pinyin": "wǒ lèi le",
+    "meaning": "I'm tired",
+    "category": "Feelings"
+  },
+  {
     "id": "zh-6e067999e2407ee3",
     "zh": "开心",
     "pinyin": "kāixīn",
     "meaning": "happy",
+    "category": "Feelings"
+  },
+  {
+    "id": "zh-4eeae343b29c2ef2",
+    "zh": "兴奋",
+    "pinyin": "xīngfèn",
+    "meaning": "excited",
+    "category": "Feelings"
+  },
+  {
+    "id": "zh-b4ae3bd8b86dd3a9",
+    "zh": "失望",
+    "pinyin": "shīwàng",
+    "meaning": "disappointed",
     "category": "Feelings"
   },
   {
@@ -111,6 +248,35 @@
     ]
   },
   {
+    "id": "zh-e9965691b0f416f2",
+    "zh": "睡着了",
+    "pinyin": "shuìzháo le",
+    "meaning": "fell asleep / is asleep now",
+    "category": "Home & Routine",
+    "usage": "Falling asleep or now being asleep. 着 is pronounced zháo here; it is not the neutral-tone aspect particle zhe.",
+    "examples": [
+      {
+        "zh": "宝宝睡着了。",
+        "pinyin": "bǎobao shuìzháo le.",
+        "meaning": "The baby has fallen asleep."
+      }
+    ]
+  },
+  {
+    "id": "zh-2f55ef3ef510fd6e",
+    "zh": "宝宝睡着了。",
+    "pinyin": "bǎobao shuìzháo le.",
+    "meaning": "The baby has fallen asleep.",
+    "category": "Home & Routine"
+  },
+  {
+    "id": "zh-0210e87252468059",
+    "zh": "我想睡觉",
+    "pinyin": "wǒ xiǎng shuìjiào",
+    "meaning": "I want to sleep",
+    "category": "Home & Routine"
+  },
+  {
     "id": "zh-96f512f980046bf6",
     "zh": "起床",
     "pinyin": "qǐchuáng",
@@ -129,6 +295,50 @@
         "meaning": "Alex, time to get up!"
       }
     ]
+  },
+  {
+    "id": "zh-5399e753ba4be059",
+    "zh": "我起床了。",
+    "pinyin": "wǒ qǐchuáng le.",
+    "meaning": "I'm up / I've gotten out of bed.",
+    "category": "Home & Routine",
+    "usage": "Means you have gotten out of bed. If you are only awake, say 我醒了 (wǒ xǐng le).",
+    "examples": [
+      {
+        "zh": "该起床了。",
+        "pinyin": "gāi qǐchuáng le.",
+        "meaning": "It's time to get up."
+      }
+    ]
+  },
+  {
+    "id": "zh-14c11cf26c2ba255",
+    "zh": "该起床了。",
+    "pinyin": "gāi qǐchuáng le.",
+    "meaning": "It's time to get up.",
+    "category": "Home & Routine"
+  },
+  {
+    "id": "zh-40b3dbc4ae2f7d3a",
+    "zh": "醒来",
+    "pinyin": "xǐnglái",
+    "meaning": "wake up (stop sleeping)",
+    "category": "Home & Routine",
+    "usage": "Waking up is different from getting out of bed (起床). You can be awake and still in bed.",
+    "examples": [
+      {
+        "zh": "我醒了。",
+        "pinyin": "wǒ xǐng le.",
+        "meaning": "I'm awake now."
+      }
+    ]
+  },
+  {
+    "id": "zh-16a598b92497f04a",
+    "zh": "我醒了。",
+    "pinyin": "wǒ xǐng le.",
+    "meaning": "I'm awake now.",
+    "category": "Home & Routine"
   },
   {
     "id": "zh-9a6ce4cf2cab6307",
@@ -151,6 +361,13 @@
     ]
   },
   {
+    "id": "zh-91187d0a2f72845e",
+    "zh": "我要回家",
+    "pinyin": "wǒ yào huí jiā",
+    "meaning": "I want to go home",
+    "category": "Home & Routine"
+  },
+  {
     "id": "zh-6e2c77f393e41e1b",
     "zh": "在哪里",
     "pinyin": "zài nǎlǐ",
@@ -162,6 +379,27 @@
     "zh": "什么",
     "pinyin": "shénme",
     "meaning": "what",
+    "category": "Common Phrases"
+  },
+  {
+    "id": "zh-056b9c626275cd54",
+    "zh": "谁",
+    "pinyin": "shéi",
+    "meaning": "who",
+    "category": "Common Phrases"
+  },
+  {
+    "id": "zh-79464926d367a9b9",
+    "zh": "哪个",
+    "pinyin": "nǎge",
+    "meaning": "which one",
+    "category": "Common Phrases"
+  },
+  {
+    "id": "zh-5ee8091a38eee188",
+    "zh": "怎么",
+    "pinyin": "zěnme",
+    "meaning": "how / in what way",
     "category": "Common Phrases"
   },
   {
@@ -284,6 +522,13 @@
     ]
   },
   {
+    "id": "zh-3a9acd46804b5830",
+    "zh": "可以吗？",
+    "pinyin": "kěyǐ ma?",
+    "meaning": "Is that okay / may I?",
+    "category": "Common Phrases"
+  },
+  {
     "id": "zh-aaf6f7c76d350c53",
     "zh": "不可以",
     "pinyin": "bù kěyǐ",
@@ -338,20 +583,6 @@
     "zh": "妹妹",
     "pinyin": "mèimei",
     "meaning": "younger sister",
-    "category": "Family"
-  },
-  {
-    "id": "zh-88e9f2870ecc116d",
-    "zh": "外婆",
-    "pinyin": "wàipó",
-    "meaning": "grandma (mom's mother)",
-    "category": "Family"
-  },
-  {
-    "id": "zh-ef0cdc594035bea0",
-    "zh": "外公",
-    "pinyin": "wàigōng",
-    "meaning": "grandpa (mom's father)",
     "category": "Family"
   },
   {
@@ -508,6 +739,35 @@
     "category": "Food"
   },
   {
+    "id": "zh-35ce82d20a4c0c12",
+    "zh": "热水",
+    "pinyin": "rèshuǐ",
+    "meaning": "hot water",
+    "category": "Food"
+  },
+  {
+    "id": "zh-99f45e03f66e7c0d",
+    "zh": "凉水",
+    "pinyin": "liángshuǐ",
+    "meaning": "cool / cold water (not necessarily chilled)",
+    "category": "Food",
+    "usage": "Cool or cold water, without necessarily being refrigerated. 冰水 (bīngshuǐ) is iced or very cold water.",
+    "examples": [
+      {
+        "zh": "我想喝点凉水。",
+        "pinyin": "wǒ xiǎng hē diǎn liángshuǐ.",
+        "meaning": "I'd like some cool water."
+      }
+    ]
+  },
+  {
+    "id": "zh-6b1311e9a899a0d4",
+    "zh": "矿泉水",
+    "pinyin": "kuàngquánshuǐ",
+    "meaning": "mineral water",
+    "category": "Food"
+  },
+  {
     "id": "zh-7e005ba311f86fa7",
     "zh": "茶",
     "pinyin": "chá",
@@ -533,6 +793,27 @@
     "zh": "害怕",
     "pinyin": "hàipà",
     "meaning": "afraid",
+    "category": "Feelings"
+  },
+  {
+    "id": "zh-313c224671ff5c9e",
+    "zh": "紧张",
+    "pinyin": "jǐnzhāng",
+    "meaning": "nervous / tense",
+    "category": "Feelings"
+  },
+  {
+    "id": "zh-102f7d8002fe533f",
+    "zh": "放心",
+    "pinyin": "fàngxīn",
+    "meaning": "feel reassured / stop worrying",
+    "category": "Feelings"
+  },
+  {
+    "id": "zh-2c7ba1fafcd4d6dd",
+    "zh": "别紧张。",
+    "pinyin": "bié jǐnzhāng.",
+    "meaning": "Don't be nervous.",
     "category": "Feelings"
   },
   {
@@ -572,10 +853,24 @@
     "category": "Feelings"
   },
   {
+    "id": "zh-490bfe52ad554086",
+    "zh": "我喜欢这个",
+    "pinyin": "wǒ xǐhuan zhège",
+    "meaning": "I like this",
+    "category": "Feelings"
+  },
+  {
     "id": "zh-e06217a18ce16d6b",
     "zh": "不喜欢",
     "pinyin": "bù xǐhuan",
     "meaning": "don't like",
+    "category": "Feelings"
+  },
+  {
+    "id": "zh-635f7bc88ce1d2c7",
+    "zh": "我不喜欢这个",
+    "pinyin": "wǒ bù xǐhuan zhège",
+    "meaning": "I don't like this",
     "category": "Feelings"
   },
   {
@@ -606,6 +901,48 @@
     "category": "Home & Routine"
   },
   {
+    "id": "zh-c90c647032879fde",
+    "zh": "卧室",
+    "pinyin": "wòshì",
+    "meaning": "bedroom",
+    "category": "Home & Routine"
+  },
+  {
+    "id": "zh-189a9873c2869253",
+    "zh": "阳台",
+    "pinyin": "yángtái",
+    "meaning": "balcony",
+    "category": "Home & Routine"
+  },
+  {
+    "id": "zh-9d743810c4b56fb3",
+    "zh": "楼上",
+    "pinyin": "lóushàng",
+    "meaning": "upstairs",
+    "category": "Home & Routine"
+  },
+  {
+    "id": "zh-d981cd0d3684893e",
+    "zh": "楼下",
+    "pinyin": "lóuxià",
+    "meaning": "downstairs",
+    "category": "Home & Routine"
+  },
+  {
+    "id": "zh-66a03a3ae3a13db9",
+    "zh": "楼梯",
+    "pinyin": "lóutī",
+    "meaning": "stairs",
+    "category": "Home & Routine"
+  },
+  {
+    "id": "zh-c4d0aea9e2da2f9f",
+    "zh": "电梯",
+    "pinyin": "diàntī",
+    "meaning": "elevator / lift",
+    "category": "Home & Routine"
+  },
+  {
     "id": "zh-a407325e0081cb7d",
     "zh": "门",
     "pinyin": "mén",
@@ -613,10 +950,52 @@
     "category": "Home & Routine"
   },
   {
+    "id": "zh-da098a22509a9187",
+    "zh": "窗户",
+    "pinyin": "chuānghu",
+    "meaning": "window",
+    "category": "Home & Routine"
+  },
+  {
+    "id": "zh-6d132744a95cf394",
+    "zh": "钥匙",
+    "pinyin": "yàoshi",
+    "meaning": "key",
+    "category": "Home & Routine"
+  },
+  {
+    "id": "zh-3b2e57ba5da52476",
+    "zh": "忘带钥匙了。",
+    "pinyin": "wàng dài yàoshi le.",
+    "meaning": "I forgot to bring my keys.",
+    "category": "Home & Routine"
+  },
+  {
     "id": "zh-5cfd73078e3aaf3f",
     "zh": "床",
     "pinyin": "chuáng",
     "meaning": "bed",
+    "category": "Home & Routine"
+  },
+  {
+    "id": "zh-84fc114618ec7257",
+    "zh": "枕头",
+    "pinyin": "zhěntou",
+    "meaning": "pillow",
+    "category": "Home & Routine"
+  },
+  {
+    "id": "zh-64569c7e08abbee1",
+    "zh": "被子",
+    "pinyin": "bèizi",
+    "meaning": "quilt / duvet",
+    "category": "Home & Routine"
+  },
+  {
+    "id": "zh-8509abd16c765100",
+    "zh": "床单",
+    "pinyin": "chuángdān",
+    "meaning": "bedsheet",
     "category": "Home & Routine"
   },
   {
@@ -635,10 +1014,59 @@
     ]
   },
   {
+    "id": "zh-c471aae1a90d63b1",
+    "zh": "毛巾",
+    "pinyin": "máojīn",
+    "meaning": "towel",
+    "category": "Home & Routine"
+  },
+  {
+    "id": "zh-247d71e18ca631b2",
+    "zh": "肥皂",
+    "pinyin": "féizào",
+    "meaning": "soap",
+    "category": "Home & Routine"
+  },
+  {
+    "id": "zh-7d3019679d09e8f5",
+    "zh": "洗发水",
+    "pinyin": "xǐfàshuǐ",
+    "meaning": "shampoo",
+    "category": "Home & Routine"
+  },
+  {
+    "id": "zh-d7b656497de700a0",
+    "zh": "吹头发",
+    "pinyin": "chuī tóufa",
+    "meaning": "blow-dry one's hair",
+    "category": "Home & Routine"
+  },
+  {
     "id": "zh-b4ffef701723d1f3",
     "zh": "刷牙",
     "pinyin": "shuāyá",
     "meaning": "brush teeth",
+    "category": "Home & Routine"
+  },
+  {
+    "id": "zh-aeb4c474be567690",
+    "zh": "牙刷",
+    "pinyin": "yáshuā",
+    "meaning": "toothbrush",
+    "category": "Home & Routine"
+  },
+  {
+    "id": "zh-31789e1528f85b15",
+    "zh": "牙膏",
+    "pinyin": "yágāo",
+    "meaning": "toothpaste",
+    "category": "Home & Routine"
+  },
+  {
+    "id": "zh-11a125593d9c7476",
+    "zh": "洗脸",
+    "pinyin": "xǐ liǎn",
+    "meaning": "wash one's face",
     "category": "Home & Routine"
   },
   {
@@ -707,6 +1135,35 @@
     ]
   },
   {
+    "id": "zh-2f8fd89f615c37ef",
+    "zh": "站起来",
+    "pinyin": "zhàn qǐlai",
+    "meaning": "stand up (from sitting or lying down)",
+    "category": "Home & Routine",
+    "usage": "Standing up from sitting or lying down. Getting out of bed in the morning is 起床 (qǐchuáng).",
+    "examples": [
+      {
+        "zh": "请站起来。",
+        "pinyin": "qǐng zhàn qǐlai.",
+        "meaning": "Please stand up."
+      }
+    ]
+  },
+  {
+    "id": "zh-8c27f26a1be2f4fc",
+    "zh": "躺下",
+    "pinyin": "tǎng xià",
+    "meaning": "lie down",
+    "category": "Home & Routine"
+  },
+  {
+    "id": "zh-8d2697d27fce9337",
+    "zh": "坐一会儿吧。",
+    "pinyin": "zuò yíhuìr ba.",
+    "meaning": "Have a seat for a while.",
+    "category": "Home & Routine"
+  },
+  {
     "id": "zh-670d9743542cae3e",
     "zh": "你好",
     "pinyin": "nǐ hǎo",
@@ -757,6 +1214,13 @@
     ]
   },
   {
+    "id": "zh-46c203e08ee64dda",
+    "zh": "没问题。",
+    "pinyin": "méi wèntí.",
+    "meaning": "No problem / that's fine.",
+    "category": "Common Phrases"
+  },
+  {
     "id": "zh-ae0317813dba8fef",
     "zh": "真的吗",
     "pinyin": "zhēn de ma",
@@ -805,6 +1269,21 @@
     "pinyin": "èr",
     "meaning": "two",
     "category": "Numbers"
+  },
+  {
+    "id": "zh-83385d2edafe28d4",
+    "zh": "两",
+    "pinyin": "liǎng",
+    "meaning": "two (usually before a measure word)",
+    "category": "Numbers",
+    "usage": "Usually used before a measure word: 两个苹果. 二 is used in counting and numbers such as 二十 (twenty).",
+    "examples": [
+      {
+        "zh": "两个苹果",
+        "pinyin": "liǎng ge píngguǒ",
+        "meaning": "two apples"
+      }
+    ]
   },
   {
     "id": "zh-a4c3313deb180960",
@@ -935,6 +1414,13 @@
     "category": "Family"
   },
   {
+    "id": "zh-353f503b0dcdf9bc",
+    "zh": "一家人",
+    "pinyin": "yì jiā rén",
+    "meaning": "a family / the whole family",
+    "category": "Family"
+  },
+  {
     "id": "zh-4ae988a29c1f702c",
     "zh": "厨房",
     "pinyin": "chúfáng",
@@ -970,10 +1456,66 @@
     "category": "Home & Routine"
   },
   {
+    "id": "zh-961085f3c7ef705a",
+    "zh": "沙发",
+    "pinyin": "shāfā",
+    "meaning": "sofa",
+    "category": "Home & Routine"
+  },
+  {
+    "id": "zh-4b203b767ba0aabf",
+    "zh": "柜子",
+    "pinyin": "guìzi",
+    "meaning": "cabinet / cupboard",
+    "category": "Home & Routine"
+  },
+  {
+    "id": "zh-e1a4f5479f90d5f5",
+    "zh": "镜子",
+    "pinyin": "jìngzi",
+    "meaning": "mirror",
+    "category": "Home & Routine"
+  },
+  {
     "id": "zh-28656d470286ce04",
     "zh": "灯",
     "pinyin": "dēng",
     "meaning": "light / lamp",
+    "category": "Home & Routine"
+  },
+  {
+    "id": "zh-9f10fe658f243bc9",
+    "zh": "空调",
+    "pinyin": "kōngtiáo",
+    "meaning": "air conditioner / air conditioning",
+    "category": "Home & Routine"
+  },
+  {
+    "id": "zh-3e41bc3fa9119f63",
+    "zh": "风扇",
+    "pinyin": "fēngshàn",
+    "meaning": "fan (appliance)",
+    "category": "Home & Routine"
+  },
+  {
+    "id": "zh-33d3ef284743dbd1",
+    "zh": "遥控器",
+    "pinyin": "yáokòngqì",
+    "meaning": "remote control",
+    "category": "Home & Routine"
+  },
+  {
+    "id": "zh-85329f19e0b01f69",
+    "zh": "关灯",
+    "pinyin": "guān dēng",
+    "meaning": "turn off the light",
+    "category": "Home & Routine"
+  },
+  {
+    "id": "zh-898b1e516e3a065d",
+    "zh": "请关灯。",
+    "pinyin": "qǐng guān dēng.",
+    "meaning": "Please turn off the light.",
     "category": "Home & Routine"
   },
   {
@@ -1010,6 +1552,41 @@
         "meaning": "Please close the door."
       }
     ]
+  },
+  {
+    "id": "zh-d254bebf0f4b2df8",
+    "zh": "垃圾",
+    "pinyin": "lājī",
+    "meaning": "rubbish / trash",
+    "category": "Home & Routine"
+  },
+  {
+    "id": "zh-d7b7407bf306922f",
+    "zh": "垃圾桶",
+    "pinyin": "lājītǒng",
+    "meaning": "rubbish bin / trash can",
+    "category": "Home & Routine"
+  },
+  {
+    "id": "zh-93cab08d9a506b16",
+    "zh": "扔垃圾",
+    "pinyin": "rēng lājī",
+    "meaning": "throw away rubbish / take out the trash",
+    "category": "Home & Routine"
+  },
+  {
+    "id": "zh-af7d9826708fce0a",
+    "zh": "扫地",
+    "pinyin": "sǎo dì",
+    "meaning": "sweep the floor",
+    "category": "Home & Routine"
+  },
+  {
+    "id": "zh-e814d1afbbf0fd22",
+    "zh": "拖地",
+    "pinyin": "tuō dì",
+    "meaning": "mop the floor",
+    "category": "Home & Routine"
   },
   {
     "id": "zh-2504ff16dd4cce10",
@@ -1159,6 +1736,13 @@
     ]
   },
   {
+    "id": "zh-e5958617b8ba6586",
+    "zh": "让我想一下。",
+    "pinyin": "ràng wǒ xiǎng yíxià.",
+    "meaning": "Let me think for a moment.",
+    "category": "Actions"
+  },
+  {
     "id": "zh-975f35218ed8782e",
     "zh": "要",
     "pinyin": "yào",
@@ -1213,6 +1797,27 @@
     ]
   },
   {
+    "id": "zh-7205426737a8c37c",
+    "zh": "看见",
+    "pinyin": "kànjiàn",
+    "meaning": "see (visually)",
+    "category": "Actions"
+  },
+  {
+    "id": "zh-87292ce09b538b95",
+    "zh": "看懂",
+    "pinyin": "kàndǒng",
+    "meaning": "understand what one reads / sees",
+    "category": "Actions"
+  },
+  {
+    "id": "zh-3e0cdca521f6b8cc",
+    "zh": "我看书",
+    "pinyin": "wǒ kàn shū",
+    "meaning": "I am reading.",
+    "category": "Actions"
+  },
+  {
     "id": "zh-1f2eb2608d236247",
     "zh": "听",
     "pinyin": "tīng",
@@ -1226,6 +1831,27 @@
         "meaning": "I like listening to music."
       }
     ]
+  },
+  {
+    "id": "zh-cbe999c9d0650d96",
+    "zh": "听见",
+    "pinyin": "tīngjiàn",
+    "meaning": "hear (a sound)",
+    "category": "Actions"
+  },
+  {
+    "id": "zh-7e8ba29c58b5697b",
+    "zh": "听懂",
+    "pinyin": "tīngdǒng",
+    "meaning": "understand what one hears",
+    "category": "Actions"
+  },
+  {
+    "id": "zh-5bf0cf7385e667a6",
+    "zh": "我想听故事",
+    "pinyin": "wǒ xiǎng tīng gùshi",
+    "meaning": "I want to listen to a story",
+    "category": "Actions"
   },
   {
     "id": "zh-ccca74461399d2a0",
@@ -1379,6 +2005,36 @@
     "category": "Descriptions"
   },
   {
+    "id": "zh-b1c27820fec23edb",
+    "zh": "高",
+    "pinyin": "gāo",
+    "meaning": "tall / high",
+    "category": "Descriptions",
+    "usage": "Height or a high level. For a person's tall height, use 高; 长 describes length.",
+    "examples": [
+      {
+        "zh": "他很高。",
+        "pinyin": "tā hěn gāo.",
+        "meaning": "He's tall."
+      }
+    ]
+  },
+  {
+    "id": "zh-6e8ab5cc6e7855ab",
+    "zh": "矮",
+    "pinyin": "ǎi",
+    "meaning": "short (height) / low",
+    "category": "Descriptions",
+    "usage": "Short in height or low. For short hair or a short duration, use 短 (duǎn).",
+    "examples": [
+      {
+        "zh": "这把椅子有点矮。",
+        "pinyin": "zhè bǎ yǐzi yǒudiǎn ǎi.",
+        "meaning": "This chair is a little low."
+      }
+    ]
+  },
+  {
     "id": "zh-6a7339bb759788f3",
     "zh": "小",
     "pinyin": "xiǎo",
@@ -1493,6 +2149,20 @@
     "category": "Time & Routine"
   },
   {
+    "id": "zh-02bb9a7dd27a9714",
+    "zh": "后天",
+    "pinyin": "hòutiān",
+    "meaning": "the day after tomorrow",
+    "category": "Time & Routine"
+  },
+  {
+    "id": "zh-807710c9439571b7",
+    "zh": "前天",
+    "pinyin": "qiántiān",
+    "meaning": "the day before yesterday",
+    "category": "Time & Routine"
+  },
+  {
     "id": "zh-b1d841b978fb524c",
     "zh": "明天",
     "pinyin": "míngtiān",
@@ -1514,10 +2184,75 @@
     "category": "Time & Routine"
   },
   {
+    "id": "zh-e46b17ada9207054",
+    "zh": "刚才",
+    "pinyin": "gāngcái",
+    "meaning": "just now / a moment ago",
+    "category": "Time & Routine",
+    "usage": "A short time ago, in the past. 马上 (mǎshàng) means right away, usually looking forward.",
+    "examples": [
+      {
+        "zh": "你刚才说什么？",
+        "pinyin": "nǐ gāngcái shuō shénme?",
+        "meaning": "What did you just say?"
+      }
+    ]
+  },
+  {
+    "id": "zh-45569fc063406280",
+    "zh": "一会儿",
+    "pinyin": "yíhuìr",
+    "meaning": "a little while / in a moment",
+    "category": "Time & Routine",
+    "usage": "Can mean a short duration or a little later. 儿 joins the preceding syllable: huìr.",
+    "examples": [
+      {
+        "zh": "我一会儿就回来。",
+        "pinyin": "wǒ yíhuìr jiù huílai.",
+        "meaning": "I'll be back in a little while."
+      }
+    ]
+  },
+  {
+    "id": "zh-d900ec421cc934da",
+    "zh": "我一会儿就回来。",
+    "pinyin": "wǒ yíhuìr jiù huílai.",
+    "meaning": "I'll be back in a little while.",
+    "category": "Time & Routine"
+  },
+  {
     "id": "zh-c6fe2eb2c986c383",
     "zh": "早上",
     "pinyin": "zǎoshang",
     "meaning": "morning",
+    "category": "Time & Routine"
+  },
+  {
+    "id": "zh-298336ec2c0e2e37",
+    "zh": "上午",
+    "pinyin": "shàngwǔ",
+    "meaning": "morning (before noon)",
+    "category": "Time & Routine"
+  },
+  {
+    "id": "zh-5422a304a0bf193e",
+    "zh": "中午",
+    "pinyin": "zhōngwǔ",
+    "meaning": "noon / midday",
+    "category": "Time & Routine"
+  },
+  {
+    "id": "zh-af81dcf37aa86091",
+    "zh": "下午",
+    "pinyin": "xiàwǔ",
+    "meaning": "afternoon",
+    "category": "Time & Routine"
+  },
+  {
+    "id": "zh-ecf4ce25e0bdbc49",
+    "zh": "半夜",
+    "pinyin": "bànyè",
+    "meaning": "the middle of the night",
     "category": "Time & Routine"
   },
   {
@@ -1528,10 +2263,116 @@
     "category": "Time & Routine"
   },
   {
+    "id": "zh-56451fdf19c23fb6",
+    "zh": "星期一",
+    "pinyin": "xīngqīyī",
+    "meaning": "Monday",
+    "category": "Time & Routine"
+  },
+  {
+    "id": "zh-8621c00d3b2c45f7",
+    "zh": "星期二",
+    "pinyin": "xīngqī'èr",
+    "meaning": "Tuesday",
+    "category": "Time & Routine"
+  },
+  {
+    "id": "zh-23ae0a11ac5bab27",
+    "zh": "星期三",
+    "pinyin": "xīngqīsān",
+    "meaning": "Wednesday",
+    "category": "Time & Routine"
+  },
+  {
+    "id": "zh-478911d29ab88b95",
+    "zh": "星期四",
+    "pinyin": "xīngqīsì",
+    "meaning": "Thursday",
+    "category": "Time & Routine"
+  },
+  {
+    "id": "zh-6e5969e50e4df390",
+    "zh": "星期五",
+    "pinyin": "xīngqīwǔ",
+    "meaning": "Friday",
+    "category": "Time & Routine"
+  },
+  {
+    "id": "zh-7bb2f5ecaa1dc683",
+    "zh": "星期六",
+    "pinyin": "xīngqīliù",
+    "meaning": "Saturday",
+    "category": "Time & Routine"
+  },
+  {
+    "id": "zh-ec93da23f2aa45fd",
+    "zh": "星期天",
+    "pinyin": "xīngqītiān",
+    "meaning": "Sunday",
+    "category": "Time & Routine"
+  },
+  {
+    "id": "zh-a60e2f4a301eaad0",
+    "zh": "今天星期几？",
+    "pinyin": "jīntiān xīngqī jǐ?",
+    "meaning": "What day of the week is it today?",
+    "category": "Time & Routine"
+  },
+  {
+    "id": "zh-7f5fab4d966e23f6",
+    "zh": "下周",
+    "pinyin": "xià zhōu",
+    "meaning": "next week",
+    "category": "Time & Routine"
+  },
+  {
+    "id": "zh-0cf8b14f4651f4de",
+    "zh": "上周",
+    "pinyin": "shàng zhōu",
+    "meaning": "last week",
+    "category": "Time & Routine"
+  },
+  {
     "id": "zh-cc86c595a88aec0b",
     "zh": "马上",
     "pinyin": "mǎshàng",
     "meaning": "right away",
+    "category": "Time & Routine"
+  },
+  {
+    "id": "zh-bd957bc497aa1a41",
+    "zh": "分钟",
+    "pinyin": "fēnzhōng",
+    "meaning": "minute",
+    "category": "Time & Routine"
+  },
+  {
+    "id": "zh-3b6fefc50febace4",
+    "zh": "小时",
+    "pinyin": "xiǎoshí",
+    "meaning": "hour (duration)",
+    "category": "Time & Routine",
+    "usage": "An hour as a duration. Clock times use 点 (diǎn): 三点 is three o'clock, 三个小时 is three hours.",
+    "examples": [
+      {
+        "zh": "要等半小时。",
+        "pinyin": "yào děng bàn xiǎoshí.",
+        "meaning": "The wait is half an hour."
+      }
+    ]
+  },
+  {
+    "id": "zh-e1dbc4d9d176ab19",
+    "zh": "半小时",
+    "pinyin": "bàn xiǎoshí",
+    "meaning": "half an hour",
+    "category": "Time & Routine"
+  },
+  {
+    "id": "zh-6feb4bf10432d26e",
+    "zh": "现在几点？",
+    "pinyin": "xiànzài jǐ diǎn?",
+    "meaning": "What time is it?",
     "category": "Time & Routine"
   },
   {
@@ -1555,10 +2396,96 @@
     ]
   },
   {
+    "id": "zh-aa98317793b49d8d",
+    "zh": "以前",
+    "pinyin": "yǐqián",
+    "meaning": "before / in the past",
+    "category": "Time & Routine"
+  },
+  {
+    "id": "zh-eea1694c235b5ddf",
+    "zh": "每天",
+    "pinyin": "měitiān",
+    "meaning": "every day",
+    "category": "Time & Routine"
+  },
+  {
+    "id": "zh-1c49d48df5599c11",
+    "zh": "经常",
+    "pinyin": "jīngcháng",
+    "meaning": "often",
+    "category": "Time & Routine"
+  },
+  {
+    "id": "zh-1f652e02964827d6",
+    "zh": "有时候",
+    "pinyin": "yǒu shíhou",
+    "meaning": "sometimes",
+    "category": "Time & Routine"
+  },
+  {
+    "id": "zh-3addf4925037f3f5",
+    "zh": "从来不",
+    "pinyin": "cónglái bù",
+    "meaning": "never (habitually)",
+    "category": "Time & Routine",
+    "usage": "Describes something you never habitually do. For an experience you've never had, use 从来没…过.",
+    "examples": [
+      {
+        "zh": "我从来不喝酒。",
+        "pinyin": "wǒ cónglái bù hē jiǔ.",
+        "meaning": "I never drink alcohol."
+      }
+    ]
+  },
+  {
     "id": "zh-3a28422f1f71d7f5",
     "zh": "衣服",
     "pinyin": "yīfu",
     "meaning": "clothes",
+    "category": "Clothes"
+  },
+  {
+    "id": "zh-66f892caca60d9f5",
+    "zh": "衬衫",
+    "pinyin": "chènshān",
+    "meaning": "shirt (with a collar)",
+    "category": "Clothes"
+  },
+  {
+    "id": "zh-fbd6318de805c257",
+    "zh": "T恤",
+    "pinyin": "T xù",
+    "meaning": "T-shirt",
+    "category": "Clothes"
+  },
+  {
+    "id": "zh-4db0b8f384e05b0e",
+    "zh": "毛衣",
+    "pinyin": "máoyī",
+    "meaning": "sweater / jumper",
+    "category": "Clothes"
+  },
+  {
+    "id": "zh-ee9ce792c80d0846",
+    "zh": "裙子",
+    "pinyin": "qúnzi",
+    "meaning": "skirt / dress",
+    "category": "Clothes",
+    "usage": "Can refer broadly to a skirt or dress. 连衣裙 (liányīqún) specifically means a one-piece dress.",
+    "examples": [
+      {
+        "zh": "我想买一条裙子。",
+        "pinyin": "wǒ xiǎng mǎi yì tiáo qúnzi.",
+        "meaning": "I want to buy a skirt or dress."
+      }
+    ]
+  },
+  {
+    "id": "zh-64f7e04cffd98381",
+    "zh": "连衣裙",
+    "pinyin": "liányīqún",
+    "meaning": "dress (one-piece garment)",
     "category": "Clothes"
   },
   {
@@ -1569,10 +2496,52 @@
     "category": "Clothes"
   },
   {
+    "id": "zh-c9534e65fd9b69ec",
+    "zh": "短裤",
+    "pinyin": "duǎnkù",
+    "meaning": "shorts",
+    "category": "Clothes"
+  },
+  {
+    "id": "zh-ce27cfb262da5fb6",
+    "zh": "牛仔裤",
+    "pinyin": "niúzǎikù",
+    "meaning": "jeans",
+    "category": "Clothes"
+  },
+  {
+    "id": "zh-575157fbbcef9786",
+    "zh": "内裤",
+    "pinyin": "nèikù",
+    "meaning": "underpants",
+    "category": "Clothes"
+  },
+  {
+    "id": "zh-4886633da6cbdbc1",
+    "zh": "睡衣",
+    "pinyin": "shuìyī",
+    "meaning": "pajamas / sleepwear",
+    "category": "Clothes"
+  },
+  {
     "id": "zh-bf55fac9c5cf853b",
     "zh": "鞋",
     "pinyin": "xié",
     "meaning": "shoes",
+    "category": "Clothes"
+  },
+  {
+    "id": "zh-6053e0a7e287f575",
+    "zh": "拖鞋",
+    "pinyin": "tuōxié",
+    "meaning": "slippers / slip-on sandals",
+    "category": "Clothes"
+  },
+  {
+    "id": "zh-b91ebe550f2c3830",
+    "zh": "运动鞋",
+    "pinyin": "yùndòngxié",
+    "meaning": "trainers / sneakers",
     "category": "Clothes"
   },
   {
@@ -1590,10 +2559,75 @@
     "category": "Clothes"
   },
   {
+    "id": "zh-47462640e72be913",
+    "zh": "围巾",
+    "pinyin": "wéijīn",
+    "meaning": "scarf",
+    "category": "Clothes"
+  },
+  {
+    "id": "zh-d3db5e56061937d2",
+    "zh": "手套",
+    "pinyin": "shǒutào",
+    "meaning": "gloves",
+    "category": "Clothes"
+  },
+  {
     "id": "zh-17191e6e18631718",
     "zh": "外套",
     "pinyin": "wàitào",
     "meaning": "coat / jacket",
+    "category": "Clothes"
+  },
+  {
+    "id": "zh-d0296176d04a268b",
+    "zh": "口袋",
+    "pinyin": "kǒudai",
+    "meaning": "pocket",
+    "category": "Clothes"
+  },
+  {
+    "id": "zh-91e04277e6d07dff",
+    "zh": "拉链",
+    "pinyin": "lāliàn",
+    "meaning": "zipper / zip",
+    "category": "Clothes"
+  },
+  {
+    "id": "zh-8638f50c3f2ad634",
+    "zh": "穿上",
+    "pinyin": "chuānshang",
+    "meaning": "put on (clothes or shoes)",
+    "category": "Clothes",
+    "usage": "Putting clothes or shoes on, rather than simply wearing them. For hats or glasses, 戴上 (dài shàng) is usual.",
+    "examples": [
+      {
+        "zh": "穿上外套。",
+        "pinyin": "chuānshang wàitào.",
+        "meaning": "Put your coat on."
+      }
+    ]
+  },
+  {
+    "id": "zh-264492771326f4c0",
+    "zh": "脱下",
+    "pinyin": "tuō xià",
+    "meaning": "take off (clothes or shoes)",
+    "category": "Clothes",
+    "usage": "Taking clothes or shoes off. It does not mean an airplane taking off.",
+    "examples": [
+      {
+        "zh": "请脱下鞋子。",
+        "pinyin": "qǐng tuō xià xiézi.",
+        "meaning": "Please take your shoes off."
+      }
+    ]
+  },
+  {
+    "id": "zh-c28bfe8ed687999c",
+    "zh": "穿上外套。",
+    "pinyin": "chuānshang wàitào.",
+    "meaning": "Put your coat on.",
     "category": "Clothes"
   },
   {
@@ -1632,10 +2666,68 @@
     "category": "Going Places"
   },
   {
+    "id": "zh-bb7479e6e9ba76d9",
+    "zh": "幼儿园",
+    "pinyin": "yòu'éryuán",
+    "meaning": "kindergarten / preschool",
+    "category": "Going Places",
+    "usage": "Preschool / kindergarten; the exact age range differs between education systems.",
+    "examples": [
+      {
+        "zh": "孩子上幼儿园了。",
+        "pinyin": "háizi shàng yòu'éryuán le.",
+        "meaning": "The child has started preschool."
+      }
+    ]
+  },
+  {
+    "id": "zh-266e6cb77079f0c3",
+    "zh": "图书馆",
+    "pinyin": "túshūguǎn",
+    "meaning": "library",
+    "category": "Going Places"
+  },
+  {
+    "id": "zh-3ed4a32ca5dcad26",
+    "zh": "游乐场",
+    "pinyin": "yóulèchǎng",
+    "meaning": "amusement park / play area",
+    "category": "Going Places",
+    "usage": "A place with play equipment or amusement rides; its size varies. Not a sports field.",
+    "examples": [
+      {
+        "zh": "我们去游乐场吧。",
+        "pinyin": "wǒmen qù yóulèchǎng ba.",
+        "meaning": "Let's go to the amusement park / play area."
+      }
+    ]
+  },
+  {
     "id": "zh-61f96c6aac6a0745",
     "zh": "商店",
     "pinyin": "shāngdiàn",
     "meaning": "shop / store",
+    "category": "Going Places"
+  },
+  {
+    "id": "zh-ce69cb3a657b875b",
+    "zh": "面包店",
+    "pinyin": "miànbāodiàn",
+    "meaning": "bakery",
+    "category": "Going Places"
+  },
+  {
+    "id": "zh-38082464152a8efe",
+    "zh": "咖啡馆",
+    "pinyin": "kāfēiguǎn",
+    "meaning": "café / coffee shop",
+    "category": "Going Places"
+  },
+  {
+    "id": "zh-eae4ffb2d08adf16",
+    "zh": "理发店",
+    "pinyin": "lǐfàdiàn",
+    "meaning": "hair salon / barbershop",
     "category": "Going Places"
   },
   {
@@ -1646,10 +2738,66 @@
     "category": "Going Places"
   },
   {
+    "id": "zh-16a2988777073350",
+    "zh": "海边",
+    "pinyin": "hǎibiān",
+    "meaning": "seaside / beach area",
+    "category": "Going Places"
+  },
+  {
+    "id": "zh-6e06691fc1c76029",
+    "zh": "游泳池",
+    "pinyin": "yóuyǒngchí",
+    "meaning": "swimming pool",
+    "category": "Going Places"
+  },
+  {
     "id": "zh-024b2708ed8e3ffc",
     "zh": "下雨",
     "pinyin": "xiàyǔ",
     "meaning": "rain / raining",
+    "category": "Weather & Outside"
+  },
+  {
+    "id": "zh-4d947325473f5b57",
+    "zh": "天气",
+    "pinyin": "tiānqì",
+    "meaning": "weather",
+    "category": "Weather & Outside"
+  },
+  {
+    "id": "zh-3efc6babe61903ce",
+    "zh": "晴天",
+    "pinyin": "qíngtiān",
+    "meaning": "sunny day / clear weather",
+    "category": "Weather & Outside"
+  },
+  {
+    "id": "zh-d1aac086f4271f17",
+    "zh": "阴天",
+    "pinyin": "yīntiān",
+    "meaning": "overcast day / cloudy weather",
+    "category": "Weather & Outside"
+  },
+  {
+    "id": "zh-a86eaeb98f4ced93",
+    "zh": "雨伞",
+    "pinyin": "yǔsǎn",
+    "meaning": "umbrella",
+    "category": "Weather & Outside"
+  },
+  {
+    "id": "zh-c9c1e6e1309def05",
+    "zh": "雨衣",
+    "pinyin": "yǔyī",
+    "meaning": "raincoat",
+    "category": "Weather & Outside"
+  },
+  {
+    "id": "zh-e2a16aba52032d39",
+    "zh": "下雨了。",
+    "pinyin": "xià yǔ le.",
+    "meaning": "It's started raining.",
     "category": "Weather & Outside"
   },
   {
@@ -1667,10 +2815,73 @@
     "category": "Weather & Outside"
   },
   {
+    "id": "zh-9eaa6d08fa0ccc5c",
+    "zh": "春天",
+    "pinyin": "chūntiān",
+    "meaning": "spring (season)",
+    "category": "Weather & Outside"
+  },
+  {
+    "id": "zh-0c27fe7382e1aac3",
+    "zh": "夏天",
+    "pinyin": "xiàtiān",
+    "meaning": "summer",
+    "category": "Weather & Outside"
+  },
+  {
+    "id": "zh-21691f1b8e10ff5b",
+    "zh": "秋天",
+    "pinyin": "qiūtiān",
+    "meaning": "autumn / fall",
+    "category": "Weather & Outside"
+  },
+  {
+    "id": "zh-7a6cc29740a72c4c",
+    "zh": "冬天",
+    "pinyin": "dōngtiān",
+    "meaning": "winter",
+    "category": "Weather & Outside"
+  },
+  {
     "id": "zh-be65bd5518aedced",
     "zh": "风",
     "pinyin": "fēng",
     "meaning": "wind",
+    "category": "Weather & Outside"
+  },
+  {
+    "id": "zh-03ce8aed5ebc351e",
+    "zh": "刮风",
+    "pinyin": "guā fēng",
+    "meaning": "be windy / the wind blows",
+    "category": "Weather & Outside"
+  },
+  {
+    "id": "zh-b640ad963c78d70d",
+    "zh": "凉快",
+    "pinyin": "liángkuai",
+    "meaning": "pleasantly cool",
+    "category": "Weather & Outside"
+  },
+  {
+    "id": "zh-5c8f68d1574b48bb",
+    "zh": "暖和",
+    "pinyin": "nuǎnhuo",
+    "meaning": "warm (comfortably so)",
+    "category": "Weather & Outside"
+  },
+  {
+    "id": "zh-3732e264dfa95cae",
+    "zh": "温度",
+    "pinyin": "wēndù",
+    "meaning": "temperature",
+    "category": "Weather & Outside"
+  },
+  {
+    "id": "zh-b275115781d4bf41",
+    "zh": "今天天气怎么样？",
+    "pinyin": "jīntiān tiānqì zěnmeyàng?",
+    "meaning": "What's the weather like today?",
     "category": "Weather & Outside"
   },
   {
@@ -1681,6 +2892,35 @@
     "category": "Weather & Outside"
   },
   {
+    "id": "zh-635643d28367e5e0",
+    "zh": "树",
+    "pinyin": "shù",
+    "meaning": "tree",
+    "category": "Weather & Outside"
+  },
+  {
+    "id": "zh-b0a1eab5f902df03",
+    "zh": "花",
+    "pinyin": "huā",
+    "meaning": "flower",
+    "category": "Weather & Outside",
+    "usage": "Here, flower. 花 can also be a verb meaning spend money or time.",
+    "examples": [
+      {
+        "zh": "这些花很漂亮。",
+        "pinyin": "zhèxiē huā hěn piàoliang.",
+        "meaning": "These flowers are beautiful."
+      }
+    ]
+  },
+  {
+    "id": "zh-91b246b5dbc05480",
+    "zh": "草",
+    "pinyin": "cǎo",
+    "meaning": "grass",
+    "category": "Weather & Outside"
+  },
+  {
     "id": "zh-12a2aadcf0a5a2d2",
     "zh": "球",
     "pinyin": "qiú",
@@ -1688,10 +2928,87 @@
     "category": "Kids & Play"
   },
   {
+    "id": "zh-82a3a5f098221934",
+    "zh": "宠物",
+    "pinyin": "chǒngwù",
+    "meaning": "pet",
+    "category": "Kids & Play"
+  },
+  {
+    "id": "zh-a810bf845a307382",
+    "zh": "猫",
+    "pinyin": "māo",
+    "meaning": "cat",
+    "category": "Kids & Play"
+  },
+  {
+    "id": "zh-cecd675a4c3cb00d",
+    "zh": "狗",
+    "pinyin": "gǒu",
+    "meaning": "dog",
+    "category": "Kids & Play"
+  },
+  {
+    "id": "zh-ab745c2d91e6f6c9",
+    "zh": "喂猫",
+    "pinyin": "wèi māo",
+    "meaning": "feed the cat",
+    "category": "Kids & Play"
+  },
+  {
+    "id": "zh-4bd55aeba6670176",
+    "zh": "遛狗",
+    "pinyin": "liù gǒu",
+    "meaning": "walk the dog",
+    "category": "Kids & Play"
+  },
+  {
     "id": "zh-6d29c127963529ac",
     "zh": "玩具",
     "pinyin": "wánjù",
     "meaning": "toy",
+    "category": "Kids & Play"
+  },
+  {
+    "id": "zh-e6df1df966637deb",
+    "zh": "积木",
+    "pinyin": "jīmù",
+    "meaning": "building blocks",
+    "category": "Kids & Play"
+  },
+  {
+    "id": "zh-37a7ebce781df40c",
+    "zh": "拼图",
+    "pinyin": "pīntú",
+    "meaning": "jigsaw puzzle",
+    "category": "Kids & Play"
+  },
+  {
+    "id": "zh-0f7385593fb1b634",
+    "zh": "画画",
+    "pinyin": "huà huà",
+    "meaning": "draw / paint pictures",
+    "category": "Kids & Play"
+  },
+  {
+    "id": "zh-02ef5bf214909795",
+    "zh": "蜡笔",
+    "pinyin": "làbǐ",
+    "meaning": "crayon",
+    "category": "Kids & Play"
+  },
+  {
+    "id": "zh-f77e30ee1aed8819",
+    "zh": "铅笔",
+    "pinyin": "qiānbǐ",
+    "meaning": "pencil",
+    "category": "Kids & Play"
+  },
+  {
+    "id": "zh-62e2af28ab4a412b",
+    "zh": "纸",
+    "pinyin": "zhǐ",
+    "meaning": "paper",
     "category": "Kids & Play"
   },
   {
@@ -1709,10 +3026,45 @@
     "category": "Kids & Play"
   },
   {
+    "id": "zh-c7338abd8b4d5038",
+    "zh": "讲故事",
+    "pinyin": "jiǎng gùshi",
+    "meaning": "tell a story",
+    "category": "Kids & Play"
+  },
+  {
+    "id": "zh-93de7576fb509f3f",
+    "zh": "再讲一个吧。",
+    "pinyin": "zài jiǎng yí ge ba.",
+    "meaning": "Tell another one, please. (a story)",
+    "category": "Kids & Play"
+  },
+  {
     "id": "zh-f5fd638d5875bb5a",
     "zh": "一起玩",
     "pinyin": "yìqǐ wán",
     "meaning": "play together",
+    "category": "Kids & Play"
+  },
+  {
+    "id": "zh-242f605390904e9d",
+    "zh": "捉迷藏",
+    "pinyin": "zhuō mícáng",
+    "meaning": "play hide-and-seek",
+    "category": "Kids & Play"
+  },
+  {
+    "id": "zh-f5f8cb6442d8323c",
+    "zh": "滑梯",
+    "pinyin": "huátī",
+    "meaning": "slide (playground equipment)",
+    "category": "Kids & Play"
+  },
+  {
+    "id": "zh-88ba14272b3d717d",
+    "zh": "秋千",
+    "pinyin": "qiūqiān",
+    "meaning": "swing (playground equipment)",
     "category": "Kids & Play"
   },
   {
@@ -1765,6 +3117,27 @@
     "category": "Numbers"
   },
   {
+    "id": "zh-9489a4a6f3fbf136",
+    "zh": "零",
+    "pinyin": "líng",
+    "meaning": "zero",
+    "category": "Numbers"
+  },
+  {
+    "id": "zh-2987ed96e3306eec",
+    "zh": "一千",
+    "pinyin": "yì qiān",
+    "meaning": "one thousand",
+    "category": "Numbers"
+  },
+  {
+    "id": "zh-7396ef3616ec16ed",
+    "zh": "一万",
+    "pinyin": "yí wàn",
+    "meaning": "ten thousand",
+    "category": "Numbers"
+  },
+  {
     "id": "zh-583ed24deba0a33f",
     "zh": "多少钱",
     "pinyin": "duōshao qián",
@@ -1776,6 +3149,13 @@
     "zh": "我明白了",
     "pinyin": "wǒ míngbai le",
     "meaning": "I understand",
+    "category": "Common Phrases"
+  },
+  {
+    "id": "zh-83306e51dc24ca1a",
+    "zh": "什么意思？",
+    "pinyin": "shénme yìsi?",
+    "meaning": "What does it mean?",
     "category": "Common Phrases"
   },
   {
@@ -1829,27 +3209,6 @@
     "category": "Common Phrases"
   },
   {
-    "id": "zh-61dd48f58b0707c0",
-    "zh": "我饿了",
-    "pinyin": "wǒ è le",
-    "meaning": "I'm hungry",
-    "category": "Everyday Sentences"
-  },
-  {
-    "id": "zh-73ed236004d3e7c6",
-    "zh": "我渴了",
-    "pinyin": "wǒ kě le",
-    "meaning": "I'm thirsty",
-    "category": "Everyday Sentences"
-  },
-  {
-    "id": "zh-df6a19a0c7a5ac78",
-    "zh": "我累了",
-    "pinyin": "wǒ lèi le",
-    "meaning": "I'm tired",
-    "category": "Everyday Sentences"
-  },
-  {
     "id": "zh-f0987456f13b89f5",
     "zh": "我要喝水",
     "pinyin": "wǒ yào hē shuǐ",
@@ -1899,20 +3258,6 @@
     "category": "Everyday Sentences"
   },
   {
-    "id": "zh-490bfe52ad554086",
-    "zh": "我喜欢这个",
-    "pinyin": "wǒ xǐhuan zhège",
-    "meaning": "I like this",
-    "category": "Everyday Sentences"
-  },
-  {
-    "id": "zh-635f7bc88ce1d2c7",
-    "zh": "我不喜欢这个",
-    "pinyin": "wǒ bù xǐhuan zhège",
-    "meaning": "I don't like this",
-    "category": "Everyday Sentences"
-  },
-  {
     "id": "zh-abf3ec386cb03111",
     "zh": "你怎么了",
     "pinyin": "nǐ zěnme le",
@@ -1931,13 +3276,6 @@
     "zh": "我要吃饭",
     "pinyin": "wǒ yào chīfàn",
     "meaning": "I want to eat",
-    "category": "Everyday Sentences"
-  },
-  {
-    "id": "zh-91187d0a2f72845e",
-    "zh": "我要回家",
-    "pinyin": "wǒ yào huí jiā",
-    "meaning": "I want to go home",
     "category": "Everyday Sentences"
   },
   {
@@ -2228,31 +3566,10 @@
     "category": "Everyday Sentences"
   },
   {
-    "id": "zh-fdaa26ac8943d4a4",
-    "zh": "我想喝水",
-    "pinyin": "wǒ xiǎng hē shuǐ",
-    "meaning": "I want to drink water",
-    "category": "Everyday Sentences"
-  },
-  {
-    "id": "zh-0210e87252468059",
-    "zh": "我想睡觉",
-    "pinyin": "wǒ xiǎng shuìjiào",
-    "meaning": "I want to sleep",
-    "category": "Everyday Sentences"
-  },
-  {
     "id": "zh-08af09c2a2250eef",
     "zh": "我想看书",
     "pinyin": "wǒ xiǎng kàn shū",
     "meaning": "I want to read a book",
-    "category": "Everyday Sentences"
-  },
-  {
-    "id": "zh-5bf0cf7385e667a6",
-    "zh": "我想听故事",
-    "pinyin": "wǒ xiǎng tīng gùshi",
-    "meaning": "I want to listen to a story",
     "category": "Everyday Sentences"
   },
   {
@@ -2782,13 +4099,6 @@
     "category": "Everyday Sentences"
   },
   {
-    "id": "zh-3e0cdca521f6b8cc",
-    "zh": "我看书",
-    "pinyin": "wǒ kàn shū",
-    "meaning": "I am reading.",
-    "category": "Everyday Sentences"
-  },
-  {
     "id": "zh-dcc9a6de78928563",
     "zh": "我拿这个",
     "pinyin": "wǒ ná zhège",
@@ -3007,13 +4317,6 @@
     ]
   },
   {
-    "id": "zh-7e608b96f83e1cf9",
-    "zh": "你能等一下吗",
-    "pinyin": "nǐ néng děng yíxià ma",
-    "meaning": "Can you wait a moment?",
-    "category": "Common Phrases"
-  },
-  {
     "id": "zh-f0404eaec00daf86",
     "zh": "我可以坐这里吗",
     "pinyin": "wǒ kěyǐ zuò zhèlǐ ma",
@@ -3057,6 +4360,27 @@
     "category": "Home & Routine"
   },
   {
+    "id": "zh-dc863ae7b6223e22",
+    "zh": "洗衣服",
+    "pinyin": "xǐ yīfu",
+    "meaning": "wash clothes / do laundry",
+    "category": "Home & Routine"
+  },
+  {
+    "id": "zh-6acfa1db6a625946",
+    "zh": "洗衣机",
+    "pinyin": "xǐyījī",
+    "meaning": "washing machine",
+    "category": "Home & Routine"
+  },
+  {
+    "id": "zh-d9938dab5b825cc5",
+    "zh": "晾衣服",
+    "pinyin": "liàng yīfu",
+    "meaning": "hang clothes out to dry",
+    "category": "Home & Routine"
+  },
+  {
     "id": "zh-792c11bc85d513bc",
     "zh": "轮到你了",
     "pinyin": "lún dào nǐ le",
@@ -3064,11 +4388,18 @@
     "category": "Kids & Play"
   },
   {
-    "id": "zh-bc105e8d53e21cc7",
-    "zh": "我来帮你",
-    "pinyin": "wǒ lái bāng nǐ",
-    "meaning": "Let me help you.",
-    "category": "Common Phrases"
+    "id": "zh-863336ebed637554",
+    "zh": "排好队。",
+    "pinyin": "pái hǎo duì.",
+    "meaning": "Line up properly.",
+    "category": "Kids & Play"
+  },
+  {
+    "id": "zh-15f828cac6a99a8a",
+    "zh": "别推。",
+    "pinyin": "bié tuī.",
+    "meaning": "Don't push.",
+    "category": "Kids & Play"
   },
   {
     "id": "zh-a233546ba99665e1",
@@ -3097,6 +4428,21 @@
     "pinyin": "yànmàipiàn",
     "meaning": "rolled oats / oatmeal flakes",
     "category": "Breakfast"
+  },
+  {
+    "id": "zh-9410d3f89fe02676",
+    "zh": "麦片",
+    "pinyin": "màipiàn",
+    "meaning": "cereal flakes (oats or other grains)",
+    "category": "Breakfast",
+    "usage": "Cereal flakes, not necessarily oats. 燕麦片 (yànmàipiàn) specifically refers to oat flakes.",
+    "examples": [
+      {
+        "zh": "我早上吃麦片。",
+        "pinyin": "wǒ zǎoshang chī màipiàn.",
+        "meaning": "I eat cereal flakes in the morning."
+      }
+    ]
   },
   {
     "id": "zh-787d89bb2ba8a2c6",
@@ -3161,6 +4507,13 @@
         "meaning": "I'd like two slices of sandwich bread."
       }
     ]
+  },
+  {
+    "id": "zh-5b841391ff5551f1",
+    "zh": "牛角包",
+    "pinyin": "niújiǎobāo",
+    "meaning": "croissant",
+    "category": "Breakfast"
   },
   {
     "id": "zh-d2283ad932b89e62",
@@ -3844,6 +5197,13 @@
     "category": "Cooking"
   },
   {
+    "id": "zh-bc773bca26641385",
+    "zh": "保鲜盒",
+    "pinyin": "bǎoxiānhé",
+    "meaning": "food storage container",
+    "category": "Cooking"
+  },
+  {
     "id": "zh-773d6bfc831da6fb",
     "zh": "新鲜",
     "pinyin": "xīnxiān",
@@ -3885,6 +5245,13 @@
         "meaning": "The chicken is cooked. It's ready to eat."
       }
     ]
+  },
+  {
+    "id": "zh-3d604862805b04fd",
+    "zh": "还没熟。",
+    "pinyin": "hái méi shú.",
+    "meaning": "It's not cooked through yet.",
+    "category": "Cooking"
   },
   {
     "id": "zh-e4dd9f27075746cc",
@@ -3943,6 +5310,48 @@
     "category": "Relatives"
   },
   {
+    "id": "zh-ef4b48f727510048",
+    "zh": "双胞胎",
+    "pinyin": "shuāngbāotāi",
+    "meaning": "twins",
+    "category": "Relatives"
+  },
+  {
+    "id": "zh-68b0d19ee7001927",
+    "zh": "独生子女",
+    "pinyin": "dúshēng zǐnǚ",
+    "meaning": "only child",
+    "category": "Relatives"
+  },
+  {
+    "id": "zh-7f33c2c47bb4b5b8",
+    "zh": "嫂子",
+    "pinyin": "sǎozi",
+    "meaning": "sister-in-law (older brother's wife)",
+    "category": "Relatives"
+  },
+  {
+    "id": "zh-32848ea614ff29eb",
+    "zh": "弟媳",
+    "pinyin": "dìxí",
+    "meaning": "sister-in-law (younger brother's wife)",
+    "category": "Relatives"
+  },
+  {
+    "id": "zh-b33d3ba4aa06a02b",
+    "zh": "姐夫",
+    "pinyin": "jiěfu",
+    "meaning": "brother-in-law (older sister's husband)",
+    "category": "Relatives"
+  },
+  {
+    "id": "zh-21989af8a798d70b",
+    "zh": "妹夫",
+    "pinyin": "mèifu",
+    "meaning": "brother-in-law (younger sister's husband)",
+    "category": "Relatives"
+  },
+  {
     "id": "zh-19db0f2f50792998",
     "zh": "老公",
     "pinyin": "lǎogōng",
@@ -3957,11 +5366,86 @@
     "category": "Relatives"
   },
   {
+    "id": "zh-16f6af47cc85c75d",
+    "zh": "公公",
+    "pinyin": "gōnggong",
+    "meaning": "father-in-law (husband's father)",
+    "category": "Relatives",
+    "usage": "Here, your husband's father. Your wife's father is 岳父 (yuèfù). Forms of direct address vary by family.",
+    "examples": [
+      {
+        "zh": "我公公退休了。",
+        "pinyin": "wǒ gōnggong tuìxiū le.",
+        "meaning": "My father-in-law (my husband's father) is retired."
+      }
+    ]
+  },
+  {
+    "id": "zh-962dee8d181d451a",
+    "zh": "婆婆",
+    "pinyin": "pópo",
+    "meaning": "mother-in-law (husband's mother)",
+    "category": "Relatives",
+    "usage": "Here, your husband's mother. Your wife's mother is 岳母 (yuèmǔ). 婆婆 can also mean grandmother in some regions.",
+    "examples": [
+      {
+        "zh": "我婆婆是老师。",
+        "pinyin": "wǒ pópo shì lǎoshī.",
+        "meaning": "My mother-in-law (my husband's mother) is a teacher."
+      }
+    ]
+  },
+  {
+    "id": "zh-ce01515d7ec7b1d4",
+    "zh": "岳父",
+    "pinyin": "yuèfù",
+    "meaning": "father-in-law (wife's father)",
+    "category": "Relatives",
+    "usage": "Your wife's father. Your husband's father is 公公 (gōnggong).",
+    "examples": [
+      {
+        "zh": "我岳父退休了。",
+        "pinyin": "wǒ yuèfù tuìxiū le.",
+        "meaning": "My father-in-law (my wife's father) is retired."
+      }
+    ]
+  },
+  {
+    "id": "zh-7d23449aeb981d1a",
+    "zh": "岳母",
+    "pinyin": "yuèmǔ",
+    "meaning": "mother-in-law (wife's mother)",
+    "category": "Relatives",
+    "usage": "Your wife's mother. Your husband's mother is 婆婆 (pópo).",
+    "examples": [
+      {
+        "zh": "我岳母是老师。",
+        "pinyin": "wǒ yuèmǔ shì lǎoshī.",
+        "meaning": "My mother-in-law (my wife's mother) is a teacher."
+      }
+    ]
+  },
+  {
     "id": "zh-a2c135e7e0890800",
     "zh": "伯伯",
     "pinyin": "bóbo",
     "meaning": "uncle (dad's older brother)",
     "category": "Relatives"
+  },
+  {
+    "id": "zh-8750737e6d337ab5",
+    "zh": "伯母",
+    "pinyin": "bómǔ",
+    "meaning": "aunt (wife of dad's older brother)",
+    "category": "Relatives",
+    "usage": "Your father's older brother's wife. His younger brother's wife is 婶婶 (shěnshen).",
+    "examples": [
+      {
+        "zh": "这是我伯母。",
+        "pinyin": "zhè shì wǒ bómǔ.",
+        "meaning": "This is my aunt (wife of dad's older brother)."
+      }
+    ]
   },
   {
     "id": "zh-85e8fccb36a5ad63",
@@ -4052,6 +5536,13 @@
     "zh": "表姐",
     "pinyin": "biǎojiě",
     "meaning": "older female cousin (mom's side or dad's sister's daughter)",
+    "category": "Relatives"
+  },
+  {
+    "id": "zh-1e7af13fe7bece0a",
+    "zh": "这是我表姐。",
+    "pinyin": "zhè shì wǒ biǎojiě.",
+    "meaning": "This is my older female cousin (表姐).",
     "category": "Relatives"
   },
   {
@@ -4171,13 +5662,6 @@
     "zh": "你有兄弟姐妹吗？",
     "pinyin": "nǐ yǒu xiōngdì jiěmèi ma?",
     "meaning": "Do you have any siblings?",
-    "category": "Relatives"
-  },
-  {
-    "id": "zh-1e7af13fe7bece0a",
-    "zh": "这是我表姐。",
-    "pinyin": "zhè shì wǒ biǎojiě.",
-    "meaning": "This is my older female cousin (表姐).",
     "category": "Relatives"
   },
   {
@@ -4309,10 +5793,59 @@
     "category": "Friends & social life"
   },
   {
+    "id": "zh-7f9dc03c7fdc818e",
+    "zh": "打电话",
+    "pinyin": "dǎ diànhuà",
+    "meaning": "make a phone call / phone someone",
+    "category": "Friends & social life"
+  },
+  {
+    "id": "zh-91dab53ece825b56",
+    "zh": "接电话",
+    "pinyin": "jiē diànhuà",
+    "meaning": "answer the phone",
+    "category": "Friends & social life"
+  },
+  {
+    "id": "zh-8e87c0dda911097d",
+    "zh": "电话号码",
+    "pinyin": "diànhuà hàomǎ",
+    "meaning": "phone number",
+    "category": "Friends & social life"
+  },
+  {
+    "id": "zh-f47fac72b93904b6",
+    "zh": "我晚点给你打电话。",
+    "pinyin": "wǒ wǎn diǎn gěi nǐ dǎ diànhuà.",
+    "meaning": "I'll call you later.",
+    "category": "Friends & social life"
+  },
+  {
     "id": "zh-1955b265d56843b1",
     "zh": "邀请",
     "pinyin": "yāoqǐng",
     "meaning": "invite",
+    "category": "Friends & social life"
+  },
+  {
+    "id": "zh-89ab6b0fa350500d",
+    "zh": "做客",
+    "pinyin": "zuòkè",
+    "meaning": "visit someone as a guest",
+    "category": "Friends & social life"
+  },
+  {
+    "id": "zh-960d96a6920e3c49",
+    "zh": "欢迎",
+    "pinyin": "huānyíng",
+    "meaning": "welcome (someone)",
+    "category": "Friends & social life"
+  },
+  {
+    "id": "zh-ca7b30731917e97a",
+    "zh": "来我家玩吧。",
+    "pinyin": "lái wǒ jiā wán ba.",
+    "meaning": "Come over sometime.",
     "category": "Friends & social life"
   },
   {
@@ -4334,6 +5867,13 @@
     "zh": "礼物",
     "pinyin": "lǐwù",
     "meaning": "gift",
+    "category": "Friends & social life"
+  },
+  {
+    "id": "zh-1d03275776a748a6",
+    "zh": "生日快乐！",
+    "pinyin": "shēngrì kuàilè!",
+    "meaning": "Happy birthday!",
     "category": "Friends & social life"
   },
   {
@@ -4681,6 +6221,13 @@
     "category": "Work & coworkers"
   },
   {
+    "id": "zh-d081cc6e1ffa02a3",
+    "zh": "我现在有点忙。",
+    "pinyin": "wǒ xiànzài yǒudiǎn máng.",
+    "meaning": "I'm a bit busy right now.",
+    "category": "Work & coworkers"
+  },
+  {
     "id": "zh-f973d5ac51a2c220",
     "zh": "有空",
     "pinyin": "yǒu kòng",
@@ -4700,6 +6247,13 @@
     "zh": "帮忙",
     "pinyin": "bāngmáng",
     "meaning": "help out",
+    "category": "Work & coworkers"
+  },
+  {
+    "id": "zh-bc105e8d53e21cc7",
+    "zh": "我来帮你",
+    "pinyin": "wǒ lái bāng nǐ",
+    "meaning": "Let me help you.",
     "category": "Work & coworkers"
   },
   {
@@ -4741,6 +6295,49 @@
     "zh": "电脑",
     "pinyin": "diànnǎo",
     "meaning": "computer",
+    "category": "Work & coworkers"
+  },
+  {
+    "id": "zh-a5e408eaee013e64",
+    "zh": "充电",
+    "pinyin": "chōngdiàn",
+    "meaning": "charge (a battery / device)",
+    "category": "Work & coworkers"
+  },
+  {
+    "id": "zh-bc71dcc29c79594f",
+    "zh": "充电器",
+    "pinyin": "chōngdiànqì",
+    "meaning": "charger",
+    "category": "Work & coworkers"
+  },
+  {
+    "id": "zh-8aa8d60039c960a5",
+    "zh": "没电了。",
+    "pinyin": "méi diàn le.",
+    "meaning": "The battery's dead / there's no power.",
+    "category": "Work & coworkers",
+    "usage": "An empty battery or no electricity, depending on the subject. It does not necessarily mean a device is broken.",
+    "examples": [
+      {
+        "zh": "手机没电了。",
+        "pinyin": "shǒujī méi diàn le.",
+        "meaning": "My phone's battery is dead."
+      }
+    ]
+  },
+  {
+    "id": "zh-a621ab606db2a11f",
+    "zh": "密码",
+    "pinyin": "mìmǎ",
+    "meaning": "password / PIN",
+    "category": "Work & coworkers"
+  },
+  {
+    "id": "zh-1bc009fa87e0dae1",
+    "zh": "耳机",
+    "pinyin": "ěrjī",
+    "meaning": "earphones / headphones",
     "category": "Work & coworkers"
   },
   {
@@ -4804,13 +6401,6 @@
     "zh": "我今天在家办公。",
     "pinyin": "wǒ jīntiān zài jiā bàngōng.",
     "meaning": "I'm working from home today.",
-    "category": "Work & coworkers"
-  },
-  {
-    "id": "zh-d081cc6e1ffa02a3",
-    "zh": "我现在有点忙。",
-    "pinyin": "wǒ xiànzài yǒudiǎn máng.",
-    "meaning": "I'm a bit busy right now.",
     "category": "Work & coworkers"
   },
   {
@@ -5151,6 +6741,13 @@
     "category": "Shopping & errands"
   },
   {
+    "id": "zh-0e5a6b3f0a3a1525",
+    "zh": "扫码",
+    "pinyin": "sǎo mǎ",
+    "meaning": "scan a QR code / barcode",
+    "category": "Shopping & errands"
+  },
+  {
     "id": "zh-dda252f97b8e98a1",
     "zh": "找钱",
     "pinyin": "zhǎo qián",
@@ -5177,6 +6774,20 @@
     "zh": "袋子",
     "pinyin": "dàizi",
     "meaning": "bag",
+    "category": "Shopping & errands"
+  },
+  {
+    "id": "zh-268002cb016d01c8",
+    "zh": "钱包",
+    "pinyin": "qiánbāo",
+    "meaning": "wallet / purse (for money)",
+    "category": "Shopping & errands"
+  },
+  {
+    "id": "zh-015845346aa9dc94",
+    "zh": "背包",
+    "pinyin": "bēibāo",
+    "meaning": "backpack",
     "category": "Shopping & errands"
   },
   {
@@ -5242,6 +6853,20 @@
     "zh": "试穿",
     "pinyin": "shìchuān",
     "meaning": "try on clothes",
+    "category": "Shopping & errands"
+  },
+  {
+    "id": "zh-3a29a2305ac89d35",
+    "zh": "太大了。",
+    "pinyin": "tài dà le.",
+    "meaning": "It's too big.",
+    "category": "Shopping & errands"
+  },
+  {
+    "id": "zh-c745f3aeead08ed4",
+    "zh": "太小了。",
+    "pinyin": "tài xiǎo le.",
+    "meaning": "It's too small.",
     "category": "Shopping & errands"
   },
   {
@@ -5562,6 +7187,27 @@
     "category": "Getting around"
   },
   {
+    "id": "zh-1a7930272017090b",
+    "zh": "入口",
+    "pinyin": "rùkǒu",
+    "meaning": "entrance",
+    "category": "Getting around"
+  },
+  {
+    "id": "zh-7016090059bdfab9",
+    "zh": "出口",
+    "pinyin": "chūkǒu",
+    "meaning": "exit",
+    "category": "Getting around"
+  },
+  {
+    "id": "zh-22964380dd7f66a7",
+    "zh": "停车场",
+    "pinyin": "tíngchēchǎng",
+    "meaning": "car park / parking lot",
+    "category": "Getting around"
+  },
+  {
     "id": "zh-536be9b372bbf17f",
     "zh": "车票",
     "pinyin": "chēpiào",
@@ -5601,6 +7247,34 @@
     "zh": "左边",
     "pinyin": "zuǒbian",
     "meaning": "left side",
+    "category": "Getting around"
+  },
+  {
+    "id": "zh-ad0a0abeab6bedf6",
+    "zh": "前面",
+    "pinyin": "qiánmian",
+    "meaning": "in front / ahead",
+    "category": "Getting around"
+  },
+  {
+    "id": "zh-e59f6d90dead1883",
+    "zh": "后面",
+    "pinyin": "hòumian",
+    "meaning": "behind / at the back",
+    "category": "Getting around"
+  },
+  {
+    "id": "zh-bab67370c50a5808",
+    "zh": "旁边",
+    "pinyin": "pángbiān",
+    "meaning": "beside / next to",
+    "category": "Getting around"
+  },
+  {
+    "id": "zh-f07898bd653a27e3",
+    "zh": "对面",
+    "pinyin": "duìmiàn",
+    "meaning": "opposite / across from",
     "category": "Getting around"
   },
   {
@@ -5651,6 +7325,20 @@
     "zh": "下车",
     "pinyin": "xià chē",
     "meaning": "get off / out of a vehicle",
+    "category": "Getting around"
+  },
+  {
+    "id": "zh-07ce80308c70f82c",
+    "zh": "到了。",
+    "pinyin": "dào le.",
+    "meaning": "We're here / we've arrived.",
+    "category": "Getting around"
+  },
+  {
+    "id": "zh-783f519a1428fa91",
+    "zh": "就在这里。",
+    "pinyin": "jiù zài zhèlǐ.",
+    "meaning": "It's right here.",
     "category": "Getting around"
   },
   {
@@ -5731,6 +7419,34 @@
     "category": "Health & body"
   },
   {
+    "id": "zh-476627a8c1b83505",
+    "zh": "头发",
+    "pinyin": "tóufa",
+    "meaning": "hair (on the head)",
+    "category": "Health & body"
+  },
+  {
+    "id": "zh-78392c2e9d07a484",
+    "zh": "脸",
+    "pinyin": "liǎn",
+    "meaning": "face",
+    "category": "Health & body"
+  },
+  {
+    "id": "zh-e3b1367eddea9efd",
+    "zh": "脖子",
+    "pinyin": "bózi",
+    "meaning": "neck",
+    "category": "Health & body"
+  },
+  {
+    "id": "zh-80ff1b1d0851270f",
+    "zh": "肩膀",
+    "pinyin": "jiānbǎng",
+    "meaning": "shoulder",
+    "category": "Health & body"
+  },
+  {
     "id": "zh-9069cc8f2c62b4b4",
     "zh": "眼睛",
     "pinyin": "yǎnjing",
@@ -5773,10 +7489,38 @@
     "category": "Health & body"
   },
   {
+    "id": "zh-fbee3cdd532ff711",
+    "zh": "胳膊",
+    "pinyin": "gēbo",
+    "meaning": "arm",
+    "category": "Health & body"
+  },
+  {
+    "id": "zh-d2855d3c6ad90497",
+    "zh": "手指",
+    "pinyin": "shǒuzhǐ",
+    "meaning": "finger",
+    "category": "Health & body"
+  },
+  {
     "id": "zh-94bf1ba00c1b0cfa",
     "zh": "脚",
     "pinyin": "jiǎo",
     "meaning": "foot",
+    "category": "Health & body"
+  },
+  {
+    "id": "zh-6fda657f199f4985",
+    "zh": "腿",
+    "pinyin": "tuǐ",
+    "meaning": "leg",
+    "category": "Health & body"
+  },
+  {
+    "id": "zh-90d87bd6730729fc",
+    "zh": "膝盖",
+    "pinyin": "xīgài",
+    "meaning": "knee",
     "category": "Health & body"
   },
   {
@@ -5806,6 +7550,27 @@
     "zh": "感冒",
     "pinyin": "gǎnmào",
     "meaning": "have a cold / a cold",
+    "category": "Health & body"
+  },
+  {
+    "id": "zh-035205a3ea13752c",
+    "zh": "流鼻涕",
+    "pinyin": "liú bítì",
+    "meaning": "have a runny nose",
+    "category": "Health & body"
+  },
+  {
+    "id": "zh-deafdd96edaf59af",
+    "zh": "打喷嚏",
+    "pinyin": "dǎ pēntì",
+    "meaning": "sneeze",
+    "category": "Health & body"
+  },
+  {
+    "id": "zh-fc8050f16c4037a6",
+    "zh": "嗓子疼",
+    "pinyin": "sǎngzi téng",
+    "meaning": "have a sore throat",
     "category": "Health & body"
   },
   {
@@ -5858,10 +7623,53 @@
     "category": "Health & body"
   },
   {
+    "id": "zh-2d5b51d2686a0496",
+    "zh": "吃药",
+    "pinyin": "chī yào",
+    "meaning": "take medicine (by mouth)",
+    "category": "Health & body"
+  },
+  {
+    "id": "zh-ddf5b4320be75adf",
+    "zh": "药片",
+    "pinyin": "yàopiàn",
+    "meaning": "tablet / pill",
+    "category": "Health & body"
+  },
+  {
+    "id": "zh-3d3e83e563a40699",
+    "zh": "创可贴",
+    "pinyin": "chuāngkětiē",
+    "meaning": "adhesive bandage / plaster",
+    "category": "Health & body"
+  },
+  {
     "id": "zh-1f6835c0d878fa0e",
     "zh": "医院",
     "pinyin": "yīyuàn",
     "meaning": "hospital",
+    "category": "Health & body"
+  },
+  {
+    "id": "zh-352cdc8078923eed",
+    "zh": "预约",
+    "pinyin": "yùyuē",
+    "meaning": "make an appointment / book ahead",
+    "category": "Health & body",
+    "usage": "Arranging a time in advance, for example with a doctor or hairdresser. 预订 is often used for reserving rooms, tables or goods.",
+    "examples": [
+      {
+        "zh": "我预约了。",
+        "pinyin": "wǒ yùyuē le.",
+        "meaning": "I have an appointment / I've booked ahead."
+      }
+    ]
+  },
+  {
+    "id": "zh-e70488184ac6a4dc",
+    "zh": "我预约了。",
+    "pinyin": "wǒ yùyuē le.",
+    "meaning": "I have an appointment / I've booked ahead.",
     "category": "Health & body"
   },
   {
@@ -5935,6 +7743,13 @@
     ]
   },
   {
+    "id": "zh-0b8c2ac3888c8f2a",
+    "zh": "准备好了。",
+    "pinyin": "zhǔnbèi hǎo le.",
+    "meaning": "Ready!",
+    "category": "Useful verbs"
+  },
+  {
     "id": "zh-805b2ab19aaa8f37",
     "zh": "记得",
     "pinyin": "jìde",
@@ -5962,6 +7777,13 @@
     "category": "Useful verbs"
   },
   {
+    "id": "zh-ec29fc9c5a07a5f2",
+    "zh": "忘了。",
+    "pinyin": "wàng le.",
+    "meaning": "I forgot.",
+    "category": "Useful verbs"
+  },
+  {
     "id": "zh-2118cbc109880ac8",
     "zh": "学习",
     "pinyin": "xuéxí",
@@ -5980,6 +7802,27 @@
     "zh": "解释",
     "pinyin": "jiěshì",
     "meaning": "explain",
+    "category": "Useful verbs"
+  },
+  {
+    "id": "zh-74642897fad8fa7e",
+    "zh": "告诉",
+    "pinyin": "gàosu",
+    "meaning": "tell (someone information)",
+    "category": "Useful verbs"
+  },
+  {
+    "id": "zh-4628c0e06f4b378d",
+    "zh": "问",
+    "pinyin": "wèn",
+    "meaning": "ask (a question)",
+    "category": "Useful verbs"
+  },
+  {
+    "id": "zh-478836a189b3df72",
+    "zh": "请告诉我。",
+    "pinyin": "qǐng gàosu wǒ.",
+    "meaning": "Please tell me.",
     "category": "Useful verbs"
   },
   {
@@ -6011,10 +7854,45 @@
     "category": "Useful verbs"
   },
   {
+    "id": "zh-afb9587a4a2e99fb",
+    "zh": "我来试试。",
+    "pinyin": "wǒ lái shìshi.",
+    "meaning": "Let me try.",
+    "category": "Useful verbs"
+  },
+  {
     "id": "zh-385a845b6094b687",
     "zh": "等",
     "pinyin": "děng",
     "meaning": "wait",
+    "category": "Useful verbs"
+  },
+  {
+    "id": "zh-d2bb025a2e51c410",
+    "zh": "开始",
+    "pinyin": "kāishǐ",
+    "meaning": "start / begin",
+    "category": "Useful verbs"
+  },
+  {
+    "id": "zh-c7b24e7997e96eaa",
+    "zh": "结束",
+    "pinyin": "jiéshù",
+    "meaning": "finish / end",
+    "category": "Useful verbs"
+  },
+  {
+    "id": "zh-b4b3bd2e2e14f27e",
+    "zh": "停一下。",
+    "pinyin": "tíng yíxià.",
+    "meaning": "Stop for a moment.",
+    "category": "Useful verbs"
+  },
+  {
+    "id": "zh-7e608b96f83e1cf9",
+    "zh": "你能等一下吗",
+    "pinyin": "nǐ néng děng yíxià ma",
+    "meaning": "Can you wait a moment?",
     "category": "Useful verbs"
   },
   {
@@ -6031,6 +7909,28 @@
         "meaning": "I'm looking for my keys."
       }
     ]
+  },
+  {
+    "id": "zh-0ccc285138ce0754",
+    "zh": "找到",
+    "pinyin": "zhǎodào",
+    "meaning": "find (successfully)",
+    "category": "Useful verbs",
+    "usage": "Finding successfully. 找 alone means looking for something.",
+    "examples": [
+      {
+        "zh": "找到了！",
+        "pinyin": "zhǎodào le!",
+        "meaning": "Found it!"
+      }
+    ]
+  },
+  {
+    "id": "zh-b4083b9419fa58eb",
+    "zh": "找到了！",
+    "pinyin": "zhǎodào le!",
+    "meaning": "Found it!",
+    "category": "Useful verbs"
   },
   {
     "id": "zh-fd5db2cf36a92942",
@@ -6051,6 +7951,20 @@
         "meaning": "Can you take me to the station?"
       }
     ]
+  },
+  {
+    "id": "zh-e17c010004186692",
+    "zh": "带上",
+    "pinyin": "dài shàng",
+    "meaning": "take / bring along (remember to include it)",
+    "category": "Useful verbs"
+  },
+  {
+    "id": "zh-8b3a3f686d5677f3",
+    "zh": "带上钥匙。",
+    "pinyin": "dài shàng yàoshi.",
+    "meaning": "Take your keys with you.",
+    "category": "Useful verbs"
   },
   {
     "id": "zh-50272827b8e2c1bd",
@@ -6112,6 +8026,28 @@
     "zh": "修",
     "pinyin": "xiū",
     "meaning": "repair / fix",
+    "category": "Useful verbs"
+  },
+  {
+    "id": "zh-cd32860d5f1658a3",
+    "zh": "坏了",
+    "pinyin": "huài le",
+    "meaning": "broken / no longer working",
+    "category": "Useful verbs",
+    "usage": "Can mean a device is broken or food has gone bad. Context supplies what is wrong.",
+    "examples": [
+      {
+        "zh": "手机坏了。",
+        "pinyin": "shǒujī huài le.",
+        "meaning": "My phone isn't working."
+      }
+    ]
+  },
+  {
+    "id": "zh-9da3b092cd4fe04e",
+    "zh": "手机坏了。",
+    "pinyin": "shǒujī huài le.",
+    "meaning": "My phone isn't working.",
     "category": "Useful verbs"
   },
   {
@@ -6217,13 +8153,6 @@
     ]
   },
   {
-    "id": "zh-3b2e57ba5da52476",
-    "zh": "忘带钥匙了。",
-    "pinyin": "wàng dài yàoshi le.",
-    "meaning": "I forgot to bring my keys.",
-    "category": "Useful verbs"
-  },
-  {
     "id": "zh-2854a7a265e723b5",
     "zh": "能借我一支笔吗？",
     "pinyin": "néng jiè wǒ yì zhī bǐ ma?",
@@ -6231,24 +8160,39 @@
     "category": "Useful verbs"
   },
   {
-    "id": "zh-afb9587a4a2e99fb",
-    "zh": "我来试试。",
-    "pinyin": "wǒ lái shìshi.",
-    "meaning": "Let me try.",
-    "category": "Useful verbs"
-  },
-  {
-    "id": "zh-e5958617b8ba6586",
-    "zh": "让我想一下。",
-    "pinyin": "ràng wǒ xiǎng yíxià.",
-    "meaning": "Let me think for a moment.",
-    "category": "Useful verbs"
-  },
-  {
     "id": "zh-535f2282f8c05490",
     "zh": "干净",
     "pinyin": "gānjìng",
     "meaning": "clean",
+    "category": "Useful descriptions"
+  },
+  {
+    "id": "zh-87e68032fdb83ef0",
+    "zh": "湿",
+    "pinyin": "shī",
+    "meaning": "wet / damp",
+    "category": "Useful descriptions"
+  },
+  {
+    "id": "zh-9ee0280bc49cff49",
+    "zh": "干",
+    "pinyin": "gān",
+    "meaning": "dry",
+    "category": "Useful descriptions",
+    "usage": "Dry, pronounced gān. The reading gàn belongs to other meanings, including doing work.",
+    "examples": [
+      {
+        "zh": "衣服还没干。",
+        "pinyin": "yīfu hái méi gān.",
+        "meaning": "The clothes aren't dry yet."
+      }
+    ]
+  },
+  {
+    "id": "zh-68fc73252eba94d7",
+    "zh": "衣服还没干。",
+    "pinyin": "yīfu hái méi gān.",
+    "meaning": "The clothes aren't dry yet.",
     "category": "Useful descriptions"
   },
   {
@@ -6320,6 +8264,58 @@
     "category": "Useful descriptions"
   },
   {
+    "id": "zh-9aa64abc364ad27a",
+    "zh": "轻",
+    "pinyin": "qīng",
+    "meaning": "light (weight)",
+    "category": "Useful descriptions"
+  },
+  {
+    "id": "zh-f93d7367ecb3121f",
+    "zh": "重",
+    "pinyin": "zhòng",
+    "meaning": "heavy",
+    "category": "Useful descriptions",
+    "usage": "Heavy, pronounced zhòng. In words such as 重新 (again), the same character is read chóng.",
+    "examples": [
+      {
+        "zh": "这个包很重。",
+        "pinyin": "zhège bāo hěn zhòng.",
+        "meaning": "This bag is heavy."
+      }
+    ]
+  },
+  {
+    "id": "zh-960ee891fbcd2ad5",
+    "zh": "软",
+    "pinyin": "ruǎn",
+    "meaning": "soft (texture)",
+    "category": "Useful descriptions",
+    "usage": "Soft to touch or easy to deform, not quiet in volume.",
+    "examples": [
+      {
+        "zh": "这个枕头很软。",
+        "pinyin": "zhège zhěntou hěn ruǎn.",
+        "meaning": "This pillow is soft."
+      }
+    ]
+  },
+  {
+    "id": "zh-9b005f7023f9e153",
+    "zh": "硬",
+    "pinyin": "yìng",
+    "meaning": "hard (texture)",
+    "category": "Useful descriptions",
+    "usage": "Hard to touch or difficult to deform. A difficult task is 难 (nán), not 硬 in this basic sense.",
+    "examples": [
+      {
+        "zh": "这个面包太硬了。",
+        "pinyin": "zhège miànbāo tài yìng le.",
+        "meaning": "This bread is too hard."
+      }
+    ]
+  },
+  {
     "id": "zh-d890780a7397c0ca",
     "zh": "复杂",
     "pinyin": "fùzá",
@@ -6380,6 +8376,20 @@
         "meaning": "Please say it more clearly."
       }
     ]
+  },
+  {
+    "id": "zh-9dc5c0158d9f5359",
+    "zh": "一样",
+    "pinyin": "yíyàng",
+    "meaning": "the same / alike",
+    "category": "Useful descriptions"
+  },
+  {
+    "id": "zh-c891dd70272a7b60",
+    "zh": "不一样",
+    "pinyin": "bù yíyàng",
+    "meaning": "different / not the same",
+    "category": "Useful descriptions"
   },
   {
     "id": "zh-c8051ef2e9c0e573",

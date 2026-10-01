@@ -6,7 +6,7 @@ root = source.parent
 deck = json.loads((root / 'deck.json').read_text(encoding='utf-8'))
 assert len({card['id'] for card in deck}) == len(deck), 'Duplicate card IDs'
 page = (source / 'template.html').read_text(encoding='utf-8')
-parts = {'STYLE': (source / 'style.css').read_text(encoding='utf-8'),
+parts = {'CARD_COUNT': str(len(deck)), 'STYLE': (source / 'style.css').read_text(encoding='utf-8'),
          'DECK': json.dumps(deck, ensure_ascii=False).replace('</', '<\\/'),
          'ENGINE': (source / 'engine.js').read_text(encoding='utf-8'),
          'APP': (source / 'app.js').read_text(encoding='utf-8')}

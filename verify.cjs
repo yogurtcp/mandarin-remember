@@ -1,7 +1,7 @@
 const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),vm=require('node:vm');
 const E=require('./source/engine.js'),deck=JSON.parse(fs.readFileSync(path.join(__dirname,'deck.json'),'utf8'));
 let now=new Date(2026,8,29,10).getTime();const id=deck[0].id,id2=deck[1].id;
-let s=E.empty();assert.equal(deck.length,788);assert.equal(new Set(deck.map(c=>c.id)).size,788);
+let s=E.empty();assert.equal(deck.length,1034);assert.equal(new Set(deck.map(c=>c.id)).size,1034);
 assert.equal(E.plan(s,now,deck).length,5);E.introduce(s,id,now);assert(!E.introduce(s,id,now));assert.equal(E.newAllowance(s,now,deck).count,4);
 assert.equal(E.dueTasks(s,now,null,deck).length,0);assert.equal(E.dueTasks(s,now+E.MIN,null,deck).length,1);
 E.review(s,id,'produce',2,now+E.MIN);assert.equal(s.items[id].produce.interval,1);assert.equal(s.logs.at(-1).delayed,false);
@@ -73,9 +73,24 @@ assert.equal(E.validate(s,deck).items[id].introducedAt,s.items[id].introducedAt)
 sandbox.ONLINE_VOICE_ENABLED=false;speech.getVoices=()=>[{name:'Mandarin test',lang:'zh-CN'}];run('audioSettings();play({id:"test",zh:"你想喝水吗？"},false,false,true)');assert.equal(spoken.at(-1).rate,1);wall+=2000;spoken.at(-1).onend();
 run('play({id:"test",zh:"你想喝水吗？"},true,false,true)');assert.equal(spoken.at(-1).rate,.4);wall+=2050;spoken.at(-1).onend();assert(get('settingsAudioStatus').textContent.includes('may ignore speed'));
 run('play({id:"test",zh:"你想喝水吗？"},true,false,true)');wall+=5000;spoken.at(-1).onend();assert(!get('settingsAudioStatus').textContent.includes('may ignore speed'));
+// Deck additions remain distinct and each new-card plan follows the edited topic order.
+assert.equal(new Set(deck.map(c=>c.zh.replace(/[\s。？！?!，,.]/g,''))).size,deck.length,'No punctuation-only duplicate cards');
+for(const c of deck)for(const key of ['id','zh','pinyin','meaning','category'])assert(typeof c[key]==='string'&&c[key].trim(),`${c.zh}: missing ${key}`);
+assert.equal(JSON.stringify(JSON.parse(html.match(/<script id="deck-data" type="application\/json">([\s\S]*?)<\/script>/)[1])),JSON.stringify(deck),'Built page must contain the current full deck');
+assert(html.includes(`${deck.length} cards · English → Mandarin · v1.4`));
+const family=deck.filter(c=>c.category==='Family'),grandparents=['奶奶','爷爷','外婆','外公'];
+assert.deepEqual(family.filter(c=>grandparents.includes(c.zh)).map(c=>c.zh),grandparents);
+assert(family.findIndex(c=>c.zh==='外公')-family.findIndex(c=>c.zh==='奶奶')<=5);
+const familyProgress=E.empty();for(const c of family.slice(0,family.findIndex(c=>c.zh==='外婆')))E.introduce(familyProgress,c.id,now-2*E.DAY);
+assert.equal(deck.find(c=>c.id===E.extraPlan(familyProgress,now,deck,'Family')[0].id).zh,'外婆');
+const homeCards=deck.filter(c=>c.category==='Home & Routine'),wakeIndex=homeCards.findIndex(c=>c.zh==='起床');
+assert.deepEqual(homeCards.slice(wakeIndex,wakeIndex+3).map(c=>c.zh),['起床','我起床了。','该起床了。']);
+get('search').value='姥姥';run('renderLibrary()');assert(get('libraryList').innerHTML.includes('外婆'));get('search').value='';
+console.log('PASS expanded curriculum: unique complete cards, embedded deck parity, grouped grandparents, maternal-name search, word/sentence order and unseen-card selection.');
+
 // Context is optional, safely rendered, searchable, and only inside the revealed answer.
-const annotated=deck.filter(c=>c.usage);assert.equal(annotated.length,102);
-assert.equal(annotated.reduce((n,c)=>n+c.examples.length,0),138);
+const annotated=deck.filter(c=>c.usage);assert.equal(annotated.length,138);
+assert.equal(annotated.reduce((n,c)=>n+c.examples.length,0),174);
 for(const c of annotated){
  assert(c.usage.trim());assert(c.examples.length>=1&&c.examples.length<=2);
  for(const example of c.examples){for(const field of ['zh','pinyin','meaning'])assert.equal(typeof example[field],'string');assert(/[\u3400-\u9fff]/u.test(example.zh));assert(example.pinyin.trim()&&example.meaning.trim());}
@@ -96,7 +111,7 @@ get('search').value='亚历克斯';run('renderLibrary()');assert(get('libraryCou
 get('search').value='';
 // Confirm the disclosure is physically inside #answer, not merely hidden by the test DOM mock.
 assert(html.indexOf('id="usageDetails"')>html.indexOf('id="answer"'));assert(html.indexOf('id="usageDetails"')<html.indexOf('id="ratings"'));
-console.log('PASS context: 102 annotated cards / 138 examples, full-sentence links, hidden recall, closed disclosures on advance, empty-card cleanup, escaping, and example search.');
+console.log('PASS context: 138 annotated cards / 174 examples, full-sentence links, hidden recall, closed disclosures on advance, empty-card cleanup, escaping, and example search.');
 
 let promptCalls=0;run('show("install");renderInstall()');assert(get('requestInstall').hidden);assert(!get('installSteps').hidden);
 windowEvents.beforeinstallprompt({preventDefault(){},prompt:async()=>{promptCalls++},userChoice:Promise.resolve({outcome:'dismissed'})});assert(!get('requestInstall').hidden);

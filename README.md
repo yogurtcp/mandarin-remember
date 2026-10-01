@@ -1,6 +1,6 @@
 # Mandarin Remember
 
-A small mobile learning app for everyday Mandarin, with 788 cards, English prompts, pinyin, spoken recall, listening/reading practice, and spaced reviews.
+A small mobile learning app for everyday Mandarin, with 1,034 cards, English prompts, pinyin, spoken recall, listening/reading practice, and spaced reviews.
 
 ## Open on your phone
 
@@ -60,3 +60,9 @@ Revealed cards and phrasebook entries offer **Copy Chinese** and **Google Transl
 For example, 起床 means getting out of bed and can be used both in a statement and in a wake-up call. Other notes distinguish borrowing/lending, listening/hearing/understanding, physical and figurative English meanings, polite requests, and context-dependent pronunciations. Read the examples when a sense is unclear; on reviews, attempt the card before opening its answer. These are selected everyday senses, not exhaustive dictionary entries or a native-speaker/audio certification.
 
 Lexical reference: [CC-CEDICT](https://cc-cedict.org/wiki/). The borrow/lend distinction was also checked against the [Ministry of Education's entry for 借](https://dict.mini.moe.edu.tw/SearchIndex/word_detail?breadcrumbs=Search_%E5%80%9F_one&dictSearchField=%E5%80%9F&wordID=D0003074). Examples are authored for this app.
+
+## Related vocabulary (v1.4)
+
+Added 246 words and short phrases across 23 existing topics, bringing the deck to 1,034 cards. Both sets of grandparents are now introduced together; the maternal terms 外婆 / 外公 already existed, and their notes now include the common alternatives 姥姥 / 姥爷. See [the content review](CONTENT-UPDATE.md) for counts, examples and pronunciation checks.
+
+Selected new sentences follow their base word, such as 起床 → 我起床了 → 该起床了. Seventeen existing sentences were moved beside their related word instead of adding duplicates. New introductions follow deck order within the selected topic; later reviews retain their individual due dates. All 788 existing card IDs are preserved. Search the phrasebook for English meanings, Chinese, pinyin, or names appearing in usage notes.
