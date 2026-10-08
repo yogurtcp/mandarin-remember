@@ -1,7 +1,7 @@
 {
-  "name": "Mandarin Remember",
+  "name": "Remember Languages",
   "short_name": "Remember",
-  "description": "Recall and revisit everyday Mandarin",
+  "description": "Recall and revisit everyday language",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",

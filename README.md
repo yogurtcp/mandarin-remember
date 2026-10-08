@@ -1,4 +1,4 @@
-# Mandarin Remember
+# Remember Languages
 
 A small mobile learning app for everyday Mandarin, with 1,034 cards, English prompts, pinyin, spoken recall, listening/reading practice, and spaced reviews.
 
@@ -39,6 +39,8 @@ The design centers on retrieval practice and distributed practice: [Karpicke & R
 python3 source/build.py
 node verify.cjs
 node verify-pwa.cjs
+node verify-courses.cjs
+python3 verify-build.py
 ```
 
 Preserve card IDs when correcting wording. Bump the service-worker cache version when changing cached assets. Publish GitHub Pages from the root of the `main` branch. No build service, API key or backend is needed.
@@ -66,3 +68,11 @@ Lexical reference: [CC-CEDICT](https://cc-cedict.org/wiki/). The borrow/lend dis
 Added 246 words and short phrases across 23 existing topics, bringing the deck to 1,034 cards. Both sets of grandparents are now introduced together; the maternal terms 外婆 / 外公 already existed, and their notes now include the common alternatives 姥姥 / 姥爷. See [the content review](CONTENT-UPDATE.md) for counts, examples and pronunciation checks.
 
 Selected new sentences follow their base word, such as 起床 → 我起床了 → 该起床了. Seventeen existing sentences were moved beside their related word instead of adding duplicates. New introductions follow deck order within the selected topic; later reviews retain their individual due dates. All 788 existing card IDs are preserved. Search the phrasebook for English meanings, Chinese, pinyin, or names appearing in usage notes.
+
+## Language-course foundation (v1.5)
+
+The home screen now has a **Course** selector. English → Mandarin remains the only published course; additional reviewed decks can be registered without rewriting the study flow. Each source/target course keeps separate progress, daily limits, statistics, notes, paused cards and voice settings. Switching ends the current session; graded work is already saved. Backups identify their course and cannot overwrite another course.
+
+Existing Mandarin progress uses exactly the same storage key and backup identity as before. It is not copied, reset or moved. Course selection is remembered, and all registered decks are embedded for offline use. The shared interface remains English; card meanings can be in another source language and target text can run right to left. No account synchronization or automatic cross-language translation is added.
+
+See [COURSES.md](COURSES.md) for adding a course. The two-course automated tests use a private fixture only; they do not publish an unfinished Hebrew deck.

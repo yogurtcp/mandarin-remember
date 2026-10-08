@@ -1,0 +1,22 @@
+{
+  "defaultCourse": "en-zh",
+  "courses": [
+    {
+      "id": "en-zh",
+      "label": "English → Mandarin",
+      "deckFile": "deck.json",
+      "cardFields": {"text": "zh", "pronunciation": "pinyin"},
+      "progressId": "chinese-family-reviewed-1",
+      "storageKey": "mandarin-remember:reviewed:v1",
+      "source": {"name": "English", "lang": "en", "dir": "ltr", "translateCode": "en"},
+      "target": {"name": "Mandarin", "textLabel": "Chinese", "lang": "zh-CN", "dir": "ltr", "translateCode": "zh-CN"},
+      "voiceLanguages": ["zh", "zh-CN", "zh-TW", "zh-SG", "cmn", "cmn-CN", "cmn-Hans-CN", "cmn-Hant-TW"],
+      "testText": "你想喝水吗？",
+      "pronunciationLabel": "Pinyin",
+      "hintMode": "pinyin",
+      "pronunciationHelp": "Pinyin keeps underlying third tones: nǐ hǎo starts with a rising tone in speech. 一/不 show common spoken changes; unmarked syllables are neutral. Listen to whole phrases. Ask a Mandarin speaker for feedback—the app doesn’t grade your voice.",
+      "searchPlaceholder": "孩子, haizi, child…",
+      "localSpeechHelper": true
+    }
+  ]
+}

@@ -1,10 +1,10 @@
 /* Transparent spacing heuristic; not a calibrated memory-probability model. */
 (function(root){
 'use strict';
-const DAY=86400000,MIN=60000,DECK_ID='chinese-family-reviewed-1';
+const DAY=86400000,MIN=60000;
 const directions=['produce','understand'];
 const localDay=t=>{const d=new Date(t);return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`};
-const empty=()=>({schema:1,deckId:DECK_ID,items:{},logs:[],settings:{newLimit:5,reviewLimit:20,audioMode:'auto',voice:''}});
+function empty(deckId){if(typeof deckId!=='string'||!deckId)throw Error('A course progress ID is required');return {schema:1,deckId,items:{},logs:[],settings:{newLimit:5,reviewLimit:20,audioMode:'auto',voice:''}}}
 const track=(due)=>({due,interval:0,lastAt:0,lastGrade:null,reviews:0,lapses:0,delayedPasses:0,phase:'learning'});
 function introduce(state,id,now){if(state.items[id])return false;state.items[id]={introducedAt:now,suspended:false,note:'',produce:track(now+MIN),understand:track(now+DAY)};return true}
 function dueTasks(state,now,category,deck){const allowed=new Set(deck.filter(c=>!category||c.category===category).map(c=>c.id));const tasks=[];for(const [id,item] of Object.entries(state.items)){if(!allowed.has(id)||item.suspended)continue;for(const direction of directions)if(item[direction].due<=now)tasks.push({id,direction,due:item[direction].due})}return tasks.sort((a,b)=>a.due-b.due||a.id.localeCompare(b.id)||a.direction.localeCompare(b.direction))}
@@ -36,9 +36,10 @@ function plan(state,now,deck,category='',practice=false){
 }
 function extraPlan(state,now,deck,category=''){return deck.filter(c=>!state.items[c.id]&&(!category||c.category===category)).slice(0,5).map(c=>({id:c.id,direction:'intro',readyAt:now,extra:true}))}
 function holding(item){return !item.suspended&&directions.every(d=>item[d].phase==='review'&&item[d].interval>=7&&item[d].delayedPasses>=2&&item[d].lastGrade>0)}
-function validate(raw,deck){
- if(!raw||raw.schema!==1||raw.deckId!==DECK_ID||!raw.items||typeof raw.items!=='object'||Array.isArray(raw.items)||!Array.isArray(raw.logs))throw Error('Not a compatible Family Coach backup');
- const state=empty(),ids=new Set(deck.map(c=>c.id));
+function validate(raw,deck,deckId){
+ if(typeof deckId!=='string'||!deckId)throw Error('A course progress ID is required');
+ if(!raw||raw.schema!==1||raw.deckId!==deckId||!raw.items||typeof raw.items!=='object'||Array.isArray(raw.items)||!Array.isArray(raw.logs))throw Error('Not a compatible backup for this course');
+ const state=empty(deckId),ids=new Set(deck.map(c=>c.id));
  const num=(v,min,max)=>typeof v==='number'&&Number.isFinite(v)&&v>=min&&v<=max;
  for(const [id,item] of Object.entries(raw.items)){
   if(!ids.has(id))throw Error('Backup contains unknown card IDs');
@@ -51,5 +52,5 @@ function validate(raw,deck){
  for(const e of raw.logs){if(!e||!ids.has(e.id)||!directions.includes(e.direction)||!num(e.at,0,1e15)||![0,1,2,3].includes(e.grade)||![0,1,2,3].includes(e.requestedGrade)||!['assisted','practice','delayed'].every(k=>typeof e[k]==='boolean')||!['spoken','listening','reading'].includes(e.input))throw Error('Invalid review history');state.logs.push({id:e.id,direction:e.direction,at:e.at,grade:e.grade,requestedGrade:e.requestedGrade,assisted:e.assisted,practice:e.practice,delayed:e.delayed,input:e.input})}
  const s=raw.settings||{};state.settings={newLimit:Number.isInteger(s.newLimit)&&s.newLimit>=0&&s.newLimit<=15?s.newLimit:5,reviewLimit:[10,20,30].includes(s.reviewLimit)?s.reviewLimit:20,audioMode:['auto','device','online'].includes(s.audioMode)?s.audioMode:'auto',voice:typeof s.voice==='string'?s.voice.slice(0,200):''};return state;
 }
-const api={DAY,MIN,DECK_ID,directions,localDay,empty,introduce,dueTasks,retention,newAllowance,schedule,review,plan,extraPlan,holding,validate};if(typeof module!=='undefined'&&module.exports)module.exports=api;else root.CoachEngine=api;
+const api={DAY,MIN,directions,localDay,empty,introduce,dueTasks,retention,newAllowance,schedule,review,plan,extraPlan,holding,validate};if(typeof module!=='undefined'&&module.exports)module.exports=api;else root.CoachEngine=api;
 })(typeof window!=='undefined'?window:globalThis);
