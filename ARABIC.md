@@ -42,7 +42,7 @@ The course usually transcribes ق as ʾ, common in urban speech. Other local q/g
 
 **Synthetic audio is not a verified Palestinian pronunciation model.** The app displays this on Arabic practice cards, in the phrasebook and in audio settings. Device voices are filtered to Arabic; the automatic choice prefers Palestinian/local or nearby Levantine locale tags before other Arabic voices. A locale tag alone does not establish dialect quality. Google Translate is a comparison tool and may also use formal Arabic.
 
-On GitHub Pages, both courses use the device/browser speech interface. Normal and Slow request different rates; the device may ignore them. If no Arabic voice is installed, the app explains this and offers “Read instead” for meaning recall.
+On GitHub Pages, both courses use a device voice when available, with on-demand Google speech if no voice is available or device playback fails (v1.6.1). Online voice can also be selected explicitly. The played text is sent to Google; audio is not prefetched. Google audio uses pitch-preserving slowdown. Device rate support varies. “Read instead” remains available when offline or when speech fails.
 
 The optional Linux helper uses ar-JO-SanaNeural (Jordanian locale) for Arabic and zh-CN-XiaoxiaoNeural for Mandarin. The Jordanian voice is a fallback, not a claim of Palestinian pronunciation. Requests, test sentences and cache keys identify the course. Audio is generated on demand; no recording collection is bundled.
 

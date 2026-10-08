@@ -45,7 +45,7 @@ wall+=2*E.DAY;run("state.settings.newLimit=0;start()");run("current.direction='u
 run('readInstead();reveal();rate(2)');assert.equal(run('state.logs.at(-1).input'),'reading');
 run('audioSettings();play({id:"test",text:"你想喝水吗？"},false,false,true)');assert.equal(spoken.at(-1).text,'你想喝水吗？');assert(get('settingsAudioStatus').textContent.includes('Test sentence'));
 run('play(byId.get(DECK[0].id),true)');assert.equal(spoken.at(-1).rate,.4);
-run('stopAudio()');const before=spoken.length;speech.getVoices=()=>[{name:'Cantonese',lang:'zh-HK'}];run('play(byId.get(DECK[0].id))');for(let i=0;i<8&&timers.size;i++){const callbacks=[...timers.values()];timers.clear();callbacks.forEach(fn=>fn())}assert.equal(spoken.length,before);assert(get('settingsAudioStatus').textContent.includes('No Mandarin'));
+run('stopAudio()');const before=spoken.length;speech.getVoices=()=>[{name:'Cantonese',lang:'zh-HK'}];run('state.settings.audioMode="device";play(byId.get(DECK[0].id))');for(let i=0;i<8&&timers.size;i++){const callbacks=[...timers.values()];timers.clear();callbacks.forEach(fn=>fn())}assert.equal(spoken.length,before);assert(get('settingsAudioStatus').textContent.includes('No Mandarin'));
 const beforeImport=run('JSON.stringify(state)');run('importCandidate=null;confirmImport()');assert.equal(run('JSON.stringify(state)'),beforeImport);
 assert.equal(run('esc("<img onerror=bad()>")'),'&lt;img onerror=bad()&gt;');
 console.log('PASS UI logic: actual bundled scripts, new-card introduction, hidden recall, hint cap, repeated-tap guard, session exit, reading fallback, whole-phrase speech, Mandarin voice filtering and safe rendering.');
@@ -58,7 +58,7 @@ const realSet=sandbox.localStorage.setItem;sandbox.localStorage.setItem=()=>{thr
 const beforeFailedImport=run('JSON.stringify(state)');run('importCandidate=E.empty(courseId);confirmImport()');assert.equal(run('JSON.stringify(state)'),beforeFailedImport);assert(get('notice').textContent.includes('Import cancelled'));sandbox.localStorage.setItem=realSet;
 run('confirmImport()');assert.equal(run('importCandidate'),null);assert(storage.has(key+':before-import'));
 // Cancelled online playback must not unlock the next listening question.
-let media=[];sandbox.ONLINE_VOICE_ENABLED=true;sandbox.Audio=function(url){this.url=url;this.play=()=>({catch(){}});this.pause=()=>{};this.removeAttribute=()=>{};this.load=()=>{};media.push(this)};
+run('state.settings.audioMode="auto"');let media=[];sandbox.ONLINE_VOICE_ENABLED=true;sandbox.Audio=function(url){this.url=url;this.play=()=>({catch(){}});this.pause=()=>{};this.removeAttribute=()=>{};this.load=()=>{};media.push(this)};
 run('play(byId.get(DECK[0].id),true)');assert(media.at(-1).url.endsWith('&slow=1'));const stale=media.at(-1);run('stopAudio()');get('notice').textContent='unchanged';stale.onplaying();assert.equal(get('notice').textContent,'unchanged');
 run('play(byId.get(DECK[0].id))');media.at(-1).onerror();assert(get('settingsAudioStatus').textContent.includes('Online audio could not load'));
 console.log('PASS resilience: future timestamps, corrupt storage preservation/recovery, quota failures, confirmed backup restore and cancelled/failed online audio.');
@@ -81,7 +81,7 @@ run('play({id:"test",text:"你想喝水吗？"},true,false,true)');wall+=5000;sp
 assert.equal(new Set(deck.map(c=>c.text.replace(/[\s。？！?!，,.]/g,''))).size,deck.length,'No punctuation-only duplicate cards');
 for(const c of deck)for(const key of ['id','text','pronunciation','meaning','category'])assert(typeof c[key]==='string'&&c[key].trim(),`${c.text}: missing ${key}`);
 assert.deepEqual(registry.courses[0].cards,deck,'Built page must contain the current normalized deck');
-assert(html.includes(`${deck.length} cards · English → Mandarin · v1.6`));
+assert(html.includes(`${deck.length} cards · English → Mandarin · v1.6.1`));
 const family=deck.filter(c=>c.category==='Family'),grandparents=['奶奶','爷爷','外婆','外公'];
 assert.deepEqual(family.filter(c=>grandparents.includes(c.text)).map(c=>c.text),grandparents);
 assert(family.findIndex(c=>c.text==='外公')-family.findIndex(c=>c.text==='奶奶')<=5);

@@ -15,12 +15,13 @@ Add a record to `courses`, with these fields:
 - `testText`: a natural target-language sentence for the audio test.
 - `pronunciationLabel`: for example `Pinyin` or `Transliteration`.
 - Optional `pronunciationHelp`, `searchPlaceholder`, and `mark` (a short header symbol).
+- Optional `onlineSpeech: {"provider": "google-translate", "language": "ar"}` enables on-demand Google fallback. Use the appropriate supported language code; keep card/test text under 200 characters. This endpoint is undocumented and best-effort, so retain device speech and error recovery. No requests run on startup.
 - Optional `audioNote`, shown in practice, phrasebook and audio settings for course-specific limitations.
 - Optional `hintMode`: `pinyin` uses the Mandarin syllable hint; other values/default use the first two pronunciation characters. A card without pronunciation has no pronunciation hint.
 
 The storage key defaults to `remember:progress:<id>:v1`. The Mandarin record deliberately overrides it with `mandarin-remember:reviewed:v1`, preserving all existing users' progress. Never reuse a storage key or `progressId` for another course. The build also checks for collisions with pre-import backup keys.
 
-`localSpeechHelper: true` opts a course into the optional helper protocol. Also register a provider voice in `voice_server.py`’s explicit `VOICES` map. The helper loads text and test sentences from the course registry and advertises supported IDs in `ONLINE_VOICE_COURSES`. Requests include `course`, `id` and `slow`; unknown combinations are rejected. An old helper with only `ONLINE_VOICE_ENABLED` remains Mandarin-only. Do not claim a dialect based on a provider locale tag. The static GitHub Pages app still uses device voices.
+`localSpeechHelper: true` opts a course into the optional helper protocol. Also register a provider voice in `voice_server.py`’s explicit `VOICES` map. The helper loads text and test sentences from the course registry and advertises supported IDs in `ONLINE_VOICE_COURSES`. Requests include `course`, `id` and `slow`; unknown combinations are rejected. An old helper with only `ONLINE_VOICE_ENABLED` remains Mandarin-only. Do not claim a dialect based on a provider locale tag. The static GitHub Pages app uses device voices and, for configured courses, the Google fallback.
 
 Keep `defaultCourse` set to the intended fallback. An unrecognized remembered course falls back to that record; removing a course does not delete its saved data.
 

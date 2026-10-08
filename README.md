@@ -6,7 +6,7 @@ A mobile learning app with English → Mandarin (1,034 cards) and English → Sp
 
 Visit **https://yogurtcp.github.io/mandarin-remember/** in Chrome on Android. Tap **Install** in the app for a direct install prompt when available, or instructions showing where Chrome’s **⋮ → Add to Home screen** menu is. You can share the same URL with anyone; no account is needed to study.
 
-Use **Menu → Audio & backup → Test normal / Test slow**. This hosted version uses your phone/browser’s voice for the selected language. If none is available, select or install Mandarin or Arabic in the phone’s text-to-speech settings, reopen the app, and test again. Voice availability and quality vary by device. This static site does not run a cloud speech service or the separate Linux speech helper.
+Use **Menu → Audio & backup → Test normal / Test slow**. Automatic uses your device voice when available and Google speech when a voice is missing or fails. You can also select Online voice explicitly. Only the phrase you play is sent to Google; there is no bulk audio download. Device voice stays available for offline use when installed. The separate Linux helper is optional.
 
 After an initial successful online load and service-worker installation, lessons are available offline. Speech may still need internet or an installed voice. There are no prerecorded audio files.
 
@@ -91,3 +91,11 @@ Arabic search ignores vowel marks and tatweel. Arabic text runs right to left; a
 Run `./start-online.sh`, then open the localhost address it prints. First run installs the pinned speech client. Only phrases you play are sent to the service. The helper uses Mandarin Xiaoxiao and Jordanian Arabic Sana, with separate course routing and a bounded cache (128 files / 8 MB). The Arabic voice is a fallback, not a verified Palestinian model. No audio deck is bundled.
 
 The helper binds to the laptop’s loopback interface and is separate from GitHub Pages. Installing the website on a phone uses that phone’s voices; it does not connect to the laptop helper. Core practice and saved progress work without the helper.
+
+## Missing-voice audio fix (v1.6.1)
+
+The published app now has on-demand Google speech for both Mandarin and Arabic. Automatic falls back when there is no suitable device voice or device playback fails. Online voice selects online playback directly; Device voice keeps playback device-only. Slow applies pitch-preserving playback at 0.65× for Google audio. The existing local helper retains its own synthesis rate and playback settings.
+
+Google’s Translate speech endpoint is undocumented and may change or throttle requests; it is not a guaranteed Google Cloud API. Failure or timeout shows a direct Google Translate link. No API keys, backend deployment, audio bundle or account is required. A no-referrer policy avoids sending this app’s page URL with audio requests. No phrase is requested until you press a playback control.
+
+Regression tests now explicitly cover **zero installed voices**, errors, timeouts and source preferences. In the Linux in-app browser with no Arabic device voice, the Arabic test sentence completed in 5.4 seconds normally and 8.1 seconds on Slow. This verifies playback, not Palestinian accent accuracy or every Android device.

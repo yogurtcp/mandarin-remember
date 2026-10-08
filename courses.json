@@ -40,7 +40,11 @@
       "pronunciationHelp": "Pinyin keeps underlying third tones: nǐ hǎo starts with a rising tone in speech. 一/不 show common spoken changes; unmarked syllables are neutral. Listen to whole phrases. Ask a Mandarin speaker for feedback—the app doesn’t grade your voice.",
       "searchPlaceholder": "孩子, haizi, child…",
       "localSpeechHelper": true,
-      "mark": "记"
+      "mark": "记",
+      "onlineSpeech": {
+        "provider": "google-translate",
+        "language": "zh-CN"
+      }
     },
     {
       "id": "en-ar-palestinian",
@@ -89,7 +93,11 @@
       "audioNote": "Arabic audio may use formal pronunciation. The Latin reading shows the intended Palestinian form.",
       "searchPlaceholder": "مي, mayy, water…",
       "localSpeechHelper": true,
-      "mark": "ع"
+      "mark": "ع",
+      "onlineSpeech": {
+        "provider": "google-translate",
+        "language": "ar"
+      }
     }
   ]
 }

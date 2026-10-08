@@ -7,14 +7,14 @@ const second={id:'ru-he-test',label:'Русский → עברית',progressId:'
 registry.courses.push(second);
 const scripts=[...html.matchAll(/<script>([\s\S]*?)<\/script>/g)].map(m=>m[1]);
 function boot(storage=new Map()){
- const elements=new Map(),events={},spoken=[],media=[],downloads=[];let created;
+ const elements=new Map(),events={},spoken=[],media=[],audioObjects=[],timers=new Map(),downloads=[];let created;
  const get=id=>{if(!elements.has(id))elements.set(id,{value:'',hidden:false,innerHTML:'',textContent:'',dataset:{},events:{},addEventListener(type,fn){this.events[type]=fn},focus(){},select(){},scrollIntoView(){}});return elements.get(id)};
  get('courses-data').textContent=JSON.stringify(registry);
  const document={getElementById:get,querySelectorAll:()=>[],createElement:()=>({click(){downloads.push(this.download)}})};
  const speech={getVoices:()=>[{name:'Chinese',lang:'zh-CN'},{name:'Cantonese',lang:'zh-HK'},{name:'Hebrew',lang:'he-IL'},{name:'Saudi default',lang:'ar-SA',default:true},{name:'Jordanian',lang:'ar-JO'}],addEventListener(){},resume(){},cancel(){},speak(u){spoken.push(u);u.onstart?.()}};
- const sandbox={document,console,URL:{createObjectURL(blob){created=blob;return 'blob:test'},revokeObjectURL(){}},Blob,Date,location:{protocol:'file:'},navigator:{},localStorage:{getItem:k=>storage.get(k)??null,setItem:(k,v)=>storage.set(k,v)},speechSynthesis:speech,SpeechSynthesisUtterance:function(text){this.text=text},Audio:function(url){media.push(url);this.play=()=>({catch(){}});this.pause=()=>{};this.removeAttribute=()=>{};this.load=()=>{}},setTimeout(){},clearTimeout(){},setInterval(){},scrollTo(){},addEventListener:(type,fn)=>events[type]=fn};
+ const sandbox={document,console,URL:{createObjectURL(blob){created=blob;return 'blob:test'},revokeObjectURL(){}},Blob,Date,location:{protocol:'file:'},navigator:{},localStorage:{getItem:k=>storage.get(k)??null,setItem:(k,v)=>storage.set(k,v)},speechSynthesis:speech,SpeechSynthesisUtterance:function(text){this.text=text},Audio:function(url){media.push(url);audioObjects.push(this);this.play=()=>({catch(){}});this.pause=()=>{};this.removeAttribute=()=>{};this.load=()=>{}},setTimeout(fn){const id=Symbol();timers.set(id,fn);return id},clearTimeout(id){timers.delete(id)},setInterval(){},scrollTo(){},addEventListener:(type,fn)=>events[type]=fn};
  sandbox.window=sandbox;const context=vm.createContext(sandbox),run=s=>vm.runInContext(s,context);scripts.forEach(run);
- return {get,run,storage,events,sandbox,spoken,media,downloads,blob:()=>created};
+ return {get,run,storage,events,sandbox,spoken,media,audioObjects,timers,downloads,blob:()=>created};
 }
 (async()=>{
  // Simulate a real v1.4 backup, including both-direction schedules and personal settings.
@@ -30,7 +30,7 @@ function boot(storage=new Map()){
  assert(a.run('switchCourse("ru-he-test")'));assert.equal(a.run('session'),null);assert.equal(a.run('current'),null);
  assert.equal(a.run('Object.keys(state.items).length'),0);assert.equal(a.run('state.settings.newLimit'),5);assert.equal(a.get('startedCount').textContent,0);
  assert.equal(a.get('targetText').dir,'rtl');assert.equal(a.get('targetText').lang,'he-IL');assert.equal(a.get('meaning').lang,'ru');
- assert.equal(a.get('copyTarget').textContent,'Copy Hebrew');assert.equal(a.get('appVersion').textContent,'2 cards · Русский → עברית · v1.6');
+ assert.equal(a.get('copyTarget').textContent,'Copy Hebrew');assert.equal(a.get('appVersion').textContent,'2 cards · Русский → עברית · v1.6.1');
  assert(a.get('category').innerHTML.includes('Test greetings'));assert(!a.get('category').innerHTML.includes('Family'));
  a.run('startExtra();studied();state.items[current.id].note="Hebrew cue";state.settings.voice="Hebrew";state.settings.newLimit=3;save()');
  assert.equal(a.run('state.deckId'),second.progressId);assert.equal(a.run('state.items[DECK[0].id].note'),'Hebrew cue');
@@ -117,10 +117,32 @@ function boot(storage=new Map()){
  ar.get('search').value='بدي';ar.run('renderLibrary()');assert(ar.get('libraryList').innerHTML.includes('بِدّي'));
  ar.get('search').value='كـيـفـك';ar.run('renderLibrary()');assert(ar.get('libraryList').innerHTML.includes('كيفَك؟'));assert(ar.get('libraryList').innerHTML.includes('كيفِك؟'));
  ar.get('search').value='coffee';ar.run('renderLibrary()');assert(ar.get('libraryList').innerHTML.includes('قهوة'));
- ar.sandbox.ONLINE_VOICE_ENABLED=true;assert.equal(ar.run('onlineAvailable()'),false,'Old Mandarin-only helpers must not advertise Arabic');
+ ar.sandbox.ONLINE_VOICE_ENABLED=true;assert.equal(ar.run('helperAvailable()'),false,'Old Mandarin-only helpers must not advertise Arabic');
  ar.sandbox.ONLINE_VOICE_COURSES=['en-zh','en-ar-palestinian'];ar.run('play(DECK[0],true)');
  const online=new URL(ar.media.at(-1),'http://localhost');assert.equal(online.searchParams.get('course'),arabic.id);assert.equal(online.searchParams.get('id'),arabic.cards[0].id);assert.equal(online.searchParams.get('slow'),'1');
  ar.run('startExtra();studied();save()');assert.deepEqual(JSON.parse(ar.storage.get(original.storageKey)),legacy);
  console.log('PASS published parity: Mandarin and 350 Arabic cards, both recall directions, audio/rates, examples, hints, extra batches, categories, cues, pause, statistics, copy/translation, backups/restart, Arabic search, regional voice order and course-aware helper routing.');
+
+ // Regress the real Linux failure: zero installed voices, not a mock Arabic voice.
+ for(const target of published){
+  const t=boot();t.run('switchCourse('+JSON.stringify(target.id)+')');t.sandbox.speechSynthesis.getVoices=()=>[];
+  assert.equal(t.media.length,0,'No phrase should be sent on startup or course selection');
+  t.run('beginSession([{id:DECK[0].id,direction:"understand",readyAt:Date.now()}],false);play(DECK[0],false,true)');
+  const request=new URL(t.media.at(-1));assert.equal(request.origin,'https://translate.googleapis.com');assert.equal(request.searchParams.get('tl'),target.onlineSpeech.language);assert.equal(request.searchParams.get('q'),target.cards[0].text);
+  assert.equal(t.run('heard'),false,'Creating/loading audio must not unlock the listening answer');
+  t.audioObjects.at(-1).onplaying();assert.equal(t.run('heard'),true);assert.equal(t.audioObjects.at(-1).playbackRate,1);
+  t.run('play(DECK[0],true)');assert.equal(t.audioObjects.at(-1).playbackRate,.65);assert.equal(t.audioObjects.at(-1).preservesPitch,true);
+  const cancelled=t.audioObjects.at(-1);t.run('stopAudio()');t.get('audioStatus').textContent='unchanged';cancelled.onplaying();assert.equal(t.get('audioStatus').textContent,'unchanged');
+  t.run('play(DECK[0])');const failed=t.audioObjects.at(-1);failed.onerror();const failure=t.get('audioStatus').textContent;assert(failure.includes('could not load'));assert(!t.get('audioFallback').hidden);failed.onplaying();assert.equal(t.get('audioStatus').textContent,failure);
+  assert.equal(new URL(t.get('audioFallback').href).searchParams.get('text'),target.cards[0].text);
+  t.run('play(DECK[0])');assert(t.get('audioFallback').hidden);[...t.timers.values()].forEach(fn=>fn());assert(t.get('audioStatus').textContent.includes('timed out'));
+  t.sandbox.speechSynthesis.getVoices=()=>[{name:'Broken voice',lang:target.target.lang}];
+  const count=t.media.length;t.run('play(DECK[0])');assert.equal(t.media.length,count);t.spoken.at(-1).onerror({error:'language-unavailable'});assert.equal(t.media.length,count+1,'Automatic must recover from a listed but broken voice');
+  t.run('state.settings.audioMode="online";play(DECK[0])');assert.equal(t.media.length,count+2,'Explicit Online must work even when a device voice exists');
+  t.run('state.settings.audioMode="device";play(DECK[0])');t.spoken.at(-1).onerror({error:'language-unavailable'});assert.equal(t.media.length,count+2,'Device-only preference must be respected');
+ }
+ assert(html.includes('<meta name="referrer" content="no-referrer">'),'Cross-origin speech requests must not send the page referrer');
+ assert(published.every(c=>c.cards.every(card=>card.text.length<=200)&&c.testText.length<=200));
+ console.log('PASS online fallback: zero installed voices in both courses, exact phrase/locale, no eager requests, normal/slow rates, actual-playback gate, error/timeout recovery, cancellation, explicit source preferences and Translate escape hatch.');
  console.log('PASS courses: legacy progress, colliding-ID isolation, statistics/settings/notes, course switching, RTL, voice/translation selection, helper guard, restart, per-course exports/imports, async import races, quota/corrupt storage, and cross-tab events.');
 })().catch(error=>{console.error(error);process.exitCode=1});
