@@ -12,7 +12,10 @@ spec.loader.exec_module(builder)
 registry = json.loads((root / 'courses.json').read_text())
 with TemporaryDirectory() as directory:
     folder = Path(directory)
-    (folder / 'deck.json').write_bytes((root / 'deck.json').read_bytes())
+    for course in registry['courses']:
+        dest = folder / course['deckFile']
+        dest.parent.mkdir(parents=True, exist_ok=True)
+        dest.write_bytes((root / course['deckFile']).read_bytes())
     second = copy.deepcopy(registry['courses'][0])
     second.update(id='ru-he-test', progressId='test-ru-he', deckFile='second.json', label='Russian → Hebrew')
     second.pop('storageKey')
@@ -32,20 +35,20 @@ with TemporaryDirectory() as directory:
         return builder.load_courses(folder)
 
     built = load(test)
-    assert len(built['courses']) == 2
+    assert len(built['courses']) == len(registry['courses']) + 1
     assert built['courses'][0]['cards'][0]['text'] == '妈妈'
     assert 'zh' not in built['courses'][0]['cards'][0]
-    assert built['courses'][1]['storageKey'] == 'remember:progress:ru-he-test:v1'
-    assert built['courses'][1]['cards'][0]['pronunciation'] == ''
-    assert built['courses'][1]['cards'][0]['examples'][0]['pronunciation'] == ''
-    assert built['courses'][1]['target']['dir'] == 'rtl'
+    assert built['courses'][-1]['storageKey'] == 'remember:progress:ru-he-test:v1'
+    assert built['courses'][-1]['cards'][0]['pronunciation'] == ''
+    assert built['courses'][-1]['cards'][0]['examples'][0]['pronunciation'] == ''
+    assert built['courses'][-1]['target']['dir'] == 'rtl'
     for key, value in [('id', test['courses'][0]['id']),
                        ('progressId', test['courses'][0]['progressId']),
                        ('storageKey', test['courses'][0]['storageKey']),
                        ('storageKey', test['courses'][0]['storageKey'] + ':before-import'),
                        ('deckFile', '../outside.json')]:
         bad = copy.deepcopy(test)
-        bad['courses'][1][key] = value
+        bad['courses'][-1][key] = value
         try:
             load(bad)
         except AssertionError:

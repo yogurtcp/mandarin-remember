@@ -1,22 +1,22 @@
 # Remember Languages
 
-A small mobile learning app for everyday Mandarin, with 1,034 cards, English prompts, pinyin, spoken recall, listening/reading practice, and spaced reviews.
+A mobile learning app with English → Mandarin (1,034 cards) and English → Spoken Palestinian Arabic (350 cards). Both courses share spoken recall, listening/reading practice, spaced reviews and progress backups. Select your course on the home screen.
 
 ## Open on your phone
 
 Visit **https://yogurtcp.github.io/mandarin-remember/** in Chrome on Android. Tap **Install** in the app for a direct install prompt when available, or instructions showing where Chrome’s **⋮ → Add to Home screen** menu is. You can share the same URL with anyone; no account is needed to study.
 
-Use **Menu → Audio & backup → Test normal / Test slow**. This hosted version uses your phone/browser’s Mandarin speech voice. If none is available, select or install Mandarin in the phone’s text-to-speech settings, reopen the app, and test again. Voice availability and quality vary by device. This static site does not run a cloud speech service or the separate Linux speech helper.
+Use **Menu → Audio & backup → Test normal / Test slow**. This hosted version uses your phone/browser’s voice for the selected language. If none is available, select or install Mandarin or Arabic in the phone’s text-to-speech settings, reopen the app, and test again. Voice availability and quality vary by device. This static site does not run a cloud speech service or the separate Linux speech helper.
 
 After an initial successful online load and service-worker installation, lessons are available offline. Speech may still need internet or an installed voice. There are no prerecorded audio files.
 
 ## Daily routine
 
 - Spend around 10 minutes most days, starting with due cards.
-- Attempt the Mandarin aloud, or recall the meaning of what you hear, **before revealing**.
+- Attempt the target language aloud, or recall the meaning of what you hear, **before revealing**.
 - Rate the original attempt. Using a hint counts as assistance.
 - Use the daily plan, or tap Learn 5 more for another batch whenever you want.
-- Use one phrase in real life; get feedback from a Mandarin speaker on your tones.
+- Use one phrase in real life; get feedback from a speaker of the language on your pronunciation.
 - Export a progress backup weekly.
 
 These are practical defaults. The scheduler is a transparent heuristic, not a guarantee of memory. The app does not record or automatically grade your pronunciation.
@@ -41,6 +41,7 @@ node verify.cjs
 node verify-pwa.cjs
 node verify-courses.cjs
 python3 verify-build.py
+python3 verify-voice.py
 ```
 
 Preserve card IDs when correcting wording. Bump the service-worker cache version when changing cached assets. Publish GitHub Pages from the root of the `main` branch. No build service, API key or backend is needed.
@@ -71,8 +72,22 @@ Selected new sentences follow their base word, such as 起床 → 我起床了 �
 
 ## Language-course foundation (v1.5)
 
-The home screen now has a **Course** selector. English → Mandarin remains the only published course; additional reviewed decks can be registered without rewriting the study flow. Each source/target course keeps separate progress, daily limits, statistics, notes, paused cards and voice settings. Switching ends the current session; graded work is already saved. Backups identify their course and cannot overwrite another course.
+The home screen now has a **Course** selector. This release introduced the course registry; additional reviewed decks can be registered without rewriting the study flow. Each source/target course keeps separate progress, daily limits, statistics, notes, paused cards and voice settings. Switching ends the current session; graded work is already saved. Backups identify their course and cannot overwrite another course.
 
 Existing Mandarin progress uses exactly the same storage key and backup identity as before. It is not copied, reset or moved. Course selection is remembered, and all registered decks are embedded for offline use. The shared interface remains English; card meanings can be in another source language and target text can run right to left. No account synchronization or automatic cross-language translation is added.
 
 See [COURSES.md](COURSES.md) for adding a course. The two-course automated tests use a private fixture only; they do not publish an unfinished Hebrew deck.
+
+## Spoken Palestinian Arabic (v1.6)
+
+Choose **English → Spoken Palestinian Arabic** in Course. It has 350 cards across 16 everyday topics, Latin readings, gender labels, and usage notes on 115 cards. See [ARABIC.md](ARABIC.md) for the curriculum, references and dialect conventions. Mandarin’s 1,034 cards and existing progress remain intact. Each course keeps its own reviews, notes, settings, statistics and backup.
+
+Arabic search ignores vowel marks and tatweel. Arabic text runs right to left; answer and cue inputs accept either direction. The same practice, Learn 5 more, audio controls, phrasebook and offline features serve both languages.
+
+**Arabic synthetic voices may use formal pronunciation.** Follow the provided reading for the intended Palestinian form and seek local-speaker feedback. This limitation is shown in the app; neither a device locale nor Google Translate guarantees Palestinian speech.
+
+## Optional Linux online speech
+
+Run `./start-online.sh`, then open the localhost address it prints. First run installs the pinned speech client. Only phrases you play are sent to the service. The helper uses Mandarin Xiaoxiao and Jordanian Arabic Sana, with separate course routing and a bounded cache (128 files / 8 MB). The Arabic voice is a fallback, not a verified Palestinian model. No audio deck is bundled.
+
+The helper binds to the laptop’s loopback interface and is separate from GitHub Pages. Installing the website on a phone uses that phone’s voices; it does not connect to the laptop helper. Core practice and saved progress work without the helper.

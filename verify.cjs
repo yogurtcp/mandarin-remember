@@ -81,7 +81,7 @@ run('play({id:"test",text:"你想喝水吗？"},true,false,true)');wall+=5000;sp
 assert.equal(new Set(deck.map(c=>c.text.replace(/[\s。？！?!，,.]/g,''))).size,deck.length,'No punctuation-only duplicate cards');
 for(const c of deck)for(const key of ['id','text','pronunciation','meaning','category'])assert(typeof c[key]==='string'&&c[key].trim(),`${c.text}: missing ${key}`);
 assert.deepEqual(registry.courses[0].cards,deck,'Built page must contain the current normalized deck');
-assert(html.includes(`${deck.length} cards · English → Mandarin · v1.5`));
+assert(html.includes(`${deck.length} cards · English → Mandarin · v1.6`));
 const family=deck.filter(c=>c.category==='Family'),grandparents=['奶奶','爷爷','外婆','外公'];
 assert.deepEqual(family.filter(c=>grandparents.includes(c.text)).map(c=>c.text),grandparents);
 assert(family.findIndex(c=>c.text==='外公')-family.findIndex(c=>c.text==='奶奶')<=5);

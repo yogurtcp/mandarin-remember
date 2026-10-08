@@ -5,18 +5,91 @@
       "id": "en-zh",
       "label": "English → Mandarin",
       "deckFile": "deck.json",
-      "cardFields": {"text": "zh", "pronunciation": "pinyin"},
+      "cardFields": {
+        "text": "zh",
+        "pronunciation": "pinyin"
+      },
       "progressId": "chinese-family-reviewed-1",
       "storageKey": "mandarin-remember:reviewed:v1",
-      "source": {"name": "English", "lang": "en", "dir": "ltr", "translateCode": "en"},
-      "target": {"name": "Mandarin", "textLabel": "Chinese", "lang": "zh-CN", "dir": "ltr", "translateCode": "zh-CN"},
-      "voiceLanguages": ["zh", "zh-CN", "zh-TW", "zh-SG", "cmn", "cmn-CN", "cmn-Hans-CN", "cmn-Hant-TW"],
+      "source": {
+        "name": "English",
+        "lang": "en",
+        "dir": "ltr",
+        "translateCode": "en"
+      },
+      "target": {
+        "name": "Mandarin",
+        "textLabel": "Chinese",
+        "lang": "zh-CN",
+        "dir": "ltr",
+        "translateCode": "zh-CN"
+      },
+      "voiceLanguages": [
+        "zh",
+        "zh-CN",
+        "zh-TW",
+        "zh-SG",
+        "cmn",
+        "cmn-CN",
+        "cmn-Hans-CN",
+        "cmn-Hant-TW"
+      ],
       "testText": "你想喝水吗？",
       "pronunciationLabel": "Pinyin",
       "hintMode": "pinyin",
       "pronunciationHelp": "Pinyin keeps underlying third tones: nǐ hǎo starts with a rising tone in speech. 一/不 show common spoken changes; unmarked syllables are neutral. Listen to whole phrases. Ask a Mandarin speaker for feedback—the app doesn’t grade your voice.",
       "searchPlaceholder": "孩子, haizi, child…",
-      "localSpeechHelper": true
+      "localSpeechHelper": true,
+      "mark": "记"
+    },
+    {
+      "id": "en-ar-palestinian",
+      "label": "English → Spoken Palestinian Arabic",
+      "deckFile": "decks/en-ar-palestinian.json",
+      "progressId": "spoken-palestinian-arabic-1",
+      "source": {
+        "name": "English",
+        "lang": "en",
+        "dir": "ltr",
+        "translateCode": "en"
+      },
+      "target": {
+        "name": "Spoken Arabic",
+        "textLabel": "Arabic",
+        "lang": "ar-PS",
+        "dir": "rtl",
+        "translateCode": "ar"
+      },
+      "voiceLanguages": [
+        "ar-PS",
+        "ar-IL",
+        "ar-JO",
+        "ar-LB",
+        "ar-SY",
+        "ar",
+        "ar-SA",
+        "ar-EG",
+        "ar-AE",
+        "ar-BH",
+        "ar-DZ",
+        "ar-IQ",
+        "ar-KW",
+        "ar-LY",
+        "ar-MA",
+        "ar-OM",
+        "ar-QA",
+        "ar-TN",
+        "ar-YE"
+      ],
+      "preferVoiceOrder": true,
+      "testText": "مرحبا، كيفك؟ بدّي كاسة ميّ لو سمحت.",
+      "pronunciationLabel": "Transliteration",
+      "hintMode": "transliteration",
+      "pronunciationHelp": "Palestinian everyday speech, with an urban-leaning reading. ā/ī/ū/ē/ō are long vowels; sh, kh and gh are single sounds. ḥ is a deep, breathy h; ʿ is ع; ʾ is a glottal stop. ṣ/ḍ/ṭ/ẓ are emphatic consonants; doubled letters are held longer. The reading usually uses ʾ for ق; q, g and k occur in other local accents. Short vowels and j also vary locally. Arabic spelling is partly unvoweled: follow the Latin reading for the intended form. Speaker/addressee gender is labeled on cards. Device and Google voices may use formal Arabic; they are not verified Palestinian models. Ask a local speaker to check your pronunciation.",
+      "audioNote": "Arabic audio may use formal pronunciation. The Latin reading shows the intended Palestinian form.",
+      "searchPlaceholder": "مي, mayy, water…",
+      "localSpeechHelper": true,
+      "mark": "ع"
     }
   ]
 }
