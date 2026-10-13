@@ -37,8 +37,9 @@ function start(practice=false){const tasks=E.plan(state,Date.now(),DECK,$('categ
  if(!tasks.length){notice(practice?'Learn some cards first.':'Nothing due in this topic. Try “Learn 5 more”.');renderHome();return}
  beginSession(tasks,practice);
 }
+function interleaveSentences(tasks){if(!Array.isArray(tasks)||tasks.length<5)return tasks||[];const slots=Math.min(5,Math.floor(tasks.length/5)),now=Date.now(),queued=new Set(tasks.map(t=>t.id));const pool=E.sentencePlan(state,now,DECK,$('category').value,slots).filter(t=>!queued.has(t.id));if(pool.length<slots){const intro=E.sentenceIntro(state,now,DECK,$('category').value);if(intro&&!queued.has(intro.id))pool.push(intro)}if(!pool.length)return tasks;const out=[];let next=0;tasks.forEach((task,i)=>{out.push(task);if((i+1)%5===0&&next<pool.length)out.push(pool[next++])});while(next<pool.length)out.push(pool[next++]);return out}
 function beginSession(tasks,practice){
- session={queue:tasks,attempts:0,studied:0,missed:0,retries:{},started:Date.now(),practice};lastCardId=null;notice('');show('practice');advance();
+ session={queue:interleaveSentences(tasks),attempts:0,studied:0,missed:0,retries:{},started:Date.now(),practice};lastCardId=null;notice('');show('practice');advance();
 }
 function advance(){stopAudio();if(!session)return;session.queue=session.queue.filter(t=>!state.items[t.id]?.suspended);const now=Date.now();
  // Due learning steps take priority over introducing another item. Avoid immediate sibling cues when possible.
@@ -50,9 +51,9 @@ function advance(){stopAudio();if(!session)return;session.queue=session.queue.fi
  if(task.direction==='intro'&&(state.items[task.id]||(!task.extra&&E.newAllowance(state,now,DECK).count===0))){advance();return}
  current=task;lastCardId=task.id;revealed=task.direction==='intro';graded=false;assisted=false;heard=false;inputMode=task.direction==='understand'?'listening':'spoken';
  const c=byId.get(task.id);$('waiting').hidden=true;$('flashcard').hidden=false;$('sessionProgress').textContent=`${session.attempts} reviews · ${session.studied} new`;
- $('taskType').textContent=task.direction==='intro'?'NEW':task.practice?'EXTRA REVIEW':task.direction==='produce'?`SAY IT IN ${course.target.name.toUpperCase()}`:'WHAT DOES IT MEAN?';
- $('taskCategory').textContent=c.category;$('prompt').textContent=task.direction==='intro'?'New card':task.direction==='produce'?c.meaning:'What does it mean?';
- $('taskInstruction').textContent=task.direction==='intro'?'Listen, then say it once.':task.direction==='produce'?'Say it before revealing.':'Listen, then recall the meaning.';
+ $('taskType').textContent=task.sentence?(task.direction==='intro'?'NEW SENTENCE':task.direction==='produce'?'SAY THE SENTENCE':'WHAT DOES THE SENTENCE MEAN?'):task.direction==='intro'?'NEW':task.practice?'EXTRA REVIEW':task.direction==='produce'?`SAY IT IN ${course.target.name.toUpperCase()}`:'WHAT DOES IT MEAN?';
+ $('taskCategory').textContent=c.category;$('prompt').textContent=task.direction==='intro'?(task.sentence?'New sentence':'New card'):task.direction==='produce'?c.meaning:'What does it mean?';
+ $('taskInstruction').textContent=task.direction==='intro'?(task.sentence?'Listen, then say the whole sentence once.':'Listen, then say it once.'):task.sentence?(task.direction==='produce'?'Say the whole sentence before revealing.':'Listen, then recall the whole meaning.'):task.direction==='produce'?'Say it before revealing.':'Listen, then recall the meaning.';
  $('draft').value='';$('draftLabel').open=false;$('draftLabel').hidden=revealed;$('listenTools').hidden=task.direction!=='understand';$('readingPrompt').hidden=true;$('readingPrompt').textContent='';
  $('hint').hidden=true;$('hint').textContent='';$('helpTools').hidden=revealed;$('hintBtn').textContent=task.direction==='produce'?'Hint':course.pronunciationLabel+' hint';$('cueBtn').hidden=!state.items[c.id]?.note;$('hintBtn').hidden=!c.pronunciation;
  $('revealBtn').hidden=revealed;$('revealBtn').disabled=false;$('answer').hidden=!revealed;
@@ -71,10 +72,10 @@ function reveal(){if(!current||revealed||graded)return;if(current.direction==='u
 function help(kind){if(!current||revealed)return;assisted=true;const c=byId.get(current.id);$('hint').hidden=false;$('hint').textContent=kind==='cue'?state.items[current.id].note:current.direction==='produce'?firstSyllable(c.pronunciation):c.pronunciation;
 }
 function firstSyllable(p){if(course.hintMode!=='pinyin')return Array.from(p).slice(0,2).join('')+'…';const match=p.match(/^([bpmfdtnlgkhjqxrzcswy]*[āáǎàēéěèīíǐìōóǒòūúǔùǖǘǚǜaeiouü]+(?:ng|n|r)?)/i);return (match?match[1]:p.split(' ')[0])+'…'}
-function studied(){if(!current||graded||current.direction!=='intro')return;graded=true;const now=Date.now();E.introduce(state,current.id,now);session.studied++;save();session.queue.push({id:current.id,direction:'produce',readyAt:now+E.MIN});$('studiedBtn').hidden=true;$('nextBtn').hidden=false;$('scheduledResult').textContent='Review in 1 minute; meaning tomorrow.';$('suspendBtn').hidden=false}
+function studied(){if(!current||graded||current.direction!=='intro')return;graded=true;const now=Date.now();E.introduce(state,current.id,now);session.studied++;save();session.queue.push({id:current.id,direction:'produce',readyAt:now+E.MIN,...(current.sentence?{sentence:true}:{})});$('studiedBtn').hidden=true;$('nextBtn').hidden=false;$('scheduledResult').textContent='Review in 1 minute; meaning tomorrow.';$('suspendBtn').hidden=false}
 function rate(grade){if(!current||!revealed||graded||current.direction==='intro')return;graded=true;const now=Date.now();const event=E.review(state,current.id,current.direction,grade,now,{assisted,practice:!!current.practice,input:inputMode});session.attempts++;if(event.grade===0)session.missed++;
  $('ratings').hidden=true;$('nextBtn').hidden=false;save();
- const t=state.items[current.id][current.direction];$('scheduledResult').textContent=event.practice?'Extra review saved. Due date unchanged.':`Next ${current.direction==='produce'?course.target.name+' recall':'meaning recall'}: ${fmt(t.due)}.`;
+ const t=state.items[current.id][current.direction];$('scheduledResult').textContent=event.practice?(current.sentence?'Sentence practice saved. Due date unchanged.':'Extra review saved. Due date unchanged.'):`Next ${current.direction==='produce'?course.target.name+' recall':'meaning recall'}: ${fmt(t.due)}.`;
  const retryKey=current.id+'/'+current.direction;const retries=session.retries[retryKey]||0;
  if(!event.practice&&t.due-now<=10*E.MIN&&retries<2){session.retries[retryKey]=retries+1;session.queue.push({id:current.id,direction:current.direction,readyAt:t.due})}
  if(t.lapses>=5)$('scheduledResult').textContent+=' Try a cue, or pause this card.';
@@ -138,7 +139,7 @@ bind('testAudio',()=>play({id:'test',text:course.testText},false,false,true));bi
 function configureCourse(){
  $('courseSelect').innerHTML=COURSES.map(c=>`<option value="${esc(c.id)}">${esc(c.label)}</option>`).join('');$('courseSelect').value=course.id;
  $('brandMark').textContent=course.mark||'↻';$('brandLanguage').textContent=course.target.name;$('practiceHeading').textContent='Practise '+course.target.name;document.title=course.target.name+' · Remember';
- $('appVersion').textContent=`${DECK.length} cards · ${course.label} · v1.6.2`;$('voiceLabel').textContent=course.target.name+' voice';$('copyTarget').textContent='Copy '+course.target.textLabel;
+ $('appVersion').textContent=`${DECK.length} cards · ${course.label} · v1.6.3`;$('voiceLabel').textContent=course.target.name+' voice';$('copyTarget').textContent='Copy '+course.target.textLabel;
  $('pronunciationHelp').textContent=course.pronunciationHelp||'Listen to whole phrases. The app does not grade your pronunciation.';$('search').placeholder=course.searchPlaceholder||'Search words and meanings…';
  for(const id of ['targetText','readingPrompt','copyText']){$(id).lang=course.target.lang;$(id).dir=course.target.dir}
  for(const id of ['meaning','prompt']){$(id).lang=course.source.lang;$(id).dir=course.source.dir}

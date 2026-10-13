@@ -52,6 +52,10 @@ Preserve card IDs when correcting wording. Bump the service-worker cache version
 
 Normal device speech now requests rate 1.0 and Slow requests 0.4. Audio settings provide both test buttons; actual speed depends on the device voice. Online helper playback also applies pitch-preserving slowdown.
 
+## Sentences alongside words (v1.6.3)
+
+About one task in five is now a full sentence, in parallel with vocabulary: **Say the sentence** (produce it from the meaning) or **What does the sentence mean?** (listen/read and recall). Sentences already started come first; if none has been started yet, one new sentence is introduced instead. Sentence practice is extra practice — it does not move due dates or inflate word counts — and follows the selected Topic.
+
 ## Compare pronunciations
 
 Revealed cards and phrasebook entries offer **Copy Chinese** and **Google Translate**. The link opens the Chinese text in Google Translate; tap the speaker beside the Chinese text to hear it. Only clicking the link sends that card text to Google. Copy also provides a selectable-text fallback when clipboard permission is unavailable. Google speech is a useful comparison, but ambiguous characters can still need context.
