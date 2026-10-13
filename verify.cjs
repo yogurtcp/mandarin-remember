@@ -21,7 +21,14 @@ let state=E.validate(JSON.parse(JSON.stringify(s)),deck,courseId);assert.deepEqu
 let stable=E.empty(courseId);E.introduce(stable,id,now);let time=now;
 for(let i=0;i<12;i++){const dir=i%2?'understand':'produce';time=Math.max(time+E.DAY,stable.items[id][dir].due);E.review(stable,id,dir,2,time)}
 assert(E.holding(stable.items[id]));E.review(stable,id,'produce',0,stable.items[id].produce.due);assert(!E.holding(stable.items[id]));
+// Progress view: overall + per-category seen / remembered-well / learning / unseen / due.
+let prog=E.empty(courseId);const progDeck=deck.slice(0,6);E.introduce(prog,progDeck[0].id,now);E.introduce(prog,progDeck[1].id,now);E.introduce(prog,progDeck[2].id,now);prog.items[progDeck[2].id].suspended=true;
+const pAll=E.progress(prog,deck,now);assert.equal(pAll.total,1034);assert.equal(pAll.seen,3);assert.equal(pAll.paused,1);assert.equal(pAll.unseen,1031);assert.equal(pAll.holding+pAll.learning+pAll.paused,pAll.seen);assert.equal(pAll.categories.reduce((n,c)=>n+c.total,0),1034);assert.equal(pAll.categories.reduce((n,c)=>n+c.seen,0),3);
+const catRow=pAll.categories.find(c=>c.category===progDeck[0].category);assert(catRow.seen>=1);assert.equal(catRow.seen,catRow.holding+catRow.learning+catRow.paused);assert.equal(catRow.total,catRow.seen+catRow.unseen);
+let heldProg=E.empty(courseId);E.introduce(heldProg,progDeck[0].id,now);let ht=now;for(let i=0;i<12;i++){const dir=i%2?'understand':'produce';ht=Math.max(ht+E.DAY,heldProg.items[progDeck[0].id][dir].due);E.review(heldProg,progDeck[0].id,dir,2,ht)}assert.equal(E.progress(heldProg,deck,ht).holding,1);assert.equal(E.progress(heldProg,deck,ht).categories.find(c=>c.category===progDeck[0].category).holding,1);
+assert.equal(E.progress(E.empty(courseId),deck,now).seen,0);
 console.log('PASS engine: due-only plans, separate directions, limits/backlog, spacing, assisted failures, early practice, delayed metrics, suspension, backups and multi-week retention criterion.');
+console.log('PASS progress: overall and per-category seen, remembered-well, learning, paused, unseen and due counts.');
 // Execute the actual bundled UI script with a controlled clock, DOM, audio and storage.
 const html=fs.readFileSync(path.join(__dirname,'index.html'),'utf8');const scripts=[...html.matchAll(/<script>([\s\S]*?)<\/script>/g)].map(m=>m[1]);assert.equal(scripts.length,2);
 assert.equal(scripts[0].trim(),fs.readFileSync(path.join(__dirname,'source/engine.js'),'utf8').trim());
@@ -49,6 +56,8 @@ run('stopAudio()');const before=spoken.length;speech.getVoices=()=>[{name:'Canto
 const beforeImport=run('JSON.stringify(state)');run('importCandidate=null;confirmImport()');assert.equal(run('JSON.stringify(state)'),beforeImport);
 assert.equal(run('esc("<img onerror=bad()>")'),'&lt;img onerror=bad()&gt;');
 console.log('PASS UI logic: actual bundled scripts, new-card introduction, hidden recall, hint cap, repeated-tap guard, session exit, reading fallback, whole-phrase speech, Mandarin voice filtering and safe rendering.');
+run('home();renderProgress()');assert(get('progressOverall').innerHTML.includes('Seen'));assert(get('progressOverall').innerHTML.includes('Remembered well'));assert(get('progressList').innerHTML.includes(deck[0].category));assert(get('progressList').innerHTML.includes('seen'));assert(get('progressList').innerHTML.includes('Practise this topic'));assert(get('progressCourse').textContent.includes('1034'));
+console.log('PASS progress view: overall stats and per-topic rows render from saved state.');
 // Future-dated imports cannot inflate the recent recall panel.
 const future=E.empty(courseId);future.logs=[{at:now+E.DAY,delayed:true,practice:false,grade:2}];assert.equal(E.retention(future,now).total,0);
 // Unreadable saved data is retained; a valid restore unlocks persistence.
@@ -81,7 +90,7 @@ run('play({id:"test",text:"你想喝水吗？"},true,false,true)');wall+=5000;sp
 assert.equal(new Set(deck.map(c=>c.text.replace(/[\s。？！?!，,.]/g,''))).size,deck.length,'No punctuation-only duplicate cards');
 for(const c of deck)for(const key of ['id','text','pronunciation','meaning','category'])assert(typeof c[key]==='string'&&c[key].trim(),`${c.text}: missing ${key}`);
 assert.deepEqual(registry.courses[0].cards,deck,'Built page must contain the current normalized deck');
-assert(html.includes(`${deck.length} cards · English → Mandarin · v1.6.1`));
+assert(html.includes(`${deck.length} cards · English → Mandarin · v1.6.2`));
 const family=deck.filter(c=>c.category==='Family'),grandparents=['奶奶','爷爷','外婆','外公'];
 assert.deepEqual(family.filter(c=>grandparents.includes(c.text)).map(c=>c.text),grandparents);
 assert(family.findIndex(c=>c.text==='外公')-family.findIndex(c=>c.text==='奶奶')<=5);

@@ -13,7 +13,14 @@ function notice(text){$('notice').textContent=text}
 function storageError(message){$('storageWarning').textContent=message;$('storageWarning').hidden=false}
 function load(){try{const raw=localStorage.getItem(KEY);const loaded=raw?E.validate(JSON.parse(raw),DECK,course.progressId):E.empty(course.progressId);storageLocked=false;$('storageWarning').hidden=true;return loaded}catch(error){storageLocked=true;storageError('Saved progress could not be read. It has not been overwritten. You can practise in memory, export this session, or restore a valid backup.');return E.empty(course.progressId)}}
 function save(){if(storageLocked)return false;try{localStorage.setItem(KEY,JSON.stringify(state));return true}catch(error){storageError('This browser could not save progress. Keep this tab open and export a backup before leaving.');return false}}
-function show(page){stopAudio();$('audioFallback').hidden=true;$('copyFallback').hidden=true;$('appMenu').open=false;for(const id of ['home','practice','done','library','settings','guide','install'])$(id).hidden=id!==page;window.scrollTo({top:0,behavior:'instant'})}
+function show(page){stopAudio();$('audioFallback').hidden=true;$('copyFallback').hidden=true;$('appMenu').open=false;for(const id of ['home','practice','done','library','settings','guide','install','progress'])$(id).hidden=id!==page;window.scrollTo({top:0,behavior:'instant'})}
+function renderProgress(){const p=E.progress(state,DECK,Date.now()),r=E.retention(state,Date.now());
+ $('progressCourse').textContent=course.label+' · '+p.total+' cards';
+ $('progressOverall').innerHTML=[['Seen',p.seen+' / '+p.total+(p.total?' ('+Math.round(p.seen/p.total*100)+'%)':'')],['Remembered well',String(p.holding)],['Still learning',String(p.learning)],['Not seen yet',String(p.unseen)],['Reviews due now',String(p.due)],['Paused',String(p.paused)],['Recalled after 20+ hours (7 days)',r.total?r.passed+' / '+r.total:'No delayed reviews yet']].map(([k,v])=>`<div class="progressStat"><span>${esc(k)}</span><strong>${esc(v)}</strong></div>`).join('');
+ $('progressList').innerHTML=p.categories.map((c,i)=>`<div class="progressRow"><div class="row progressRowHead"><strong>${esc(c.category)}</strong><span class="small">${c.seen} / ${c.total} seen · ${c.holding} remembered well</span></div><div class="progressBar" role="img" aria-label="${esc(c.category)}: ${c.seen} of ${c.total} seen, ${c.holding} remembered well"><span class="barSeen" style="width:${c.seenPct}%"></span><span class="barHeld" style="width:${c.holdingPct}%"></span></div><p class="small">${c.learning} learning · ${c.unseen} not seen · ${c.due} due${c.paused?' · '+c.paused+' paused':''}</p><button class="secondary" data-topic="${i}">Practise this topic</button></div>`).join('');
+ for(const b of document.querySelectorAll('[data-topic]'))b.onclick=()=>{const cat=p.categories[Number(b.dataset.topic)]?.category||'';$('category').value=cat;updateMoreButtons();home();notice(cat?'Topic set to “'+cat+'”. Start practice or Learn 5 more uses only this topic.':'Showing all topics.')};
+}
+function openProgress(){show('progress');renderProgress()}
 function home(){session=null;current=null;show('home');renderHome()}
 function renderHome(){const now=Date.now(),due=E.dueTasks(state,now,null,DECK),n=E.newAllowance(state,now,DECK),r=E.retention(state,now);
  $('dueCount').textContent=due.length;$('startedCount').textContent=Object.keys(state.items).length;$('holdingCount').textContent=Object.values(state.items).filter(E.holding).length;
@@ -120,7 +127,7 @@ async function readImport(file){const revision=++importRevision,startedIn=course
 function confirmImport(){if(!importCandidate)return;let candidate;try{candidate=E.validate(importCandidate,DECK,course.progressId)}catch(error){notice('Backup does not match this course.');return}try{localStorage.setItem(KEY+':before-import',JSON.stringify(state));localStorage.setItem(KEY,JSON.stringify(candidate))}catch(error){notice('Import cancelled: the browser could not save it. Existing progress is unchanged.');return}state=candidate;importCandidate=null;storageLocked=false;$('storageWarning').hidden=true;$('importPreview').hidden=true;notice('Backup restored.');home()}
 function bind(id,fn){$(id).addEventListener('click',fn)}
 bind('audioFallback',stopAudio);bind('learnMoreBtn',startExtra);bind('doneMoreBtn',startExtra);bind('startBtn',()=>start());bind('weakBtn',()=>start(true));bind('brand',e=>{e.preventDefault();home()});bind('homeBtn',home);bind('guideBtn',()=>show('guide'));bind('guideBack',home);bind('settingsBtn',audioSettings);bind('settingsBack',home);bind('libraryBtn',()=>{show('library');renderLibrary()});bind('libraryBack',home);bind('moreBtn',()=>{libraryLimit+=30;renderLibrary()});$('search').addEventListener('input',()=>{libraryLimit=30;renderLibrary()});
-bind('endBtn',finish);bind('continueBtn',advance);bind('nextBtn',advance);bind('studiedBtn',studied);bind('revealBtn',reveal);bind('hintBtn',()=>help('pinyin'));bind('cueBtn',()=>help('cue'));bind('readingBtn',readInstead);bind('saveCue',saveCue);bind('suspendBtn',pauseCurrent);
+bind('progressBtn',openProgress);bind('progressBack',home);bind('endBtn',finish);bind('continueBtn',advance);bind('nextBtn',advance);bind('studiedBtn',studied);bind('revealBtn',reveal);bind('hintBtn',()=>help('pinyin'));bind('cueBtn',()=>help('cue'));bind('readingBtn',readInstead);bind('saveCue',saveCue);bind('suspendBtn',pauseCurrent);
 bind('copyTarget',()=>current&&revealed&&copyTarget(byId.get(current.id)));bind('copyDone',()=>{$('copyFallback').hidden=true});bind('translateLink',stopAudio);bind('usageDetails',event=>{if(event.target?.closest('[data-translate]'))stopAudio()});
 bind('promptAudio',()=>current&&play(byId.get(current.id),false,true));bind('promptSlow',()=>current&&play(byId.get(current.id),true,true));bind('answerAudio',()=>current&&play(byId.get(current.id)));bind('answerSlow',()=>current&&play(byId.get(current.id),true));
 for(const b of document.querySelectorAll('[data-grade]'))b.addEventListener('click',()=>rate(Number(b.dataset.grade)));
@@ -131,7 +138,7 @@ bind('testAudio',()=>play({id:'test',text:course.testText},false,false,true));bi
 function configureCourse(){
  $('courseSelect').innerHTML=COURSES.map(c=>`<option value="${esc(c.id)}">${esc(c.label)}</option>`).join('');$('courseSelect').value=course.id;
  $('brandMark').textContent=course.mark||'↻';$('brandLanguage').textContent=course.target.name;$('practiceHeading').textContent='Practise '+course.target.name;document.title=course.target.name+' · Remember';
- $('appVersion').textContent=`${DECK.length} cards · ${course.label} · v1.6.1`;$('voiceLabel').textContent=course.target.name+' voice';$('copyTarget').textContent='Copy '+course.target.textLabel;
+ $('appVersion').textContent=`${DECK.length} cards · ${course.label} · v1.6.2`;$('voiceLabel').textContent=course.target.name+' voice';$('copyTarget').textContent='Copy '+course.target.textLabel;
  $('pronunciationHelp').textContent=course.pronunciationHelp||'Listen to whole phrases. The app does not grade your pronunciation.';$('search').placeholder=course.searchPlaceholder||'Search words and meanings…';
  for(const id of ['targetText','readingPrompt','copyText']){$(id).lang=course.target.lang;$(id).dir=course.target.dir}
  for(const id of ['meaning','prompt']){$(id).lang=course.source.lang;$(id).dir=course.source.dir}
@@ -148,7 +155,7 @@ $('courseSelect').addEventListener('change',()=>switchCourse($('courseSelect').v
 configureCourse();
 if('speechSynthesis' in window)window.speechSynthesis.addEventListener('voiceschanged',refreshVoices);
 window.addEventListener('storage',e=>{if(e.key===KEY||e.key===null){importRevision++;importCandidate=null;$('importPreview').hidden=true;state=load();notice('Progress changed in another tab. This session was stopped to avoid overwriting it.');home()}});
-setInterval(()=>{if(session&&!current)renderWaiting();if(!$('home').hidden)renderHome()},15000);
+setInterval(()=>{if(session&&!current)renderWaiting();if(!$('home').hidden)renderHome();if(!$('progress').hidden)renderProgress()},15000);
 if('serviceWorker' in navigator&&/^https?:$/.test(location.protocol))navigator.serviceWorker.register('sw.js').catch(()=>{});
 renderHome();
 

@@ -36,6 +36,11 @@ function plan(state,now,deck,category='',practice=false){
 }
 function extraPlan(state,now,deck,category=''){return deck.filter(c=>!state.items[c.id]&&(!category||c.category===category)).slice(0,5).map(c=>({id:c.id,direction:'intro',readyAt:now,extra:true}))}
 function holding(item){return !item.suspended&&directions.every(d=>item[d].phase==='review'&&item[d].interval>=7&&item[d].delayedPasses>=2&&item[d].lastGrade>0)}
+function progress(state,deck,now){const byCategory=new Map();for(const c of deck){if(!byCategory.has(c.category))byCategory.set(c.category,{category:c.category,total:0,seen:0,holding:0,learning:0,paused:0,unseen:0,due:0,seenPct:0,holdingPct:0});byCategory.get(c.category).total++}
+ const byId=new Map(deck.map(c=>[c.id,c])),dueByCategory=new Map();for(const t of dueTasks(state,now,null,deck)){const card=byId.get(t.id);if(card)dueByCategory.set(card.category,(dueByCategory.get(card.category)||0)+1)}
+ let seen=0,held=0,paused=0,due=0;for(const c of deck){const row=byCategory.get(c.category),item=state.items[c.id];if(!item){row.unseen++;continue}row.seen++;seen++;if(item.suspended){row.paused++;paused++}else if(holding(item)){row.holding++;held++}else row.learning++}
+ for(const row of byCategory.values()){row.due=dueByCategory.get(row.category)||0;due+=row.due;row.seenPct=row.total?Math.round(row.seen/row.total*100):0;row.holdingPct=row.total?Math.round(row.holding/row.total*100):0}
+ const total=deck.length,holdingCount=held;return {total,seen,holding:holdingCount,learning:seen-holdingCount-paused,paused,unseen:total-seen,due,categories:[...byCategory.values()]}}
 function validate(raw,deck,deckId){
  if(typeof deckId!=='string'||!deckId)throw Error('A course progress ID is required');
  if(!raw||raw.schema!==1||raw.deckId!==deckId||!raw.items||typeof raw.items!=='object'||Array.isArray(raw.items)||!Array.isArray(raw.logs))throw Error('Not a compatible backup for this course');
@@ -52,5 +57,5 @@ function validate(raw,deck,deckId){
  for(const e of raw.logs){if(!e||!ids.has(e.id)||!directions.includes(e.direction)||!num(e.at,0,1e15)||![0,1,2,3].includes(e.grade)||![0,1,2,3].includes(e.requestedGrade)||!['assisted','practice','delayed'].every(k=>typeof e[k]==='boolean')||!['spoken','listening','reading'].includes(e.input))throw Error('Invalid review history');state.logs.push({id:e.id,direction:e.direction,at:e.at,grade:e.grade,requestedGrade:e.requestedGrade,assisted:e.assisted,practice:e.practice,delayed:e.delayed,input:e.input})}
  const s=raw.settings||{};state.settings={newLimit:Number.isInteger(s.newLimit)&&s.newLimit>=0&&s.newLimit<=15?s.newLimit:5,reviewLimit:[10,20,30].includes(s.reviewLimit)?s.reviewLimit:20,audioMode:['auto','device','online'].includes(s.audioMode)?s.audioMode:'auto',voice:typeof s.voice==='string'?s.voice.slice(0,200):''};return state;
 }
-const api={DAY,MIN,directions,localDay,empty,introduce,dueTasks,retention,newAllowance,schedule,review,plan,extraPlan,holding,validate};if(typeof module!=='undefined'&&module.exports)module.exports=api;else root.CoachEngine=api;
+const api={DAY,MIN,directions,localDay,empty,introduce,dueTasks,retention,newAllowance,schedule,review,plan,extraPlan,holding,progress,validate};if(typeof module!=='undefined'&&module.exports)module.exports=api;else root.CoachEngine=api;
 })(typeof window!=='undefined'?window:globalThis);
