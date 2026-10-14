@@ -29,14 +29,22 @@ let heldProg=E.empty(courseId);E.introduce(heldProg,progDeck[0].id,now);let ht=n
 assert.equal(E.progress(E.empty(courseId),deck,now).seen,0);
 console.log('PASS engine: due-only plans, separate directions, limits/backlog, spacing, assisted failures, early practice, delayed metrics, suspension, backups and multi-week retention criterion.');
 console.log('PASS progress: overall and per-category seen, remembered-well, learning, paused, unseen and due counts.');
-// Sentences in parallel: seen sentences only, alternating say/listen, practice-only (due dates untouched).
+// Sentences in parallel: a sentence appears only when every word in it is known, and grading it credits those words.
 assert(E.isSentence(deck.find(c=>c.text==='我起床了。')));assert(!E.isSentence(deck.find(c=>c.text==='妈妈')));assert(E.isSentence({text:'你想去公园吗',category:'Everyday Sentences'}));
-let sentState=E.empty(courseId);const sentCards=deck.filter(c=>E.isSentence(c)).slice(0,3);for(const c of sentCards)E.introduce(sentState,c.id,now-2*E.DAY);sentState.items[sentCards[2].id].suspended=true;
-const sPlan=E.sentencePlan(sentState,now,deck,'',5);assert.equal(sPlan.length,2);assert.deepEqual(sPlan.map(t=>t.direction),['produce','understand']);assert(sPlan.every(t=>t.sentence&&t.practice));assert(!sPlan.some(t=>t.id===sentCards[2].id));
-const dueBefore=JSON.stringify(sentState.items[sentCards[0].id]);E.review(sentState,sentCards[0].id,'produce',2,now,{practice:true});assert.equal(JSON.stringify(sentState.items[sentCards[0].id]),dueBefore,'Sentence practice must not move due dates');
-assert.equal(E.sentencePlan(E.empty(courseId),now,deck).length,0);const sIntro=E.sentenceIntro(E.empty(courseId),now,deck);assert(sIntro.sentence&&sIntro.direction==='intro'&&E.isSentence(deck.find(c=>c.id===sIntro.id)));
-assert(E.sentencePlan(sentState,now,deck,sentCards[0].category,5).every(t=>deck.find(c=>c.id===t.id).category===sentCards[0].category));
-console.log('PASS sentences: detection, seen-only alternating practice, suspended/category filters, one unseen intro, unchanged due dates.');
+const wakeWord=deck.find(c=>c.text==='起床');assert.deepEqual(E.sentenceWords(deck.find(c=>c.text==='我起床了。'),deck),[wakeWord.id]);
+assert(deck.filter(c=>E.isSentence(c)).some(c=>E.sentenceWords(c,deck)===null),'Some sentences stay hidden until their words exist in the deck');
+const multi=deck.filter(c=>E.isSentence(c)).map(c=>({card:c,words:E.sentenceWords(c,deck)})).find(x=>x.words&&x.words.length>=2);assert(multi,'Need a multi-word decomposable sentence for tests');
+let gate=E.empty(courseId);assert.equal(E.sentencePlan(gate,now,deck).length,0);
+for(const wid of multi.words.slice(0,-1))E.introduce(gate,wid,now-2*E.DAY);
+assert(!E.sentencePlan(gate,now,deck).some(t=>t.id===multi.card.id),'Sentence hidden while one word is still unknown');
+E.introduce(gate,multi.words.at(-1),now-2*E.DAY);
+const gated=E.sentencePlan(gate,now,deck).find(t=>t.id===multi.card.id);assert(gated&&gated.sentence&&!gated.practice);assert.deepEqual(gated.words,multi.words);assert.equal(gate.items[multi.card.id],undefined,'Sentence itself is never tracked');
+gate.items[multi.words[0]].suspended=true;assert(!E.sentencePlan(gate,now,deck).some(t=>t.id===multi.card.id),'Paused words block the sentence');gate.items[multi.words[0]].suspended=false;
+assert(E.sentencePlan(gate,now,deck,multi.card.category,5).some(t=>t.id===multi.card.id));assert(!E.sentencePlan(gate,now,deck,'No such topic',5).length);
+// Forced credit updates a word schedule even when the word was not due yet.
+let forceState=E.empty(courseId);E.introduce(forceState,wakeWord.id,now);const earlyDue=forceState.items[wakeWord.id].produce.due;E.review(forceState,wakeWord.id,'produce',2,now,{force:true});assert.notEqual(forceState.items[wakeWord.id].produce.due,earlyDue);assert.equal(forceState.logs.at(-1).practice,false);
+let plainState=E.empty(courseId);E.introduce(plainState,wakeWord.id,now);const plainDue=plainState.items[wakeWord.id].produce.due;E.review(plainState,wakeWord.id,'produce',2,now);assert.equal(plainState.items[wakeWord.id].produce.due,plainDue,'Ordinary early review stays practice-only');
+console.log('PASS sentences: word mapping, all-words-known gate (no sentence tracking), paused/category filters, forced per-word credit.');
 // Execute the actual bundled UI script with a controlled clock, DOM, audio and storage.
 const html=fs.readFileSync(path.join(__dirname,'index.html'),'utf8');const scripts=[...html.matchAll(/<script>([\s\S]*?)<\/script>/g)].map(m=>m[1]);assert.equal(scripts.length,2);
 assert.equal(scripts[0].trim(),fs.readFileSync(path.join(__dirname,'source/engine.js'),'utf8').trim());
@@ -66,12 +74,18 @@ assert.equal(run('esc("<img onerror=bad()>")'),'&lt;img onerror=bad()&gt;');
 console.log('PASS UI logic: actual bundled scripts, new-card introduction, hidden recall, hint cap, repeated-tap guard, session exit, reading fallback, whole-phrase speech, Mandarin voice filtering and safe rendering.');
 run('home();renderProgress()');assert(get('progressOverall').innerHTML.includes('Seen'));assert(get('progressOverall').innerHTML.includes('Remembered well'));assert(get('progressList').innerHTML.includes(deck[0].category));assert(get('progressList').innerHTML.includes('seen'));assert(get('progressList').innerHTML.includes('Practise this topic'));assert(get('progressCourse').textContent.includes('1034'));
 console.log('PASS progress view: overall stats and per-topic rows render from saved state.');
-// Interleave: 1 sentence per 5 vocab tasks, labelled as a sentence, short sessions untouched.
-run('home();state=E.empty(courseId);E.introduce(state,DECK.find(c=>E.isSentence(c)).id,Date.now()-86400000)');
-const mixed=run('interleaveSentences(DECK.slice(0,10).map(c=>({id:c.id,direction:"intro",readyAt:Date.now()})))');assert.equal(mixed.length,12);assert.equal(mixed.filter(t=>t.sentence).length,2);assert.equal(mixed[5].sentence,true);
+// Interleave: 1 sentence per 5 vocab tasks, only when all its words are known; grading credits the words, never the sentence.
+run('home();state=E.empty(courseId)');assert.equal(run('interleaveSentences(DECK.slice(0,10).map(c=>({id:c.id,direction:"intro",readyAt:Date.now()}))).length'),10,'No sentence before its words are known');
+run('state=E.empty(courseId);for(const wid of '+JSON.stringify(multi.words)+')E.introduce(state,wid,Date.now()-86400000)');
+const mixed=run('interleaveSentences(DECK.slice(0,10).map(c=>({id:c.id,direction:"intro",readyAt:Date.now()})))');assert.equal(mixed.length,11);assert.equal(mixed.filter(t=>t.sentence).length,1);assert.equal(mixed[5].sentence,true);assert.equal(JSON.stringify(mixed[5].words),JSON.stringify(multi.words));
 assert.equal(run('interleaveSentences(DECK.slice(0,4).map(c=>({id:c.id,direction:"intro",readyAt:Date.now()}))).length'),4);
-run('beginSession(DECK.slice(0,10).map(c=>({id:c.id,direction:"intro",readyAt:Date.now()})),false)');assert([run('current'),...run('session.queue')].some(t=>t.sentence));run('finish()');
-console.log('PASS sentence interleave: one sentence per five cards in session queue with sentence flag.');
+const duesBefore=run('JSON.stringify('+JSON.stringify(multi.words)+'.map(id=>state.items[id].produce.due))');
+run('beginSession([E.sentencePlan(state,Date.now(),DECK,"",1)[0]],false)');assert.equal(run('current.sentence'),true);assert.equal(run('current.id'),run('E.sentencePlan(state,Date.now(),DECK,"",1)[0].id'));
+run('reveal();rate(2)');assert.equal(run('state.items[current.id]'),undefined,'Sentence card gains no progress entry');assert.notEqual(run('JSON.stringify('+JSON.stringify(multi.words)+'.map(id=>state.items[id].produce.due))'),duesBefore,'Sentence grade must update word due dates');assert(run('JSON.stringify('+JSON.stringify(multi.words)+'.map(id=>state.items[id].produce.reviews))')===JSON.stringify(multi.words.map(()=>1)));assert(get('scheduledResult').textContent.includes('Sentence credited to'));
+// Same-session guard: a second sentence with the same words must not reschedule them again.
+run('current=E.sentencePlan(state,Date.now(),DECK,"",1)[0];revealed=true;graded=false;rate(2)');assert(run('JSON.stringify('+JSON.stringify(multi.words)+'.map(id=>state.items[id].produce.reviews))')===JSON.stringify(multi.words.map(()=>1)),'No double credit in one session');assert(get('scheduledResult').textContent.includes('already practised'));
+run('finish()');
+console.log('PASS sentence session: gated interleave, per-word due-date credit, no sentence tracking, no double credit.');
 // Future-dated imports cannot inflate the recent recall panel.
 const future=E.empty(courseId);future.logs=[{at:now+E.DAY,delayed:true,practice:false,grade:2}];assert.equal(E.retention(future,now).total,0);
 // Unreadable saved data is retained; a valid restore unlocks persistence.
@@ -93,9 +107,9 @@ assert(E.extraPlan(capped,now,deck,'Breakfast').every(t=>deck.find(c=>c.id===t.i
 run('home();state=E.empty(courseId);state.settings.newLimit=0;startExtra()');
 for(let i=0;i<5;i++){assert.equal(run('current.direction'),'intro');run('studied();advance()')}
 assert.equal(run('Object.keys(state.items).length'),5);assert.equal(run('state.settings.newLimit'),0);
-// One interleaved NEW SENTENCE follows the five vocabulary cards; studying it completes the batch.
-assert.equal(run('current.sentence'),true);assert.equal(run('current.direction'),'intro');run('studied();advance()');assert.equal(run('Object.keys(state.items).length'),6);
-run('finish();startExtra()');assert(run('current.sentence')||!run('state.items[current.id]'),'Extra batch starts with a new card or a sentence practice');assert([run('current'),...run('session.queue')].some(t=>t.sentence));run('finish()');
+// No sentence joins this batch: none has all of its words known yet, and sentences are never introduced as cards.
+assert.equal(run('current'),null);
+run('finish();startExtra()');assert.equal(run('current.direction'),'intro');assert(!run('state.items[current.id]'));run('finish()');
 // A v1 backup remains valid with the expanded deck.
 assert.equal(E.validate(s,deck,courseId).items[id].introducedAt,s.items[id].introducedAt);
 // Speech uses whole phrases at clearly distinct rates; late callbacks cannot mark a newer prompt heard.
@@ -106,7 +120,7 @@ run('play({id:"test",text:"你想喝水吗？"},true,false,true)');wall+=5000;sp
 assert.equal(new Set(deck.map(c=>c.text.replace(/[\s。？！?!，,.]/g,''))).size,deck.length,'No punctuation-only duplicate cards');
 for(const c of deck)for(const key of ['id','text','pronunciation','meaning','category'])assert(typeof c[key]==='string'&&c[key].trim(),`${c.text}: missing ${key}`);
 assert.deepEqual(registry.courses[0].cards,deck,'Built page must contain the current normalized deck');
-assert(html.includes(`${deck.length} cards · English → Mandarin · v1.6.3`));
+assert(html.includes(`${deck.length} cards · English → Mandarin · v1.6.4`));
 const family=deck.filter(c=>c.category==='Family'),grandparents=['奶奶','爷爷','外婆','外公'];
 assert.deepEqual(family.filter(c=>grandparents.includes(c.text)).map(c=>c.text),grandparents);
 assert(family.findIndex(c=>c.text==='外公')-family.findIndex(c=>c.text==='奶奶')<=5);

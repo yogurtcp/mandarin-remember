@@ -18,9 +18,9 @@ function schedule(previous,grade,now){const t={...previous};t.reviews++;t.lastAt
  }else {const factor=grade===1?1.2:grade===2?2:2.8;t.interval=Math.min(180,Math.max(1,Math.round(previous.interval*factor*10)/10));t.due=now+t.interval*DAY}
  return t;
 }
-function review(state,id,direction,grade,now,{assisted=false,practice=false,input='spoken'}={}){
+function review(state,id,direction,grade,now,{assisted=false,practice=false,input='spoken',force=false}={}){
  const item=state.items[id];if(!item||!directions.includes(direction)||!Number.isInteger(grade)||grade<0||grade>3)throw Error('Invalid review');
- const previous=item[direction];const early=previous.due>now;practice=practice||early;const effective=assisted?0:grade;
+ const previous=item[direction];const early=previous.due>now;practice=practice||early;if(force)practice=false;const effective=assisted?0:grade;
  const latestAttempt=state.logs.filter(e=>e.id===id).reduce((n,e)=>Math.max(n,e.at),item.introducedAt);
  const lastExposure=Math.max(latestAttempt,item.produce.lastAt,item.understand.lastAt);
  const delayed=!practice&&now-lastExposure>=20*60*MIN;
@@ -42,8 +42,13 @@ function progress(state,deck,now){const byCategory=new Map();for(const c of deck
  for(const row of byCategory.values()){row.due=dueByCategory.get(row.category)||0;due+=row.due;row.seenPct=row.total?Math.round(row.seen/row.total*100):0;row.holdingPct=row.total?Math.round(row.holding/row.total*100):0}
  const total=deck.length,holdingCount=held;return {total,seen,holding:holdingCount,learning:seen-holdingCount-paused,paused,unseen:total-seen,due,categories:[...byCategory.values()]}}
 function isSentence(card){const text=(card.text||'').trim();return /[。？！.!?؟]$/.test(text)||card.category==='Everyday Sentences'}
-function sentencePlan(state,now,deck,category='',limit=5){const seen=deck.filter(c=>isSentence(c)&&(!category||c.category===category)&&state.items[c.id]&&!state.items[c.id].suspended).sort((a,b)=>Math.min(state.items[a.id].produce.due,state.items[a.id].understand.due)-Math.min(state.items[b.id].produce.due,state.items[b.id].understand.due)||a.id.localeCompare(b.id));return seen.slice(0,Math.max(0,limit)).map((c,i)=>({id:c.id,direction:i%2?'understand':'produce',practice:true,sentence:true,readyAt:now}))}
-function sentenceIntro(state,now,deck,category=''){const card=deck.find(c=>isSentence(c)&&(!category||c.category===category)&&!state.items[c.id]);return card?{id:card.id,direction:'intro',sentence:true,extra:true,readyAt:now}:null}
+const SENTENCE_PARTICLES=new Set([...'了的吗呢吧啊呀嘛着过']);
+const SENTENCE_GLUE=['我们','你们','他们','这是','那是','我','你','他','她','它','这','那','是','在','不','没','有','和','会','能','就','也','都','还','很','个','地','得'];
+function wordDictionary(deck){const map=new Map();for(const c of deck){if(isSentence(c))continue;const key=c.text.trim();if(key&&!map.has(key))map.set(key,c)}return map}
+function sentenceWords(card,deck){const dict=wordDictionary(deck),text=(card.text||'').trim();if(!text)return null;const ids=[],add=id=>{if(!ids.includes(id))ids.push(id)};
+ if(/\s/.test(text)){const norm=s=>s.toLowerCase().normalize('NFD').replace(/[\u064b-\u0652\u0640]/g,'').replace(/[。？！.!?؟،,;؛:]/g,'');const byNorm=new Map([...dict.values()].map(c=>[norm(c.text),c]));for(const raw of text.split(/\s+/)){const token=raw.replace(/^[。？！.!?؟،,;؛:]+|[。？！.!?؟،,;؛:]+$/g,'');if(!token)continue;const hit=dict.get(token)||byNorm.get(norm(token));if(!hit)return null;add(hit.id)}return ids.length?ids:null}
+ const clean=text.replace(/[。？！.!?؟\s，、；：,.]/g,''),keys=[...dict.keys()].sort((a,b)=>b.length-a.length);let i=0;while(i<clean.length){const hit=keys.find(k=>clean.startsWith(k,i));if(hit){add(dict.get(hit).id);i+=hit.length;continue}const glue=SENTENCE_GLUE.find(k=>clean.startsWith(k,i));if(glue){i+=glue.length;continue}if(SENTENCE_PARTICLES.has(clean[i])){i++;continue}return null}return ids.length?ids:null}
+function sentencePlan(state,now,deck,category='',limit=5){const eligible=[];for(const c of deck){if(!isSentence(c)||(category&&c.category!==category))continue;const words=sentenceWords(c,deck);if(!words)continue;if(!words.every(id=>state.items[id]&&!state.items[id].suspended))continue;const earliest=Math.min(...words.map(id=>Math.min(state.items[id].produce.due,state.items[id].understand.due)));eligible.push({id:c.id,words,earliest})}eligible.sort((a,b)=>a.earliest-b.earliest||a.id.localeCompare(b.id));return eligible.slice(0,Math.max(0,limit)).map((t,i)=>({id:t.id,direction:i%2?'understand':'produce',sentence:true,words:t.words,readyAt:now}))}
 function validate(raw,deck,deckId){
  if(typeof deckId!=='string'||!deckId)throw Error('A course progress ID is required');
  if(!raw||raw.schema!==1||raw.deckId!==deckId||!raw.items||typeof raw.items!=='object'||Array.isArray(raw.items)||!Array.isArray(raw.logs))throw Error('Not a compatible backup for this course');
@@ -60,5 +65,5 @@ function validate(raw,deck,deckId){
  for(const e of raw.logs){if(!e||!ids.has(e.id)||!directions.includes(e.direction)||!num(e.at,0,1e15)||![0,1,2,3].includes(e.grade)||![0,1,2,3].includes(e.requestedGrade)||!['assisted','practice','delayed'].every(k=>typeof e[k]==='boolean')||!['spoken','listening','reading'].includes(e.input))throw Error('Invalid review history');state.logs.push({id:e.id,direction:e.direction,at:e.at,grade:e.grade,requestedGrade:e.requestedGrade,assisted:e.assisted,practice:e.practice,delayed:e.delayed,input:e.input})}
  const s=raw.settings||{};state.settings={newLimit:Number.isInteger(s.newLimit)&&s.newLimit>=0&&s.newLimit<=15?s.newLimit:5,reviewLimit:[10,20,30].includes(s.reviewLimit)?s.reviewLimit:20,audioMode:['auto','device','online'].includes(s.audioMode)?s.audioMode:'auto',voice:typeof s.voice==='string'?s.voice.slice(0,200):''};return state;
 }
-const api={DAY,MIN,directions,localDay,empty,introduce,dueTasks,retention,newAllowance,schedule,review,plan,extraPlan,holding,progress,isSentence,sentencePlan,sentenceIntro,validate};if(typeof module!=='undefined'&&module.exports)module.exports=api;else root.CoachEngine=api;
+const api={DAY,MIN,directions,localDay,empty,introduce,dueTasks,retention,newAllowance,schedule,review,plan,extraPlan,holding,progress,isSentence,sentenceWords,sentencePlan,validate};if(typeof module!=='undefined'&&module.exports)module.exports=api;else root.CoachEngine=api;
 })(typeof window!=='undefined'?window:globalThis);
