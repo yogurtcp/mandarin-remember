@@ -52,6 +52,10 @@ Preserve card IDs when correcting wording. Bump the service-worker cache version
 
 Normal device speech now requests rate 1.0 and Slow requests 0.4. Audio settings provide both test buttons; actual speed depends on the device voice. Online helper playback also applies pitch-preserving slowdown.
 
+## Phrasebook by topic (v1.6.5)
+
+The Phrasebook (Menu → Phrasebook) now groups the full dictionary under topic headings in deck order, each with a shown/total count, plus a tappable topic index at the top that jumps to a topic (loading more if needed). Search still searches everything and keeps the grouping.
+
 ## Sentences alongside words (v1.6.4)
 
 About one task in five is a full sentence, in parallel with vocabulary: **Say the sentence** (produce it from the meaning) or **What does the sentence mean?** (listen/read and recall). A sentence appears only when every word in it has already been learned — sentences are never introduced or tracked as cards. Your sentence grade is credited to every word in the sentence, updating each word's review date through the normal scheduler; a word already practised in the same session is not rescheduled twice. Sentences whose words are not all in the deck stay hidden, and the selection follows the selected Topic.

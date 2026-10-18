@@ -74,6 +74,10 @@ assert.equal(run('esc("<img onerror=bad()>")'),'&lt;img onerror=bad()&gt;');
 console.log('PASS UI logic: actual bundled scripts, new-card introduction, hidden recall, hint cap, repeated-tap guard, session exit, reading fallback, whole-phrase speech, Mandarin voice filtering and safe rendering.');
 run('home();renderProgress()');assert(get('progressOverall').innerHTML.includes('Seen'));assert(get('progressOverall').innerHTML.includes('Remembered well'));assert(get('progressList').innerHTML.includes(deck[0].category));assert(get('progressList').innerHTML.includes('seen'));assert(get('progressList').innerHTML.includes('Practise this topic'));assert(get('progressCourse').textContent.includes('1034'));
 console.log('PASS progress view: overall stats and per-topic rows render from saved state.');
+// Phrasebook is divided by topic: headings in deck order, per-topic counts, search narrows groups.
+run('home()');get('search').value='';run('libraryLimit=10000;renderLibrary()');const libAll=get('libraryList').innerHTML;assert(libAll.includes('class="libraryTopic"'));assert(libAll.indexOf('>Family ')>=0&&libAll.indexOf('>Family ')<libAll.indexOf('>Cooking '),'Topics appear in deck order');assert(get('libraryTopics').innerHTML.includes('Family'));assert(get('libraryTopics').innerHTML.includes('Cooking'));assert(libAll.includes('of 25'),'Per-topic shown/total counts');
+get('search').value='child';run('renderLibrary()');assert(get('libraryList').innerHTML.includes('libraryTopic'));get('search').value='';run('libraryLimit=30;renderLibrary()');
+console.log('PASS phrasebook topics: grouped headings, deck order, counts, topic index and search grouping.');
 // Interleave: 1 sentence per 5 vocab tasks, only when all its words are known; grading credits the words, never the sentence.
 run('home();state=E.empty(courseId)');assert.equal(run('interleaveSentences(DECK.slice(0,10).map(c=>({id:c.id,direction:"intro",readyAt:Date.now()}))).length'),10,'No sentence before its words are known');
 run('state=E.empty(courseId);for(const wid of '+JSON.stringify(multi.words)+')E.introduce(state,wid,Date.now()-86400000)');
@@ -120,7 +124,7 @@ run('play({id:"test",text:"你想喝水吗？"},true,false,true)');wall+=5000;sp
 assert.equal(new Set(deck.map(c=>c.text.replace(/[\s。？！?!，,.]/g,''))).size,deck.length,'No punctuation-only duplicate cards');
 for(const c of deck)for(const key of ['id','text','pronunciation','meaning','category'])assert(typeof c[key]==='string'&&c[key].trim(),`${c.text}: missing ${key}`);
 assert.deepEqual(registry.courses[0].cards,deck,'Built page must contain the current normalized deck');
-assert(html.includes(`${deck.length} cards · English → Mandarin · v1.6.4`));
+assert(html.includes(`${deck.length} cards · English → Mandarin · v1.6.5`));
 const family=deck.filter(c=>c.category==='Family'),grandparents=['奶奶','爷爷','外婆','外公'];
 assert.deepEqual(family.filter(c=>grandparents.includes(c.text)).map(c=>c.text),grandparents);
 assert(family.findIndex(c=>c.text==='外公')-family.findIndex(c=>c.text==='奶奶')<=5);
