@@ -52,6 +52,10 @@ Preserve card IDs when correcting wording. Bump the service-worker cache version
 
 Normal device speech now requests rate 1.0 and Slow requests 0.4. Audio settings provide both test buttons; actual speed depends on the device voice. Online helper playback also applies pitch-preserving slowdown.
 
+## More varied sentences (v1.6.6)
+
+Sentences now appear about one task in three. Selection rotates by least-recently-shown (using a practice-only exposure log, still no sentence card or schedule) and picks different sentence frames — the pattern with its scored words blanked, e.g. `___在哪里` — before reusing a frame, so the same sentence should not keep coming back while other known-word sentences wait. The revealed answer adds **How this sentence is built**: each scored word with its reading and meaning, the frame, and any connecting words (pronouns, question/aspect particles and similar glue) with a short explanation. Connecting words are explained, not scored.
+
 ## Phrasebook by topic (v1.6.5)
 
 The Phrasebook (Menu → Phrasebook) now groups the full dictionary under topic headings in deck order, each with a shown/total count, plus a tappable topic index at the top that jumps to a topic (loading more if needed). Search still searches everything and keeps the grouping.

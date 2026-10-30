@@ -45,6 +45,14 @@ assert(E.sentencePlan(gate,now,deck,multi.card.category,5).some(t=>t.id===multi.
 let forceState=E.empty(courseId);E.introduce(forceState,wakeWord.id,now);const earlyDue=forceState.items[wakeWord.id].produce.due;E.review(forceState,wakeWord.id,'produce',2,now,{force:true});assert.notEqual(forceState.items[wakeWord.id].produce.due,earlyDue);assert.equal(forceState.logs.at(-1).practice,false);
 let plainState=E.empty(courseId);E.introduce(plainState,wakeWord.id,now);const plainDue=plainState.items[wakeWord.id].produce.due;E.review(plainState,wakeWord.id,'produce',2,now);assert.equal(plainState.items[wakeWord.id].produce.due,plainDue,'Ordinary early review stays practice-only');
 console.log('PASS sentences: word mapping, all-words-known gate (no sentence tracking), paused/category filters, forced per-word credit.');
+// Connectors are explained but not scored; selection rotates and varies the frame instead of repeating one sentence.
+const wakeParts=E.sentenceParts(deck.find(c=>c.text==='我起床了。'),deck);assert.deepEqual(wakeParts.words,[wakeWord.id]);assert(wakeParts.connectors.some(x=>x.text==='了'&&/completed/.test(x.meaning)));assert(wakeParts.connectors.some(x=>x.text==='我'));
+assert(E.sentenceFrame(deck.find(c=>c.text==='我起床了。'),deck,[wakeWord.id]).includes('___'));
+let rotate=E.empty(courseId);const rotCards=['妈妈在哪里','爸爸在哪里','我起床了。'].map(t=>deck.find(c=>c.text===t));for(const c of rotCards)for(const wid of E.sentenceWords(c,deck))if(!rotate.items[wid])E.introduce(rotate,wid,now-2*E.DAY);
+const rotPlan=E.sentencePlan(rotate,now,deck,'',2);assert.equal(rotPlan.length,2);assert.notEqual(rotPlan[0].frame,rotPlan[1].frame,'Different frames in one batch');
+rotate.logs.push({id:rotPlan[0].id,direction:'produce',grade:2,requestedGrade:2,at:now,assisted:false,practice:true,delayed:false,input:'spoken'});
+assert.notEqual(E.sentencePlan(rotate,now,deck,'',2)[0].id,rotPlan[0].id,'Recently shown sentence rotates away');
+console.log('PASS sentence variety: explained connectors, frame signature, different frames per batch, least-recently-shown rotation.');
 // Execute the actual bundled UI script with a controlled clock, DOM, audio and storage.
 const html=fs.readFileSync(path.join(__dirname,'index.html'),'utf8');const scripts=[...html.matchAll(/<script>([\s\S]*?)<\/script>/g)].map(m=>m[1]);assert.equal(scripts.length,2);
 assert.equal(scripts[0].trim(),fs.readFileSync(path.join(__dirname,'source/engine.js'),'utf8').trim());
@@ -81,10 +89,10 @@ console.log('PASS phrasebook topics: grouped headings, deck order, counts, topic
 // Interleave: 1 sentence per 5 vocab tasks, only when all its words are known; grading credits the words, never the sentence.
 run('home();state=E.empty(courseId)');assert.equal(run('interleaveSentences(DECK.slice(0,10).map(c=>({id:c.id,direction:"intro",readyAt:Date.now()}))).length'),10,'No sentence before its words are known');
 run('state=E.empty(courseId);for(const wid of '+JSON.stringify(multi.words)+')E.introduce(state,wid,Date.now()-86400000)');
-const mixed=run('interleaveSentences(DECK.slice(0,10).map(c=>({id:c.id,direction:"intro",readyAt:Date.now()})))');assert.equal(mixed.length,11);assert.equal(mixed.filter(t=>t.sentence).length,1);assert.equal(mixed[5].sentence,true);assert.equal(JSON.stringify(mixed[5].words),JSON.stringify(multi.words));
-assert.equal(run('interleaveSentences(DECK.slice(0,4).map(c=>({id:c.id,direction:"intro",readyAt:Date.now()}))).length'),4);
+const mixed=run('interleaveSentences(DECK.slice(0,10).map(c=>({id:c.id,direction:"intro",readyAt:Date.now()})))');assert.equal(mixed.length,11);assert.equal(mixed.filter(t=>t.sentence).length,1);assert.equal(mixed[3].sentence,true,'One sentence per three tasks');assert.equal(JSON.stringify(mixed[3].words),JSON.stringify(multi.words));
+assert.equal(run('interleaveSentences(DECK.slice(0,2).map(c=>({id:c.id,direction:"intro",readyAt:Date.now()}))).length'),2);
 const duesBefore=run('JSON.stringify('+JSON.stringify(multi.words)+'.map(id=>state.items[id].produce.due))');
-run('beginSession([E.sentencePlan(state,Date.now(),DECK,"",1)[0]],false)');assert.equal(run('current.sentence'),true);assert.equal(run('current.id'),run('E.sentencePlan(state,Date.now(),DECK,"",1)[0].id'));
+run('beginSession([E.sentencePlan(state,Date.now(),DECK,"",1)[0]],false)');assert.equal(run('current.sentence'),true);assert.equal(run('current.id'),run('E.sentencePlan(state,Date.now(),DECK,"",1)[0].id'));assert(get('sentenceBreakdown').innerHTML.includes('How this sentence is built'));assert(!get('sentenceBreakdown').hidden);
 run('reveal();rate(2)');assert.equal(run('state.items[current.id]'),undefined,'Sentence card gains no progress entry');assert.notEqual(run('JSON.stringify('+JSON.stringify(multi.words)+'.map(id=>state.items[id].produce.due))'),duesBefore,'Sentence grade must update word due dates');assert(run('JSON.stringify('+JSON.stringify(multi.words)+'.map(id=>state.items[id].produce.reviews))')===JSON.stringify(multi.words.map(()=>1)));assert(get('scheduledResult').textContent.includes('Sentence credited to'));
 // Same-session guard: a second sentence with the same words must not reschedule them again.
 run('current=E.sentencePlan(state,Date.now(),DECK,"",1)[0];revealed=true;graded=false;rate(2)');assert(run('JSON.stringify('+JSON.stringify(multi.words)+'.map(id=>state.items[id].produce.reviews))')===JSON.stringify(multi.words.map(()=>1)),'No double credit in one session');assert(get('scheduledResult').textContent.includes('already practised'));
@@ -124,7 +132,7 @@ run('play({id:"test",text:"你想喝水吗？"},true,false,true)');wall+=5000;sp
 assert.equal(new Set(deck.map(c=>c.text.replace(/[\s。？！?!，,.]/g,''))).size,deck.length,'No punctuation-only duplicate cards');
 for(const c of deck)for(const key of ['id','text','pronunciation','meaning','category'])assert(typeof c[key]==='string'&&c[key].trim(),`${c.text}: missing ${key}`);
 assert.deepEqual(registry.courses[0].cards,deck,'Built page must contain the current normalized deck');
-assert(html.includes(`${deck.length} cards · English → Mandarin · v1.6.5`));
+assert(html.includes(`${deck.length} cards · English → Mandarin · v1.6.6`));
 const family=deck.filter(c=>c.category==='Family'),grandparents=['奶奶','爷爷','外婆','外公'];
 assert.deepEqual(family.filter(c=>grandparents.includes(c.text)).map(c=>c.text),grandparents);
 assert(family.findIndex(c=>c.text==='外公')-family.findIndex(c=>c.text==='奶奶')<=5);
