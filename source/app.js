@@ -15,7 +15,7 @@ function load(){try{const raw=localStorage.getItem(KEY);const loaded=raw?E.valid
 function save(){if(storageLocked)return false;try{localStorage.setItem(KEY,JSON.stringify(state));return true}catch(error){storageError('This browser could not save progress. Keep this tab open and export a backup before leaving.');return false}}
 function show(page){stopAudio();$('audioFallback').hidden=true;$('copyFallback').hidden=true;$('appMenu').open=false;for(const id of ['home','practice','done','library','settings','guide','install','progress'])$(id).hidden=id!==page;window.scrollTo({top:0,behavior:'instant'})}
 function renderProgress(){const p=E.progress(state,DECK,Date.now()),r=E.retention(state,Date.now());
- $('progressCourse').textContent=course.label+' · '+p.total+' cards';
+ $('progressCourse').textContent=course.label+' · '+p.total+' words (sentences are not counted as words)';
  $('progressOverall').innerHTML=[['Seen',p.seen+' / '+p.total+(p.total?' ('+Math.round(p.seen/p.total*100)+'%)':'')],['Remembered well',String(p.holding)],['Still learning',String(p.learning)],['Not seen yet',String(p.unseen)],['Reviews due now',String(p.due)],['Paused',String(p.paused)],['Recalled after 20+ hours (7 days)',r.total?r.passed+' / '+r.total:'No delayed reviews yet']].map(([k,v])=>`<div class="progressStat"><span>${esc(k)}</span><strong>${esc(v)}</strong></div>`).join('');
  $('progressList').innerHTML=p.categories.map((c,i)=>`<div class="progressRow"><div class="row progressRowHead"><strong>${esc(c.category)}</strong><span class="small">${c.seen} / ${c.total} seen · ${c.holding} remembered well</span></div><div class="progressBar" role="img" aria-label="${esc(c.category)}: ${c.seen} of ${c.total} seen, ${c.holding} remembered well"><span class="barSeen" style="width:${c.seenPct}%"></span><span class="barHeld" style="width:${c.holdingPct}%"></span></div><p class="small">${c.learning} learning · ${c.unseen} not seen · ${c.due} due${c.paused?' · '+c.paused+' paused':''}</p><button class="secondary" data-topic="${i}">Practise this topic</button></div>`).join('');
  for(const b of document.querySelectorAll('[data-topic]'))b.onclick=()=>{const cat=p.categories[Number(b.dataset.topic)]?.category||'';$('category').value=cat;updateMoreButtons();home();notice(cat?'Topic set to “'+cat+'”. Start practice or Learn 5 more uses only this topic.':'Showing all topics.')};
@@ -23,7 +23,7 @@ function renderProgress(){const p=E.progress(state,DECK,Date.now()),r=E.retentio
 function openProgress(){show('progress');renderProgress()}
 function home(){session=null;current=null;show('home');renderHome()}
 function renderHome(){const now=Date.now(),due=E.dueTasks(state,now,null,DECK),n=E.newAllowance(state,now,DECK),r=E.retention(state,now);
- $('dueCount').textContent=due.length;$('startedCount').textContent=Object.keys(state.items).length;$('holdingCount').textContent=Object.values(state.items).filter(E.holding).length;
+ $('dueCount').textContent=due.length;const prog=E.progress(state,DECK,now);$('startedCount').textContent=prog.seen;$('holdingCount').textContent=prog.holding;
  $('retention').textContent=r.total?`${r.passed} / ${r.total} recalled`:'No delayed reviews yet';
  $('dailyText').textContent=`${n.used} new today. ${n.reason?'Reviews first in the daily plan.':n.count+' left in your daily plan.'}`;
  const next=nextDue();$('planText').textContent=due.length?`Up to ${state.settings.reviewLimit} reviews${n.count?` + ${n.count} new`:''}.`:n.count?`${n.count} new cards in today’s plan.`:next?`Next review: ${fmt(next)}.`:'Start with a new batch.';

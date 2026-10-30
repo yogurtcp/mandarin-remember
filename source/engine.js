@@ -7,7 +7,7 @@ const localDay=t=>{const d=new Date(t);return `${d.getFullYear()}-${String(d.get
 function empty(deckId){if(typeof deckId!=='string'||!deckId)throw Error('A course progress ID is required');return {schema:1,deckId,items:{},logs:[],settings:{newLimit:5,reviewLimit:20,audioMode:'auto',voice:''}}}
 const track=(due)=>({due,interval:0,lastAt:0,lastGrade:null,reviews:0,lapses:0,delayedPasses:0,phase:'learning'});
 function introduce(state,id,now){if(state.items[id])return false;state.items[id]={introducedAt:now,suspended:false,note:'',produce:track(now+MIN),understand:track(now+DAY)};return true}
-function dueTasks(state,now,category,deck){const allowed=new Set(deck.filter(c=>!category||c.category===category).map(c=>c.id));const tasks=[];for(const [id,item] of Object.entries(state.items)){if(!allowed.has(id)||item.suspended)continue;for(const direction of directions)if(item[direction].due<=now)tasks.push({id,direction,due:item[direction].due})}return tasks.sort((a,b)=>a.due-b.due||a.id.localeCompare(b.id)||a.direction.localeCompare(b.direction))}
+function dueTasks(state,now,category,deck){const allowed=new Set(deck.filter(c=>!isSentence(c)&&(!category||c.category===category)).map(c=>c.id));const tasks=[];for(const [id,item] of Object.entries(state.items)){if(!allowed.has(id)||item.suspended)continue;for(const direction of directions)if(item[direction].due<=now)tasks.push({id,direction,due:item[direction].due})}return tasks.sort((a,b)=>a.due-b.due||a.id.localeCompare(b.id)||a.direction.localeCompare(b.direction))}
 function retention(state,now){const logs=state.logs.filter(e=>e.delayed&&e.at>=now-7*DAY&&e.at<=now&&!e.practice);return {total:logs.length,passed:logs.filter(e=>e.grade>0).length}}
 function newAllowance(state,now,deck){const used=Object.values(state.items).filter(i=>localDay(i.introducedAt)===localDay(now)).length;const r=retention(state,now);const backlog=dueTasks(state,now,null,deck).length;const paused=backlog>=20||(r.total>=10&&r.passed/r.total<.7);return {count:paused?0:Math.max(0,state.settings.newLimit-used),used,reason:backlog>=20?'Review backlog':paused?'Consolidate recent material':''}}
 function schedule(previous,grade,now){const t={...previous};t.reviews++;t.lastAt=now;t.lastGrade=grade;
@@ -28,19 +28,19 @@ function review(state,id,direction,grade,now,{assisted=false,practice=false,inpu
  const event={id,direction,grade:effective,requestedGrade:grade,at:now,assisted,practice,delayed,input};state.logs.push(event);state.logs=state.logs.slice(-5000);return event;
 }
 function plan(state,now,deck,category='',practice=false){
- if(practice)return Object.entries(state.items).filter(([id,s])=>!s.suspended&&deck.some(c=>c.id===id&&(!category||c.category===category))).sort((a,b)=>(b[1].produce.lapses+b[1].understand.lapses)-(a[1].produce.lapses+a[1].understand.lapses)).slice(0,10).map(([id])=>({id,direction:'produce',practice:true,readyAt:now}));
+ if(practice)return Object.entries(state.items).filter(([id,s])=>!s.suspended&&deck.some(c=>c.id===id&&!isSentence(c)&&(!category||c.category===category))).sort((a,b)=>(b[1].produce.lapses+b[1].understand.lapses)-(a[1].produce.lapses+a[1].understand.lapses)).slice(0,10).map(([id])=>({id,direction:'produce',practice:true,readyAt:now}));
  const usedIds=new Set();
  const tasks=dueTasks(state,now,category,deck).filter(t=>{if(usedIds.has(t.id))return false;usedIds.add(t.id);return true}).slice(0,state.settings.reviewLimit).map(t=>({...t,readyAt:now}));
  const n=newAllowance(state,now,deck).count;
- const fresh=deck.filter(c=>!state.items[c.id]&&(!category||c.category===category)).slice(0,n).map(c=>({id:c.id,direction:'intro',readyAt:now}));return tasks.concat(fresh);
+ const fresh=deck.filter(c=>!isSentence(c)&&!state.items[c.id]&&(!category||c.category===category)).slice(0,n).map(c=>({id:c.id,direction:'intro',readyAt:now}));return tasks.concat(fresh);
 }
-function extraPlan(state,now,deck,category=''){return deck.filter(c=>!state.items[c.id]&&(!category||c.category===category)).slice(0,5).map(c=>({id:c.id,direction:'intro',readyAt:now,extra:true}))}
+function extraPlan(state,now,deck,category=''){return deck.filter(c=>!isSentence(c)&&!state.items[c.id]&&(!category||c.category===category)).slice(0,5).map(c=>({id:c.id,direction:'intro',readyAt:now,extra:true}))}
 function holding(item){return !item.suspended&&directions.every(d=>item[d].phase==='review'&&item[d].interval>=7&&item[d].delayedPasses>=2&&item[d].lastGrade>0)}
-function progress(state,deck,now){const byCategory=new Map();for(const c of deck){if(!byCategory.has(c.category))byCategory.set(c.category,{category:c.category,total:0,seen:0,holding:0,learning:0,paused:0,unseen:0,due:0,seenPct:0,holdingPct:0});byCategory.get(c.category).total++}
+function progress(state,deck,now){const words=deck.filter(c=>!isSentence(c)),byCategory=new Map();for(const c of words){if(!byCategory.has(c.category))byCategory.set(c.category,{category:c.category,total:0,seen:0,holding:0,learning:0,paused:0,unseen:0,due:0,seenPct:0,holdingPct:0});byCategory.get(c.category).total++}
  const byId=new Map(deck.map(c=>[c.id,c])),dueByCategory=new Map();for(const t of dueTasks(state,now,null,deck)){const card=byId.get(t.id);if(card)dueByCategory.set(card.category,(dueByCategory.get(card.category)||0)+1)}
- let seen=0,held=0,paused=0,due=0;for(const c of deck){const row=byCategory.get(c.category),item=state.items[c.id];if(!item){row.unseen++;continue}row.seen++;seen++;if(item.suspended){row.paused++;paused++}else if(holding(item)){row.holding++;held++}else row.learning++}
+ let seen=0,held=0,paused=0,due=0;for(const c of words){const row=byCategory.get(c.category),item=state.items[c.id];if(!item){row.unseen++;continue}row.seen++;seen++;if(item.suspended){row.paused++;paused++}else if(holding(item)){row.holding++;held++}else row.learning++}
  for(const row of byCategory.values()){row.due=dueByCategory.get(row.category)||0;due+=row.due;row.seenPct=row.total?Math.round(row.seen/row.total*100):0;row.holdingPct=row.total?Math.round(row.holding/row.total*100):0}
- const total=deck.length,holdingCount=held;return {total,seen,holding:holdingCount,learning:seen-holdingCount-paused,paused,unseen:total-seen,due,categories:[...byCategory.values()]}}
+ const total=words.length,holdingCount=held;return {total,seen,holding:holdingCount,learning:seen-holdingCount-paused,paused,unseen:total-seen,due,categories:[...byCategory.values()]}}
 function isSentence(card){const text=(card.text||'').trim();return /[。？！.!?؟]$/.test(text)||card.category==='Everyday Sentences'}
 const SENTENCE_PARTICLES=new Set([...'了的吗呢吧啊呀嘛着过']);
 const SENTENCE_GLUE=['我们','你们','他们','这是','那是','我','你','他','她','它','这','那','是','在','不','没','有','和','会','能','就','也','都','还','很','个','地','得'];
