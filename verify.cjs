@@ -34,7 +34,9 @@ console.log('PASS progress: overall and per-category seen, remembered-well, lear
 // Sentences in parallel: a sentence appears only when every word in it is known, and grading it credits those words.
 assert(E.isSentence(deck.find(c=>c.text==='我起床了。')));assert(!E.isSentence(deck.find(c=>c.text==='妈妈')));assert(E.isSentence({text:'你想去公园吗',category:'Everyday Sentences'}));
 const wakeWord=deck.find(c=>c.text==='起床');assert.deepEqual(E.sentenceWords(deck.find(c=>c.text==='我起床了。'),deck),[wakeWord.id]);
-assert(deck.filter(c=>E.isSentence(c)).some(c=>E.sentenceWords(c,deck)===null),'Some sentences stay hidden until their words exist in the deck');
+const chineseSentences=deck.filter(c=>E.isSentence(c)),validatedChinese=chineseSentences.map(card=>({card,parts:E.sentenceParts(card,deck)})),unresolvedChinese=validatedChinese.filter(x=>!x.parts);
+assert.equal(chineseSentences.length,165);assert.equal(validatedChinese.length-unresolvedChinese.length,84);assert(unresolvedChinese.length>0,'Sentences with missing vocabulary must stay hidden');
+assert(validatedChinese.filter(x=>x.parts).every(({parts})=>parts.words.length&&parts.matches.length&&parts.matches.every(m=>deck.some(c=>c.id===m.id)&&m.text)),'Every eligible Chinese sentence must have a complete component map');
 const multi=deck.filter(c=>E.isSentence(c)).map(c=>({card:c,words:E.sentenceWords(c,deck)})).find(x=>x.words&&x.words.length>=2);assert(multi,'Need a multi-word decomposable sentence for tests');
 let gate=E.empty(courseId);assert.equal(E.sentencePlan(gate,now,deck).length,0);
 for(const wid of multi.words.slice(0,-1))E.introduce(gate,wid,now-2*E.DAY);
@@ -134,7 +136,7 @@ run('play({id:"test",text:"你想喝水吗？"},true,false,true)');wall+=5000;sp
 assert.equal(new Set(deck.map(c=>c.text.replace(/[\s。？！?!，,.]/g,''))).size,deck.length,'No punctuation-only duplicate cards');
 for(const c of deck)for(const key of ['id','text','pronunciation','meaning','category'])assert(typeof c[key]==='string'&&c[key].trim(),`${c.text}: missing ${key}`);
 assert.deepEqual(registry.courses[0].cards,deck,'Built page must contain the current normalized deck');
-assert(html.includes(`${deck.length} cards · English → Mandarin · v1.6.6`));
+assert(html.includes(`${deck.length} cards · English → Mandarin · v1.6.7`));
 const family=deck.filter(c=>c.category==='Family'),grandparents=['奶奶','爷爷','外婆','外公'];
 assert.deepEqual(family.filter(c=>grandparents.includes(c.text)).map(c=>c.text),grandparents);
 assert(family.findIndex(c=>c.text==='外公')-family.findIndex(c=>c.text==='奶奶')<=5);

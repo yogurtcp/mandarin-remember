@@ -1,6 +1,6 @@
 # Remember Languages
 
-A mobile learning app with English → Mandarin (1,034 cards) and English → Spoken Palestinian Arabic (350 cards). Both courses share spoken recall, listening/reading practice, spaced reviews and progress backups. Select your course on the home screen.
+A mobile learning app with English → Mandarin (1,034 cards) and English → Japanese (60 starter cards). Both courses share spoken recall, listening/reading practice, spaced reviews and progress backups. Select your course on the home screen.
 
 ## Open on your phone
 
@@ -52,6 +52,12 @@ Preserve card IDs when correcting wording. Bump the service-worker cache version
 
 Normal device speech now requests rate 1.0 and Slow requests 0.4. Audio settings provide both test buttons; actual speed depends on the device voice. Online helper playback also applies pitch-preserving slowdown.
 
+## Japanese starter course and sentence templates (v1.6.7)
+
+Choose **English → Japanese** on the home screen for 45 foundational words and 15 fully validated everyday sentences. Japanese sentences use the same word-based review system as Mandarin, but their polite surface forms are explicit templates: for example, **飲みます** is shown as the polite non-past form of the scored base word **飲む**. The sentence breakdown displays both forms and explains particles such as は and を without scheduling those connectors as cards.
+
+Chinese sentence cards were also revalidated. A sentence only enters practice when its entire composition resolves to known cards plus documented connectors; 84 of the existing 165 Chinese sentence cards currently meet that standard. The remainder stay safely out of the sentence queue until their missing vocabulary or an explicit form template is added—there is no partial credit or guessed mapping.
+
 ## More varied sentences (v1.6.6)
 
 Sentence cards are no longer learned or reviewed as words: new-card plans, due reviews, extra review and word progress count only vocabulary words, and a sentence card left in older saved progress is simply never scheduled again — it can only appear through this sentence system. Sentences now appear about one task in three. Selection rotates by least-recently-shown (using a practice-only exposure log, still no sentence card or schedule) and picks different sentence frames — the pattern with its scored words blanked, e.g. `___在哪里` — before reusing a frame, so the same sentence should not keep coming back while other known-word sentences wait. The revealed answer adds **How this sentence is built**: each scored word with its reading and meaning, the frame, and any connecting words (pronouns, question/aspect particles and similar glue) with a short explanation. Connecting words are explained, not scored.
@@ -90,24 +96,16 @@ Existing Mandarin progress uses exactly the same storage key and backup identity
 
 See [COURSES.md](COURSES.md) for adding a course. The two-course automated tests use a private fixture only; they do not publish an unfinished Hebrew deck.
 
-## Spoken Palestinian Arabic (v1.6)
-
-Choose **English → Spoken Palestinian Arabic** in Course. It has 350 cards across 16 everyday topics, Latin readings, gender labels, and usage notes on 115 cards. See [ARABIC.md](ARABIC.md) for the curriculum, references and dialect conventions. Mandarin’s 1,034 cards and existing progress remain intact. Each course keeps its own reviews, notes, settings, statistics and backup.
-
-Arabic search ignores vowel marks and tatweel. Arabic text runs right to left; answer and cue inputs accept either direction. The same practice, Learn 5 more, audio controls, phrasebook and offline features serve both languages.
-
-**Arabic synthetic voices may use formal pronunciation.** Follow the provided reading for the intended Palestinian form and seek local-speaker feedback. This limitation is shown in the app; neither a device locale nor Google Translate guarantees Palestinian speech.
-
 ## Optional Linux online speech
 
-Run `./start-online.sh`, then open the localhost address it prints. First run installs the pinned speech client. Only phrases you play are sent to the service. The helper uses Mandarin Xiaoxiao and Jordanian Arabic Sana, with separate course routing and a bounded cache (128 files / 8 MB). The Arabic voice is a fallback, not a verified Palestinian model. No audio deck is bundled.
+Run `./start-online.sh`, then open the localhost address it prints. First run installs the pinned speech client. Only phrases you play are sent to the service. The optional helper uses Mandarin Xiaoxiao and has a bounded cache (128 files / 8 MB). Japanese uses device speech or the app’s Google fallback. No audio deck is bundled.
 
 The helper binds to the laptop’s loopback interface and is separate from GitHub Pages. Installing the website on a phone uses that phone’s voices; it does not connect to the laptop helper. Core practice and saved progress work without the helper.
 
-## Missing-voice audio fix (v1.6.1)
+## Missing-voice audio fallback (v1.6.1)
 
-The published app now has on-demand Google speech for both Mandarin and Arabic. Automatic falls back when there is no suitable device voice or device playback fails. Online voice selects online playback directly; Device voice keeps playback device-only. Slow applies pitch-preserving playback at 0.65× for Google audio. The existing local helper retains its own synthesis rate and playback settings.
+The published app has on-demand Google speech for Mandarin and Japanese. Automatic falls back when there is no suitable device voice or device playback fails. Online voice selects online playback directly; Device voice keeps playback device-only. Slow applies pitch-preserving playback at 0.65× for Google audio. The existing local helper retains its own synthesis rate and playback settings.
 
 Google’s Translate speech endpoint is undocumented and may change or throttle requests; it is not a guaranteed Google Cloud API. Failure or timeout shows a direct Google Translate link. No API keys, backend deployment, audio bundle or account is required. A no-referrer policy avoids sending this app’s page URL with audio requests. No phrase is requested until you press a playback control.
 
-Regression tests now explicitly cover **zero installed voices**, errors, timeouts and source preferences. In the Linux in-app browser with no Arabic device voice, the Arabic test sentence completed in 5.4 seconds normally and 8.1 seconds on Slow. This verifies playback, not Palestinian accent accuracy or every Android device.
+Regression tests cover **zero installed voices**, errors, timeouts and source preferences. This verifies playback, not accent accuracy or every Android device.

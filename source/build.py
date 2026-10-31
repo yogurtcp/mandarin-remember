@@ -43,7 +43,25 @@ def load_courses(root):
             meaning = raw['meaning']
             assert isinstance(text, str) and text.strip() and isinstance(meaning, str) and meaning.strip(), 'Empty card text/meaning'
             assert isinstance(pronunciation, str), 'Invalid pronunciation'
-            return dict(text=text, pronunciation=pronunciation, meaning=meaning)
+            card = dict(text=text, pronunciation=pronunciation, meaning=meaning)
+            # Sentence forms map an inflected/template surface back to this
+            # learned lexical card (for example, Japanese 飲みます → 飲む).
+            forms = raw.get('forms', [])
+            assert isinstance(forms, list), 'Invalid sentence forms'
+            seen_forms = {text.strip()}
+            normalized_forms = []
+            for form in forms:
+                if isinstance(form, str):
+                    form = {'text': form}
+                assert isinstance(form, dict), 'Invalid sentence form'
+                surface, label, reading = form.get('text'), form.get('label', ''), form.get('pronunciation', '')
+                assert isinstance(surface, str) and surface.strip() and surface.strip() not in seen_forms, 'Invalid/duplicate sentence form'
+                assert isinstance(label, str) and isinstance(reading, str), 'Invalid sentence form detail'
+                seen_forms.add(surface.strip())
+                normalized_forms.append(dict(text=surface, label=label, pronunciation=reading))
+            if normalized_forms:
+                card['forms'] = normalized_forms
+            return card
 
         cards, card_ids = [], set()
         for raw in raw_cards:

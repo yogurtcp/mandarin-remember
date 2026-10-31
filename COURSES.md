@@ -51,6 +51,17 @@ New decks use language-neutral fields:
 
 `pronunciation` may be omitted or empty. `usage` and `examples` are optional; examples appear in the usage disclosure, so include a usage note with them. Use one or two examples. IDs must be unique **within a course**; different courses may share a card ID without sharing progress. Preserve IDs when editing meanings, spelling, categories or order.
 
+### Template forms in sentences
+
+For a sentence that realizes a learned word in another form, put the allowed surface form on the **word** card. The sentence system displays the base word, explains the form, and credits the base word's schedule; it does not create a separate card for the conjugation.
+
+```json
+{"id":"ja-drink","text":"飲む","pronunciation":"nomu","meaning":"to drink",
+ "forms":[{"text":"飲みます","pronunciation":"nomimasu","label":"polite non-past form"}]}
+```
+
+Only a full, unambiguous parse is eligible for sentence practice. An unresolved sentence stays out of the queue rather than receiving partial or guessed credit. Chinese and Japanese particles are explained as unscored connecting words. Add form templates deliberately; they are learning-content data, not an automatic conjugator.
+
 The existing Mandarin source deck retains its `zh` / `pinyin` fields for compatibility with the optional voice helper and prior content tools. Its registry record has `cardFields: {"text": "zh", "pronunciation": "pinyin"}`. The build normalizes these fields, including examples, into the shared runtime format. New decks do not need this adapter.
 
 ## Build and verify

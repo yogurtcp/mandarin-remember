@@ -7,7 +7,7 @@ from urllib.parse import parse_qs, urlsplit
 
 ROOT=Path(__file__).resolve().parent
 # Explicitly configured providers; a locale label is not a dialect guarantee.
-VOICES={'en-zh':'zh-CN-XiaoxiaoNeural','en-ar-palestinian':'ar-JO-SanaNeural'}
+VOICES={'en-zh':'zh-CN-XiaoxiaoNeural'}
 REGISTRY=json.loads((ROOT/'courses.json').read_text())
 TEXTS={}
 for course in REGISTRY['courses']:

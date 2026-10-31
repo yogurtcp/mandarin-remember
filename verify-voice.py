@@ -31,28 +31,25 @@ with TemporaryDirectory() as directory:
         headers=dict(response.getheaders());connection.close();return status,body,headers
     try:
         status,body,_=request('/')
-        assert status==200 and b'ONLINE_VOICE_COURSES=["en-zh", "en-ar-palestinian"]' in body
+        assert status==200 and b'ONLINE_VOICE_COURSES=["en-zh"]' in body
         status,body,_=request('/api/voice-status')
-        assert status==200 and len(json.loads(body)['voices'])==2
-        # The test ID exists in both courses; text and cached audio must stay distinct.
+        assert status==200 and len(json.loads(body)['voices'])==1
+        # Mandarin retains the local helper; Japanese uses the app's on-demand
+        # Google fallback and must not be silently routed through this helper.
         _,zh,headers=request('/api/speech?id=test')
         assert calls[-1][1:] == ('zh-CN-XiaoxiaoNeural','+0%')
-        _,ar,headers=request('/api/speech?course=en-ar-palestinian&id=test')
-        assert ar!=zh and calls[-1][1:] == ('ar-JO-SanaNeural','+0%')
-        assert calls[-1][0]==helper.TEXTS['en-ar-palestinian']['test']
         call_count=len(calls)
-        _,cached,headers=request('/api/speech?course=en-ar-palestinian&id=test')
-        assert cached==ar and headers['X-Speech-Cache']=='hit' and len(calls)==call_count
-        _,slow,_=request('/api/speech?course=en-ar-palestinian&id=test&slow=1')
-        assert slow!=ar and calls[-1][2]=='-28%'
-        assert len(list(helper.CACHE.glob('*.mp3')))==3
-        arabic_id=next(iter(helper.TEXTS['en-ar-palestinian']))
-        assert request('/api/speech?course=en-zh&id='+arabic_id)[0]==400
+        _,cached,headers=request('/api/speech?id=test')
+        assert cached==zh and headers['X-Speech-Cache']=='hit' and len(calls)==call_count
+        _,slow,_=request('/api/speech?id=test&slow=1')
+        assert slow!=zh and calls[-1][2]=='-28%'
+        assert len(list(helper.CACHE.glob('*.mp3')))==2
+        assert request('/api/speech?course=en-ja-japanese&id=test')[0]==400
         assert request('/api/speech?course=unknown&id=test')[0]==400
-        assert request('/api/speech?course=en-ar-palestinian&id=unknown')[0]==400
+        assert request('/api/speech?course=unknown&id=unknown')[0]==400
         assert request('/api/speech?id=test&slow=2')[0]==400
         assert request('/',host='example.com')[0]==403
         assert request('/courses.json')[0]==404
     finally:
         server.shutdown();server.server_close();thread.join()
-print('PASS helper: advertised courses, legacy Mandarin fallback, per-course text/voice/cache, slow rate, input validation and loopback host restriction (mock speech).')
+print('PASS helper: Mandarin helper routing, Japanese helper exclusion, cache, slow rate, input validation and loopback host restriction (mock speech).')

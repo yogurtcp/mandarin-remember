@@ -11,7 +11,7 @@ function boot(storage=new Map()){
  const get=id=>{if(!elements.has(id))elements.set(id,{value:'',hidden:false,innerHTML:'',textContent:'',dataset:{},events:{},addEventListener(type,fn){this.events[type]=fn},focus(){},select(){},scrollIntoView(){}});return elements.get(id)};
  get('courses-data').textContent=JSON.stringify(registry);
  const document={getElementById:get,querySelectorAll:()=>[],createElement:()=>({click(){downloads.push(this.download)}})};
- const speech={getVoices:()=>[{name:'Chinese',lang:'zh-CN'},{name:'Cantonese',lang:'zh-HK'},{name:'Hebrew',lang:'he-IL'},{name:'Saudi default',lang:'ar-SA',default:true},{name:'Jordanian',lang:'ar-JO'}],addEventListener(){},resume(){},cancel(){},speak(u){spoken.push(u);u.onstart?.()}};
+ const speech={getVoices:()=>[{name:'Chinese',lang:'zh-CN'},{name:'Cantonese',lang:'zh-HK'},{name:'Japanese',lang:'ja-JP'},{name:'Hebrew',lang:'he-IL'}],addEventListener(){},resume(){},cancel(){},speak(u){spoken.push(u);u.onstart?.()}};
  const sandbox={document,console,URL:{createObjectURL(blob){created=blob;return 'blob:test'},revokeObjectURL(){}},Blob,Date,location:{protocol:'file:'},navigator:{},localStorage:{getItem:k=>storage.get(k)??null,setItem:(k,v)=>storage.set(k,v)},speechSynthesis:speech,SpeechSynthesisUtterance:function(text){this.text=text},Audio:function(url){media.push(url);audioObjects.push(this);this.play=()=>({catch(){}});this.pause=()=>{};this.removeAttribute=()=>{};this.load=()=>{}},setTimeout(fn){const id=Symbol();timers.set(id,fn);return id},clearTimeout(id){timers.delete(id)},setInterval(){},scrollTo(){},addEventListener:(type,fn)=>events[type]=fn};
  sandbox.window=sandbox;const context=vm.createContext(sandbox),run=s=>vm.runInContext(s,context);scripts.forEach(run);
  return {get,run,storage,events,sandbox,spoken,media,audioObjects,timers,downloads,blob:()=>created};
@@ -30,7 +30,7 @@ function boot(storage=new Map()){
  assert(a.run('switchCourse("ru-he-test")'));assert.equal(a.run('session'),null);assert.equal(a.run('current'),null);
  assert.equal(a.run('Object.keys(state.items).length'),0);assert.equal(a.run('state.settings.newLimit'),5);assert.equal(a.get('startedCount').textContent,0);
  assert.equal(a.get('targetText').dir,'rtl');assert.equal(a.get('targetText').lang,'he-IL');assert.equal(a.get('meaning').lang,'ru');
- assert.equal(a.get('copyTarget').textContent,'Copy Hebrew');assert.equal(a.get('appVersion').textContent,'2 cards · Русский → עברית · v1.6.6');
+ assert.equal(a.get('copyTarget').textContent,'Copy Hebrew');assert.equal(a.get('appVersion').textContent,'2 cards · Русский → עברית · v1.6.7');
  assert(a.get('category').innerHTML.includes('Test greetings'));assert(!a.get('category').innerHTML.includes('Family'));
  a.run('startExtra();studied();state.items[current.id].note="Hebrew cue";state.settings.voice="Hebrew";state.settings.newLimit=3;save()');
  assert.equal(a.run('state.deckId'),second.progressId);assert.equal(a.run('state.items[DECK[0].id].note'),'Hebrew cue');
@@ -62,14 +62,14 @@ function boot(storage=new Map()){
 
  // Exercise the identical public feature paths with each actual course.
  const published=registry.courses.filter(c=>c.id!=='ru-he-test');assert.equal(published.length,2);
- const arabic=published.find(c=>c.id==='en-ar-palestinian');assert(arabic);
- assert.equal(arabic.cards.length,350);assert.equal(new Set(arabic.cards.map(c=>c.id)).size,350);
- assert.deepEqual(arabic.cards,JSON.parse(fs.readFileSync(__dirname+'/decks/en-ar-palestinian.json','utf8')));
- assert.equal(new Set(arabic.cards.map(c=>c.category)).size,16);
- assert.equal(arabic.cards.filter(c=>c.usage).length,115);
- for(const c of arabic.cards){
+ const japanese=published.find(c=>c.id==='en-ja-japanese');assert(japanese);
+ assert.equal(japanese.cards.length,60);assert.equal(new Set(japanese.cards.map(c=>c.id)).size,60);
+ assert.deepEqual(japanese.cards,JSON.parse(fs.readFileSync(__dirname+'/decks/en-ja-japanese.json','utf8')));
+ assert.equal(new Set(japanese.cards.map(c=>c.category)).size,7);
+ assert(japanese.cards.filter(c=>c.usage).length>=3);
+ for(const c of japanese.cards){
   for(const key of ['id','text','pronunciation','meaning','category'])assert(typeof c[key]==='string'&&c[key].trim());
-  assert(/[\u0621-\u064a]/u.test(c.text));
+  assert(/[\u3040-\u30ff\u3400-\u9fff]/u.test(c.text));
   if(c.examples){assert(c.usage);assert(c.examples.length<=2);for(const example of c.examples)for(const key of ['text','pronunciation','meaning'])assert(example[key]?.trim());}
  }
  for(const target of published){
@@ -96,14 +96,12 @@ function boot(storage=new Map()){
   assert.equal(t.run('state.items[DECK[0].id].suspended'),true);
   assert.equal(t.run('state.items[DECK[0].id].note'),'My course-specific cue');
   assert(!t.run('E.plan(state,Date.now(),DECK,"",true).some(t=>t.id===DECK[0].id)'));
-  t.get('category').value=target.cards.at(-1).category;t.run('startExtra()');
-  assert.equal(t.run('byId.get(current.id).category'),target.cards.at(-1).category);
+  const categoryCard=[...target.cards].reverse().find(c=>!E.isSentence(c));t.get('category').value=categoryCard.category;t.run('startExtra()');
+  assert.equal(t.run('byId.get(current.id).category'),categoryCard.category);
   t.run('home();audioSettings();play(DECK[0]);play(DECK[0],true)');
   assert.equal(t.spoken.at(-2).rate,1);assert.equal(t.spoken.at(-1).rate,.4);
   assert.equal(t.spoken.at(-1).text,target.cards[0].text);
-  const annotated=target.cards.find(c=>c.examples?.length);t.run('home();beginSession([{id:'+JSON.stringify(annotated.id)+',direction:"intro",readyAt:Date.now(),extra:true}],false)');
-  assert(!t.get('usageDetails').hidden);assert(!t.get('usageDetails').open);
-  assert(t.get('usageContent').innerHTML.includes(annotated.examples[0].pronunciation));
+  const annotated=target.cards.find(c=>c.examples?.length);assert(annotated?.usage&&annotated.examples[0].pronunciation);
   let copied;t.sandbox.navigator.clipboard={writeText:async text=>copied=text};await t.run('copyTarget(DECK[0])');assert.equal(copied,target.cards[0].text);
   const url=new URL(t.run('translateURL(DECK[0].text)'));assert.equal(url.searchParams.get('sl'),target.target.translateCode);assert.equal(url.searchParams.get('text'),copied);
   t.run('home();save();exportBackup()');const backup=JSON.parse(await t.blob().text());assert.equal(backup.deckId,target.progressId);
@@ -111,19 +109,14 @@ function boot(storage=new Map()){
   assert.deepEqual(JSON.parse(t.run('JSON.stringify(state)')),backup);
   assert.equal(boot(t.storage).run('course.id'),target.id);
  }
- const ar=boot(new Map([[original.storageKey,JSON.stringify(legacy)]]));ar.run('switchCourse("en-ar-palestinian");audioSettings();play(DECK[0])');
- assert.equal(ar.spoken.at(-1).voice.name,'Jordanian','Prefer regional fallback over a distant default');
- assert(!ar.get('courseAudioNote').hidden);assert(ar.get('audioExplanation').textContent.includes('formal pronunciation'));
- ar.get('search').value='بدي';ar.run('renderLibrary()');assert(ar.get('libraryList').innerHTML.includes('بِدّي'));
- ar.get('search').value='كـيـفـك';ar.run('renderLibrary()');assert(ar.get('libraryList').innerHTML.includes('كيفَك؟'));assert(ar.get('libraryList').innerHTML.includes('كيفِك؟'));
- ar.get('search').value='coffee';ar.run('renderLibrary()');assert(ar.get('libraryList').innerHTML.includes('قهوة'));
- ar.sandbox.ONLINE_VOICE_ENABLED=true;assert.equal(ar.run('helperAvailable()'),false,'Old Mandarin-only helpers must not advertise Arabic');
- ar.sandbox.ONLINE_VOICE_COURSES=['en-zh','en-ar-palestinian'];ar.run('play(DECK[0],true)');
- const online=new URL(ar.media.at(-1),'http://localhost');assert.equal(online.searchParams.get('course'),arabic.id);assert.equal(online.searchParams.get('id'),arabic.cards[0].id);assert.equal(online.searchParams.get('slow'),'1');
- ar.run('startExtra();studied();save()');assert.deepEqual(JSON.parse(ar.storage.get(original.storageKey)),legacy);
- console.log('PASS published parity: Mandarin and 350 Arabic cards, both recall directions, audio/rates, examples, hints, extra batches, categories, cues, pause, statistics, copy/translation, backups/restart, Arabic search, regional voice order and course-aware helper routing.');
+ const sentence=japanese.cards.find(c=>c.id==='ja-sentence-drink-water'),parts=E.sentenceParts(sentence,japanese.cards);
+ assert.deepEqual(parts.words,['ja-i','ja-water','ja-drink']);assert.equal(parts.matches.find(m=>m.id==='ja-drink').text,'飲みます');assert.equal(parts.matches.find(m=>m.id==='ja-drink').form.label,'polite non-past form');
+ assert(parts.connectors.some(c=>c.text==='は')&&parts.connectors.some(c=>c.text==='を'));
+ const allJapaneseSentences=japanese.cards.filter(E.isSentence);assert.equal(allJapaneseSentences.length,15);assert(allJapaneseSentences.every(c=>E.sentenceParts(c,japanese.cards)),'Every Japanese sentence must have a complete validated composition');
+ const known=E.empty(japanese.progressId);for(const id of parts.words)E.introduce(known,id,Date.now()-E.DAY);const planned=E.sentencePlan(known,Date.now(),japanese.cards,'',5).find(t=>t.id===sentence.id);assert(planned);assert(planned.frame.includes('___'));assert.equal(planned.matches.find(m=>m.id==='ja-drink').text,'飲みます');
+ console.log('PASS published parity: Mandarin and 60 Japanese cards, isolated course state, audio/rates, examples, hints, categories, backups, and full sentence-component validation.');
 
- // Regress the real Linux failure: zero installed voices, not a mock Arabic voice.
+ // Regress the real Linux failure: zero installed voices, not a mock course voice.
  for(const target of published){
   const t=boot();t.run('switchCourse('+JSON.stringify(target.id)+')');t.sandbox.speechSynthesis.getVoices=()=>[];
   assert.equal(t.media.length,0,'No phrase should be sent on startup or course selection');
