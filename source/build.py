@@ -32,9 +32,13 @@ def load_courses(root):
         for key in ('label', 'testText', 'pronunciationLabel'):
             assert isinstance(course[key], str) and course[key], f'Missing {key}'
         assert course['voiceLanguages'] and all(isinstance(v, str) and v for v in course['voiceLanguages']), 'Missing voice languages'
-        deck_path = (root / course.pop('deckFile')).resolve()
-        assert deck_path.is_relative_to(root.resolve()), 'Deck must be inside the project'
-        raw_cards = json.loads(deck_path.read_text(encoding='utf-8'))
+        deck_files = [course.pop('deckFile'), *course.pop('supplementDeckFiles', [])]
+        assert all(isinstance(path, str) and path for path in deck_files), 'Invalid supplemental deck path'
+        raw_cards = []
+        for deck_file in deck_files:
+            deck_path = (root / deck_file).resolve()
+            assert deck_path.is_relative_to(root.resolve()), 'Deck must be inside the project'
+            raw_cards.extend(json.loads(deck_path.read_text(encoding='utf-8')))
         fields = course.pop('cardFields', {})
 
         def normalize_text(raw):

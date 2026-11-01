@@ -12,9 +12,11 @@ REGISTRY=json.loads((ROOT/'courses.json').read_text())
 TEXTS={}
 for course in REGISTRY['courses']:
     if course['id'] not in VOICES or not course.get('localSpeechHelper'):continue
-    deck_path=(ROOT/course['deckFile']).resolve()
-    if not deck_path.is_relative_to(ROOT.resolve()):raise ValueError('Invalid deck path')
-    deck=json.loads(deck_path.read_text())
+    deck=[]
+    for deck_file in [course['deckFile'],*course.get('supplementDeckFiles',[])]:
+        deck_path=(ROOT/deck_file).resolve()
+        if not deck_path.is_relative_to(ROOT.resolve()):raise ValueError('Invalid deck path')
+        deck.extend(json.loads(deck_path.read_text()))
     field=course.get('cardFields',{}).get('text','text')
     TEXTS[course['id']]={card['id']:card[field] for card in deck}
     TEXTS[course['id']]['test']=course['testText']

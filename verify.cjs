@@ -1,10 +1,10 @@
 const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),vm=require('node:vm');
-const E=require('./source/engine.js'),rawDeck=JSON.parse(fs.readFileSync(path.join(__dirname,'deck.json'),'utf8'));
+const E=require('./source/engine.js'),rawDeck=[...JSON.parse(fs.readFileSync(path.join(__dirname,'deck.json'),'utf8')),...JSON.parse(fs.readFileSync(path.join(__dirname,'decks/en-zh-common-interactions.json'),'utf8'))];
 const courseId='chinese-family-reviewed-1';
 const normalizeCard=c=>{const {zh,pinyin,examples,...rest}=c;return {...rest,text:zh,pronunciation:pinyin,...(examples?{examples:examples.map(normalizeCard)}:{})}};
 const deck=rawDeck.map(normalizeCard);
 let now=new Date(2026,8,29,10).getTime();const id=deck[0].id,id2=deck[1].id;
-let s=E.empty(courseId);assert.equal(deck.length,1034);assert.equal(new Set(deck.map(c=>c.id)).size,1034);
+let s=E.empty(courseId);assert.equal(deck.length,1050);assert.equal(new Set(deck.map(c=>c.id)).size,1050);
 assert.equal(E.plan(s,now,deck).length,5);E.introduce(s,id,now);assert(!E.introduce(s,id,now));assert.equal(E.newAllowance(s,now,deck).count,4);
 assert.equal(E.dueTasks(s,now,null,deck).length,0);assert.equal(E.dueTasks(s,now+E.MIN,null,deck).length,1);
 E.review(s,id,'produce',2,now+E.MIN);assert.equal(s.items[id].produce.interval,1);assert.equal(s.logs.at(-1).delayed,false);
@@ -35,8 +35,10 @@ console.log('PASS progress: overall and per-category seen, remembered-well, lear
 assert(E.isSentence(deck.find(c=>c.text==='我起床了。')));assert(!E.isSentence(deck.find(c=>c.text==='妈妈')));assert(E.isSentence({text:'你想去公园吗',category:'Everyday Sentences'}));
 const wakeWord=deck.find(c=>c.text==='起床');assert.deepEqual(E.sentenceWords(deck.find(c=>c.text==='我起床了。'),deck),[wakeWord.id]);
 const chineseSentences=deck.filter(c=>E.isSentence(c)),validatedChinese=chineseSentences.map(card=>({card,parts:E.sentenceParts(card,deck)})),unresolvedChinese=validatedChinese.filter(x=>!x.parts);
-assert.equal(chineseSentences.length,165);assert.equal(validatedChinese.length-unresolvedChinese.length,84);assert(unresolvedChinese.length>0,'Sentences with missing vocabulary must stay hidden');
+assert.equal(chineseSentences.length,169);assert.equal(validatedChinese.length-unresolvedChinese.length,96);assert(unresolvedChinese.length>0,'Sentences with missing vocabulary must stay hidden');
 assert(validatedChinese.filter(x=>x.parts).every(({parts})=>parts.words.length&&parts.matches.length&&parts.matches.every(m=>deck.some(c=>c.id===m.id)&&m.text)),'Every eligible Chinese sentence must have a complete component map');
+const interactions=['请给我一杯水。','请给我小票。','请问，有手机充电器吗？','我很好，谢谢。你呢？','很高兴认识你。','很高兴见到你。','下次见！','最近怎么样？'];
+for(const text of interactions){const card=deck.find(c=>c.text===text),parts=card&&E.sentenceParts(card,deck);assert(card&&parts,`Interaction must be composable: ${text}`);const ready=E.empty(courseId);for(const id of parts.words)E.introduce(ready,id,now-E.DAY);assert(E.sentencePlan(ready,now,deck,card.category,50).some(t=>t.id===card.id),`Interaction must enter practice when its words are known: ${text}`)}
 const multi=deck.filter(c=>E.isSentence(c)).map(c=>({card:c,words:E.sentenceWords(c,deck)})).find(x=>x.words&&x.words.length>=2);assert(multi,'Need a multi-word decomposable sentence for tests');
 let gate=E.empty(courseId);assert.equal(E.sentencePlan(gate,now,deck).length,0);
 for(const wid of multi.words.slice(0,-1))E.introduce(gate,wid,now-2*E.DAY);
@@ -136,7 +138,7 @@ run('play({id:"test",text:"你想喝水吗？"},true,false,true)');wall+=5000;sp
 assert.equal(new Set(deck.map(c=>c.text.replace(/[\s。？！?!，,.]/g,''))).size,deck.length,'No punctuation-only duplicate cards');
 for(const c of deck)for(const key of ['id','text','pronunciation','meaning','category'])assert(typeof c[key]==='string'&&c[key].trim(),`${c.text}: missing ${key}`);
 assert.deepEqual(registry.courses[0].cards,deck,'Built page must contain the current normalized deck');
-assert(html.includes(`${deck.length} cards · English → Mandarin · v1.6.7`));
+assert(html.includes(`${deck.length} cards · English → Mandarin · v1.6.8`));
 const family=deck.filter(c=>c.category==='Family'),grandparents=['奶奶','爷爷','外婆','外公'];
 assert.deepEqual(family.filter(c=>grandparents.includes(c.text)).map(c=>c.text),grandparents);
 assert(family.findIndex(c=>c.text==='外公')-family.findIndex(c=>c.text==='奶奶')<=5);
@@ -148,10 +150,10 @@ get('search').value='姥姥';run('renderLibrary()');assert(get('libraryList').in
 console.log('PASS expanded curriculum: unique complete cards, embedded deck parity, grouped grandparents, maternal-name search, word/sentence order and unseen-card selection.');
 
 // Context is optional, safely rendered, searchable, and only inside the revealed answer.
-const annotated=deck.filter(c=>c.usage);assert.equal(annotated.length,138);
-assert.equal(annotated.reduce((n,c)=>n+c.examples.length,0),174);
+const annotated=deck.filter(c=>c.usage),annotatedWithExamples=annotated.filter(c=>c.examples?.length);assert.equal(annotated.length,141);
+assert.equal(annotatedWithExamples.reduce((n,c)=>n+c.examples.length,0),174);
 for(const c of annotated){
- assert(c.usage.trim());assert(c.examples.length>=1&&c.examples.length<=2);
+ assert(c.usage.trim());if(!c.examples)continue;assert(c.examples.length>=1&&c.examples.length<=2);
  for(const example of c.examples){for(const field of ['text','pronunciation','meaning'])assert.equal(typeof example[field],'string');assert(/[\u3400-\u9fff]/u.test(example.text));assert(example.pronunciation.trim()&&example.meaning.trim());}
 }
 const wake=deck.find(c=>c.text==='起床');
@@ -170,7 +172,7 @@ get('search').value='亚历克斯';run('renderLibrary()');assert(get('libraryCou
 get('search').value='';
 // Confirm the disclosure is physically inside #answer, not merely hidden by the test DOM mock.
 assert(html.indexOf('id="usageDetails"')>html.indexOf('id="answer"'));assert(html.indexOf('id="usageDetails"')<html.indexOf('id="ratings"'));
-console.log('PASS context: 138 annotated cards / 174 examples, full-sentence links, hidden recall, closed disclosures on advance, empty-card cleanup, escaping, and example search.');
+console.log('PASS context: 141 annotated cards / 174 examples, optional-context rendering, full-sentence links, hidden recall, closed disclosures on advance, empty-card cleanup, escaping, and example search.');
 
 let promptCalls=0;run('show("install");renderInstall()');assert(get('requestInstall').hidden);assert(!get('installSteps').hidden);
 windowEvents.beforeinstallprompt({preventDefault(){},prompt:async()=>{promptCalls++},userChoice:Promise.resolve({outcome:'dismissed'})});assert(!get('requestInstall').hidden);

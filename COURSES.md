@@ -64,6 +64,10 @@ Only a full, unambiguous parse is eligible for sentence practice. An unresolved 
 
 The existing Mandarin source deck retains its `zh` / `pinyin` fields for compatibility with the optional voice helper and prior content tools. Its registry record has `cardFields: {"text": "zh", "pronunciation": "pinyin"}`. The build normalizes these fields, including examples, into the shared runtime format. New decks do not need this adapter.
 
+## Supplemental vocabulary files
+
+A course may declare `supplementDeckFiles`, an ordered list of additional JSON decks inside the project. They are merged with `deckFile` at build time and must use the same field conventions and globally unique IDs for that course. Use this for a reviewed, focused expansion such as Mandarin’s common-interactions set; do not duplicate card text or IDs already in the base deck. The local voice helper also loads these files, so new cards retain optional helper speech.
+
 ## Build and verify
 
 ```sh

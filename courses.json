@@ -5,6 +5,7 @@
       "id": "en-zh",
       "label": "English → Mandarin",
       "deckFile": "deck.json",
+      "supplementDeckFiles": ["decks/en-zh-common-interactions.json"],
       "cardFields": {
         "text": "zh",
         "pronunciation": "pinyin"

@@ -1,6 +1,6 @@
 # Remember Languages
 
-A mobile learning app with English → Mandarin (1,034 cards) and English → Japanese (60 starter cards). Both courses share spoken recall, listening/reading practice, spaced reviews and progress backups. Select your course on the home screen.
+A mobile learning app with English → Mandarin (1,050 cards) and English → Japanese (60 starter cards). Both courses share spoken recall, listening/reading practice, spaced reviews and progress backups. Select your course on the home screen.
 
 ## Open on your phone
 
@@ -56,7 +56,11 @@ Normal device speech now requests rate 1.0 and Slow requests 0.4. Audio settings
 
 Choose **English → Japanese** on the home screen for 45 foundational words and 15 fully validated everyday sentences. Japanese sentences use the same word-based review system as Mandarin, but their polite surface forms are explicit templates: for example, **飲みます** is shown as the polite non-past form of the scored base word **飲む**. The sentence breakdown displays both forms and explains particles such as は and を without scheduling those connectors as cards.
 
-Chinese sentence cards were also revalidated. A sentence only enters practice when its entire composition resolves to known cards plus documented connectors; 84 of the existing 165 Chinese sentence cards currently meet that standard. The remainder stay safely out of the sentence queue until their missing vocabulary or an explicit form template is added—there is no partial credit or guessed mapping.
+Chinese sentence cards were also revalidated. A sentence only enters practice when its entire composition resolves to known cards plus documented connectors; 96 of the current 169 Chinese sentence cards meet that standard. The remainder stay safely out of the sentence queue until their missing vocabulary or an explicit form template is added—there is no partial credit or guessed mapping.
+
+## Common Mandarin interactions (v1.6.8)
+
+The Mandarin course now includes a checked **Common interactions** set: polite requests for water, a receipt, or an indicated item; asking for a phone charger; greeting and “I’m well, thanks. And you?” exchanges; meeting/parting language; and “How have you been lately?” The shared sentence system tests that each of these is scheduled only after all of its component cards are learned. The request pattern appears in several real variants—`请给我一杯水。`, `请给我小票。`, and `请给我这个。`—rather than as an unspoken blank placeholder.
 
 ## More varied sentences (v1.6.6)
 

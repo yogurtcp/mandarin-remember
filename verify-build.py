@@ -13,13 +13,15 @@ registry = json.loads((root / 'courses.json').read_text())
 with TemporaryDirectory() as directory:
     folder = Path(directory)
     for course in registry['courses']:
-        dest = folder / course['deckFile']
-        dest.parent.mkdir(parents=True, exist_ok=True)
-        dest.write_bytes((root / course['deckFile']).read_bytes())
+        for deck_file in [course['deckFile'], *course.get('supplementDeckFiles', [])]:
+            dest = folder / deck_file
+            dest.parent.mkdir(parents=True, exist_ok=True)
+            dest.write_bytes((root / deck_file).read_bytes())
     second = copy.deepcopy(registry['courses'][0])
     second.update(id='ru-he-test', progressId='test-ru-he', deckFile='second.json', label='Russian → Hebrew')
     second.pop('storageKey')
     second.pop('cardFields')
+    second.pop('supplementDeckFiles')
     second.pop('localSpeechHelper')
     second.update(source=dict(name='Russian', lang='ru', dir='ltr', translateCode='ru'),
                   target=dict(name='Hebrew', lang='he-IL', dir='rtl', translateCode='iw'),

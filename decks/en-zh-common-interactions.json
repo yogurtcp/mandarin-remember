@@ -1,0 +1,18 @@
+[
+  {"id":"zh-int-please","zh":"请","pinyin":"qǐng","meaning":"please; to invite / ask","category":"Common interactions","usage":"Before a request, 请 makes it polite. In 请问, it combines with 问 to mean “excuse me, may I ask?”"},
+  {"id":"zh-int-cup","zh":"一杯","pinyin":"yì bēi","meaning":"a cup / glass of","category":"Common interactions","usage":"A cup/glass measure phrase. The tone of 一 changes before a fourth-tone syllable: yì bēi."},
+  {"id":"zh-int-have","zh":"有","pinyin":"yǒu","meaning":"to have; there is / are","category":"Common interactions"},
+  {"id":"zh-int-phone","zh":"手机","pinyin":"shǒujī","meaning":"mobile phone","category":"Common interactions"},
+  {"id":"zh-int-excuse","zh":"请问","pinyin":"qǐngwèn","meaning":"excuse me, may I ask…","category":"Common interactions","usage":"A polite opener before asking a stranger, shop staff, or someone you do not know well."},
+  {"id":"zh-int-see","zh":"见","pinyin":"jiàn","meaning":"to see / meet","category":"Common interactions"},
+  {"id":"zh-int-next-time","zh":"下次","pinyin":"xià cì","meaning":"next time","category":"Common interactions"},
+  {"id":"zh-int-goodbye","zh":"再见","pinyin":"zàijiàn","meaning":"goodbye / see you again","category":"Common interactions"},
+  {"id":"zh-int-recently","zh":"最近","pinyin":"zuìjìn","meaning":"recently; lately","category":"Common interactions"},
+  {"id":"zh-int-how","zh":"怎么样","pinyin":"zěnmeyàng","meaning":"how is it? / how are things?","category":"Common interactions"},
+  {"id":"zh-int-see-you","zh":"见到","pinyin":"jiàn dào","meaning":"to see / meet (someone)","category":"Common interactions"},
+  {"id":"zh-int-this-one","zh":"这个","pinyin":"zhège","meaning":"this one / this","category":"Common interactions"},
+  {"id":"zh-int-phone-charger","zh":"请问，有手机充电器吗？","pinyin":"qǐngwèn, yǒu shǒujī chōngdiànqì ma?","meaning":"Excuse me, do you have a phone charger?","category":"Common interactions"},
+  {"id":"zh-int-well-thanks","zh":"我很好，谢谢。你呢？","pinyin":"wǒ hěn hǎo, xièxie. nǐ ne?","meaning":"I'm well, thanks. And you?","category":"Common interactions"},
+  {"id":"zh-int-nice-seeing","zh":"很高兴见到你。","pinyin":"hěn gāoxìng jiàn dào nǐ.","meaning":"It was nice seeing you.","category":"Common interactions"},
+  {"id":"zh-int-please-this","zh":"请给我这个。","pinyin":"qǐng gěi wǒ zhège.","meaning":"Please give me this one.","category":"Common interactions"}
+]
