@@ -1,9 +1,9 @@
 // Scope the cache to this installation, including GitHub Pages project paths.
 const PREFIX='mandarin-remember:'+self.registration.scope+':';
-const CACHE=PREFIX+'v16';
+const CACHE=PREFIX+'v18';
 const HOME=new URL('./',self.registration.scope).href;
 const ASSETS=['manifest.webmanifest','icon.svg','icon-192.png','icon-512.png'].map(path=>new URL(path,HOME).href);
-self.addEventListener('install',event=>event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll([HOME,...ASSETS]))));
+self.addEventListener('install',event=>event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll([HOME,...ASSETS])).then(()=>self.skipWaiting())));
 self.addEventListener('activate',event=>event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(key=>key.startsWith(PREFIX)&&key!==CACHE).map(key=>caches.delete(key)))).then(()=>self.clients.claim())));
 self.addEventListener('fetch',event=>{
  const url=new URL(event.request.url);

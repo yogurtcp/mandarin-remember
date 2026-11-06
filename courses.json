@@ -6,6 +6,29 @@
       "label": "English → Mandarin",
       "deckFile": "deck.json",
       "supplementDeckFiles": ["decks/en-zh-common-interactions.json"],
+      "sentenceCardIds": [
+        "zh-fdaa26ac8943d4a4", "zh-61dd48f58b0707c0", "zh-73ed236004d3e7c6", "zh-df6a19a0c7a5ac78",
+        "zh-0210e87252468059", "zh-91187d0a2f72845e", "zh-31b86e9372ca7d41", "zh-54673ea53c1f20ad",
+        "zh-c0ad5411b19cfcba", "zh-490bfe52ad554086", "zh-635f7bc88ce1d2c7", "zh-be10ea8c4e5d464c",
+        "zh-0e81c06652f02fff", "zh-3e0cdca521f6b8cc", "zh-5bf0cf7385e667a6", "zh-ea66d23efe6cf143",
+        "zh-ee4bd422de62b679", "zh-bdf004bd9505b10c", "zh-c732f8782b599982", "zh-87537f4252b5ae43",
+        "zh-eefe49536b5b92ad", "zh-9d79f3f091a50f7b", "zh-afcb51570aa77115", "zh-bbc3df97ea21a593",
+        "zh-ec5f4a41c1709beb", "zh-ec1deed735f15f74", "zh-7f43bf23508583d9", "zh-d4c447d5f4c51e54",
+        "zh-398f892cdedef1d5", "zh-3ec20b2c1bf68e6a", "zh-6f1045963af85799", "zh-b192b8b582cdf503",
+        "zh-55324a742b9b066a", "zh-f489b96c36f43356", "zh-09d655221882ba26", "zh-582a495ba1d3ab7c",
+        "zh-d87bead248243f4a", "zh-9042e6e85c44fa57", "zh-5e6923484388b061", "zh-e394f1b9801ed0ae",
+        "zh-78efcb63d0947934", "zh-e9adf2bc81f5d707", "zh-03331fe3e10df7f7", "zh-475757cd03fc9627",
+        "zh-71109ed28491b632", "zh-f13403f1f1e183ec", "zh-6878bbd3e1a2431e", "zh-05d421543a65d650",
+        "zh-fee21c95f63e218b", "zh-8b08f86ac226433c", "zh-0bd63fc702e85480", "zh-f0404eaec00daf86",
+        "zh-a780eecbbfcde7c4", "zh-58127cc9b1e9ab4d", "zh-bc105e8d53e21cc7", "zh-7e608b96f83e1cf9"
+      ],
+      "featuredCardIds": [
+        "zh-int-please", "zh-int-cup", "zh-int-have", "zh-int-phone", "zh-int-excuse", "zh-bc71dcc29c79594f",
+        "zh-22e840cf333b0beb", "zh-327b54d04f71f212", "zh-a6345ffb8bf6bfb4", "zh-670d9743542cae3e",
+        "zh-int-good", "zh-5fcaf1452472773f", "zh-1c17dc403125481f", "zh-1bf7ac688560d3b0", "zh-int-see",
+        "zh-int-next-time", "zh-int-recently", "zh-int-how", "zh-int-this-one", "zh-df0d25193874aa17",
+        "zh-975f35218ed8782e"
+      ],
       "cardFields": {
         "text": "zh",
         "pronunciation": "pinyin"

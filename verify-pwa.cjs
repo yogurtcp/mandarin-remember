@@ -11,7 +11,7 @@ async function test(scope){
   if(!stores.has(name))stores.set(name,new Map());const data=stores.get(name);
   return {addAll:async urls=>{for(const url of urls){assert(url.startsWith(scope));data.set(url,{body:'offline app'})}},put:async(req,res)=>data.set(key(req),res),match:async req=>data.get(key(req))}
  }};
- const context=vm.createContext({URL,caches,self:{registration:{scope},location:{origin:new URL(scope).origin},clients:{claim:async()=>{}},addEventListener:(type,handler)=>handlers[type]=handler},fetch:async()=>{fetches++;if(!online)throw Error('offline');return {ok:true,body:'fresh app',clone(){return {...this}}}}});
+ const context=vm.createContext({URL,caches,self:{registration:{scope},location:{origin:new URL(scope).origin},clients:{claim:async()=>{}},skipWaiting:async()=>{},addEventListener:(type,handler)=>handlers[type]=handler},fetch:async()=>{fetches++;if(!online)throw Error('offline');return {ok:true,body:'fresh app',clone(){return {...this}}}}});
  vm.runInContext(fs.readFileSync(path.join(root,'sw.js'),'utf8'),context);
  for(const type of ['install','activate']){let pending;handlers[type]({waitUntil:p=>pending=p});await pending}
  assert(!stores.has(prefix+'v1'));assert(stores.has('another-site-cache'));

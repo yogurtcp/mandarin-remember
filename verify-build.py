@@ -22,6 +22,8 @@ with TemporaryDirectory() as directory:
     second.pop('storageKey')
     second.pop('cardFields')
     second.pop('supplementDeckFiles')
+    second.pop('sentenceCardIds')
+    second.pop('featuredCardIds')
     second.pop('localSpeechHelper')
     second.update(source=dict(name='Russian', lang='ru', dir='ltr', translateCode='ru'),
                   target=dict(name='Hebrew', lang='he-IL', dir='rtl', translateCode='iw'),

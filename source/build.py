@@ -23,6 +23,10 @@ def load_courses(root):
         assert not {storage_key, storage_key + ':before-import'} & storage_keys, 'Courses must not share progress storage'
         progress_ids.add(progress_id)
         storage_keys.update((storage_key, storage_key + ':before-import'))
+        sentence_ids = course.pop('sentenceCardIds', [])
+        featured_ids = course.pop('featuredCardIds', [])
+        assert isinstance(sentence_ids, list) and isinstance(featured_ids, list) and all(isinstance(card_id, str) and card_id for card_id in [*sentence_ids, *featured_ids]), 'Invalid card ID list'
+        featured_priority = {card_id: index for index, card_id in enumerate(featured_ids)}
         for side in ('source', 'target'):
             language = course[side]
             language.setdefault('textLabel', language['name'])
@@ -73,6 +77,10 @@ def load_courses(root):
             card_ids.add(raw['id'])
             assert isinstance(raw['category'], str) and raw['category'], 'Missing category'
             card = dict(id=raw['id'], **normalize_text(raw), category=raw['category'])
+            if raw.get('sentence') or raw['id'] in sentence_ids:
+                card['sentence'] = True
+            if raw.get('featured') or raw['id'] in featured_ids:
+                card['featured'] = featured_priority.get(raw['id'], len(featured_priority))
             if raw.get('usage'):
                 assert isinstance(raw['usage'], str), 'Invalid usage note'
                 card['usage'] = raw['usage']
@@ -81,6 +89,7 @@ def load_courses(root):
                 card['examples'] = [normalize_text(e) for e in raw['examples']]
             cards.append(card)
         assert cards, 'Empty course'
+        assert set(sentence_ids).issubset(card_ids) and set(featured_ids).issubset(card_ids), 'Unknown sentence/featured card ID'
         course['cards'] = cards
         courses.append(course)
     assert registry['defaultCourse'] in ids, 'Unknown default course'
