@@ -46,6 +46,23 @@ with TemporaryDirectory() as directory:
     assert built['courses'][-1]['cards'][0]['pronunciation'] == ''
     assert built['courses'][-1]['cards'][0]['examples'][0]['pronunciation'] == ''
     assert built['courses'][-1]['target']['dir'] == 'rtl'
+    japanese = next(course for course in built['courses'] if course['id'] == 'en-ja-japanese')
+    watashi = next(card for card in japanese['cards'] if card['id'] == 'ja-i')
+    assert watashi['text'] == '私' and watashi['pronunciation'] == 'watashi' and watashi['speechText'] == 'わたし'
+    assert watashi['examples'][0]['speechText'] == 'わたしはせんせいです。'
+    japanese_path = folder / 'decks/en-ja-japanese.json'
+    japanese_cards = json.loads(japanese_path.read_text())
+    for invalid_speech in ['', None, 123, 'あ' * 201, '私']:
+        broken_cards = copy.deepcopy(japanese_cards)
+        next(card for card in broken_cards if card['id'] == 'ja-i')['speechText'] = invalid_speech
+        japanese_path.write_text(json.dumps(broken_cards))
+        try:
+            load(test)
+        except AssertionError:
+            pass
+        else:
+            raise AssertionError('Build accepted invalid Japanese speech input')
+    japanese_path.write_text(json.dumps(japanese_cards))
     for key, value in [('id', test['courses'][0]['id']),
                        ('progressId', test['courses'][0]['progressId']),
                        ('storageKey', test['courses'][0]['storageKey']),

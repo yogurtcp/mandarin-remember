@@ -52,6 +52,12 @@ def load_courses(root):
             assert isinstance(text, str) and text.strip() and isinstance(meaning, str) and meaning.strip(), 'Empty card text/meaning'
             assert isinstance(pronunciation, str), 'Invalid pronunciation'
             card = dict(text=text, pronunciation=pronunciation, meaning=meaning)
+            if 'speechText' in raw:
+                speech_text = raw['speechText']
+                assert isinstance(speech_text, str) and speech_text.strip() and len(speech_text) <= 200, 'Invalid speech text'
+                card['speechText'] = speech_text
+            if course['target']['lang'].startswith('ja'):
+                assert not re.search(r'[\u3400-\u9fff]', card.get('speechText', text)), 'Japanese kanji needs an explicit kana speech reading'
             # Sentence forms map an inflected/template surface back to this
             # learned lexical card (for example, Japanese 飲みます → 飲む).
             forms = raw.get('forms', [])

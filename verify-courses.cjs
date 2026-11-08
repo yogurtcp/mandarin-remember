@@ -30,7 +30,7 @@ function boot(storage=new Map()){
  assert(a.run('switchCourse("ru-he-test")'));assert.equal(a.run('session'),null);assert.equal(a.run('current'),null);
  assert.equal(a.run('Object.keys(state.items).length'),0);assert.equal(a.run('state.settings.newLimit'),5);assert.equal(a.get('startedCount').textContent,0);
  assert.equal(a.get('targetText').dir,'rtl');assert.equal(a.get('targetText').lang,'he-IL');assert.equal(a.get('meaning').lang,'ru');
- assert.equal(a.get('copyTarget').textContent,'Copy Hebrew');assert.equal(a.get('appVersion').textContent,'2 cards · Русский → עברית · v1.6.10');
+ assert.equal(a.get('copyTarget').textContent,'Copy Hebrew');assert.equal(a.get('appVersion').textContent,'2 cards · Русский → עברית · v1.6.11');
  assert(a.get('category').innerHTML.includes('Test greetings'));assert(!a.get('category').innerHTML.includes('Family'));
  a.run('startExtra();studied();state.items[current.id].note="Hebrew cue";state.settings.voice="Hebrew";state.settings.newLimit=3;save()');
  assert.equal(a.run('state.deckId'),second.progressId);assert.equal(a.run('state.items[DECK[0].id].note'),'Hebrew cue');
@@ -115,6 +115,36 @@ function boot(storage=new Map()){
  const allJapaneseSentences=japanese.cards.filter(E.isSentence);assert.equal(allJapaneseSentences.length,15);assert(allJapaneseSentences.every(c=>E.sentenceParts(c,japanese.cards)),'Every Japanese sentence must have a complete validated composition');
  const known=E.empty(japanese.progressId);for(const id of parts.words)E.introduce(known,id,Date.now()-E.DAY);const planned=E.sentencePlan(known,Date.now(),japanese.cards,'',5).find(t=>t.id===sentence.id);assert(planned);assert(planned.frame.includes('___'));assert.equal(planned.matches.find(m=>m.id==='ja-drink').text,'飲みます');
  console.log('PASS published parity: Mandarin and 60 Japanese cards, isolated course state, audio/rates, examples, hints, categories, backups, and full sentence-component validation.');
+
+ // Exercise the actual bundled playback paths for every Japanese word and sentence.
+ const ja=boot();ja.run('switchCourse("en-ja-japanese")');
+ assert.equal(japanese.cards.find(c=>c.id==='ja-i').speechText,'わたし');
+ assert.equal(japanese.cards.find(c=>c.id==='ja-home').speechText,'いえ');
+ assert.equal(japanese.cards.find(c=>c.id==='ja-tomorrow').speechText,'あした');
+ assert.equal(japanese.cards.find(c=>c.id==='ja-come').speechText,'くる');
+ const unchangedState=ja.run('JSON.stringify(state)');
+ for(const card of japanese.cards){
+  const expected=card.speechText||card.text;
+  assert(!/[\u3400-\u9fff]/u.test(expected),card.id+': speech must specify the kana reading');
+  for(const example of card.examples||[])assert(!/[\u3400-\u9fff]/u.test(example.speechText||example.text));
+  for(const slow of [false,true]){
+   ja.run('state.settings.audioMode="device";play(byId.get('+JSON.stringify(card.id)+'),'+slow+')');
+   assert.equal(ja.spoken.at(-1).text,expected);assert.equal(ja.spoken.at(-1).lang,'ja-JP');
+   assert.equal(ja.spoken.at(-1).rate,slow?.4:1);
+   ja.run('state.settings.audioMode="online";play(byId.get('+JSON.stringify(card.id)+'),'+slow+')');
+   const request=new URL(ja.media.at(-1));assert.equal(request.searchParams.get('q'),expected);assert.equal(request.searchParams.get('tl'),'ja');
+   assert.equal(ja.audioObjects.at(-1).playbackRate,slow?.65:1);
+  }
+ }
+ ja.run('state.settings.audioMode="auto";play(byId.get("ja-i"))');ja.spoken.at(-1).onerror({error:'language-unavailable'});
+ assert.equal(new URL(ja.media.at(-1)).searchParams.get('q'),'わたし','Device failure must keep the explicit reading');
+ ja.audioObjects.at(-1).onerror();assert.equal(new URL(ja.get('audioFallback').href).searchParams.get('text'),'わたし');
+ ja.sandbox.speechSynthesis.getVoices=()=>[];ja.run('play(byId.get("ja-i"),true)');
+ assert.equal(new URL(ja.media.at(-1)).searchParams.get('q'),'わたし','Missing device voice must keep the explicit reading');
+ let copiedJapanese;ja.sandbox.navigator.clipboard={writeText:async text=>copiedJapanese=text};await ja.run('copyTarget(byId.get("ja-i"))');
+ assert.equal(copiedJapanese,'私');assert.equal(new URL(ja.run('translateURL(byId.get("ja-i").text)')).searchParams.get('text'),'私');
+ ja.run('state.settings.audioMode="auto"');assert.equal(ja.run('JSON.stringify(state)'),unchangedState,'Playback must not change progress');
+ console.log('PASS Japanese readings: all 60 cards, normal/slow device and Google inputs, fallback, no-voice recovery, canonical copy/translation and unchanged progress.');
 
  // Regress the real Linux failure: zero installed voices, not a mock course voice.
  for(const target of published){

@@ -51,6 +51,8 @@ New decks use language-neutral fields:
 
 `pronunciation` may be omitted or empty. `usage` and `examples` are optional; examples appear in the usage disclosure, so include a usage note with them. Use one or two examples. IDs must be unique **within a course**; different courses may share a card ID without sharing progress. Preserve IDs when editing meanings, spelling, categories or order.
 
+`speechText` optionally specifies the exact target-language text sent to device and online speech. It does not replace displayed text, copy/translation text, sentence components, or the card ID. Use native-script readings rather than Latin transliteration: for example, `"text":"私","pronunciation":"watashi","speechText":"わたし"`. Japanese cards and examples containing kanji must provide a kana speech reading; the build rejects unresolved kanji in the speech input. Course audio-test text should likewise use the intended kana reading. The audio-error fallback link uses the speech reading so its speaker can reproduce the intended pronunciation.
+
 ### Template forms in sentences
 
 For a sentence that realizes a learned word in another form, put the allowed surface form on the **word** card. The sentence system displays the base word, explains the form, and credits the base word's schedule; it does not create a separate card for the conjugation.

@@ -18,7 +18,7 @@ for course in REGISTRY['courses']:
         if not deck_path.is_relative_to(ROOT.resolve()):raise ValueError('Invalid deck path')
         deck.extend(json.loads(deck_path.read_text()))
     field=course.get('cardFields',{}).get('text','text')
-    TEXTS[course['id']]={card['id']:card[field] for card in deck}
+    TEXTS[course['id']]={card['id']:card.get('speechText') or card[field] for card in deck}
     TEXTS[course['id']]['test']=course['testText']
 CACHE=ROOT/'.speech-cache'
 GATE=threading.BoundedSemaphore(2)

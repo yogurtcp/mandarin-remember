@@ -104,14 +104,15 @@ function audioStatus(text){$('audioStatus').textContent=text;$('settingsAudioSta
 function stopAudio(){audioToken++;clearTimeout(audioTimer);if(activeAudio){activeAudio.pause();activeAudio.removeAttribute('src');activeAudio.load();activeAudio=null}if('speechSynthesis' in window)window.speechSynthesis.cancel();activeUtterance=null}
 function voices(){if(!('speechSynthesis' in window))return [];const allowed=course.voiceLanguages.map(lang=>lang.toLowerCase());const list=window.speechSynthesis.getVoices().filter(v=>allowed.includes(v.lang.replaceAll('_','-').toLowerCase()));return course.preferVoiceOrder?list.sort((a,b)=>allowed.indexOf(a.lang.replaceAll('_','-').toLowerCase())-allowed.indexOf(b.lang.replaceAll('_','-').toLowerCase())):list}
 function refreshVoices(){const list=voices();$('voiceSelect').innerHTML='<option value="">Choose automatically</option>'+list.map(v=>`<option value="${esc(v.name)}">${esc(v.name)} · ${esc(v.lang)}</option>`).join('');$('voiceSelect').value=state.settings.voice}
-function speechFallback(card){$('audioFallback').href=translateURL(card.text);$('audioFallback').hidden=false}
+function speechText(card){return card.speechText||card.text}
+function speechFallback(card){$('audioFallback').href=translateURL(speechText(card));$('audioFallback').hidden=false}
 function remoteAvailable(){return course.onlineSpeech?.provider==='google-translate'&&!!course.onlineSpeech.language}
-function remoteSpeechURL(card){return 'https://translate.googleapis.com/translate_tts?client=gtx&ie=UTF-8&tl='+encodeURIComponent(course.onlineSpeech.language)+'&q='+encodeURIComponent(card.text)}
+function remoteSpeechURL(card){return 'https://translate.googleapis.com/translate_tts?client=gtx&ie=UTF-8&tl='+encodeURIComponent(course.onlineSpeech.language)+'&q='+encodeURIComponent(speechText(card))}
 function play(card,slow=false,prompt=false,test=false,forceOnline=false){stopAudio();$('audioFallback').hidden=true;const token=audioToken;const markPlayed=()=>{if(token!==audioToken)return;if(prompt&&current?.id===card.id&&!revealed)heard=true;audioStatus(`${test?'Test sentence':'Playing'} · ${slow?'slow':'normal'}${useOnline?(helperAvailable()?' · online helper':' · Google'):''}`)};
  const mode=state.settings.audioMode,useOnline=forceOnline||mode==='online'||(mode==='auto'&&(helperAvailable()||(!voices().length&&remoteAvailable())));
  const deviceFailed=message=>{if(token!==audioToken)return;clearTimeout(audioTimer);if(mode==='auto'&&onlineAvailable()){play(card,slow,prompt,test,true);return}audioStatus(message);speechFallback(card)};
  if(useOnline){if(!onlineAvailable()){audioStatus('Online speech is not available for this course here. Choose a device voice.');return}audioStatus('Loading online audio…');
- const helper=helperAvailable();if(!helper&&card.text.length>200){audioStatus('This phrase is too long for online speech. Use the Google Translate link.');speechFallback(card);return}
+ const helper=helperAvailable();if(!helper&&speechText(card).length>200){audioStatus('This phrase is too long for online speech. Use the Google Translate link.');speechFallback(card);return}
  const audio=new Audio(helper?'/api/speech?course='+encodeURIComponent(course.id)+'&id='+encodeURIComponent(card.id)+'&slow='+(slow?'1':'0'):remoteSpeechURL(card));audio.defaultPlaybackRate=slow ? (helper ? 0.75 : 0.65) : 1;audio.playbackRate=audio.defaultPlaybackRate;audio.preservesPitch=true;activeAudio=audio;let failed=false,startedAt=null;
  const fail=(message='Online audio could not load. Retry, choose a device voice, or use the Google Translate link.')=>{if(token!==audioToken||failed)return;failed=true;clearTimeout(audioTimer);audio.pause();audio.removeAttribute('src');audio.load();activeAudio=null;audioStatus(message);speechFallback(card)};
  audio.onerror=()=>fail();audio.onplaying=()=>{if(token!==audioToken||failed)return;clearTimeout(audioTimer);if(startedAt===null)startedAt=Date.now();markPlayed()};
@@ -121,7 +122,7 @@ function play(card,slow=false,prompt=false,test=false,forceOnline=false){stopAud
  }
 
  let tries=0;const attempt=()=>{if(token!==audioToken)return;const list=voices();const voice=list.find(v=>v.name===state.settings.voice)||list.find(v=>v.lang.replaceAll('_','-').toLowerCase()===course.target.lang.toLowerCase())||(course.preferVoiceOrder?list[0]:list.find(v=>v.default))||list[0];if(!voice){if(tries++<6){audioTimer=setTimeout(attempt,250);return}deviceFailed('No '+course.target.name+' voice found. Select Automatic or Online voice in Audio & backup.');return}
- const u=new SpeechSynthesisUtterance(card.text);activeUtterance=u;u.lang=voice.lang;u.voice=voice;u.rate=slow?.4:1;let startedAt=null;
+ const u=new SpeechSynthesisUtterance(speechText(card));activeUtterance=u;u.lang=voice.lang;u.voice=voice;u.rate=slow?.4:1;let startedAt=null;
  u.onstart=()=>{if(token!==audioToken)return;clearTimeout(audioTimer);startedAt=Date.now();markPlayed()};u.onend=()=>{if(token===audioToken){clearTimeout(audioTimer);activeUtterance=null;if(test){const seconds=startedAt===null?0:(Date.now()-startedAt)/1000;const timings=voiceTimings.get(voice.name)||{};if(seconds>.3){timings[slow?'slow':'normal']=seconds;voiceTimings.set(voice.name,timings)}const unchanged=timings.normal&&timings.slow&&timings.slow<timings.normal*1.25;audioStatus(unchanged?'This voice may ignore speed changes. Try another '+course.target.name+' voice.':`Test finished · ${slow?'slow':'normal'}${seconds>.3?' · '+seconds.toFixed(1)+'s':''}`)}}};
  u.onerror=e=>{if(token===audioToken&&!['canceled','interrupted'].includes(e.error)){clearTimeout(audioTimer);deviceFailed('Speech error: '+e.error+'. Choose Automatic or Online voice, or read instead.')}};
  audioStatus('Starting '+voice.name+'…');audioTimer=setTimeout(()=>{if(token===audioToken)deviceFailed('Speech did not start. Choose Automatic or Online voice, or read instead.')},8000);
@@ -147,7 +148,7 @@ bind('testAudio',()=>play({id:'test',text:course.testText},false,false,true));bi
 function configureCourse(){
  $('courseSelect').innerHTML=COURSES.map(c=>`<option value="${esc(c.id)}">${esc(c.label)}</option>`).join('');$('courseSelect').value=course.id;
  $('brandMark').textContent=course.mark||'↻';$('brandLanguage').textContent=course.target.name;$('practiceHeading').textContent='Practise '+course.target.name;document.title=course.target.name+' · Remember';
- $('appVersion').textContent=`${DECK.length} cards · ${course.label} · v1.6.10`;$('voiceLabel').textContent=course.target.name+' voice';$('copyTarget').textContent='Copy '+course.target.textLabel;
+ $('appVersion').textContent=`${DECK.length} cards · ${course.label} · v1.6.11`;$('voiceLabel').textContent=course.target.name+' voice';$('copyTarget').textContent='Copy '+course.target.textLabel;
  $('pronunciationHelp').textContent=course.pronunciationHelp||'Listen to whole phrases. The app does not grade your pronunciation.';$('search').placeholder=course.searchPlaceholder||'Search words and meanings…';
  for(const id of ['targetText','readingPrompt','copyText']){$(id).lang=course.target.lang;$(id).dir=course.target.dir}
  for(const id of ['meaning','prompt']){$(id).lang=course.source.lang;$(id).dir=course.source.dir}

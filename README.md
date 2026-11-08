@@ -54,6 +54,10 @@ Normal device speech now requests rate 1.0 and Slow requests 0.4. Audio settings
 
 ## Japanese starter course and sentence templates (v1.6.7)
 
+### Japanese speech reading correction (v1.6.11)
+
+All 60 Japanese cards were checked against their displayed readings. Cards containing kanji now have explicit kana speech text: for example, 私 → わたし (watashi), 家 → いえ (ie), 明日 → あした (ashita), 今日 → きょう (kyō), and 来る → くる (kuru). Full sentences and the audio test also supply the intended reading. This prevents a speech engine from selecting an alternative kanji reading while leaving the original writing, romaji, card IDs and saved progress intact. Normal and slow device speech, Google speech, and automatic error fallback use the same reading. Tests verify speech inputs and routing; the voice provider still determines accent and sound quality.
+
 Choose **English → Japanese** on the home screen for 45 foundational words and 15 fully validated everyday sentences. Japanese sentences use the same word-based review system as Mandarin, but their polite surface forms are explicit templates: for example, **飲みます** is shown as the polite non-past form of the scored base word **飲む**. The sentence breakdown displays both forms and explains particles such as は and を without scheduling those connectors as cards.
 
 Chinese sentence cards were also revalidated. A sentence only enters practice when its entire composition resolves to known cards plus documented connectors; 142 of the current 225 Chinese sentence cards meet that standard. The remainder stay safely out of the sentence queue until their missing vocabulary or an explicit form template is added—there is no partial credit or guessed mapping.

@@ -90,7 +90,7 @@
       },
       "voiceLanguages": ["ja-JP", "ja"],
       "preferVoiceOrder": true,
-      "testText": "こんにちは。私は日本語を勉強します。",
+      "testText": "こんにちは。わたしはにほんごをべんきょうします。",
       "pronunciationLabel": "Romaji",
       "hintMode": "romaji",
       "pronunciationHelp": "Romaji is a reading aid, not English spelling. Long vowels are marked with ō where useful; listen to whole phrases and ask a Japanese speaker for pronunciation feedback.",
