@@ -93,18 +93,17 @@ console.log('PASS progress view: overall stats and per-topic rows render from sa
 run('home()');get('search').value='';run('libraryLimit=10000;renderLibrary()');const libAll=get('libraryList').innerHTML;assert(libAll.includes('class="libraryTopic"'));assert(libAll.indexOf('>Family ')>=0&&libAll.indexOf('>Family ')<libAll.indexOf('>Cooking '),'Topics appear in deck order');assert(get('libraryTopics').innerHTML.includes('Family'));assert(get('libraryTopics').innerHTML.includes('Cooking'));assert(libAll.includes('of 25'),'Per-topic shown/total counts');
 get('search').value='child';run('renderLibrary()');assert(get('libraryList').innerHTML.includes('libraryTopic'));get('search').value='';run('libraryLimit=30;renderLibrary()');
 console.log('PASS phrasebook topics: grouped headings, deck order, counts, topic index and search grouping.');
-// Interleave: 1 sentence per 5 vocab tasks, only when all its words are known; grading credits the words, never the sentence.
-run('home();state=E.empty(courseId)');assert.equal(run('interleaveSentences(DECK.slice(0,10).map(c=>({id:c.id,direction:"intro",readyAt:Date.now()}))).length'),10,'No sentence before its words are known');
+// Sentences replace eligible recall tasks on demand; new-card queues stay unchanged.
+run('home();state=E.empty(courseId)');
 run('state=E.empty(courseId);for(const wid of '+JSON.stringify(multi.words)+')E.introduce(state,wid,Date.now()-86400000)');
-const mixed=run('interleaveSentences(DECK.slice(0,10).map(c=>({id:c.id,direction:"intro",readyAt:Date.now()})))');assert(mixed.length>10&&mixed.length<=13);assert(mixed.filter(t=>t.sentence).length>=1);assert(mixed.some(t=>t.id===multi.card.id&&JSON.stringify(t.words)===JSON.stringify(multi.words)),'The known sentence joins the mixed session');
-assert.equal(run('interleaveSentences(DECK.slice(0,2).map(c=>({id:c.id,direction:"intro",readyAt:Date.now()}))).length'),2);
+run('beginSession(E.extraPlan(state,Date.now(),DECK),false)');assert.equal(run('current.direction'),'intro');assert.equal(run('!!current.sentence'),false);assert.equal(run('session.queue.length'),4);run('home()');
 const duesBefore=run('JSON.stringify('+JSON.stringify(multi.words)+'.map(id=>state.items[id].produce.due))');
 const multiTask=run('E.sentencePlan(state,Date.now(),DECK,"",50).find(t=>t.id==='+JSON.stringify(multi.card.id)+')');run('beginSession(['+JSON.stringify(multiTask)+'],false)');assert.equal(run('current.sentence'),true);assert.equal(run('current.id'),multi.card.id);assert(get('sentenceBreakdown').innerHTML.includes('How this sentence is built'));assert(!get('sentenceBreakdown').hidden);
 run('reveal();rate(2)');assert.equal(run('state.items[current.id]'),undefined,'Sentence card gains no progress entry');assert.notEqual(run('JSON.stringify('+JSON.stringify(multi.words)+'.map(id=>state.items[id].produce.due))'),duesBefore,'Sentence grade must update word due dates');assert(run('JSON.stringify('+JSON.stringify(multi.words)+'.map(id=>state.items[id].produce.reviews))')===JSON.stringify(multi.words.map(()=>1)));assert(get('scheduledResult').textContent.includes('Sentence credited to'));
 // Same-session guard: a second sentence with the same words must not reschedule them again.
 run('current='+JSON.stringify(multiTask)+';revealed=true;graded=false;rate(2)');assert(run('JSON.stringify('+JSON.stringify(multi.words)+'.map(id=>state.items[id].produce.reviews))')===JSON.stringify(multi.words.map(()=>1)),'No double credit in one session');assert(get('scheduledResult').textContent.includes('already practised'));
 run('finish()');
-console.log('PASS sentence session: gated interleave, per-word due-date credit, no sentence tracking, no double credit.');
+console.log('PASS sentence session: recall-only sentences, per-word due-date credit, no sentence tracking, no double credit.');
 // Future-dated imports cannot inflate the recent recall panel.
 const future=E.empty(courseId);future.logs=[{at:now+E.DAY,delayed:true,practice:false,grade:2}];assert.equal(E.retention(future,now).total,0);
 // Unreadable saved data is retained; a valid restore unlocks persistence.
@@ -139,7 +138,7 @@ run('play({id:"test",text:"你想喝水吗？"},true,false,true)');wall+=5000;sp
 assert.equal(new Set(deck.map(c=>c.text.replace(/[\s。？！?!，,.]/g,''))).size,deck.length,'No punctuation-only duplicate cards');
 for(const c of deck)for(const key of ['id','text','pronunciation','meaning','category'])assert(typeof c[key]==='string'&&c[key].trim(),`${c.text}: missing ${key}`);
 assert.deepEqual(registry.courses[0].cards,deck,'Built page must contain the current normalized deck');
-assert(html.includes(`${deck.length} cards · English → Mandarin · v1.6.11`));
+assert(html.includes(`${deck.length} cards · English → Mandarin · v1.6.12`));
 const family=deck.filter(c=>c.category==='Family'),grandparents=['奶奶','爷爷','外婆','外公'];
 assert.deepEqual(family.filter(c=>grandparents.includes(c.text)).map(c=>c.text),grandparents);
 assert(family.findIndex(c=>c.text==='外公')-family.findIndex(c=>c.text==='奶奶')<=5);

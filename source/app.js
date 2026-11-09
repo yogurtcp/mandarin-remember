@@ -37,18 +37,21 @@ function start(practice=false){const tasks=E.plan(state,Date.now(),DECK,$('categ
  if(!tasks.length){notice(practice?'Learn some cards first.':'Nothing due in this topic. Try “Learn 5 more”.');renderHome();return}
  beginSession(tasks,practice);
 }
-function interleaveSentences(tasks){if(!Array.isArray(tasks)||tasks.length<3)return tasks||[];const slots=Math.min(6,Math.floor(tasks.length/3)),now=Date.now(),queued=new Set(tasks.map(t=>t.id));const pool=E.sentencePlan(state,now,DECK,$('category').value,slots).filter(t=>!queued.has(t.id));if(!pool.length)return tasks;const out=[];let next=0;tasks.forEach((task,i)=>{out.push(task);if((i+1)%3===0&&next<pool.length)out.push(pool[next++])});while(next<pool.length)out.push(pool[next++]);return out}
 function beginSession(tasks,practice){
- session={queue:interleaveSentences(tasks),attempts:0,studied:0,missed:0,retries:{},started:Date.now(),practice,graded:new Set()};lastCardId=null;notice('');show('practice');advance();
+ session={queue:[...tasks],learningOnly:tasks.length>0&&tasks.every(t=>t.direction==='intro'),recalls:0,sentenceIds:new Set(),attempts:0,studied:0,missed:0,retries:{},started:Date.now(),practice,graded:new Set()};lastCardId=null;notice('');show('practice');advance();
 }
 function advance(){stopAudio();if(!session)return;session.queue=session.queue.filter(t=>!state.items[t.id]?.suspended);const now=Date.now();
  // Due learning steps take priority over introducing another item. Avoid immediate sibling cues when possible.
  let ready=session.queue.filter(t=>t.readyAt<=now&&(!state.items[t.id]||!state.items[t.id].suspended));
  const retrieval=ready.filter(t=>t.direction!=='intro');if(retrieval.length)ready=retrieval;
- const task=ready.find(t=>t.id!==lastCardId)||ready[0];
+ let task=ready.find(t=>t.id!==lastCardId)||ready[0];
  if(!task){if(!session.queue.length){finish();return}current=null;$('flashcard').hidden=true;$('waiting').hidden=false;renderWaiting();return}
  session.queue.splice(session.queue.indexOf(task),1);
  if(task.direction==='intro'&&(state.items[task.id]||(!task.extra&&E.newAllowance(state,now,DECK).count===0))){advance();return}
+ if(!session.learningOnly&&!task.sentence&&E.directions.includes(task.direction)){
+  const useSentence=session.recalls++%2===0;
+  if(useSentence){const sentence=E.sentenceRecall(state,now,DECK,task,[...session.sentenceIds]);if(sentence){task=sentence;session.sentenceIds.add(task.id)}}
+ }
  current=task;lastCardId=task.id;revealed=task.direction==='intro';graded=false;assisted=false;heard=false;inputMode=task.direction==='understand'?'listening':'spoken';
  const c=byId.get(task.id);$('waiting').hidden=true;$('flashcard').hidden=false;$('sessionProgress').textContent=`${session.attempts} reviews · ${session.studied} new`;
  $('taskType').textContent=task.sentence?(task.direction==='produce'?'SAY THE SENTENCE':'WHAT DOES THE SENTENCE MEAN?'):task.direction==='intro'?'NEW':task.practice?'EXTRA REVIEW':task.direction==='produce'?`SAY IT IN ${course.target.name.toUpperCase()}`:'WHAT DOES IT MEAN?';
@@ -75,7 +78,7 @@ function help(kind){if(!current||revealed)return;assisted=true;const c=byId.get(
 function firstSyllable(p){if(course.hintMode!=='pinyin')return Array.from(p).slice(0,2).join('')+'…';const match=p.match(/^([bpmfdtnlgkhjqxrzcswy]*[āáǎàēéěèīíǐìōóǒòūúǔùǖǘǚǜaeiouü]+(?:ng|n|r)?)/i);return (match?match[1]:p.split(' ')[0])+'…'}
 function studied(){if(!current||graded||current.direction!=='intro')return;graded=true;const now=Date.now();E.introduce(state,current.id,now);session.studied++;save();session.queue.push({id:current.id,direction:'produce',readyAt:now+E.MIN});$('studiedBtn').hidden=true;$('nextBtn').hidden=false;$('scheduledResult').textContent='Review in 1 minute; meaning tomorrow.';$('suspendBtn').hidden=false}
 function rate(grade){if(!current||!revealed||graded||current.direction==='intro')return;graded=true;const now=Date.now();
- if(current.sentence){const words=current.words||E.sentenceWords(byId.get(current.id),DECK)||[];let credited=0;for(const id of words){const key=id+'/'+current.direction;if(session?.graded?.has(key))continue;const item=state.items[id];if(!item||item.suspended)continue;E.review(state,id,current.direction,grade,now,{assisted,force:true,input:inputMode});session?.graded?.add(key);credited++}state.logs.push({id:current.id,direction:current.direction,grade:assisted?0:grade,requestedGrade:grade,at:now,assisted,practice:true,delayed:false,input:inputMode});session.attempts++;if((assisted?0:grade)===0)session.missed++;$('ratings').hidden=true;$('nextBtn').hidden=false;save();$('scheduledResult').textContent=credited?`Sentence credited to ${credited} word${credited===1?'':'s'} — their review dates were updated.`:'Sentence done. Its words were already practised in this session, so no dates changed twice.';return}
+ if(current.sentence){const words=current.words||E.sentenceWords(byId.get(current.id),DECK)||[];let credited=0;for(const id of words){const key=id+'/'+current.direction;if(session?.graded?.has(key))continue;const item=state.items[id];if(!item||item.suspended)continue;E.review(state,id,current.direction,grade,now,{assisted,practice:!!current.practice,force:!current.practice,input:inputMode});session?.graded?.add(key);credited++}state.logs.push({id:current.id,direction:current.direction,grade:assisted?0:grade,requestedGrade:grade,at:now,assisted,practice:true,delayed:false,input:inputMode});state.logs=state.logs.slice(-5000);session.attempts++;if((assisted?0:grade)===0)session.missed++;$('ratings').hidden=true;$('nextBtn').hidden=false;save();$('scheduledResult').textContent=current.practice?'Sentence extra review saved. Due dates unchanged.':credited?`Sentence credited to ${credited} word${credited===1?'':'s'} — their review dates were updated.`:'Sentence done. Its words were already practised in this session, so no dates changed twice.';return}
  const alreadyGraded=session?.graded?.has(current.id+'/'+current.direction);const event=E.review(state,current.id,current.direction,grade,now,{assisted,practice:!!current.practice||alreadyGraded,input:inputMode});session?.graded?.add(current.id+'/'+current.direction);session.attempts++;if(event.grade===0)session.missed++;
  $('ratings').hidden=true;$('nextBtn').hidden=false;save();
  const t=state.items[current.id][current.direction];$('scheduledResult').textContent=event.practice?'Extra review saved. Due date unchanged.':`Next ${current.direction==='produce'?course.target.name+' recall':'meaning recall'}: ${fmt(t.due)}.`;
@@ -148,7 +151,7 @@ bind('testAudio',()=>play({id:'test',text:course.testText},false,false,true));bi
 function configureCourse(){
  $('courseSelect').innerHTML=COURSES.map(c=>`<option value="${esc(c.id)}">${esc(c.label)}</option>`).join('');$('courseSelect').value=course.id;
  $('brandMark').textContent=course.mark||'↻';$('brandLanguage').textContent=course.target.name;$('practiceHeading').textContent='Practise '+course.target.name;document.title=course.target.name+' · Remember';
- $('appVersion').textContent=`${DECK.length} cards · ${course.label} · v1.6.11`;$('voiceLabel').textContent=course.target.name+' voice';$('copyTarget').textContent='Copy '+course.target.textLabel;
+ $('appVersion').textContent=`${DECK.length} cards · ${course.label} · v1.6.12`;$('voiceLabel').textContent=course.target.name+' voice';$('copyTarget').textContent='Copy '+course.target.textLabel;
  $('pronunciationHelp').textContent=course.pronunciationHelp||'Listen to whole phrases. The app does not grade your pronunciation.';$('search').placeholder=course.searchPlaceholder||'Search words and meanings…';
  for(const id of ['targetText','readingPrompt','copyText']){$(id).lang=course.target.lang;$(id).dir=course.target.dir}
  for(const id of ['meaning','prompt']){$(id).lang=course.source.lang;$(id).dir=course.source.dir}

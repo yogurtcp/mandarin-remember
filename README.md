@@ -40,6 +40,7 @@ python3 source/build.py
 node verify.cjs
 node verify-pwa.cjs
 node verify-courses.cjs
+node verify-recall.cjs
 python3 verify-build.py
 python3 verify-voice.py
 ```
@@ -67,6 +68,12 @@ Chinese sentence cards were also revalidated. A sentence only enters practice wh
 The Mandarin course now includes a checked **Common interactions** set: polite requests for water, a receipt, or an indicated item; asking for a phone charger; greeting and “I’m well, thanks. And you?” exchanges; meeting/parting language; and “How have you been lately?” The shared sentence system tests that each of these is scheduled only after all of its component cards are learned. The request pattern appears in several real variants—`请给我一杯水。`, `请给我小票。`, and `请给我这个。`—rather than as an unspoken blank placeholder. These interaction foundations are prioritized in the next new-card batches, and existing unpunctuated utterances such as `你好吗` and `我很好` are explicitly treated as sentences rather than vocabulary words.
 
 ## More varied sentences (v1.6.6)
+
+### Recall-time selection (v1.6.12)
+
+Sentences now replace individual recall tasks at display time instead of being appended when a session starts. Each replacement includes the word being reviewed, keeps its speaking/understanding direction, and uses only learned, unpaused vocabulary plus explained connectors. Roughly every other recall uses a sentence when a matching one is available; even a one-task review can use a sentence. Selection follows the reviewed word's topic and rotates through the authored sentence bank without repeating a sentence within that session. Eligibility is checked again as the session progresses and includes vocabulary learned before this update.
+
+**Learn 5 more and other sessions containing only new-card introductions stay word-only**, including their one-minute recall steps. Mixed daily sessions introduce new vocabulary as individual words and use sentences only for recall tasks. Sentence grades still credit the constituent word schedules once per direction per session; Extra review remains practice-only. Saved card identities, schedules and Japanese speech readings remain compatible. The earlier release descriptions below document the previous session-start insertion behavior.
 
 Sentence cards are no longer learned or reviewed as words: new-card plans, due reviews, extra review and word progress count only vocabulary words, and a sentence card left in older saved progress is simply never scheduled again — it can only appear through this sentence system. Sentences now appear about one task in three. Selection rotates by least-recently-shown (using a practice-only exposure log, still no sentence card or schedule) and picks different sentence frames — the pattern with its scored words blanked, e.g. `___在哪里` — before reusing a frame, so the same sentence should not keep coming back while other known-word sentences wait. The revealed answer adds **How this sentence is built**: each scored word with its reading and meaning, the frame, and any connecting words (pronouns, question/aspect particles and similar glue) with a short explanation. Connecting words are explained, not scored.
 

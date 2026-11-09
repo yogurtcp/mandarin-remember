@@ -58,6 +58,14 @@ function sentencePlan(state,now,deck,category='',limit=5){const shownAt=new Map(
  eligible.sort((a,b)=>a.shown-b.shown||a.earliest-b.earliest||a.id.localeCompare(b.id));
  const picked=[],usedFrames=new Set();for(const t of eligible){if(picked.length>=Math.max(0,limit))break;if(usedFrames.has(t.frame))continue;usedFrames.add(t.frame);picked.push(t)}for(const t of eligible){if(picked.length>=Math.max(0,limit))break;if(!picked.includes(t))picked.push(t)}
  return picked.map((t,i)=>({id:t.id,direction:i%2?'understand':'produce',sentence:true,words:t.words,connectors:t.connectors,matches:t.matches,frame:t.frame,readyAt:now}))}
+// Build a sentence recall at the moment a vocabulary recall is displayed.
+// Its anchor remains the scheduled word, so topic and recall direction carry over.
+function sentenceRecall(state,now,deck,task,excluded=[]){
+ if(!task||task.sentence||!directions.includes(task.direction)||!state.items[task.id]||state.items[task.id].suspended)return null;
+ const skip=new Set(excluded);
+ const candidate=sentencePlan(state,now,deck,'',deck.length).find(t=>t.words.includes(task.id)&&!skip.has(t.id));
+ return candidate?{...candidate,direction:task.direction,practice:!!task.practice,reviewWord:task.id}:null;
+}
 function validate(raw,deck,deckId){
  if(typeof deckId!=='string'||!deckId)throw Error('A course progress ID is required');
  if(!raw||raw.schema!==1||raw.deckId!==deckId||!raw.items||typeof raw.items!=='object'||Array.isArray(raw.items)||!Array.isArray(raw.logs))throw Error('Not a compatible backup for this course');
@@ -74,5 +82,5 @@ function validate(raw,deck,deckId){
  for(const e of raw.logs){if(!e||!ids.has(e.id)||!directions.includes(e.direction)||!num(e.at,0,1e15)||![0,1,2,3].includes(e.grade)||![0,1,2,3].includes(e.requestedGrade)||!['assisted','practice','delayed'].every(k=>typeof e[k]==='boolean')||!['spoken','listening','reading'].includes(e.input))throw Error('Invalid review history');state.logs.push({id:e.id,direction:e.direction,at:e.at,grade:e.grade,requestedGrade:e.requestedGrade,assisted:e.assisted,practice:e.practice,delayed:e.delayed,input:e.input})}
  const s=raw.settings||{};state.settings={newLimit:Number.isInteger(s.newLimit)&&s.newLimit>=0&&s.newLimit<=15?s.newLimit:5,reviewLimit:[10,20,30].includes(s.reviewLimit)?s.reviewLimit:20,audioMode:['auto','device','online'].includes(s.audioMode)?s.audioMode:'auto',voice:typeof s.voice==='string'?s.voice.slice(0,200):''};return state;
 }
-const api={DAY,MIN,directions,localDay,empty,introduce,dueTasks,retention,newAllowance,schedule,review,plan,extraPlan,holding,progress,isSentence,sentenceWords,sentenceParts,sentenceFrame,sentencePlan,validate};if(typeof module!=='undefined'&&module.exports)module.exports=api;else root.CoachEngine=api;
+const api={DAY,MIN,directions,localDay,empty,introduce,dueTasks,retention,newAllowance,schedule,review,plan,extraPlan,holding,progress,isSentence,sentenceWords,sentenceParts,sentenceFrame,sentencePlan,sentenceRecall,validate};if(typeof module!=='undefined'&&module.exports)module.exports=api;else root.CoachEngine=api;
 })(typeof window!=='undefined'?window:globalThis);
