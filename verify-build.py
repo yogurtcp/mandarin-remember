@@ -63,6 +63,19 @@ with TemporaryDirectory() as directory:
         else:
             raise AssertionError('Build accepted invalid Japanese speech input')
     japanese_path.write_text(json.dumps(japanese_cards))
+    reading_path = folder / 'decks/en-zh-reading.json'
+    reading_cards = json.loads(reading_path.read_text())
+    for requirements in [['unknown-character'], [reading_cards[-1]['id']], [reading_cards[0]['id']]]:
+        broken_reading = copy.deepcopy(reading_cards)
+        next(card for card in broken_reading if card['kind'] == 'compound')['requires'] = requirements
+        reading_path.write_text(json.dumps(broken_reading))
+        try:
+            load(test)
+        except AssertionError:
+            pass
+        else:
+            raise AssertionError('Build accepted incomplete or circular compound prerequisites')
+    reading_path.write_text(json.dumps(reading_cards))
     for key, value in [('id', test['courses'][0]['id']),
                        ('progressId', test['courses'][0]['progressId']),
                        ('storageKey', test['courses'][0]['storageKey']),

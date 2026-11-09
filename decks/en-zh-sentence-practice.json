@@ -1,0 +1,562 @@
+[
+  {
+    "id": "zh-sent-840a198eb3e8",
+    "zh": "这是我奶奶。",
+    "pinyin": "zhè shì wǒ nǎinai.",
+    "meaning": "This is my grandma (dad's mother).",
+    "category": "Family",
+    "sentence": true
+  },
+  {
+    "id": "zh-sent-a1349b2d3154",
+    "zh": "这是我爷爷。",
+    "pinyin": "zhè shì wǒ yéye.",
+    "meaning": "This is my grandpa (dad's father).",
+    "category": "Family",
+    "sentence": true
+  },
+  {
+    "id": "zh-sent-c1e51d395d51",
+    "zh": "这个多少钱？",
+    "pinyin": "zhège duōshao qián?",
+    "meaning": "How much does this cost?",
+    "category": "Common Phrases",
+    "sentence": true
+  },
+  {
+    "id": "zh-sent-a873655a5ef3",
+    "zh": "我的脚很疼。",
+    "pinyin": "wǒ de jiǎo hěn téng.",
+    "meaning": "My foot really hurts.",
+    "category": "Feelings",
+    "sentence": true
+  },
+  {
+    "id": "zh-sent-a4fe9f5a5fab",
+    "zh": "我在家。",
+    "pinyin": "wǒ zài jiā.",
+    "meaning": "I'm at home.",
+    "category": "Home & Routine",
+    "sentence": true
+  },
+  {
+    "id": "zh-sent-e19c1e82a9a8",
+    "zh": "我每天晚上洗澡。",
+    "pinyin": "wǒ měitiān wǎnshang xǐzǎo.",
+    "meaning": "I shower every evening.",
+    "category": "Home & Routine",
+    "sentence": true
+  },
+  {
+    "id": "zh-sent-1ad9d2345ae3",
+    "zh": "快穿衣服，我们要走了。",
+    "pinyin": "kuài chuān yīfu, wǒmen yào zǒu le.",
+    "meaning": "Get dressed quickly; we're leaving.",
+    "category": "Home & Routine",
+    "sentence": true
+  },
+  {
+    "id": "zh-sent-c12e24ad7555",
+    "zh": "请进来。",
+    "pinyin": "qǐng jìnlai.",
+    "meaning": "Please come in.",
+    "category": "Home & Routine",
+    "sentence": true
+  },
+  {
+    "id": "zh-sent-1a22ad31c51c",
+    "zh": "请坐下。",
+    "pinyin": "qǐng zuò xià.",
+    "meaning": "Please sit down.",
+    "category": "Home & Routine",
+    "sentence": true
+  },
+  {
+    "id": "zh-sent-09ead5b9adda",
+    "zh": "请站起来。",
+    "pinyin": "qǐng zhàn qǐlai.",
+    "meaning": "Please stand up.",
+    "category": "Home & Routine",
+    "sentence": true
+  },
+  {
+    "id": "zh-sent-0e191d255021",
+    "zh": "这是我叔叔，他是我爸爸的弟弟。",
+    "pinyin": "zhè shì wǒ shūshu, tā shì wǒ bàba de dìdi.",
+    "meaning": "This is my uncle, my dad's younger brother.",
+    "category": "Family",
+    "sentence": true
+  },
+  {
+    "id": "zh-sent-724a6ca4eccc",
+    "zh": "阿姨好！",
+    "pinyin": "āyí hǎo!",
+    "meaning": "Hello, Auntie! (A child's polite greeting to an adult woman.)",
+    "category": "Family",
+    "sentence": true
+  },
+  {
+    "id": "zh-sent-c069aa44f6ea",
+    "zh": "请打开窗户。",
+    "pinyin": "qǐng dǎkāi chuānghu.",
+    "meaning": "Please open the window.",
+    "category": "Home & Routine",
+    "sentence": true
+  },
+  {
+    "id": "zh-sent-95915044ffd9",
+    "zh": "请关上门。",
+    "pinyin": "qǐng guānshàng mén.",
+    "meaning": "Please close the door.",
+    "category": "Home & Routine",
+    "sentence": true
+  },
+  {
+    "id": "zh-sent-3da7f709c89c",
+    "zh": "今天很热。",
+    "pinyin": "jīntiān hěn rè.",
+    "meaning": "It's hot today.",
+    "category": "Feelings",
+    "sentence": true
+  },
+  {
+    "id": "zh-sent-f007a3ad47a1",
+    "zh": "我很想你。",
+    "pinyin": "wǒ hěn xiǎng nǐ.",
+    "meaning": "I miss you a lot.",
+    "category": "Actions",
+    "sentence": true
+  },
+  {
+    "id": "zh-sent-7fb8924a133a",
+    "zh": "我要一杯咖啡。",
+    "pinyin": "wǒ yào yì bēi kāfēi.",
+    "meaning": "I'd like a coffee.",
+    "category": "Actions",
+    "sentence": true
+  },
+  {
+    "id": "zh-sent-91a669dab873",
+    "zh": "我要走了。",
+    "pinyin": "wǒ yào zǒu le.",
+    "meaning": "I'm leaving now.",
+    "category": "Actions",
+    "sentence": true
+  },
+  {
+    "id": "zh-sent-0061935f4b73",
+    "zh": "我在看书。",
+    "pinyin": "wǒ zài kàn shū.",
+    "meaning": "I'm reading.",
+    "category": "Actions",
+    "sentence": true
+  },
+  {
+    "id": "zh-sent-8a80443edc6b",
+    "zh": "我喜欢听音乐。",
+    "pinyin": "wǒ xǐhuan tīng yīnyuè.",
+    "meaning": "I like listening to music.",
+    "category": "Actions",
+    "sentence": true
+  },
+  {
+    "id": "zh-sent-82372253cf51",
+    "zh": "你说什么？",
+    "pinyin": "nǐ shuō shénme?",
+    "meaning": "What did you say?",
+    "category": "Actions",
+    "sentence": true
+  },
+  {
+    "id": "zh-sent-d1e5c7213461",
+    "zh": "我给你买了面包。",
+    "pinyin": "wǒ gěi nǐ mǎi le miànbāo.",
+    "meaning": "I bought you some bread.",
+    "category": "Actions",
+    "sentence": true
+  },
+  {
+    "id": "zh-sent-65cd70731018",
+    "zh": "你在做什么？",
+    "pinyin": "nǐ zài zuò shénme?",
+    "meaning": "What are you doing?",
+    "category": "Actions",
+    "sentence": true
+  },
+  {
+    "id": "zh-sent-ed78d31ce200",
+    "zh": "我们走路去吧。",
+    "pinyin": "wǒmen zǒulù qù ba.",
+    "meaning": "Let's walk there.",
+    "category": "Actions",
+    "sentence": true
+  },
+  {
+    "id": "zh-sent-b68be8e52f58",
+    "zh": "别跑，小心！",
+    "pinyin": "bié pǎo, xiǎoxīn!",
+    "meaning": "Don't run. Be careful!",
+    "category": "Actions",
+    "sentence": true
+  },
+  {
+    "id": "zh-sent-6323b8221de5",
+    "zh": "他很高。",
+    "pinyin": "tā hěn gāo.",
+    "meaning": "He's tall.",
+    "category": "Descriptions",
+    "sentence": true
+  },
+  {
+    "id": "zh-sent-30d42e93409b",
+    "zh": "她的头发很短。",
+    "pinyin": "tā de tóufa hěn duǎn.",
+    "meaning": "Her hair is short.",
+    "category": "Descriptions",
+    "sentence": true
+  },
+  {
+    "id": "zh-sent-088cb7fcae1f",
+    "zh": "这是我的旧手机。",
+    "pinyin": "zhè shì wǒ de jiù shǒujī.",
+    "meaning": "This is my old phone.",
+    "category": "Descriptions",
+    "sentence": true
+  },
+  {
+    "id": "zh-sent-0d8dd4d48445",
+    "zh": "他跑得很快。",
+    "pinyin": "tā pǎo de hěn kuài.",
+    "meaning": "He runs fast.",
+    "category": "Descriptions",
+    "sentence": true
+  },
+  {
+    "id": "zh-sent-26af7e1ad388",
+    "zh": "快下雨了。",
+    "pinyin": "kuài xià yǔ le.",
+    "meaning": "It's going to rain soon.",
+    "category": "Descriptions",
+    "sentence": true
+  },
+  {
+    "id": "zh-sent-398862d42699",
+    "zh": "你刚才说什么？",
+    "pinyin": "nǐ gāngcái shuō shénme?",
+    "meaning": "What did you just say?",
+    "category": "Time & Routine",
+    "sentence": true
+  },
+  {
+    "id": "zh-sent-355f64580727",
+    "zh": "要等半小时。",
+    "pinyin": "yào děng bàn xiǎoshí.",
+    "meaning": "The wait is half an hour.",
+    "category": "Time & Routine",
+    "sentence": true
+  },
+  {
+    "id": "zh-sent-c2081ac0bd65",
+    "zh": "下班以后，我去买菜。",
+    "pinyin": "xiàbān yǐhòu, wǒ qù mǎi cài.",
+    "meaning": "After work, I'm going grocery shopping.",
+    "category": "Time & Routine",
+    "sentence": true
+  },
+  {
+    "id": "zh-sent-401d0336e51a",
+    "zh": "我们去游乐场吧。",
+    "pinyin": "wǒmen qù yóulèchǎng ba.",
+    "meaning": "Let's go to the amusement park / play area.",
+    "category": "Going Places",
+    "sentence": true
+  },
+  {
+    "id": "zh-sent-7e5ab771385c",
+    "zh": "等一下，我来了！",
+    "pinyin": "děng yíxià, wǒ lái le!",
+    "meaning": "Just a moment. Coming!",
+    "category": "Common Phrases",
+    "sentence": true
+  },
+  {
+    "id": "zh-sent-9b502b759045",
+    "zh": "我拿这个，你拿那个。",
+    "pinyin": "wǒ ná zhège, nǐ ná nàge.",
+    "meaning": "I'll take this one; you take that one.",
+    "category": "Everyday Sentences",
+    "sentence": true
+  },
+  {
+    "id": "zh-sent-5b08b87192ed",
+    "zh": "我找这个，你们有吗？",
+    "pinyin": "wǒ zhǎo zhège, nǐmen yǒu ma?",
+    "meaning": "I'm looking for this. Do you have it?",
+    "category": "Everyday Sentences",
+    "sentence": true
+  },
+  {
+    "id": "zh-sent-0599428c3162",
+    "zh": "你看这个，好漂亮！",
+    "pinyin": "nǐ kàn zhège, hǎo piàoliang!",
+    "meaning": "Look at this. It's so pretty!",
+    "category": "Everyday Sentences",
+    "sentence": true
+  },
+  {
+    "id": "zh-sent-9f89e8fd4453",
+    "zh": "我婆婆是老师。",
+    "pinyin": "wǒ pópo shì lǎoshī.",
+    "meaning": "My mother-in-law (my husband's mother) is a teacher.",
+    "category": "Relatives",
+    "sentence": true
+  },
+  {
+    "id": "zh-sent-c4f5dc6b9d9c",
+    "zh": "我岳母是老师。",
+    "pinyin": "wǒ yuèmǔ shì lǎoshī.",
+    "meaning": "My mother-in-law (my wife's mother) is a teacher.",
+    "category": "Relatives",
+    "sentence": true
+  },
+  {
+    "id": "zh-sent-93baed7ef2ca",
+    "zh": "这是我伯母。",
+    "pinyin": "zhè shì wǒ bómǔ.",
+    "meaning": "This is my aunt (wife of dad's older brother).",
+    "category": "Relatives",
+    "sentence": true
+  },
+  {
+    "id": "zh-sent-3369543eaff9",
+    "zh": "我们是老朋友。",
+    "pinyin": "wǒmen shì lǎopéngyou.",
+    "meaning": "We've been friends for a long time.",
+    "category": "Friends & social life",
+    "sentence": true
+  },
+  {
+    "id": "zh-sent-ee9e4d10b11b",
+    "zh": "你认识他吗？",
+    "pinyin": "nǐ rènshi tā ma?",
+    "meaning": "Do you know him?",
+    "category": "Friends & social life",
+    "sentence": true
+  },
+  {
+    "id": "zh-sent-912597b4b2ce",
+    "zh": "我们明天见面吧。",
+    "pinyin": "wǒmen míngtiān jiànmiàn ba.",
+    "meaning": "Let's meet tomorrow.",
+    "category": "Friends & social life",
+    "sentence": true
+  },
+  {
+    "id": "zh-sent-f278575276e1",
+    "zh": "我在家工作。",
+    "pinyin": "wǒ zài jiā gōngzuò.",
+    "meaning": "I work from home.",
+    "category": "Work & coworkers",
+    "sentence": true
+  },
+  {
+    "id": "zh-sent-6a9e61242778",
+    "zh": "我在找工作。",
+    "pinyin": "wǒ zài zhǎo gōngzuò.",
+    "meaning": "I'm looking for a job.",
+    "category": "Work & coworkers",
+    "sentence": true
+  },
+  {
+    "id": "zh-sent-851f69a2d8f2",
+    "zh": "我今天不上班。",
+    "pinyin": "wǒ jīntiān bú shàngbān.",
+    "meaning": "I'm not working today.",
+    "category": "Work & coworkers",
+    "sentence": true
+  },
+  {
+    "id": "zh-sent-3c6e5ff8e7d8",
+    "zh": "下班以后，我们去吃饭吧。",
+    "pinyin": "xiàbān yǐhòu, wǒmen qù chī fàn ba.",
+    "meaning": "Let's go eat after work.",
+    "category": "Work & coworkers",
+    "sentence": true
+  },
+  {
+    "id": "zh-sent-e92aab202ccb",
+    "zh": "学校下周放假。",
+    "pinyin": "xuéxiào xià zhōu fàngjià.",
+    "meaning": "School is on break next week.",
+    "category": "Work & coworkers",
+    "sentence": true
+  },
+  {
+    "id": "zh-sent-f4638a8aeb0d",
+    "zh": "你明天有空吗？",
+    "pinyin": "nǐ míngtiān yǒu kòng ma?",
+    "meaning": "Are you free tomorrow?",
+    "category": "Work & coworkers",
+    "sentence": true
+  },
+  {
+    "id": "zh-sent-0ee61b222fea",
+    "zh": "我想问一个问题。",
+    "pinyin": "wǒ xiǎng wèn yí ge wèntí.",
+    "meaning": "I'd like to ask a question.",
+    "category": "Work & coworkers",
+    "sentence": true
+  },
+  {
+    "id": "zh-sent-a5de70e5ee9c",
+    "zh": "我的手机有问题。",
+    "pinyin": "wǒ de shǒujī yǒu wèntí.",
+    "meaning": "There's something wrong with my phone.",
+    "category": "Work & coworkers",
+    "sentence": true
+  },
+  {
+    "id": "zh-sent-b4a30d8c6615",
+    "zh": "她是会计。",
+    "pinyin": "tā shì kuàijì.",
+    "meaning": "She's an accountant.",
+    "category": "Professions",
+    "sentence": true
+  },
+  {
+    "id": "zh-sent-392e7118fae1",
+    "zh": "她是翻译。",
+    "pinyin": "tā shì fānyì.",
+    "meaning": "She's a translator / interpreter.",
+    "category": "Professions",
+    "sentence": true
+  },
+  {
+    "id": "zh-sent-878f7694dc58",
+    "zh": "我想预订一个房间。",
+    "pinyin": "wǒ xiǎng yùdìng yí ge fángjiān.",
+    "meaning": "I'd like to book a room.",
+    "category": "Eating out",
+    "sentence": true
+  },
+  {
+    "id": "zh-sent-3ce3eafc3eaf",
+    "zh": "这个菜不太辣。",
+    "pinyin": "zhège cài bú tài là.",
+    "meaning": "This dish isn't very spicy.",
+    "category": "Eating out",
+    "sentence": true
+  },
+  {
+    "id": "zh-sent-5358d7c62412",
+    "zh": "快上车，我们要迟到了。",
+    "pinyin": "kuài shàng chē, wǒmen yào chídào le.",
+    "meaning": "Get in. We're going to be late.",
+    "category": "Getting around",
+    "sentence": true
+  },
+  {
+    "id": "zh-sent-087c60d3cabf",
+    "zh": "我在准备晚饭。",
+    "pinyin": "wǒ zài zhǔnbèi wǎnfàn.",
+    "meaning": "I'm preparing dinner.",
+    "category": "Useful verbs",
+    "sentence": true
+  },
+  {
+    "id": "zh-sent-9e7851ba0d6b",
+    "zh": "我准备明天去。",
+    "pinyin": "wǒ zhǔnbèi míngtiān qù.",
+    "meaning": "I'm planning to go tomorrow.",
+    "category": "Useful verbs",
+    "sentence": true
+  },
+  {
+    "id": "zh-sent-212440e1251d",
+    "zh": "我记得他的名字。",
+    "pinyin": "wǒ jìde tā de míngzi.",
+    "meaning": "I remember his name.",
+    "category": "Useful verbs",
+    "sentence": true
+  },
+  {
+    "id": "zh-sent-ca14172a714e",
+    "zh": "记得带钥匙。",
+    "pinyin": "jìde dài yàoshi.",
+    "meaning": "Remember to bring your keys.",
+    "category": "Useful verbs",
+    "sentence": true
+  },
+  {
+    "id": "zh-sent-fcfd4a836e3d",
+    "zh": "我在找钥匙。",
+    "pinyin": "wǒ zài zhǎo yàoshi.",
+    "meaning": "I'm looking for my keys.",
+    "category": "Useful verbs",
+    "sentence": true
+  },
+  {
+    "id": "zh-sent-b3fe00b0fc79",
+    "zh": "你能带我去车站吗？",
+    "pinyin": "nǐ néng dài wǒ qù chēzhàn ma?",
+    "meaning": "Can you take me to the station?",
+    "category": "Useful verbs",
+    "sentence": true
+  },
+  {
+    "id": "zh-sent-7a33c60925e8",
+    "zh": "我想换一个座位。",
+    "pinyin": "wǒ xiǎng huàn yí ge zuòwèi.",
+    "meaning": "I'd like to change seats.",
+    "category": "Useful verbs",
+    "sentence": true
+  },
+  {
+    "id": "zh-sent-fdfab64da5dc",
+    "zh": "我在收拾房间。",
+    "pinyin": "wǒ zài shōushi fángjiān.",
+    "meaning": "I'm tidying my room.",
+    "category": "Useful verbs",
+    "sentence": true
+  },
+  {
+    "id": "zh-sent-5c910e8289da",
+    "zh": "我今天要照顾孩子。",
+    "pinyin": "wǒ jīntiān yào zhàogu háizi.",
+    "meaning": "I need to look after the children today.",
+    "category": "Useful verbs",
+    "sentence": true
+  },
+  {
+    "id": "zh-sent-3fa1f05025ec",
+    "zh": "谢谢你关心我。",
+    "pinyin": "xièxie nǐ guānxīn wǒ.",
+    "meaning": "Thank you for caring about me.",
+    "category": "Useful verbs",
+    "sentence": true
+  },
+  {
+    "id": "zh-sent-cd288a445d76",
+    "zh": "这个枕头很软。",
+    "pinyin": "zhège zhěntou hěn ruǎn.",
+    "meaning": "This pillow is soft.",
+    "category": "Useful descriptions",
+    "sentence": true
+  },
+  {
+    "id": "zh-sent-cae9e44c60a5",
+    "zh": "她工作很认真。",
+    "pinyin": "tā gōngzuò hěn rènzhēn.",
+    "meaning": "She's very conscientious at work.",
+    "category": "Useful descriptions",
+    "sentence": true
+  },
+  {
+    "id": "zh-sent-50591a29272b",
+    "zh": "这个电影很无聊。",
+    "pinyin": "zhège diànyǐng hěn wúliáo.",
+    "meaning": "This movie is boring.",
+    "category": "Useful descriptions",
+    "sentence": true
+  }
+]

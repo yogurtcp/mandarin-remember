@@ -68,6 +68,13 @@ The existing Mandarin source deck retains its `zh` / `pinyin` fields for compati
 
 ## Supplemental vocabulary files
 
+Courses can set `studyMode: "reading"` to use recognition-only reviews. Every
+reading card declares `kind: "character"` or `kind: "compound"`. Compound
+`requires` lists the IDs of every constituent character; the build checks
+that each reference is a single independent character and covers the compound.
+New compounds unlock only after a successful recognition of every prerequisite;
+introducing a character or hearing its audio does not count. See [READING.md](READING.md).
+
 A course may declare `supplementDeckFiles`, an ordered list of additional JSON decks inside the project. They are merged with `deckFile` at build time and must use the same field conventions and globally unique IDs for that course. Use this for a reviewed, focused expansion such as Mandarin’s common-interactions set; do not duplicate card text or IDs already in the base deck. The local voice helper also loads these files, so new cards retain optional helper speech.
 
 ## Build and verify

@@ -87,6 +87,17 @@ def load_courses(root):
                 card['sentence'] = True
             if raw.get('featured') or raw['id'] in featured_ids:
                 card['featured'] = featured_priority.get(raw['id'], len(featured_priority))
+            if course.get('studyMode') == 'reading':
+                card['readingOnly'] = True
+                assert raw.get('kind') in ('character', 'compound'), 'Invalid reading card kind'
+                card['kind'] = raw['kind']
+                requirements = raw.get('requires', [])
+                assert isinstance(requirements, list) and all(isinstance(item, str) for item in requirements), 'Invalid character prerequisites'
+                if requirements:
+                    card['requires'] = requirements
+                if raw.get('audioContext'):
+                    assert isinstance(raw['audioContext'], str), 'Invalid audio context'
+                    card['audioContext'] = raw['audioContext']
             if raw.get('usage'):
                 assert isinstance(raw['usage'], str), 'Invalid usage note'
                 card['usage'] = raw['usage']
@@ -95,10 +106,22 @@ def load_courses(root):
                 card['examples'] = [normalize_text(e) for e in raw['examples']]
             cards.append(card)
         assert cards, 'Empty course'
+        if course.get('studyMode') == 'reading':
+            by_id = {card['id']: card for card in cards}
+            for card in cards:
+                if card['kind'] == 'character':
+                    assert len(card['text']) == 1 and not card.get('requires'), 'Base characters must be independent'
+                else:
+                    requirements = card.get('requires', [])
+                    assert requirements and all(item in by_id and by_id[item]['kind'] == 'character' for item in requirements), 'Compound must reference base characters'
+                    assert {by_id[item]['text'] for item in requirements} == set(card['text']), 'Compound must cover every character'
         assert set(sentence_ids).issubset(card_ids) and set(featured_ids).issubset(card_ids), 'Unknown sentence/featured card ID'
         course['cards'] = cards
         courses.append(course)
     assert registry['defaultCourse'] in ids, 'Unknown default course'
+    for course in courses:
+        assert course.get('studyMode') in (None, 'reading'), 'Unknown study mode'
+        assert not course.get('characterCourse') or course['characterCourse'] in ids, 'Unknown linked reading course'
     return dict(defaultCourse=registry['defaultCourse'], courses=courses)
 
 

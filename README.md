@@ -1,6 +1,6 @@
 # Remember Languages
 
-A mobile learning app with English → Mandarin (1,051 cards) and English → Japanese (60 starter cards). Both courses share spoken recall, listening/reading practice, spaced reviews and progress backups. Select your course on the home screen.
+A mobile learning app with English → Mandarin (1,121 cards), English → Japanese (60 starter cards), and Chinese character reading (94 characters and 90 compounds). Select your course on the home screen.
 
 ## Open on your phone
 
@@ -41,11 +41,31 @@ node verify.cjs
 node verify-pwa.cjs
 node verify-courses.cjs
 node verify-recall.cjs
+node verify-reading.cjs
 python3 verify-build.py
 python3 verify-voice.py
 ```
 
 Preserve card IDs when correcting wording. Bump the service-worker cache version when changing cached assets. Publish GitHub Pages from the root of the `main` branch. No build service, API key or backend is needed.
+
+## Reading and sentence practice (v1.6.13)
+
+The Mandarin home screen now has **Learn Chinese characters & compounds**.
+It opens a reading-only course: recognize 94 base characters, then unlock 90
+words/compounds using familiar characters. A successful character recall—not
+just its introduction—unlocks its compounds, which are prioritized in the next
+learning batch. Reviews show Chinese first and reveal pinyin and meaning.
+No handwriting, typing, or listening gate is required. Reading progress is
+separate from existing vocabulary progress. See [READING.md](READING.md).
+
+Seventy existing reviewed examples are now also available as full sentence
+recalls, expanding the composable Mandarin bank from 142 to 212 sentences and
+the vocabulary covered by those sentences from 109 to 185 entries.
+They still appear only during recall using learned words.
+Missed or hinted sentences return after a short gap and other recalls where
+available, with at most two retries. A retry is practice-only and does not
+change word schedules a second time. Saved IDs and existing progress remain
+compatible.
 
 ## September 2026 update
 
@@ -61,7 +81,7 @@ All 60 Japanese cards were checked against their displayed readings. Cards conta
 
 Choose **English → Japanese** on the home screen for 45 foundational words and 15 fully validated everyday sentences. Japanese sentences use the same word-based review system as Mandarin, but their polite surface forms are explicit templates: for example, **飲みます** is shown as the polite non-past form of the scored base word **飲む**. The sentence breakdown displays both forms and explains particles such as は and を without scheduling those connectors as cards.
 
-Chinese sentence cards were also revalidated. A sentence only enters practice when its entire composition resolves to known cards plus documented connectors; 142 of the current 225 Chinese sentence cards meet that standard. The remainder stay safely out of the sentence queue until their missing vocabulary or an explicit form template is added—there is no partial credit or guessed mapping.
+Chinese sentence cards were also revalidated. A sentence only enters practice when its entire composition resolves to known cards plus documented connectors; 212 of the current 295 Chinese sentence cards meet that standard. The remainder stay safely out of the sentence queue until their missing vocabulary or an explicit form template is added—there is no partial credit or guessed mapping.
 
 ## Common Mandarin interactions (v1.6.10)
 

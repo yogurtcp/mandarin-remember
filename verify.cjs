@@ -1,10 +1,10 @@
 const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),vm=require('node:vm');
-const E=require('./source/engine.js'),sourceRegistry=JSON.parse(fs.readFileSync(path.join(__dirname,'courses.json'),'utf8')),sourceCourse=sourceRegistry.courses.find(c=>c.id==='en-zh'),sentenceIds=new Set(sourceCourse.sentenceCardIds||[]),featuredRank=new Map((sourceCourse.featuredCardIds||[]).map((id,index)=>[id,index])),rawDeck=[...JSON.parse(fs.readFileSync(path.join(__dirname,'deck.json'),'utf8')),...JSON.parse(fs.readFileSync(path.join(__dirname,'decks/en-zh-common-interactions.json'),'utf8'))];
+const E=require('./source/engine.js'),sourceRegistry=JSON.parse(fs.readFileSync(path.join(__dirname,'courses.json'),'utf8')),sourceCourse=sourceRegistry.courses.find(c=>c.id==='en-zh'),sentenceIds=new Set(sourceCourse.sentenceCardIds||[]),featuredRank=new Map((sourceCourse.featuredCardIds||[]).map((id,index)=>[id,index])),rawDeck=[sourceCourse.deckFile,...(sourceCourse.supplementDeckFiles||[])].flatMap(file=>JSON.parse(fs.readFileSync(path.join(__dirname,file),'utf8')));
 const courseId='chinese-family-reviewed-1';
 const normalizeCard=c=>{const {zh,pinyin,examples,...rest}=c;return {...rest,text:zh,pronunciation:pinyin,...(sentenceIds.has(c.id)?{sentence:true}:{}),...(c.featured||featuredRank.has(c.id)?{featured:featuredRank.get(c.id)??featuredRank.size}:{}),...(examples?{examples:examples.map(normalizeCard)}:{})}};
 const deck=rawDeck.map(normalizeCard);
 let now=new Date(2026,8,29,10).getTime();const id=deck[0].id,id2=deck[1].id;
-let s=E.empty(courseId);assert.equal(deck.length,1051);assert.equal(new Set(deck.map(c=>c.id)).size,1051);
+let s=E.empty(courseId);assert.equal(deck.length,1121);assert.equal(new Set(deck.map(c=>c.id)).size,1121);
 assert.equal(E.plan(s,now,deck).length,5);E.introduce(s,id,now);assert(!E.introduce(s,id,now));assert.equal(E.newAllowance(s,now,deck).count,4);
 assert.equal(E.dueTasks(s,now,null,deck).length,0);assert.equal(E.dueTasks(s,now+E.MIN,null,deck).length,1);
 E.review(s,id,'produce',2,now+E.MIN);assert.equal(s.items[id].produce.interval,1);assert.equal(s.logs.at(-1).delayed,false);
@@ -35,7 +35,7 @@ console.log('PASS progress: overall and per-category seen, remembered-well, lear
 assert(E.isSentence(deck.find(c=>c.text==='我起床了。')));assert(!E.isSentence(deck.find(c=>c.text==='妈妈')));assert(E.isSentence({text:'你想去公园吗',category:'Everyday Sentences'}));
 const wakeWord=deck.find(c=>c.text==='起床');assert.deepEqual(E.sentenceWords(deck.find(c=>c.text==='我起床了。'),deck),[wakeWord.id]);
 const chineseSentences=deck.filter(c=>E.isSentence(c)),validatedChinese=chineseSentences.map(card=>({card,parts:E.sentenceParts(card,deck)})),unresolvedChinese=validatedChinese.filter(x=>!x.parts);
-assert.equal(chineseSentences.length,225);assert.equal(validatedChinese.length-unresolvedChinese.length,142);assert(unresolvedChinese.length>0,'Sentences with missing vocabulary must stay hidden');
+assert.equal(chineseSentences.length,295);assert.equal(validatedChinese.length-unresolvedChinese.length,212);assert(unresolvedChinese.length>0,'Sentences with missing vocabulary must stay hidden');
 assert(validatedChinese.filter(x=>x.parts).every(({parts})=>parts.words.length&&parts.matches.length&&parts.matches.every(m=>deck.some(c=>c.id===m.id)&&m.text)),'Every eligible Chinese sentence must have a complete component map');
 const interactions=['请给我一杯水。','请给我小票。','请问，有手机充电器吗？','我很好，谢谢。你呢？','很高兴认识你。','很高兴见到你。','下次见！','最近怎么样？'];
 for(const text of interactions){const card=deck.find(c=>c.text===text),parts=card&&E.sentenceParts(card,deck);assert(card&&parts,`Interaction must be composable: ${text}`);const ready=E.empty(courseId);for(const id of parts.words)E.introduce(ready,id,now-E.DAY);assert(E.sentencePlan(ready,now,deck,card.category,50).some(t=>t.id===card.id),`Interaction must enter practice when its words are known: ${text}`)}
@@ -138,7 +138,7 @@ run('play({id:"test",text:"你想喝水吗？"},true,false,true)');wall+=5000;sp
 assert.equal(new Set(deck.map(c=>c.text.replace(/[\s。？！?!，,.]/g,''))).size,deck.length,'No punctuation-only duplicate cards');
 for(const c of deck)for(const key of ['id','text','pronunciation','meaning','category'])assert(typeof c[key]==='string'&&c[key].trim(),`${c.text}: missing ${key}`);
 assert.deepEqual(registry.courses[0].cards,deck,'Built page must contain the current normalized deck');
-assert(html.includes(`${deck.length} cards · English → Mandarin · v1.6.12`));
+assert(html.includes(`${deck.length} cards · English → Mandarin · v1.6.13`));
 const family=deck.filter(c=>c.category==='Family'),grandparents=['奶奶','爷爷','外婆','外公'];
 assert.deepEqual(family.filter(c=>grandparents.includes(c.text)).map(c=>c.text),grandparents);
 assert(family.findIndex(c=>c.text==='外公')-family.findIndex(c=>c.text==='奶奶')<=5);

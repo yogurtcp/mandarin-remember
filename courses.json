@@ -5,7 +5,9 @@
       "id": "en-zh",
       "label": "English → Mandarin",
       "deckFile": "deck.json",
-      "supplementDeckFiles": ["decks/en-zh-common-interactions.json"],
+      "supplementDeckFiles": ["decks/en-zh-common-interactions.json", "decks/en-zh-sentence-practice.json"],
+      "characterCourse": "en-zh-reading",
+      "characterCourseLabel": "Learn Chinese characters & compounds",
       "sentenceCardIds": [
         "zh-fdaa26ac8943d4a4", "zh-61dd48f58b0707c0", "zh-73ed236004d3e7c6", "zh-df6a19a0c7a5ac78",
         "zh-0210e87252468059", "zh-91187d0a2f72845e", "zh-31b86e9372ca7d41", "zh-54673ea53c1f20ad",
@@ -100,6 +102,25 @@
         "provider": "google-translate",
         "language": "ja"
       }
+    },
+    {
+      "id": "en-zh-reading",
+      "label": "English → Chinese character reading",
+      "deckFile": "decks/en-zh-reading.json",
+      "progressId": "chinese-character-reading-1",
+      "studyMode": "reading",
+      "characterCourse": "en-zh",
+      "characterCourseLabel": "Back to Mandarin vocabulary",
+      "source": {"name": "English", "lang": "en", "dir": "ltr", "translateCode": "en"},
+      "target": {"name": "Chinese reading", "textLabel": "Chinese", "lang": "zh-CN", "dir": "ltr", "translateCode": "zh-CN"},
+      "voiceLanguages": ["zh", "zh-CN", "zh-TW", "zh-SG", "cmn", "cmn-CN", "cmn-Hans-CN", "cmn-Hant-TW"],
+      "testText": "今天我们学习中文。",
+      "pronunciationLabel": "Pinyin",
+      "hintMode": "pinyin",
+      "pronunciationHelp": "Recognize the Chinese text and recall its meaning. Pinyin and meaning appear after reveal; audio is optional. Some characters have multiple readings. Compound readings may change tones or use a neutral tone. No handwriting or typing is required.",
+      "searchPlaceholder": "人, rén, person…",
+      "mark": "字",
+      "onlineSpeech": {"provider": "google-translate", "language": "zh-CN"}
     }
   ]
 }

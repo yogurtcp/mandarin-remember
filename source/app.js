@@ -15,7 +15,7 @@ function load(){try{const raw=localStorage.getItem(KEY);const loaded=raw?E.valid
 function save(){if(storageLocked)return false;try{localStorage.setItem(KEY,JSON.stringify(state));return true}catch(error){storageError('This browser could not save progress. Keep this tab open and export a backup before leaving.');return false}}
 function show(page){stopAudio();$('audioFallback').hidden=true;$('copyFallback').hidden=true;$('appMenu').open=false;for(const id of ['home','practice','done','library','settings','guide','install','progress'])$(id).hidden=id!==page;window.scrollTo({top:0,behavior:'instant'})}
 function renderProgress(){const p=E.progress(state,DECK,Date.now()),r=E.retention(state,Date.now());
- $('progressCourse').textContent=course.label+' · '+p.total+' words (sentences are not counted as words)';
+ $('progressCourse').textContent=course.label+' · '+p.total+(course.studyMode==='reading'?' characters and compounds':' words (sentences are not counted as words)');
  $('progressOverall').innerHTML=[['Seen',p.seen+' / '+p.total+(p.total?' ('+Math.round(p.seen/p.total*100)+'%)':'')],['Remembered well',String(p.holding)],['Still learning',String(p.learning)],['Not seen yet',String(p.unseen)],['Reviews due now',String(p.due)],['Paused',String(p.paused)],['Recalled after 20+ hours (7 days)',r.total?r.passed+' / '+r.total:'No delayed reviews yet']].map(([k,v])=>`<div class="progressStat"><span>${esc(k)}</span><strong>${esc(v)}</strong></div>`).join('');
  $('progressList').innerHTML=p.categories.map((c,i)=>`<div class="progressRow"><div class="row progressRowHead"><strong>${esc(c.category)}</strong><span class="small">${c.seen} / ${c.total} seen · ${c.holding} remembered well</span></div><div class="progressBar" role="img" aria-label="${esc(c.category)}: ${c.seen} of ${c.total} seen, ${c.holding} remembered well"><span class="barSeen" style="width:${c.seenPct}%"></span><span class="barHeld" style="width:${c.holdingPct}%"></span></div><p class="small">${c.learning} learning · ${c.unseen} not seen · ${c.due} due${c.paused?' · '+c.paused+' paused':''}</p><button class="secondary" data-topic="${i}">Practise this topic</button></div>`).join('');
  for(const b of document.querySelectorAll('[data-topic]'))b.onclick=()=>{const cat=p.categories[Number(b.dataset.topic)]?.category||'';$('category').value=cat;updateMoreButtons();home();notice(cat?'Topic set to “'+cat+'”. Start practice or Learn 5 more uses only this topic.':'Showing all topics.')};
@@ -23,6 +23,12 @@ function renderProgress(){const p=E.progress(state,DECK,Date.now()),r=E.retentio
 function openProgress(){show('progress');renderProgress()}
 function home(){session=null;current=null;show('home');renderHome()}
 function renderHome(){const now=Date.now(),due=E.dueTasks(state,now,null,DECK),n=E.newAllowance(state,now,DECK),r=E.retention(state,now);
+ $('readingTrackNote').hidden=course.studyMode!=='reading';
+ if(course.studyMode==='reading'){
+  const characters=DECK.filter(c=>c.kind==='character'),compounds=DECK.filter(c=>c.kind==='compound');
+  const known=id=>state.items[id]&&!state.items[id].suspended&&state.items[id].understand.lastGrade>0;
+  $('readingTrackNote').textContent=characters.filter(c=>known(c.id)).length+' / '+characters.length+' characters recognized · '+compounds.filter(c=>c.requires.every(known)).length+' / '+compounds.length+' compounds unlocked. Learn characters first; compounds unlock after a successful reading recall of every component. No handwriting or typing.';
+ }
  $('dueCount').textContent=due.length;const prog=E.progress(state,DECK,now);$('startedCount').textContent=prog.seen;$('holdingCount').textContent=prog.holding;
  $('retention').textContent=r.total?`${r.passed} / ${r.total} recalled`:'No delayed reviews yet';
  $('dailyText').textContent=`${n.used} new today. ${n.reason?'Reviews first in the daily plan.':n.count+' left in your daily plan.'}`;
@@ -30,8 +36,8 @@ function renderHome(){const now=Date.now(),due=E.dueTasks(state,now,null,DECK),n
  updateMoreButtons();
  $('newLimit').value=String(state.settings.newLimit);$('reviewLimit').value=String(state.settings.reviewLimit);
 }
-function updateMoreButtons(){const count=E.extraPlan(state,Date.now(),DECK,$('category').value).length;for(const id of ['learnMoreBtn','doneMoreBtn']){$(id).disabled=!count;$(id).textContent=count?`Learn ${count} more`:'All cards started'}}
-function nextDue(){const times=Object.values(state.items).filter(i=>!i.suspended).flatMap(i=>E.directions.map(d=>i[d].due));return times.length?Math.min(...times):null}
+function updateMoreButtons(){const category=$('category').value,count=E.extraPlan(state,Date.now(),DECK,category).length,locked=course.studyMode==='reading'&&DECK.some(c=>!state.items[c.id]&&(!category||c.category===category));for(const id of ['learnMoreBtn','doneMoreBtn']){$(id).disabled=!count;$(id).textContent=count?`Learn ${count} more`:locked?'Learn the required characters first':'All cards started'}}
+function nextDue(){const times=E.dueTasks(state,1e15,null,DECK).map(t=>t.due);return times.length?Math.min(...times):null}
 function startExtra(){if(session)return;const tasks=E.extraPlan(state,Date.now(),DECK,$('category').value);if(!tasks.length){notice('No new cards left in this topic.');return}beginSession(tasks,false)}
 function start(practice=false){const tasks=E.plan(state,Date.now(),DECK,$('category').value,practice);
  if(!tasks.length){notice(practice?'Learn some cards first.':'Nothing due in this topic. Try “Learn 5 more”.');renderHome();return}
@@ -40,9 +46,9 @@ function start(practice=false){const tasks=E.plan(state,Date.now(),DECK,$('categ
 function beginSession(tasks,practice){
  session={queue:[...tasks],learningOnly:tasks.length>0&&tasks.every(t=>t.direction==='intro'),recalls:0,sentenceIds:new Set(),attempts:0,studied:0,missed:0,retries:{},started:Date.now(),practice,graded:new Set()};lastCardId=null;notice('');show('practice');advance();
 }
-function advance(){stopAudio();if(!session)return;session.queue=session.queue.filter(t=>!state.items[t.id]?.suspended);const now=Date.now();
+function advance(){stopAudio();if(!session)return;session.queue=session.queue.filter(t=>!state.items[t.id]?.suspended&&(!t.sentence||(t.words||[]).every(id=>state.items[id]&&!state.items[id].suspended)));const now=Date.now();
  // Due learning steps take priority over introducing another item. Avoid immediate sibling cues when possible.
- let ready=session.queue.filter(t=>t.readyAt<=now&&(!state.items[t.id]||!state.items[t.id].suspended));
+ let ready=session.queue.filter(t=>t.readyAt<=now&&(!state.items[t.id]||!state.items[t.id].suspended)&&(!t.afterAttempts||session.attempts>=t.afterAttempts||!session.queue.some(other=>other!==t&&!other.afterAttempts&&other.readyAt<=now)));
  const retrieval=ready.filter(t=>t.direction!=='intro');if(retrieval.length)ready=retrieval;
  let task=ready.find(t=>t.id!==lastCardId)||ready[0];
  if(!task){if(!session.queue.length){finish();return}current=null;$('flashcard').hidden=true;$('waiting').hidden=false;renderWaiting();return}
@@ -54,6 +60,7 @@ function advance(){stopAudio();if(!session)return;session.queue=session.queue.fi
  }
  current=task;lastCardId=task.id;revealed=task.direction==='intro';graded=false;assisted=false;heard=false;inputMode=task.direction==='understand'?'listening':'spoken';
  const c=byId.get(task.id);$('waiting').hidden=true;$('flashcard').hidden=false;$('sessionProgress').textContent=`${session.attempts} reviews · ${session.studied} new`;
+ $('prompt').className=c.readingOnly?'readingCue':'';
  $('taskType').textContent=task.sentence?(task.direction==='produce'?'SAY THE SENTENCE':'WHAT DOES THE SENTENCE MEAN?'):task.direction==='intro'?'NEW':task.practice?'EXTRA REVIEW':task.direction==='produce'?`SAY IT IN ${course.target.name.toUpperCase()}`:'WHAT DOES IT MEAN?';
  $('taskCategory').textContent=c.category;$('prompt').textContent=task.direction==='intro'?'New card':task.direction==='produce'?c.meaning:'What does it mean?';
  $('taskInstruction').textContent=task.direction==='intro'?'Listen, then say it once.':task.sentence?(task.direction==='produce'?'Say the whole sentence before revealing. Your grade updates every word in it.':'Listen, then recall the whole meaning. Your grade updates every word in it.'):task.direction==='produce'?'Say it before revealing.':'Listen, then recall the meaning.';
@@ -65,6 +72,18 @@ function advance(){stopAudio();if(!session)return;session.queue=session.queue.fi
  const parts=task.sentence?(task.words?{words:task.words,connectors:task.connectors||[],matches:task.matches||[]}:E.sentenceParts(c,DECK)):null;$('sentenceBreakdown').hidden=!parts;$('sentenceBreakdown').innerHTML=parts?('<p class="small"><b>How this sentence is built</b>'+(task.frame?' · Frame: '+esc(task.frame):'')+'</p>'+parts.words.map(id=>{const w=byId.get(id),match=parts.matches?.find(x=>x.id===id&&x.form);const realized=match?` <span class="small">→ ${esc(match.text)}${match.form.label?' ('+esc(match.form.label)+')':''}</span>`:'';return w?`<p class="breakdownLine"><span lang="${esc(course.target.lang)}" dir="${course.target.dir}">${esc(w.text)}</span> <span class="pronunciation breakdownPron">${esc(w.pronunciation)}</span> — ${esc(w.meaning)}${realized}</p>`:''}).join('')+(parts.connectors.length?parts.connectors.map(x=>`<p class="breakdownLine">${esc(x.text)} — ${esc(x.meaning)} <span class="small">(connecting word, not scored)</span></p>`).join(''):'')):'';
  $('ratings').hidden=true;$('studiedBtn').hidden=!revealed;$('nextBtn').hidden=true;$('scheduledResult').textContent='';$('ratingHelp').textContent='';$('audioStatus').textContent='';$('suspendBtn').hidden=!state.items[c.id];
  if(revealed)$('ratingHelp').textContent='';
+ $('characterBreakdown').hidden=!c.requires?.length;
+ $('characterBreakdown').innerHTML=c.requires?.length?'<p><b>Familiar characters in this word</b></p>'+c.requires.map(id=>{const part=byId.get(id);return '<p class="breakdownLine"><span lang="zh-CN">'+esc(part.text)+'</span> — '+esc(part.pronunciation)+' · '+esc(part.meaning)+'</p>'}).join('')+'<p class="small">Learn the whole word’s meaning and reading; characters do not always combine literally.</p>':'';
+ if(c.readingOnly){
+  inputMode='reading';$('listenTools').hidden=true;$('draftLabel').hidden=true;
+  $('taskType').textContent=(task.direction==='intro'?'NEW ':'READ THE ')+(c.kind==='character'?'CHARACTER':'COMPOUND');
+  if(task.direction!=='intro'){$('prompt').textContent=c.text;$('prompt').lang='zh-CN';$('taskInstruction').textContent='Read the Chinese text and recall its meaning before revealing. No writing required.'}
+  else $('taskInstruction').textContent='Recognize the shape, meaning and reading. Listen if useful; no writing required.';
+  $('answerAudio').textContent=c.audioContext?'▶ Hear in context':'▶ Listen';
+  if(c.audioContext)$('characterBreakdown').innerHTML+='<p class="small">Audio example: '+esc(c.audioContext)+'</p>';
+  if(c.audioContext)$('characterBreakdown').hidden=false;
+ }else $('answerAudio').textContent='▶ Listen';
+ if(task.sentenceRetry){$('taskType').textContent='TRY THE SENTENCE AGAIN';$('taskInstruction').textContent='Try the sentence again before revealing. This retry does not change review dates twice.'}
 }
 function renderWaiting(){if(!session||current)return;const next=Math.min(...session.queue.map(t=>t.readyAt));$('waitText').textContent=`Next review ${next<=Date.now()?'now':`in about ${Math.max(1,Math.ceil((next-Date.now())/60000))} minute(s)`}.`}
 function readInstead(){if(!current||current.direction!=='understand'||revealed)return;inputMode='reading';$('readingPrompt').textContent=byId.get(current.id).text;$('readingPrompt').hidden=false;$('taskInstruction').textContent='Read and recall the meaning.'}
@@ -76,9 +95,9 @@ function reveal(){if(!current||revealed||graded)return;if(current.direction==='u
 function help(kind){if(!current||revealed)return;assisted=true;const c=byId.get(current.id);$('hint').hidden=false;$('hint').textContent=kind==='cue'?state.items[current.id].note:current.direction==='produce'?firstSyllable(c.pronunciation):c.pronunciation;
 }
 function firstSyllable(p){if(course.hintMode!=='pinyin')return Array.from(p).slice(0,2).join('')+'…';const match=p.match(/^([bpmfdtnlgkhjqxrzcswy]*[āáǎàēéěèīíǐìōóǒòūúǔùǖǘǚǜaeiouü]+(?:ng|n|r)?)/i);return (match?match[1]:p.split(' ')[0])+'…'}
-function studied(){if(!current||graded||current.direction!=='intro')return;graded=true;const now=Date.now();E.introduce(state,current.id,now);session.studied++;save();session.queue.push({id:current.id,direction:'produce',readyAt:now+E.MIN});$('studiedBtn').hidden=true;$('nextBtn').hidden=false;$('scheduledResult').textContent='Review in 1 minute; meaning tomorrow.';$('suspendBtn').hidden=false}
+function studied(){if(!current||graded||current.direction!=='intro')return;graded=true;const now=Date.now();E.introduce(state,current.id,now,byId.get(current.id).readingOnly);session.studied++;save();session.queue.push({id:current.id,direction:byId.get(current.id).readingOnly?'understand':'produce',readyAt:now+E.MIN});$('studiedBtn').hidden=true;$('nextBtn').hidden=false;$('scheduledResult').textContent='Review in 1 minute; meaning tomorrow.';$('suspendBtn').hidden=false}
 function rate(grade){if(!current||!revealed||graded||current.direction==='intro')return;graded=true;const now=Date.now();
- if(current.sentence){const words=current.words||E.sentenceWords(byId.get(current.id),DECK)||[];let credited=0;for(const id of words){const key=id+'/'+current.direction;if(session?.graded?.has(key))continue;const item=state.items[id];if(!item||item.suspended)continue;E.review(state,id,current.direction,grade,now,{assisted,practice:!!current.practice,force:!current.practice,input:inputMode});session?.graded?.add(key);credited++}state.logs.push({id:current.id,direction:current.direction,grade:assisted?0:grade,requestedGrade:grade,at:now,assisted,practice:true,delayed:false,input:inputMode});state.logs=state.logs.slice(-5000);session.attempts++;if((assisted?0:grade)===0)session.missed++;$('ratings').hidden=true;$('nextBtn').hidden=false;save();$('scheduledResult').textContent=current.practice?'Sentence extra review saved. Due dates unchanged.':credited?`Sentence credited to ${credited} word${credited===1?'':'s'} — their review dates were updated.`:'Sentence done. Its words were already practised in this session, so no dates changed twice.';return}
+ if(current.sentence){const words=current.words||E.sentenceWords(byId.get(current.id),DECK)||[];let credited=0;for(const id of words){const key=id+'/'+current.direction;if(session?.graded?.has(key))continue;const item=state.items[id];if(!item||item.suspended)continue;E.review(state,id,current.direction,grade,now,{assisted,practice:!!current.practice,force:!current.practice,input:inputMode});session?.graded?.add(key);credited++}state.logs.push({id:current.id,direction:current.direction,grade:assisted?0:grade,requestedGrade:grade,at:now,assisted,practice:true,delayed:false,input:inputMode});state.logs=state.logs.slice(-5000);session.attempts++;const retryQueued=queueSentenceRetry(current,assisted?0:grade,now);if((assisted?0:grade)===0)session.missed++;$('ratings').hidden=true;$('nextBtn').hidden=false;save();$('scheduledResult').textContent=current.practice?'Sentence extra review saved. Due dates unchanged.':credited?`Sentence credited to ${credited} word${credited===1?'':'s'} — their review dates were updated.`:'Sentence done. Its words were already practised in this session, so no dates changed twice.';if(retryQueued)$('scheduledResult').textContent+=' Try this sentence again after a short gap.';return}
  const alreadyGraded=session?.graded?.has(current.id+'/'+current.direction);const event=E.review(state,current.id,current.direction,grade,now,{assisted,practice:!!current.practice||alreadyGraded,input:inputMode});session?.graded?.add(current.id+'/'+current.direction);session.attempts++;if(event.grade===0)session.missed++;
  $('ratings').hidden=true;$('nextBtn').hidden=false;save();
  const t=state.items[current.id][current.direction];$('scheduledResult').textContent=event.practice?'Extra review saved. Due date unchanged.':`Next ${current.direction==='produce'?course.target.name+' recall':'meaning recall'}: ${fmt(t.due)}.`;
@@ -87,6 +106,14 @@ function rate(grade){if(!current||!revealed||graded||current.direction==='intro'
  if(t.lapses>=5)$('scheduledResult').textContent+=' Try a cue, or pause this card.';
 }
 function finish(){updateMoreButtons();if(!session){home();return}const info={...session};session=null;current=null;show('done');$('doneSummary').textContent=`${info.attempts} reviews · ${info.missed} missed · ${info.studied} new. ${storageLocked?'Export a backup to keep this session.':''}`;const next=nextDue();$('nextReviewText').textContent=next?`Next review ${next<=Date.now()?'is ready now':`is due ${fmt(next)}`}. `:'No scheduled reviews yet.'}
+function queueSentenceRetry(task,effectiveGrade,now){
+ if(effectiveGrade!==0)return false;
+ const key='sentence/'+task.id+'/'+task.direction,count=session.retries[key]||0;
+ if(count>=2)return false;
+ session.retries[key]=count+1;
+ session.queue.push({...task,practice:true,sentenceRetry:true,readyAt:now+E.MIN,afterAttempts:session.attempts+2});
+ return true;
+}
 function pauseCurrent(){if(!current||!state.items[current.id])return;state.items[current.id].suspended=true;session.queue=session.queue.filter(t=>t.id!==current.id);save();advance()}
 function saveCue(){if(!current)return;const item=state.items[current.id];if(!item){audioStatus('Study this card first, then save a cue.');return}item.note=$('memoryCue').value.slice(0,1000);save();audioStatus('Cue saved.')}
 function translateURL(text){return 'https://translate.google.com/?sl='+encodeURIComponent(course.target.translateCode)+'&tl='+encodeURIComponent(course.source.translateCode)+'&text='+encodeURIComponent(text)+'&op=translate'}
@@ -149,9 +176,13 @@ $('category').addEventListener('change',updateMoreButtons);
 $('audioMode').addEventListener('change',()=>{stopAudio();state.settings.audioMode=$('audioMode').value;save()});$('voiceSelect').addEventListener('change',()=>{state.settings.voice=$('voiceSelect').value;save()});
 bind('testAudio',()=>play({id:'test',text:course.testText},false,false,true));bind('testSlow',()=>play({id:'test',text:course.testText},true,false,true));bind('exportBtn',exportBackup);$('importFile').addEventListener('change',e=>readImport(e.target.files[0]));bind('confirmImport',confirmImport);bind('cancelImport',()=>{importRevision++;importCandidate=null;$('importPreview').hidden=true});
 function configureCourse(){
+ $('characterTrackBtn').hidden=!course.characterCourse;
+ $('characterTrackBtn').textContent=course.characterCourseLabel||'Chinese characters & compounds';
+ $('retentionHelp').textContent=course.studyMode==='reading'?'Reading recognition is reviewed over time. Compounds unlock after successful recall of their characters; handwriting and production are not tested.':'Recall after a gap of 20+ hours. “Holding” means repeated success in both directions, with intervals of at least a week.';
+ $('progressHelp').textContent=course.studyMode==='reading'?'Seen means you have started a character or compound. Remembered well means repeated reading success after delays, with an interval of at least a week. Reading progress is separate from Mandarin vocabulary progress.':'Seen means you have started the card. Remembered well means repeated success in both directions, with intervals of at least a week. Counts are for the selected course only.';
  $('courseSelect').innerHTML=COURSES.map(c=>`<option value="${esc(c.id)}">${esc(c.label)}</option>`).join('');$('courseSelect').value=course.id;
  $('brandMark').textContent=course.mark||'↻';$('brandLanguage').textContent=course.target.name;$('practiceHeading').textContent='Practise '+course.target.name;document.title=course.target.name+' · Remember';
- $('appVersion').textContent=`${DECK.length} cards · ${course.label} · v1.6.12`;$('voiceLabel').textContent=course.target.name+' voice';$('copyTarget').textContent='Copy '+course.target.textLabel;
+ $('appVersion').textContent=`${DECK.length} cards · ${course.label} · v1.6.13`;$('voiceLabel').textContent=course.target.name+' voice';$('copyTarget').textContent='Copy '+course.target.textLabel;
  $('pronunciationHelp').textContent=course.pronunciationHelp||'Listen to whole phrases. The app does not grade your pronunciation.';$('search').placeholder=course.searchPlaceholder||'Search words and meanings…';
  for(const id of ['targetText','readingPrompt','copyText']){$(id).lang=course.target.lang;$(id).dir=course.target.dir}
  for(const id of ['meaning','prompt']){$(id).lang=course.source.lang;$(id).dir=course.source.dir}
@@ -165,6 +196,7 @@ function switchCourse(id){const next=COURSES.find(c=>c.id===id);if(!next||next.i
  try{localStorage.setItem(ACTIVE_KEY,course.id)}catch(error){notice('Course opened. This browser could not remember the selection.')}return true;
 }
 $('courseSelect').addEventListener('change',()=>switchCourse($('courseSelect').value));
+bind('characterTrackBtn',()=>course.characterCourse&&switchCourse(course.characterCourse));
 configureCourse();
 if('speechSynthesis' in window)window.speechSynthesis.addEventListener('voiceschanged',refreshVoices);
 window.addEventListener('storage',e=>{if(e.key===KEY||e.key===null){importRevision++;importCandidate=null;$('importPreview').hidden=true;state=load();notice('Progress changed in another tab. This session was stopped to avoid overwriting it.');home()}});

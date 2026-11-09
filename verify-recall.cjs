@@ -76,3 +76,19 @@ practice.run('const w=DECK.find(c=>c.text==="起床");E.introduce(state,w.id,Dat
 assert(practice.run('current.sentence&&current.practice'));grade(practice);
 assert.equal(practice.run('JSON.stringify(state.items)'),practice.run('before'));
 console.log('PASS recall flow: word-only learning, retroactive single-task sentences, vocabulary topics, 5/10 dynamic sentence recalls, per-word credit, newly eligible words, paused gates and practice-only scheduling.');
+
+// Missed sentences return after other recalls / a time gap, with at most two
+// practice-only retries. They never add a sentence progress item or move word dates twice.
+const retry=boot();
+retry.run('for(const c of DECK.filter(c=>!E.isSentence(c)))E.introduce(state,c.id,Date.now()-10*E.DAY);beginSession(["起床","水","妈妈"].map(text=>({id:DECK.find(c=>c.text===text).id,direction:"produce",readyAt:Date.now()})),false)');
+assert(retry.run('current.sentence'));const failedId=retry.run('current.id');
+retry.run('reveal();rate(0)');
+assert.equal(retry.run('session.queue.filter(t=>t.sentenceRetry).length'),1);
+retry.run('advance()');assert.notEqual(retry.run('current.id'),failedId);grade(retry);retry.run('advance()');grade(retry);
+retry.tick();retry.run('advance()');assert(retry.run('current.sentenceRetry'));assert.equal(retry.run('current.id'),failedId);
+const retrySchedule=retry.run('JSON.stringify(state.items)');
+retry.run('reveal();rate(0)');assert.equal(retry.run('JSON.stringify(state.items)'),retrySchedule);
+retry.tick();retry.run('advance()');assert(retry.run('current.sentenceRetry'));retry.run('reveal();rate(0);advance()');
+assert.equal(retry.run('session'),null);assert.equal(retry.run('state.items['+JSON.stringify(failedId)+']'),undefined);
+assert(retry.run('state.logs.length<=5000'));
+console.log('PASS sentence retries: delayed return, two-attempt limit, practice-only retry schedules and no sentence cards.');

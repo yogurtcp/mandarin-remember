@@ -1,0 +1,1936 @@
+[
+  {
+    "id": "zh-read-4eba",
+    "text": "人",
+    "pronunciation": "rén",
+    "meaning": "person",
+    "category": "Base characters",
+    "kind": "character"
+  },
+  {
+    "id": "zh-read-53e3",
+    "text": "口",
+    "pronunciation": "kǒu",
+    "meaning": "mouth; opening",
+    "category": "Base characters",
+    "kind": "character"
+  },
+  {
+    "id": "zh-read-5927",
+    "text": "大",
+    "pronunciation": "dà",
+    "meaning": "big",
+    "category": "Base characters",
+    "kind": "character"
+  },
+  {
+    "id": "zh-read-5c0f",
+    "text": "小",
+    "pronunciation": "xiǎo",
+    "meaning": "small",
+    "category": "Base characters",
+    "kind": "character"
+  },
+  {
+    "id": "zh-read-591a",
+    "text": "多",
+    "pronunciation": "duō",
+    "meaning": "many; much",
+    "category": "Base characters",
+    "kind": "character"
+  },
+  {
+    "id": "zh-read-5c11",
+    "text": "少",
+    "pronunciation": "shǎo",
+    "meaning": "few; little",
+    "category": "Base characters",
+    "kind": "character",
+    "speechText": "多少",
+    "audioContext": "多少 (duōshao, how many / how much)",
+    "usage": "The reading shown is the one used here. This character can have another reading or a neutral tone in other words. Audio demonstrates it in 多少 (duōshao, how many / how much)."
+  },
+  {
+    "id": "zh-read-4e0a",
+    "text": "上",
+    "pronunciation": "shàng",
+    "meaning": "up; above",
+    "category": "Base characters",
+    "kind": "character"
+  },
+  {
+    "id": "zh-read-4e0b",
+    "text": "下",
+    "pronunciation": "xià",
+    "meaning": "down; below",
+    "category": "Base characters",
+    "kind": "character"
+  },
+  {
+    "id": "zh-read-5de6",
+    "text": "左",
+    "pronunciation": "zuǒ",
+    "meaning": "left",
+    "category": "Base characters",
+    "kind": "character"
+  },
+  {
+    "id": "zh-read-53f3",
+    "text": "右",
+    "pronunciation": "yòu",
+    "meaning": "right",
+    "category": "Base characters",
+    "kind": "character"
+  },
+  {
+    "id": "zh-read-4e2d",
+    "text": "中",
+    "pronunciation": "zhōng",
+    "meaning": "middle; center",
+    "category": "Base characters",
+    "kind": "character",
+    "speechText": "中国",
+    "audioContext": "中国 (Zhōngguó, China)",
+    "usage": "The reading shown is the one used here. This character can have another reading or a neutral tone in other words. Audio demonstrates it in 中国 (Zhōngguó, China)."
+  },
+  {
+    "id": "zh-read-65e5",
+    "text": "日",
+    "pronunciation": "rì",
+    "meaning": "sun; day",
+    "category": "Base characters",
+    "kind": "character"
+  },
+  {
+    "id": "zh-read-6708",
+    "text": "月",
+    "pronunciation": "yuè",
+    "meaning": "moon; month",
+    "category": "Base characters",
+    "kind": "character"
+  },
+  {
+    "id": "zh-read-660e",
+    "text": "明",
+    "pronunciation": "míng",
+    "meaning": "bright; clear",
+    "category": "Base characters",
+    "kind": "character"
+  },
+  {
+    "id": "zh-read-5929",
+    "text": "天",
+    "pronunciation": "tiān",
+    "meaning": "sky; day",
+    "category": "Base characters",
+    "kind": "character"
+  },
+  {
+    "id": "zh-read-4eca",
+    "text": "今",
+    "pronunciation": "jīn",
+    "meaning": "now; present (in compounds)",
+    "category": "Base characters",
+    "kind": "character"
+  },
+  {
+    "id": "zh-read-6628",
+    "text": "昨",
+    "pronunciation": "zuó",
+    "meaning": "yesterday (in compounds)",
+    "category": "Base characters",
+    "kind": "character"
+  },
+  {
+    "id": "zh-read-65e9",
+    "text": "早",
+    "pronunciation": "zǎo",
+    "meaning": "early; morning",
+    "category": "Base characters",
+    "kind": "character"
+  },
+  {
+    "id": "zh-read-665a",
+    "text": "晚",
+    "pronunciation": "wǎn",
+    "meaning": "late; evening",
+    "category": "Base characters",
+    "kind": "character"
+  },
+  {
+    "id": "zh-read-5e74",
+    "text": "年",
+    "pronunciation": "nián",
+    "meaning": "year",
+    "category": "Base characters",
+    "kind": "character"
+  },
+  {
+    "id": "zh-read-65f6",
+    "text": "时",
+    "pronunciation": "shí",
+    "meaning": "time; hour",
+    "category": "Base characters",
+    "kind": "character"
+  },
+  {
+    "id": "zh-read-5206",
+    "text": "分",
+    "pronunciation": "fēn",
+    "meaning": "to divide; minute",
+    "category": "Base characters",
+    "kind": "character",
+    "speechText": "分钟",
+    "audioContext": "分钟 (fēnzhōng, minute)",
+    "usage": "The reading shown is the one used here. This character can have another reading or a neutral tone in other words. Audio demonstrates it in 分钟 (fēnzhōng, minute)."
+  },
+  {
+    "id": "zh-read-95f4",
+    "text": "间",
+    "pronunciation": "jiān",
+    "meaning": "between; room (in compounds)",
+    "category": "Base characters",
+    "kind": "character"
+  },
+  {
+    "id": "zh-read-949f",
+    "text": "钟",
+    "pronunciation": "zhōng",
+    "meaning": "clock; bell",
+    "category": "Base characters",
+    "kind": "character"
+  },
+  {
+    "id": "zh-read-6bcf",
+    "text": "每",
+    "pronunciation": "měi",
+    "meaning": "each; every",
+    "category": "Base characters",
+    "kind": "character"
+  },
+  {
+    "id": "zh-read-4e00",
+    "text": "一",
+    "pronunciation": "yī",
+    "meaning": "one",
+    "category": "Base characters",
+    "kind": "character"
+  },
+  {
+    "id": "zh-read-4e8c",
+    "text": "二",
+    "pronunciation": "èr",
+    "meaning": "two",
+    "category": "Base characters",
+    "kind": "character"
+  },
+  {
+    "id": "zh-read-4e09",
+    "text": "三",
+    "pronunciation": "sān",
+    "meaning": "three",
+    "category": "Base characters",
+    "kind": "character"
+  },
+  {
+    "id": "zh-read-5341",
+    "text": "十",
+    "pronunciation": "shí",
+    "meaning": "ten",
+    "category": "Base characters",
+    "kind": "character"
+  },
+  {
+    "id": "zh-read-5b50",
+    "text": "子",
+    "pronunciation": "zǐ",
+    "meaning": "child; son; noun suffix (often neutral zi)",
+    "category": "Base characters",
+    "kind": "character",
+    "speechText": "子女",
+    "audioContext": "子女 (zǐnǚ, children)",
+    "usage": "The reading shown is the one used here. This character can have another reading or a neutral tone in other words. Audio demonstrates it in 子女 (zǐnǚ, children)."
+  },
+  {
+    "id": "zh-read-5973",
+    "text": "女",
+    "pronunciation": "nǚ",
+    "meaning": "woman; female",
+    "category": "Base characters",
+    "kind": "character"
+  },
+  {
+    "id": "zh-read-7537",
+    "text": "男",
+    "pronunciation": "nán",
+    "meaning": "man; male",
+    "category": "Base characters",
+    "kind": "character"
+  },
+  {
+    "id": "zh-read-513f",
+    "text": "儿",
+    "pronunciation": "ér",
+    "meaning": "child; son",
+    "category": "Base characters",
+    "kind": "character"
+  },
+  {
+    "id": "zh-read-5b69",
+    "text": "孩",
+    "pronunciation": "hái",
+    "meaning": "child (in compounds)",
+    "category": "Base characters",
+    "kind": "character"
+  },
+  {
+    "id": "zh-read-597d",
+    "text": "好",
+    "pronunciation": "hǎo",
+    "meaning": "good; well",
+    "category": "Base characters",
+    "kind": "character"
+  },
+  {
+    "id": "zh-read-5988",
+    "text": "妈",
+    "pronunciation": "mā",
+    "meaning": "mom",
+    "category": "Base characters",
+    "kind": "character"
+  },
+  {
+    "id": "zh-read-7238",
+    "text": "爸",
+    "pronunciation": "bà",
+    "meaning": "dad",
+    "category": "Base characters",
+    "kind": "character"
+  },
+  {
+    "id": "zh-read-5bb6",
+    "text": "家",
+    "pronunciation": "jiā",
+    "meaning": "home; family",
+    "category": "Base characters",
+    "kind": "character"
+  },
+  {
+    "id": "zh-read-95e8",
+    "text": "门",
+    "pronunciation": "mén",
+    "meaning": "door; gate",
+    "category": "Base characters",
+    "kind": "character"
+  },
+  {
+    "id": "zh-read-51fa",
+    "text": "出",
+    "pronunciation": "chū",
+    "meaning": "to go out; exit",
+    "category": "Base characters",
+    "kind": "character"
+  },
+  {
+    "id": "zh-read-5165",
+    "text": "入",
+    "pronunciation": "rù",
+    "meaning": "to enter",
+    "category": "Base characters",
+    "kind": "character"
+  },
+  {
+    "id": "zh-read-5f00",
+    "text": "开",
+    "pronunciation": "kāi",
+    "meaning": "to open; turn on",
+    "category": "Base characters",
+    "kind": "character"
+  },
+  {
+    "id": "zh-read-5173",
+    "text": "关",
+    "pronunciation": "guān",
+    "meaning": "to close; turn off",
+    "category": "Base characters",
+    "kind": "character"
+  },
+  {
+    "id": "zh-read-5c71",
+    "text": "山",
+    "pronunciation": "shān",
+    "meaning": "mountain",
+    "category": "Base characters",
+    "kind": "character"
+  },
+  {
+    "id": "zh-read-6c34",
+    "text": "水",
+    "pronunciation": "shuǐ",
+    "meaning": "water",
+    "category": "Base characters",
+    "kind": "character"
+  },
+  {
+    "id": "zh-read-706b",
+    "text": "火",
+    "pronunciation": "huǒ",
+    "meaning": "fire",
+    "category": "Base characters",
+    "kind": "character"
+  },
+  {
+    "id": "zh-read-6728",
+    "text": "木",
+    "pronunciation": "mù",
+    "meaning": "wood; tree (in compounds)",
+    "category": "Base characters",
+    "kind": "character"
+  },
+  {
+    "id": "zh-read-6797",
+    "text": "林",
+    "pronunciation": "lín",
+    "meaning": "woods; grove",
+    "category": "Base characters",
+    "kind": "character"
+  },
+  {
+    "id": "zh-read-68ee",
+    "text": "森",
+    "pronunciation": "sēn",
+    "meaning": "dense woodland (in compounds)",
+    "category": "Base characters",
+    "kind": "character"
+  },
+  {
+    "id": "zh-read-7530",
+    "text": "田",
+    "pronunciation": "tián",
+    "meaning": "field",
+    "category": "Base characters",
+    "kind": "character"
+  },
+  {
+    "id": "zh-read-679c",
+    "text": "果",
+    "pronunciation": "guǒ",
+    "meaning": "fruit; result",
+    "category": "Base characters",
+    "kind": "character"
+  },
+  {
+    "id": "zh-read-7535",
+    "text": "电",
+    "pronunciation": "diàn",
+    "meaning": "electricity",
+    "category": "Base characters",
+    "kind": "character"
+  },
+  {
+    "id": "zh-read-624b",
+    "text": "手",
+    "pronunciation": "shǒu",
+    "meaning": "hand",
+    "category": "Base characters",
+    "kind": "character"
+  },
+  {
+    "id": "zh-read-673a",
+    "text": "机",
+    "pronunciation": "jī",
+    "meaning": "machine (in compounds)",
+    "category": "Base characters",
+    "kind": "character"
+  },
+  {
+    "id": "zh-read-5934",
+    "text": "头",
+    "pronunciation": "tóu",
+    "meaning": "head",
+    "category": "Base characters",
+    "kind": "character"
+  },
+  {
+    "id": "zh-read-8111",
+    "text": "脑",
+    "pronunciation": "nǎo",
+    "meaning": "brain",
+    "category": "Base characters",
+    "kind": "character"
+  },
+  {
+    "id": "zh-read-8bdd",
+    "text": "话",
+    "pronunciation": "huà",
+    "meaning": "speech; words",
+    "category": "Base characters",
+    "kind": "character"
+  },
+  {
+    "id": "zh-read-5de5",
+    "text": "工",
+    "pronunciation": "gōng",
+    "meaning": "work; worker (in compounds)",
+    "category": "Base characters",
+    "kind": "character"
+  },
+  {
+    "id": "zh-read-5382",
+    "text": "厂",
+    "pronunciation": "chǎng",
+    "meaning": "factory",
+    "category": "Base characters",
+    "kind": "character"
+  },
+  {
+    "id": "zh-read-4f5c",
+    "text": "作",
+    "pronunciation": "zuò",
+    "meaning": "to do; make",
+    "category": "Base characters",
+    "kind": "character"
+  },
+  {
+    "id": "zh-read-5b66",
+    "text": "学",
+    "pronunciation": "xué",
+    "meaning": "to study; learn",
+    "category": "Base characters",
+    "kind": "character"
+  },
+  {
+    "id": "zh-read-751f",
+    "text": "生",
+    "pronunciation": "shēng",
+    "meaning": "to be born; life; student (in compounds)",
+    "category": "Base characters",
+    "kind": "character"
+  },
+  {
+    "id": "zh-read-6821",
+    "text": "校",
+    "pronunciation": "xiào",
+    "meaning": "school (in compounds)",
+    "category": "Base characters",
+    "kind": "character",
+    "speechText": "学校",
+    "audioContext": "学校 (xuéxiào, school)",
+    "usage": "The reading shown is the one used here. This character can have another reading or a neutral tone in other words. Audio demonstrates it in 学校 (xuéxiào, school)."
+  },
+  {
+    "id": "zh-read-8001",
+    "text": "老",
+    "pronunciation": "lǎo",
+    "meaning": "old; elder",
+    "category": "Base characters",
+    "kind": "character"
+  },
+  {
+    "id": "zh-read-5e08",
+    "text": "师",
+    "pronunciation": "shī",
+    "meaning": "teacher; master (in compounds)",
+    "category": "Base characters",
+    "kind": "character"
+  },
+  {
+    "id": "zh-read-540c",
+    "text": "同",
+    "pronunciation": "tóng",
+    "meaning": "same; together",
+    "category": "Base characters",
+    "kind": "character"
+  },
+  {
+    "id": "zh-read-670b",
+    "text": "朋",
+    "pronunciation": "péng",
+    "meaning": "friend (in compounds)",
+    "category": "Base characters",
+    "kind": "character"
+  },
+  {
+    "id": "zh-read-53cb",
+    "text": "友",
+    "pronunciation": "yǒu",
+    "meaning": "friend",
+    "category": "Base characters",
+    "kind": "character"
+  },
+  {
+    "id": "zh-read-6765",
+    "text": "来",
+    "pronunciation": "lái",
+    "meaning": "to come",
+    "category": "Base characters",
+    "kind": "character"
+  },
+  {
+    "id": "zh-read-53bb",
+    "text": "去",
+    "pronunciation": "qù",
+    "meaning": "to go",
+    "category": "Base characters",
+    "kind": "character"
+  },
+  {
+    "id": "zh-read-56de",
+    "text": "回",
+    "pronunciation": "huí",
+    "meaning": "to return",
+    "category": "Base characters",
+    "kind": "character"
+  },
+  {
+    "id": "zh-read-8fdb",
+    "text": "进",
+    "pronunciation": "jìn",
+    "meaning": "to enter; advance",
+    "category": "Base characters",
+    "kind": "character"
+  },
+  {
+    "id": "zh-read-8f66",
+    "text": "车",
+    "pronunciation": "chē",
+    "meaning": "vehicle",
+    "category": "Base characters",
+    "kind": "character"
+  },
+  {
+    "id": "zh-read-6c7d",
+    "text": "汽",
+    "pronunciation": "qì",
+    "meaning": "steam; vapor",
+    "category": "Base characters",
+    "kind": "character"
+  },
+  {
+    "id": "zh-read-7ad9",
+    "text": "站",
+    "pronunciation": "zhàn",
+    "meaning": "station; to stand",
+    "category": "Base characters",
+    "kind": "character"
+  },
+  {
+    "id": "zh-read-53f0",
+    "text": "台",
+    "pronunciation": "tái",
+    "meaning": "platform; stage",
+    "category": "Base characters",
+    "kind": "character"
+  },
+  {
+    "id": "zh-read-5916",
+    "text": "外",
+    "pronunciation": "wài",
+    "meaning": "outside",
+    "category": "Base characters",
+    "kind": "character"
+  },
+  {
+    "id": "zh-read-91cc",
+    "text": "里",
+    "pronunciation": "lǐ",
+    "meaning": "inside",
+    "category": "Base characters",
+    "kind": "character"
+  },
+  {
+    "id": "zh-read-9762",
+    "text": "面",
+    "pronunciation": "miàn",
+    "meaning": "face; surface; noodles",
+    "category": "Base characters",
+    "kind": "character"
+  },
+  {
+    "id": "zh-read-56fd",
+    "text": "国",
+    "pronunciation": "guó",
+    "meaning": "country",
+    "category": "Base characters",
+    "kind": "character"
+  },
+  {
+    "id": "zh-read-6587",
+    "text": "文",
+    "pronunciation": "wén",
+    "meaning": "writing; language",
+    "category": "Base characters",
+    "kind": "character"
+  },
+  {
+    "id": "zh-read-770b",
+    "text": "看",
+    "pronunciation": "kàn",
+    "meaning": "to look; watch",
+    "category": "Base characters",
+    "kind": "character"
+  },
+  {
+    "id": "zh-read-89c1",
+    "text": "见",
+    "pronunciation": "jiàn",
+    "meaning": "to see; meet",
+    "category": "Base characters",
+    "kind": "character"
+  },
+  {
+    "id": "zh-read-5403",
+    "text": "吃",
+    "pronunciation": "chī",
+    "meaning": "to eat",
+    "category": "Base characters",
+    "kind": "character"
+  },
+  {
+    "id": "zh-read-559d",
+    "text": "喝",
+    "pronunciation": "hē",
+    "meaning": "to drink",
+    "category": "Base characters",
+    "kind": "character"
+  },
+  {
+    "id": "zh-read-7c73",
+    "text": "米",
+    "pronunciation": "mǐ",
+    "meaning": "rice (uncooked)",
+    "category": "Base characters",
+    "kind": "character"
+  },
+  {
+    "id": "zh-read-996d",
+    "text": "饭",
+    "pronunciation": "fàn",
+    "meaning": "cooked rice; meal",
+    "category": "Base characters",
+    "kind": "character"
+  },
+  {
+    "id": "zh-read-8336",
+    "text": "茶",
+    "pronunciation": "chá",
+    "meaning": "tea",
+    "category": "Base characters",
+    "kind": "character"
+  },
+  {
+    "id": "zh-read-725b",
+    "text": "牛",
+    "pronunciation": "niú",
+    "meaning": "cow; ox",
+    "category": "Base characters",
+    "kind": "character"
+  },
+  {
+    "id": "zh-read-5976",
+    "text": "奶",
+    "pronunciation": "nǎi",
+    "meaning": "milk",
+    "category": "Base characters",
+    "kind": "character"
+  },
+  {
+    "id": "zh-read-767d",
+    "text": "白",
+    "pronunciation": "bái",
+    "meaning": "white",
+    "category": "Base characters",
+    "kind": "character"
+  },
+  {
+    "id": "zh-read-7ea2",
+    "text": "红",
+    "pronunciation": "hóng",
+    "meaning": "red",
+    "category": "Base characters",
+    "kind": "character"
+  },
+  {
+    "id": "zh-read-82b1",
+    "text": "花",
+    "pronunciation": "huā",
+    "meaning": "flower",
+    "category": "Base characters",
+    "kind": "character"
+  },
+  {
+    "id": "zh-read-5fc3",
+    "text": "心",
+    "pronunciation": "xīn",
+    "meaning": "heart; mind",
+    "category": "Base characters",
+    "kind": "character"
+  },
+  {
+    "id": "zh-read-4eba-53e3",
+    "text": "人口",
+    "pronunciation": "rénkǒu",
+    "meaning": "population",
+    "category": "Compounds from familiar characters",
+    "kind": "compound",
+    "requires": [
+      "zh-read-4eba",
+      "zh-read-53e3"
+    ],
+    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+  },
+  {
+    "id": "zh-read-5927-4eba",
+    "text": "大人",
+    "pronunciation": "dàren",
+    "meaning": "adult",
+    "category": "Compounds from familiar characters",
+    "kind": "compound",
+    "requires": [
+      "zh-read-5927",
+      "zh-read-4eba"
+    ],
+    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+  },
+  {
+    "id": "zh-read-5927-95e8",
+    "text": "大门",
+    "pronunciation": "dàmén",
+    "meaning": "main gate; main entrance",
+    "category": "Compounds from familiar characters",
+    "kind": "compound",
+    "requires": [
+      "zh-read-5927",
+      "zh-read-95e8"
+    ],
+    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+  },
+  {
+    "id": "zh-read-5c0f-95e8",
+    "text": "小门",
+    "pronunciation": "xiǎomén",
+    "meaning": "small door",
+    "category": "Compounds from familiar characters",
+    "kind": "compound",
+    "requires": [
+      "zh-read-5c0f",
+      "zh-read-95e8"
+    ],
+    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+  },
+  {
+    "id": "zh-read-95e8-53e3",
+    "text": "门口",
+    "pronunciation": "ménkǒu",
+    "meaning": "doorway; entrance",
+    "category": "Compounds from familiar characters",
+    "kind": "compound",
+    "requires": [
+      "zh-read-95e8",
+      "zh-read-53e3"
+    ],
+    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+  },
+  {
+    "id": "zh-read-5f00-95e8",
+    "text": "开门",
+    "pronunciation": "kāimén",
+    "meaning": "to open the door",
+    "category": "Compounds from familiar characters",
+    "kind": "compound",
+    "requires": [
+      "zh-read-5f00",
+      "zh-read-95e8"
+    ],
+    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+  },
+  {
+    "id": "zh-read-5173-95e8",
+    "text": "关门",
+    "pronunciation": "guānmén",
+    "meaning": "to close the door",
+    "category": "Compounds from familiar characters",
+    "kind": "compound",
+    "requires": [
+      "zh-read-5173",
+      "zh-read-95e8"
+    ],
+    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+  },
+  {
+    "id": "zh-read-51fa-95e8",
+    "text": "出门",
+    "pronunciation": "chūmén",
+    "meaning": "to go out; leave home",
+    "category": "Compounds from familiar characters",
+    "kind": "compound",
+    "requires": [
+      "zh-read-51fa",
+      "zh-read-95e8"
+    ],
+    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+  },
+  {
+    "id": "zh-read-5165-53e3",
+    "text": "入口",
+    "pronunciation": "rùkǒu",
+    "meaning": "entrance",
+    "category": "Compounds from familiar characters",
+    "kind": "compound",
+    "requires": [
+      "zh-read-5165",
+      "zh-read-53e3"
+    ],
+    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+  },
+  {
+    "id": "zh-read-51fa-53e3",
+    "text": "出口",
+    "pronunciation": "chūkǒu",
+    "meaning": "exit",
+    "category": "Compounds from familiar characters",
+    "kind": "compound",
+    "requires": [
+      "zh-read-51fa",
+      "zh-read-53e3"
+    ],
+    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+  },
+  {
+    "id": "zh-read-5927-5c0f",
+    "text": "大小",
+    "pronunciation": "dàxiǎo",
+    "meaning": "size",
+    "category": "Compounds from familiar characters",
+    "kind": "compound",
+    "requires": [
+      "zh-read-5927",
+      "zh-read-5c0f"
+    ],
+    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+  },
+  {
+    "id": "zh-read-591a-5c11",
+    "text": "多少",
+    "pronunciation": "duōshao",
+    "meaning": "how many; how much",
+    "category": "Compounds from familiar characters",
+    "kind": "compound",
+    "requires": [
+      "zh-read-591a",
+      "zh-read-5c11"
+    ],
+    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+  },
+  {
+    "id": "zh-read-5de6-53f3",
+    "text": "左右",
+    "pronunciation": "zuǒyòu",
+    "meaning": "left and right; approximately",
+    "category": "Compounds from familiar characters",
+    "kind": "compound",
+    "requires": [
+      "zh-read-5de6",
+      "zh-read-53f3"
+    ],
+    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+  },
+  {
+    "id": "zh-read-4e2d-5fc3",
+    "text": "中心",
+    "pronunciation": "zhōngxīn",
+    "meaning": "center",
+    "category": "Compounds from familiar characters",
+    "kind": "compound",
+    "requires": [
+      "zh-read-4e2d",
+      "zh-read-5fc3"
+    ],
+    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+  },
+  {
+    "id": "zh-read-4e2d-5b66",
+    "text": "中学",
+    "pronunciation": "zhōngxué",
+    "meaning": "secondary school",
+    "category": "Compounds from familiar characters",
+    "kind": "compound",
+    "requires": [
+      "zh-read-4e2d",
+      "zh-read-5b66"
+    ],
+    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+  },
+  {
+    "id": "zh-read-5c0f-5b66",
+    "text": "小学",
+    "pronunciation": "xiǎoxué",
+    "meaning": "primary school",
+    "category": "Compounds from familiar characters",
+    "kind": "compound",
+    "requires": [
+      "zh-read-5c0f",
+      "zh-read-5b66"
+    ],
+    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+  },
+  {
+    "id": "zh-read-5b66-751f",
+    "text": "学生",
+    "pronunciation": "xuésheng",
+    "meaning": "student",
+    "category": "Compounds from familiar characters",
+    "kind": "compound",
+    "requires": [
+      "zh-read-5b66",
+      "zh-read-751f"
+    ],
+    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+  },
+  {
+    "id": "zh-read-5b66-6821",
+    "text": "学校",
+    "pronunciation": "xuéxiào",
+    "meaning": "school",
+    "category": "Compounds from familiar characters",
+    "kind": "compound",
+    "requires": [
+      "zh-read-5b66",
+      "zh-read-6821"
+    ],
+    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+  },
+  {
+    "id": "zh-read-8001-5e08",
+    "text": "老师",
+    "pronunciation": "lǎoshī",
+    "meaning": "teacher",
+    "category": "Compounds from familiar characters",
+    "kind": "compound",
+    "requires": [
+      "zh-read-8001",
+      "zh-read-5e08"
+    ],
+    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+  },
+  {
+    "id": "zh-read-540c-5b66",
+    "text": "同学",
+    "pronunciation": "tóngxué",
+    "meaning": "classmate",
+    "category": "Compounds from familiar characters",
+    "kind": "compound",
+    "requires": [
+      "zh-read-540c",
+      "zh-read-5b66"
+    ],
+    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+  },
+  {
+    "id": "zh-read-660e-5929",
+    "text": "明天",
+    "pronunciation": "míngtiān",
+    "meaning": "tomorrow",
+    "category": "Compounds from familiar characters",
+    "kind": "compound",
+    "requires": [
+      "zh-read-660e",
+      "zh-read-5929"
+    ],
+    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+  },
+  {
+    "id": "zh-read-4eca-5929",
+    "text": "今天",
+    "pronunciation": "jīntiān",
+    "meaning": "today",
+    "category": "Compounds from familiar characters",
+    "kind": "compound",
+    "requires": [
+      "zh-read-4eca",
+      "zh-read-5929"
+    ],
+    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+  },
+  {
+    "id": "zh-read-6628-5929",
+    "text": "昨天",
+    "pronunciation": "zuótiān",
+    "meaning": "yesterday",
+    "category": "Compounds from familiar characters",
+    "kind": "compound",
+    "requires": [
+      "zh-read-6628",
+      "zh-read-5929"
+    ],
+    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+  },
+  {
+    "id": "zh-read-5929-5929",
+    "text": "天天",
+    "pronunciation": "tiāntiān",
+    "meaning": "every day",
+    "category": "Compounds from familiar characters",
+    "kind": "compound",
+    "requires": [
+      "zh-read-5929"
+    ],
+    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+  },
+  {
+    "id": "zh-read-6bcf-5929",
+    "text": "每天",
+    "pronunciation": "měitiān",
+    "meaning": "every day",
+    "category": "Compounds from familiar characters",
+    "kind": "compound",
+    "requires": [
+      "zh-read-6bcf",
+      "zh-read-5929"
+    ],
+    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+  },
+  {
+    "id": "zh-read-65e9-4e0a",
+    "text": "早上",
+    "pronunciation": "zǎoshang",
+    "meaning": "morning",
+    "category": "Compounds from familiar characters",
+    "kind": "compound",
+    "requires": [
+      "zh-read-65e9",
+      "zh-read-4e0a"
+    ],
+    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+  },
+  {
+    "id": "zh-read-665a-4e0a",
+    "text": "晚上",
+    "pronunciation": "wǎnshang",
+    "meaning": "evening",
+    "category": "Compounds from familiar characters",
+    "kind": "compound",
+    "requires": [
+      "zh-read-665a",
+      "zh-read-4e0a"
+    ],
+    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+  },
+  {
+    "id": "zh-read-65f6-95f4",
+    "text": "时间",
+    "pronunciation": "shíjiān",
+    "meaning": "time",
+    "category": "Compounds from familiar characters",
+    "kind": "compound",
+    "requires": [
+      "zh-read-65f6",
+      "zh-read-95f4"
+    ],
+    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+  },
+  {
+    "id": "zh-read-5c0f-65f6",
+    "text": "小时",
+    "pronunciation": "xiǎoshí",
+    "meaning": "hour",
+    "category": "Compounds from familiar characters",
+    "kind": "compound",
+    "requires": [
+      "zh-read-5c0f",
+      "zh-read-65f6"
+    ],
+    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+  },
+  {
+    "id": "zh-read-5206-949f",
+    "text": "分钟",
+    "pronunciation": "fēnzhōng",
+    "meaning": "minute",
+    "category": "Compounds from familiar characters",
+    "kind": "compound",
+    "requires": [
+      "zh-read-5206",
+      "zh-read-949f"
+    ],
+    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+  },
+  {
+    "id": "zh-read-4eca-5e74",
+    "text": "今年",
+    "pronunciation": "jīnnián",
+    "meaning": "this year",
+    "category": "Compounds from familiar characters",
+    "kind": "compound",
+    "requires": [
+      "zh-read-4eca",
+      "zh-read-5e74"
+    ],
+    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+  },
+  {
+    "id": "zh-read-660e-5e74",
+    "text": "明年",
+    "pronunciation": "míngnián",
+    "meaning": "next year",
+    "category": "Compounds from familiar characters",
+    "kind": "compound",
+    "requires": [
+      "zh-read-660e",
+      "zh-read-5e74"
+    ],
+    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+  },
+  {
+    "id": "zh-read-53bb-5e74",
+    "text": "去年",
+    "pronunciation": "qùnián",
+    "meaning": "last year",
+    "category": "Compounds from familiar characters",
+    "kind": "compound",
+    "requires": [
+      "zh-read-53bb",
+      "zh-read-5e74"
+    ],
+    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+  },
+  {
+    "id": "zh-read-5973-5b50",
+    "text": "女子",
+    "pronunciation": "nǚzǐ",
+    "meaning": "woman (often in formal or sports contexts)",
+    "category": "Compounds from familiar characters",
+    "kind": "compound",
+    "requires": [
+      "zh-read-5973",
+      "zh-read-5b50"
+    ],
+    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+  },
+  {
+    "id": "zh-read-7537-5b50",
+    "text": "男子",
+    "pronunciation": "nánzǐ",
+    "meaning": "man (often in formal or sports contexts)",
+    "category": "Compounds from familiar characters",
+    "kind": "compound",
+    "requires": [
+      "zh-read-7537",
+      "zh-read-5b50"
+    ],
+    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+  },
+  {
+    "id": "zh-read-5973-513f",
+    "text": "女儿",
+    "pronunciation": "nǚ'ér",
+    "meaning": "daughter",
+    "category": "Compounds from familiar characters",
+    "kind": "compound",
+    "requires": [
+      "zh-read-5973",
+      "zh-read-513f"
+    ],
+    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+  },
+  {
+    "id": "zh-read-513f-5b50",
+    "text": "儿子",
+    "pronunciation": "érzi",
+    "meaning": "son",
+    "category": "Compounds from familiar characters",
+    "kind": "compound",
+    "requires": [
+      "zh-read-513f",
+      "zh-read-5b50"
+    ],
+    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+  },
+  {
+    "id": "zh-read-5b69-5b50",
+    "text": "孩子",
+    "pronunciation": "háizi",
+    "meaning": "child",
+    "category": "Compounds from familiar characters",
+    "kind": "compound",
+    "requires": [
+      "zh-read-5b69",
+      "zh-read-5b50"
+    ],
+    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+  },
+  {
+    "id": "zh-read-5988-5988",
+    "text": "妈妈",
+    "pronunciation": "māma",
+    "meaning": "mom",
+    "category": "Compounds from familiar characters",
+    "kind": "compound",
+    "requires": [
+      "zh-read-5988"
+    ],
+    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+  },
+  {
+    "id": "zh-read-7238-7238",
+    "text": "爸爸",
+    "pronunciation": "bàba",
+    "meaning": "dad",
+    "category": "Compounds from familiar characters",
+    "kind": "compound",
+    "requires": [
+      "zh-read-7238"
+    ],
+    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+  },
+  {
+    "id": "zh-read-5bb6-4eba",
+    "text": "家人",
+    "pronunciation": "jiārén",
+    "meaning": "family members",
+    "category": "Compounds from familiar characters",
+    "kind": "compound",
+    "requires": [
+      "zh-read-5bb6",
+      "zh-read-4eba"
+    ],
+    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+  },
+  {
+    "id": "zh-read-5927-5bb6",
+    "text": "大家",
+    "pronunciation": "dàjiā",
+    "meaning": "everyone",
+    "category": "Compounds from familiar characters",
+    "kind": "compound",
+    "requires": [
+      "zh-read-5927",
+      "zh-read-5bb6"
+    ],
+    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+  },
+  {
+    "id": "zh-read-5c71-6c34",
+    "text": "山水",
+    "pronunciation": "shānshuǐ",
+    "meaning": "landscape; mountains and water",
+    "category": "Compounds from familiar characters",
+    "kind": "compound",
+    "requires": [
+      "zh-read-5c71",
+      "zh-read-6c34"
+    ],
+    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+  },
+  {
+    "id": "zh-read-6c34-7530",
+    "text": "水田",
+    "pronunciation": "shuǐtián",
+    "meaning": "paddy field",
+    "category": "Compounds from familiar characters",
+    "kind": "compound",
+    "requires": [
+      "zh-read-6c34",
+      "zh-read-7530"
+    ],
+    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+  },
+  {
+    "id": "zh-read-6c34-679c",
+    "text": "水果",
+    "pronunciation": "shuǐguǒ",
+    "meaning": "fruit",
+    "category": "Compounds from familiar characters",
+    "kind": "compound",
+    "requires": [
+      "zh-read-6c34",
+      "zh-read-679c"
+    ],
+    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+  },
+  {
+    "id": "zh-read-706b-5c71",
+    "text": "火山",
+    "pronunciation": "huǒshān",
+    "meaning": "volcano",
+    "category": "Compounds from familiar characters",
+    "kind": "compound",
+    "requires": [
+      "zh-read-706b",
+      "zh-read-5c71"
+    ],
+    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+  },
+  {
+    "id": "zh-read-5c71-6797",
+    "text": "山林",
+    "pronunciation": "shānlín",
+    "meaning": "mountain forest",
+    "category": "Compounds from familiar characters",
+    "kind": "compound",
+    "requires": [
+      "zh-read-5c71",
+      "zh-read-6797"
+    ],
+    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+  },
+  {
+    "id": "zh-read-6728-5934",
+    "text": "木头",
+    "pronunciation": "mùtou",
+    "meaning": "wood; timber",
+    "category": "Compounds from familiar characters",
+    "kind": "compound",
+    "requires": [
+      "zh-read-6728",
+      "zh-read-5934"
+    ],
+    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+  },
+  {
+    "id": "zh-read-6797-6728",
+    "text": "林木",
+    "pronunciation": "línmù",
+    "meaning": "forest trees",
+    "category": "Compounds from familiar characters",
+    "kind": "compound",
+    "requires": [
+      "zh-read-6797",
+      "zh-read-6728"
+    ],
+    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+  },
+  {
+    "id": "zh-read-68ee-6797",
+    "text": "森林",
+    "pronunciation": "sēnlín",
+    "meaning": "forest",
+    "category": "Compounds from familiar characters",
+    "kind": "compound",
+    "requires": [
+      "zh-read-68ee",
+      "zh-read-6797"
+    ],
+    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+  },
+  {
+    "id": "zh-read-7535-8f66",
+    "text": "电车",
+    "pronunciation": "diànchē",
+    "meaning": "tram; trolleybus",
+    "category": "Compounds from familiar characters",
+    "kind": "compound",
+    "requires": [
+      "zh-read-7535",
+      "zh-read-8f66"
+    ],
+    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+  },
+  {
+    "id": "zh-read-7535-8111",
+    "text": "电脑",
+    "pronunciation": "diànnǎo",
+    "meaning": "computer",
+    "category": "Compounds from familiar characters",
+    "kind": "compound",
+    "requires": [
+      "zh-read-7535",
+      "zh-read-8111"
+    ],
+    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+  },
+  {
+    "id": "zh-read-7535-8bdd",
+    "text": "电话",
+    "pronunciation": "diànhuà",
+    "meaning": "telephone",
+    "category": "Compounds from familiar characters",
+    "kind": "compound",
+    "requires": [
+      "zh-read-7535",
+      "zh-read-8bdd"
+    ],
+    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+  },
+  {
+    "id": "zh-read-624b-673a",
+    "text": "手机",
+    "pronunciation": "shǒujī",
+    "meaning": "mobile phone",
+    "category": "Compounds from familiar characters",
+    "kind": "compound",
+    "requires": [
+      "zh-read-624b",
+      "zh-read-673a"
+    ],
+    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+  },
+  {
+    "id": "zh-read-5f00-673a",
+    "text": "开机",
+    "pronunciation": "kāijī",
+    "meaning": "to turn on a machine",
+    "category": "Compounds from familiar characters",
+    "kind": "compound",
+    "requires": [
+      "zh-read-5f00",
+      "zh-read-673a"
+    ],
+    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+  },
+  {
+    "id": "zh-read-5173-673a",
+    "text": "关机",
+    "pronunciation": "guānjī",
+    "meaning": "to turn off a machine",
+    "category": "Compounds from familiar characters",
+    "kind": "compound",
+    "requires": [
+      "zh-read-5173",
+      "zh-read-673a"
+    ],
+    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+  },
+  {
+    "id": "zh-read-5de5-4eba",
+    "text": "工人",
+    "pronunciation": "gōngrén",
+    "meaning": "worker",
+    "category": "Compounds from familiar characters",
+    "kind": "compound",
+    "requires": [
+      "zh-read-5de5",
+      "zh-read-4eba"
+    ],
+    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+  },
+  {
+    "id": "zh-read-5de5-5382",
+    "text": "工厂",
+    "pronunciation": "gōngchǎng",
+    "meaning": "factory",
+    "category": "Compounds from familiar characters",
+    "kind": "compound",
+    "requires": [
+      "zh-read-5de5",
+      "zh-read-5382"
+    ],
+    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+  },
+  {
+    "id": "zh-read-5de5-4f5c",
+    "text": "工作",
+    "pronunciation": "gōngzuò",
+    "meaning": "work; job",
+    "category": "Compounds from familiar characters",
+    "kind": "compound",
+    "requires": [
+      "zh-read-5de5",
+      "zh-read-4f5c"
+    ],
+    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+  },
+  {
+    "id": "zh-read-670b-53cb",
+    "text": "朋友",
+    "pronunciation": "péngyou",
+    "meaning": "friend",
+    "category": "Compounds from familiar characters",
+    "kind": "compound",
+    "requires": [
+      "zh-read-670b",
+      "zh-read-53cb"
+    ],
+    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+  },
+  {
+    "id": "zh-read-53cb-4eba",
+    "text": "友人",
+    "pronunciation": "yǒurén",
+    "meaning": "friend (written style)",
+    "category": "Compounds from familiar characters",
+    "kind": "compound",
+    "requires": [
+      "zh-read-53cb",
+      "zh-read-4eba"
+    ],
+    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+  },
+  {
+    "id": "zh-read-53cb-597d",
+    "text": "友好",
+    "pronunciation": "yǒuhǎo",
+    "meaning": "friendly",
+    "category": "Compounds from familiar characters",
+    "kind": "compound",
+    "requires": [
+      "zh-read-53cb",
+      "zh-read-597d"
+    ],
+    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+  },
+  {
+    "id": "zh-read-51fa-6765",
+    "text": "出来",
+    "pronunciation": "chūlai",
+    "meaning": "to come out",
+    "category": "Compounds from familiar characters",
+    "kind": "compound",
+    "requires": [
+      "zh-read-51fa",
+      "zh-read-6765"
+    ],
+    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+  },
+  {
+    "id": "zh-read-8fdb-53bb",
+    "text": "进去",
+    "pronunciation": "jìnqu",
+    "meaning": "to go in",
+    "category": "Compounds from familiar characters",
+    "kind": "compound",
+    "requires": [
+      "zh-read-8fdb",
+      "zh-read-53bb"
+    ],
+    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+  },
+  {
+    "id": "zh-read-56de-5bb6",
+    "text": "回家",
+    "pronunciation": "huíjiā",
+    "meaning": "to go home",
+    "category": "Compounds from familiar characters",
+    "kind": "compound",
+    "requires": [
+      "zh-read-56de",
+      "zh-read-5bb6"
+    ],
+    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+  },
+  {
+    "id": "zh-read-56de-6765",
+    "text": "回来",
+    "pronunciation": "huílai",
+    "meaning": "to come back",
+    "category": "Compounds from familiar characters",
+    "kind": "compound",
+    "requires": [
+      "zh-read-56de",
+      "zh-read-6765"
+    ],
+    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+  },
+  {
+    "id": "zh-read-56de-53bb",
+    "text": "回去",
+    "pronunciation": "huíqu",
+    "meaning": "to go back",
+    "category": "Compounds from familiar characters",
+    "kind": "compound",
+    "requires": [
+      "zh-read-56de",
+      "zh-read-53bb"
+    ],
+    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+  },
+  {
+    "id": "zh-read-4e0a-8f66",
+    "text": "上车",
+    "pronunciation": "shàngchē",
+    "meaning": "to get on; get into a vehicle",
+    "category": "Compounds from familiar characters",
+    "kind": "compound",
+    "requires": [
+      "zh-read-4e0a",
+      "zh-read-8f66"
+    ],
+    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+  },
+  {
+    "id": "zh-read-4e0b-8f66",
+    "text": "下车",
+    "pronunciation": "xiàchē",
+    "meaning": "to get off; get out of a vehicle",
+    "category": "Compounds from familiar characters",
+    "kind": "compound",
+    "requires": [
+      "zh-read-4e0b",
+      "zh-read-8f66"
+    ],
+    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+  },
+  {
+    "id": "zh-read-8f66-7ad9",
+    "text": "车站",
+    "pronunciation": "chēzhàn",
+    "meaning": "station; stop",
+    "category": "Compounds from familiar characters",
+    "kind": "compound",
+    "requires": [
+      "zh-read-8f66",
+      "zh-read-7ad9"
+    ],
+    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+  },
+  {
+    "id": "zh-read-706b-8f66",
+    "text": "火车",
+    "pronunciation": "huǒchē",
+    "meaning": "train",
+    "category": "Compounds from familiar characters",
+    "kind": "compound",
+    "requires": [
+      "zh-read-706b",
+      "zh-read-8f66"
+    ],
+    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+  },
+  {
+    "id": "zh-read-6c7d-8f66",
+    "text": "汽车",
+    "pronunciation": "qìchē",
+    "meaning": "car; motor vehicle",
+    "category": "Compounds from familiar characters",
+    "kind": "compound",
+    "requires": [
+      "zh-read-6c7d",
+      "zh-read-8f66"
+    ],
+    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+  },
+  {
+    "id": "zh-read-8f66-95e8",
+    "text": "车门",
+    "pronunciation": "chēmén",
+    "meaning": "vehicle door",
+    "category": "Compounds from familiar characters",
+    "kind": "compound",
+    "requires": [
+      "zh-read-8f66",
+      "zh-read-95e8"
+    ],
+    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+  },
+  {
+    "id": "zh-read-7ad9-53f0",
+    "text": "站台",
+    "pronunciation": "zhàntái",
+    "meaning": "station platform",
+    "category": "Compounds from familiar characters",
+    "kind": "compound",
+    "requires": [
+      "zh-read-7ad9",
+      "zh-read-53f0"
+    ],
+    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+  },
+  {
+    "id": "zh-read-5916-9762",
+    "text": "外面",
+    "pronunciation": "wàimian",
+    "meaning": "outside",
+    "category": "Compounds from familiar characters",
+    "kind": "compound",
+    "requires": [
+      "zh-read-5916",
+      "zh-read-9762"
+    ],
+    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+  },
+  {
+    "id": "zh-read-91cc-9762",
+    "text": "里面",
+    "pronunciation": "lǐmian",
+    "meaning": "inside",
+    "category": "Compounds from familiar characters",
+    "kind": "compound",
+    "requires": [
+      "zh-read-91cc",
+      "zh-read-9762"
+    ],
+    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+  },
+  {
+    "id": "zh-read-5916-56fd",
+    "text": "外国",
+    "pronunciation": "wàiguó",
+    "meaning": "foreign country",
+    "category": "Compounds from familiar characters",
+    "kind": "compound",
+    "requires": [
+      "zh-read-5916",
+      "zh-read-56fd"
+    ],
+    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+  },
+  {
+    "id": "zh-read-4e2d-56fd",
+    "text": "中国",
+    "pronunciation": "Zhōngguó",
+    "meaning": "China",
+    "category": "Compounds from familiar characters",
+    "kind": "compound",
+    "requires": [
+      "zh-read-4e2d",
+      "zh-read-56fd"
+    ],
+    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+  },
+  {
+    "id": "zh-read-4e2d-6587",
+    "text": "中文",
+    "pronunciation": "Zhōngwén",
+    "meaning": "Chinese (language)",
+    "category": "Compounds from familiar characters",
+    "kind": "compound",
+    "requires": [
+      "zh-read-4e2d",
+      "zh-read-6587"
+    ],
+    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+  },
+  {
+    "id": "zh-read-770b-89c1",
+    "text": "看见",
+    "pronunciation": "kànjiàn",
+    "meaning": "to see",
+    "category": "Compounds from familiar characters",
+    "kind": "compound",
+    "requires": [
+      "zh-read-770b",
+      "zh-read-89c1"
+    ],
+    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+  },
+  {
+    "id": "zh-read-89c1-9762",
+    "text": "见面",
+    "pronunciation": "jiànmiàn",
+    "meaning": "to meet",
+    "category": "Compounds from familiar characters",
+    "kind": "compound",
+    "requires": [
+      "zh-read-89c1",
+      "zh-read-9762"
+    ],
+    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+  },
+  {
+    "id": "zh-read-5403-996d",
+    "text": "吃饭",
+    "pronunciation": "chīfàn",
+    "meaning": "to eat; have a meal",
+    "category": "Compounds from familiar characters",
+    "kind": "compound",
+    "requires": [
+      "zh-read-5403",
+      "zh-read-996d"
+    ],
+    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+  },
+  {
+    "id": "zh-read-7c73-996d",
+    "text": "米饭",
+    "pronunciation": "mǐfàn",
+    "meaning": "cooked rice",
+    "category": "Compounds from familiar characters",
+    "kind": "compound",
+    "requires": [
+      "zh-read-7c73",
+      "zh-read-996d"
+    ],
+    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+  },
+  {
+    "id": "zh-read-725b-5976",
+    "text": "牛奶",
+    "pronunciation": "niúnǎi",
+    "meaning": "cow's milk",
+    "category": "Compounds from familiar characters",
+    "kind": "compound",
+    "requires": [
+      "zh-read-725b",
+      "zh-read-5976"
+    ],
+    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+  },
+  {
+    "id": "zh-read-767d-5929",
+    "text": "白天",
+    "pronunciation": "báitiān",
+    "meaning": "daytime",
+    "category": "Compounds from familiar characters",
+    "kind": "compound",
+    "requires": [
+      "zh-read-767d",
+      "zh-read-5929"
+    ],
+    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+  },
+  {
+    "id": "zh-read-7ea2-82b1",
+    "text": "红花",
+    "pronunciation": "hónghuā",
+    "meaning": "red flower; safflower",
+    "category": "Compounds from familiar characters",
+    "kind": "compound",
+    "requires": [
+      "zh-read-7ea2",
+      "zh-read-82b1"
+    ],
+    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+  },
+  {
+    "id": "zh-read-5f00-5fc3",
+    "text": "开心",
+    "pronunciation": "kāixīn",
+    "meaning": "happy",
+    "category": "Compounds from familiar characters",
+    "kind": "compound",
+    "requires": [
+      "zh-read-5f00",
+      "zh-read-5fc3"
+    ],
+    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+  },
+  {
+    "id": "zh-read-597d-5fc3",
+    "text": "好心",
+    "pronunciation": "hǎoxīn",
+    "meaning": "kind-hearted; well-intentioned",
+    "category": "Compounds from familiar characters",
+    "kind": "compound",
+    "requires": [
+      "zh-read-597d",
+      "zh-read-5fc3"
+    ],
+    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+  },
+  {
+    "id": "zh-read-5fc3-91cc",
+    "text": "心里",
+    "pronunciation": "xīnli",
+    "meaning": "in one's heart; in one's mind",
+    "category": "Compounds from familiar characters",
+    "kind": "compound",
+    "requires": [
+      "zh-read-5fc3",
+      "zh-read-91cc"
+    ],
+    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+  },
+  {
+    "id": "zh-read-4e0a-5b66",
+    "text": "上学",
+    "pronunciation": "shàngxué",
+    "meaning": "to go to school",
+    "category": "Compounds from familiar characters",
+    "kind": "compound",
+    "requires": [
+      "zh-read-4e0a",
+      "zh-read-5b66"
+    ],
+    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+  }
+]
