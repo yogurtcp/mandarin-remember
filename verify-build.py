@@ -76,6 +76,29 @@ with TemporaryDirectory() as directory:
         else:
             raise AssertionError('Build accepted incomplete or circular compound prerequisites')
     reading_path.write_text(json.dumps(reading_cards))
+    arabic_path = folder / 'decks/en-ar-reading.json'
+    arabic_cards = json.loads(arabic_path.read_text())
+    for failure in ['missing-vowel', 'circular', 'unknown', 'incomplete-shapes', 'bare-mark']:
+        broken_arabic = copy.deepcopy(arabic_cards)
+        word = next(card for card in broken_arabic if card['text'] == 'بَاب')
+        if failure == 'missing-vowel':
+            word['requires'].remove('ar-read-fatha')
+        elif failure == 'circular':
+            word['requires'] = [word['id']]
+        elif failure == 'unknown':
+            word['requires'] = ['unknown-letter']
+        elif failure == 'incomplete-shapes':
+            next(card for card in broken_arabic if card['kind'] == 'letter')['letterForms'].pop('medial')
+        else:
+            next(card for card in broken_arabic if card['kind'] == 'mark')['text'] = '\u064e'
+        arabic_path.write_text(json.dumps(broken_arabic))
+        try:
+            load(test)
+        except AssertionError:
+            pass
+        else:
+            raise AssertionError('Build accepted invalid Arabic reading data: ' + failure)
+    arabic_path.write_text(json.dumps(arabic_cards))
     for key, value in [('id', test['courses'][0]['id']),
                        ('progressId', test['courses'][0]['progressId']),
                        ('storageKey', test['courses'][0]['storageKey']),

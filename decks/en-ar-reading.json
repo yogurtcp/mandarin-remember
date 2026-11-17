@@ -1,0 +1,1012 @@
+[
+  {
+    "id": "ar-read-ba",
+    "text": "ب",
+    "kind": "letter",
+    "pronunciation": "bāʾ",
+    "meaning": "b as in bed",
+    "category": "Letters & shapes",
+    "speechText": "بَاء",
+    "audioContext": "Letter name: bāʾ (not the sound of a syllable).",
+    "usage": "One dot below. Compare ت and ث, which share its basic shape. Read right to left. Letter dots belong to the letter; vowel marks are added separately.",
+    "letterForms": {
+      "isolated": "ب",
+      "initial": "بـ",
+      "medial": "ـبـ",
+      "final": "ـب"
+    }
+  },
+  {
+    "id": "ar-read-fatha",
+    "text": "◌َ",
+    "kind": "mark",
+    "pronunciation": "fatḥa",
+    "meaning": "short a",
+    "category": "Vowel marks · ḥarakāt",
+    "speechText": "فَتْحَة",
+    "audioContext": "Mark name: fatḥa. The dotted circle is just a placeholder.",
+    "usage": "A small stroke above the letter: بَ = ba. It adds a short vowel after the consonant, not a separate letter. The dotted circle shows where the mark sits; it is not an Arabic letter."
+  },
+  {
+    "id": "ar-read-alif",
+    "text": "ا",
+    "kind": "letter",
+    "pronunciation": "alif",
+    "meaning": "long ā; also a seat for hamza",
+    "category": "Letters & shapes",
+    "speechText": "أَلِف",
+    "audioContext": "Letter name: alif (not the sound of a syllable).",
+    "usage": "Alif does not join the next letter. A plain ا usually extends an ā sound; أ and إ carry hamza and are taught separately. Read right to left. Letter dots belong to the letter; vowel marks are added separately.",
+    "letterForms": {
+      "isolated": "ا",
+      "initial": "ا",
+      "medial": "ـا",
+      "final": "ـا"
+    }
+  },
+  {
+    "id": "ar-read-ta",
+    "text": "ت",
+    "kind": "letter",
+    "pronunciation": "tāʾ",
+    "meaning": "t as in tea",
+    "category": "Letters & shapes",
+    "speechText": "تَاء",
+    "audioContext": "Letter name: tāʾ (not the sound of a syllable).",
+    "usage": "Two dots above. Compare ب and ث. Read right to left. Letter dots belong to the letter; vowel marks are added separately.",
+    "letterForms": {
+      "isolated": "ت",
+      "initial": "تـ",
+      "medial": "ـتـ",
+      "final": "ـت"
+    }
+  },
+  {
+    "id": "ar-read-kasra",
+    "text": "◌ِ",
+    "kind": "mark",
+    "pronunciation": "kasra",
+    "meaning": "short i; sometimes e in Palestinian speech",
+    "category": "Vowel marks · ḥarakāt",
+    "speechText": "كَسْرَة",
+    "audioContext": "Mark name: kasra. The dotted circle is just a placeholder.",
+    "usage": "A small stroke below the letter: بِ = bi. In this course a kasra can also help mark local e, including before a final ة. Follow the Latin reading for the exact vowel. The dotted circle shows where the mark sits; it is not an Arabic letter."
+  },
+  {
+    "id": "ar-read-mim",
+    "text": "م",
+    "kind": "letter",
+    "pronunciation": "mīm",
+    "meaning": "m as in moon",
+    "category": "Letters & shapes",
+    "speechText": "مِيم",
+    "audioContext": "Letter name: mīm (not the sound of a syllable).",
+    "usage": "The head and tail change with position. Learn its connected forms as the same letter. Read right to left. Letter dots belong to the letter; vowel marks are added separately.",
+    "letterForms": {
+      "isolated": "م",
+      "initial": "مـ",
+      "medial": "ـمـ",
+      "final": "ـم"
+    }
+  },
+  {
+    "id": "ar-read-nun",
+    "text": "ن",
+    "kind": "letter",
+    "pronunciation": "nūn",
+    "meaning": "n as in no",
+    "category": "Letters & shapes",
+    "speechText": "نُون",
+    "audioContext": "Letter name: nūn (not the sound of a syllable).",
+    "usage": "One dot above. In connected text compare its dots and shape with ب ت ث ي. Read right to left. Letter dots belong to the letter; vowel marks are added separately.",
+    "letterForms": {
+      "isolated": "ن",
+      "initial": "نـ",
+      "medial": "ـنـ",
+      "final": "ـن"
+    }
+  },
+  {
+    "id": "ar-read-sukun",
+    "text": "◌ْ",
+    "kind": "mark",
+    "pronunciation": "sukūn",
+    "meaning": "no vowel after this consonant",
+    "category": "Vowel marks · ḥarakāt",
+    "speechText": "سُكُون",
+    "audioContext": "Mark name: sukūn. The dotted circle is just a placeholder.",
+    "usage": "A small circle above the letter: نْ in بِنْت (bint). It means no vowel after that consonant. It is often omitted in ordinary writing and at the end of a word. The dotted circle shows where the mark sits; it is not an Arabic letter."
+  },
+  {
+    "id": "ar-read-damma",
+    "text": "◌ُ",
+    "kind": "mark",
+    "pronunciation": "ḍamma",
+    "meaning": "short u; sometimes o in Palestinian speech",
+    "category": "Vowel marks · ḥarakāt",
+    "speechText": "ضَمَّة",
+    "audioContext": "Mark name: ḍamma. The dotted circle is just a placeholder.",
+    "usage": "A small curl above the letter: بُ = bu. Local vowel quality varies; the Latin reading distinguishes u and o where useful. The dotted circle shows where the mark sits; it is not an Arabic letter."
+  },
+  {
+    "id": "ar-read-ya",
+    "text": "ي",
+    "kind": "letter",
+    "pronunciation": "yāʾ",
+    "meaning": "y; also ī and often ē",
+    "category": "Letters & shapes",
+    "speechText": "يَاء",
+    "audioContext": "Letter name: yāʾ (not the sound of a syllable).",
+    "usage": "Two dots below. ي can be a consonant or part of a long vowel; compare final ى, which has no dots. Read right to left. Letter dots belong to the letter; vowel marks are added separately.",
+    "letterForms": {
+      "isolated": "ي",
+      "initial": "يـ",
+      "medial": "ـيـ",
+      "final": "ـي"
+    }
+  },
+  {
+    "id": "ar-read-waw",
+    "text": "و",
+    "kind": "letter",
+    "pronunciation": "wāw",
+    "meaning": "w; also ū and often ō",
+    "category": "Letters & shapes",
+    "speechText": "وَاو",
+    "audioContext": "Letter name: wāw (not the sound of a syllable).",
+    "usage": "Does not join the following letter. و can be a consonant or part of a long vowel; the whole word’s reading decides. Read right to left. Letter dots belong to the letter; vowel marks are added separately.",
+    "letterForms": {
+      "isolated": "و",
+      "initial": "و",
+      "medial": "ـو",
+      "final": "ـو"
+    }
+  },
+  {
+    "id": "ar-read-shadda",
+    "text": "◌ّ",
+    "kind": "mark",
+    "pronunciation": "shadda",
+    "meaning": "double or hold the consonant",
+    "category": "Vowel marks · ḥarakāt",
+    "speechText": "شَدَّة",
+    "audioContext": "Mark name: shadda. The dotted circle is just a placeholder.",
+    "usage": "The small w-shaped mark doubles the consonant: دّ in بِدِّي (biddi). It can occur together with a vowel mark; it does not itself add a vowel. The dotted circle shows where the mark sits; it is not an Arabic letter."
+  },
+  {
+    "id": "ar-read-ha",
+    "text": "ه",
+    "kind": "letter",
+    "pronunciation": "hāʾ",
+    "meaning": "h as in hello",
+    "category": "Letters & shapes",
+    "speechText": "هَاء",
+    "audioContext": "Letter name: hāʾ (not the sound of a syllable).",
+    "usage": "Ordinary h, different from ح. Its middle form looks different from its isolated form. Read right to left. Letter dots belong to the letter; vowel marks are added separately.",
+    "letterForms": {
+      "isolated": "ه",
+      "initial": "هـ",
+      "medial": "ـهـ",
+      "final": "ـه"
+    }
+  },
+  {
+    "id": "ar-read-shin",
+    "text": "ش",
+    "kind": "letter",
+    "pronunciation": "shīn",
+    "meaning": "sh as in ship",
+    "category": "Letters & shapes",
+    "speechText": "شِين",
+    "audioContext": "Letter name: shīn (not the sound of a syllable).",
+    "usage": "Three dots above. Compare س. Read right to left. Letter dots belong to the letter; vowel marks are added separately.",
+    "letterForms": {
+      "isolated": "ش",
+      "initial": "شـ",
+      "medial": "ـشـ",
+      "final": "ـش"
+    }
+  },
+  {
+    "id": "ar-read-ta-marbuta",
+    "text": "ة",
+    "kind": "letter",
+    "pronunciation": "tāʾ marbūṭa",
+    "meaning": "word-final a or e; t in some combinations",
+    "category": "Extra letter forms",
+    "speechText": "تَاء مَرْبُوطَة",
+    "audioContext": "Letter name: tāʾ marbūṭa (not the sound of a syllable).",
+    "usage": "This end-of-word form often has a or e in Palestinian speech, not a pronounced h. It is heard as t in combinations such as kāset mayy (a glass of water). It is not interchangeable with ه. Read right to left. Letter dots belong to the letter; vowel marks are added separately.",
+    "letterForms": {
+      "isolated": "ة",
+      "initial": "—",
+      "medial": "—",
+      "final": "ـة"
+    }
+  },
+  {
+    "id": "ar-read-tha",
+    "text": "ث",
+    "kind": "letter",
+    "pronunciation": "thāʾ",
+    "meaning": "th as in thin in formal Arabic",
+    "category": "Letters & shapes",
+    "speechText": "ثَاء",
+    "audioContext": "Letter name: thāʾ (not the sound of a syllable).",
+    "usage": "Three dots above. In Palestinian words this may be t, s or th depending on the word and local variety; follow the word’s reading. Read right to left. Letter dots belong to the letter; vowel marks are added separately.",
+    "letterForms": {
+      "isolated": "ث",
+      "initial": "ثـ",
+      "medial": "ـثـ",
+      "final": "ـث"
+    }
+  },
+  {
+    "id": "ar-read-jim",
+    "text": "ج",
+    "kind": "letter",
+    "pronunciation": "jīm",
+    "meaning": "j; often like the s in measure locally",
+    "category": "Letters & shapes",
+    "speechText": "جِيم",
+    "audioContext": "Letter name: jīm (not the sound of a syllable).",
+    "usage": "One dot below the bowl. Palestinian varieties differ between j and zh-like sounds; compare ح and خ. Read right to left. Letter dots belong to the letter; vowel marks are added separately.",
+    "letterForms": {
+      "isolated": "ج",
+      "initial": "جـ",
+      "medial": "ـجـ",
+      "final": "ـج"
+    }
+  },
+  {
+    "id": "ar-read-ha-deep",
+    "text": "ح",
+    "kind": "letter",
+    "pronunciation": "ḥāʾ",
+    "meaning": "ḥ: deep, breathy h",
+    "category": "Letters & shapes",
+    "speechText": "حَاء",
+    "audioContext": "Letter name: ḥāʾ (not the sound of a syllable).",
+    "usage": "No dot. This throat sound is different from the ordinary ه h; compare ج and خ. Read right to left. Letter dots belong to the letter; vowel marks are added separately.",
+    "letterForms": {
+      "isolated": "ح",
+      "initial": "حـ",
+      "medial": "ـحـ",
+      "final": "ـح"
+    }
+  },
+  {
+    "id": "ar-read-kha",
+    "text": "خ",
+    "kind": "letter",
+    "pronunciation": "khāʾ",
+    "meaning": "kh, like Scottish loch",
+    "category": "Letters & shapes",
+    "speechText": "خَاء",
+    "audioContext": "Letter name: khāʾ (not the sound of a syllable).",
+    "usage": "One dot above the bowl. Compare ج and ح. Read right to left. Letter dots belong to the letter; vowel marks are added separately.",
+    "letterForms": {
+      "isolated": "خ",
+      "initial": "خـ",
+      "medial": "ـخـ",
+      "final": "ـخ"
+    }
+  },
+  {
+    "id": "ar-read-dal",
+    "text": "د",
+    "kind": "letter",
+    "pronunciation": "dāl",
+    "meaning": "d as in door",
+    "category": "Letters & shapes",
+    "speechText": "دَال",
+    "audioContext": "Letter name: dāl (not the sound of a syllable).",
+    "usage": "Does not join the following letter. It can still attach to a preceding letter. Read right to left. Letter dots belong to the letter; vowel marks are added separately.",
+    "letterForms": {
+      "isolated": "د",
+      "initial": "د",
+      "medial": "ـد",
+      "final": "ـد"
+    }
+  },
+  {
+    "id": "ar-read-dhal",
+    "text": "ذ",
+    "kind": "letter",
+    "pronunciation": "dhāl",
+    "meaning": "th as in this in formal Arabic",
+    "category": "Letters & shapes",
+    "speechText": "ذَال",
+    "audioContext": "Letter name: dhāl (not the sound of a syllable).",
+    "usage": "One dot above. Does not join the following letter. Palestinian readings may use d, z or dh depending on the word and variety. Read right to left. Letter dots belong to the letter; vowel marks are added separately.",
+    "letterForms": {
+      "isolated": "ذ",
+      "initial": "ذ",
+      "medial": "ـذ",
+      "final": "ـذ"
+    }
+  },
+  {
+    "id": "ar-read-ra",
+    "text": "ر",
+    "kind": "letter",
+    "pronunciation": "rāʾ",
+    "meaning": "r: a tap or trill",
+    "category": "Letters & shapes",
+    "speechText": "رَاء",
+    "audioContext": "Letter name: rāʾ (not the sound of a syllable).",
+    "usage": "Does not join the following letter. Compare ز, which has a dot. Read right to left. Letter dots belong to the letter; vowel marks are added separately.",
+    "letterForms": {
+      "isolated": "ر",
+      "initial": "ر",
+      "medial": "ـر",
+      "final": "ـر"
+    }
+  },
+  {
+    "id": "ar-read-zay",
+    "text": "ز",
+    "kind": "letter",
+    "pronunciation": "zāy",
+    "meaning": "z as in zoo",
+    "category": "Letters & shapes",
+    "speechText": "زَاي",
+    "audioContext": "Letter name: zāy (not the sound of a syllable).",
+    "usage": "One dot above. Does not join the following letter; compare ر. Read right to left. Letter dots belong to the letter; vowel marks are added separately.",
+    "letterForms": {
+      "isolated": "ز",
+      "initial": "ز",
+      "medial": "ـز",
+      "final": "ـز"
+    }
+  },
+  {
+    "id": "ar-read-sin",
+    "text": "س",
+    "kind": "letter",
+    "pronunciation": "sīn",
+    "meaning": "s as in see",
+    "category": "Letters & shapes",
+    "speechText": "سِين",
+    "audioContext": "Letter name: sīn (not the sound of a syllable).",
+    "usage": "No dots. Look for the teeth in common print styles; compare ش. Read right to left. Letter dots belong to the letter; vowel marks are added separately.",
+    "letterForms": {
+      "isolated": "س",
+      "initial": "سـ",
+      "medial": "ـسـ",
+      "final": "ـس"
+    }
+  },
+  {
+    "id": "ar-read-sad",
+    "text": "ص",
+    "kind": "letter",
+    "pronunciation": "ṣād",
+    "meaning": "ṣ: emphatic s",
+    "category": "Letters & shapes",
+    "speechText": "صَاد",
+    "audioContext": "Letter name: ṣād (not the sound of a syllable).",
+    "usage": "A heavier, tongue-retracted s. It may affect neighboring vowels. Compare ض. Read right to left. Letter dots belong to the letter; vowel marks are added separately.",
+    "letterForms": {
+      "isolated": "ص",
+      "initial": "صـ",
+      "medial": "ـصـ",
+      "final": "ـص"
+    }
+  },
+  {
+    "id": "ar-read-dad",
+    "text": "ض",
+    "kind": "letter",
+    "pronunciation": "ḍād",
+    "meaning": "ḍ: emphatic d",
+    "category": "Letters & shapes",
+    "speechText": "ضَاد",
+    "audioContext": "Letter name: ḍād (not the sound of a syllable).",
+    "usage": "One dot above the ص-shaped body. Keep it distinct from ordinary د. Read right to left. Letter dots belong to the letter; vowel marks are added separately.",
+    "letterForms": {
+      "isolated": "ض",
+      "initial": "ضـ",
+      "medial": "ـضـ",
+      "final": "ـض"
+    }
+  },
+  {
+    "id": "ar-read-ta-heavy",
+    "text": "ط",
+    "kind": "letter",
+    "pronunciation": "ṭāʾ",
+    "meaning": "ṭ: emphatic t",
+    "category": "Letters & shapes",
+    "speechText": "طَاء",
+    "audioContext": "Letter name: ṭāʾ (not the sound of a syllable).",
+    "usage": "No dot. A heavier, tongue-retracted t; compare ظ. Read right to left. Letter dots belong to the letter; vowel marks are added separately.",
+    "letterForms": {
+      "isolated": "ط",
+      "initial": "طـ",
+      "medial": "ـطـ",
+      "final": "ـط"
+    }
+  },
+  {
+    "id": "ar-read-za-heavy",
+    "text": "ظ",
+    "kind": "letter",
+    "pronunciation": "ẓāʾ",
+    "meaning": "ẓ: emphatic z in many local words",
+    "category": "Letters & shapes",
+    "speechText": "ظَاء",
+    "audioContext": "Letter name: ẓāʾ (not the sound of a syllable).",
+    "usage": "One dot above. Formal Arabic often has an emphatic dh sound; the Palestinian sound depends on the word and variety. Read right to left. Letter dots belong to the letter; vowel marks are added separately.",
+    "letterForms": {
+      "isolated": "ظ",
+      "initial": "ظـ",
+      "medial": "ـظـ",
+      "final": "ـظ"
+    }
+  },
+  {
+    "id": "ar-read-ayn",
+    "text": "ع",
+    "kind": "letter",
+    "pronunciation": "ʿayn",
+    "meaning": "ʿ: voiced throat consonant",
+    "category": "Letters & shapes",
+    "speechText": "عَيْن",
+    "audioContext": "Letter name: ʿayn (not the sound of a syllable).",
+    "usage": "Not an a vowel and not hamza. The connected forms change substantially; use the shapes below. Read right to left. Letter dots belong to the letter; vowel marks are added separately.",
+    "letterForms": {
+      "isolated": "ع",
+      "initial": "عـ",
+      "medial": "ـعـ",
+      "final": "ـع"
+    }
+  },
+  {
+    "id": "ar-read-ghayn",
+    "text": "غ",
+    "kind": "letter",
+    "pronunciation": "ghayn",
+    "meaning": "gh: voiced counterpart of kh",
+    "category": "Letters & shapes",
+    "speechText": "غَيْن",
+    "audioContext": "Letter name: ghayn (not the sound of a syllable).",
+    "usage": "One dot above the ع-shaped body. A voiced sound from the back of the mouth. Read right to left. Letter dots belong to the letter; vowel marks are added separately.",
+    "letterForms": {
+      "isolated": "غ",
+      "initial": "غـ",
+      "medial": "ـغـ",
+      "final": "ـغ"
+    }
+  },
+  {
+    "id": "ar-read-fa",
+    "text": "ف",
+    "kind": "letter",
+    "pronunciation": "fāʾ",
+    "meaning": "f as in food",
+    "category": "Letters & shapes",
+    "speechText": "فَاء",
+    "audioContext": "Letter name: fāʾ (not the sound of a syllable).",
+    "usage": "One dot above. Compare ق, which has two dots in this script. Read right to left. Letter dots belong to the letter; vowel marks are added separately.",
+    "letterForms": {
+      "isolated": "ف",
+      "initial": "فـ",
+      "medial": "ـفـ",
+      "final": "ـف"
+    }
+  },
+  {
+    "id": "ar-read-qaf",
+    "text": "ق",
+    "kind": "letter",
+    "pronunciation": "qāf",
+    "meaning": "q in formal Arabic; often ʾ locally",
+    "category": "Letters & shapes",
+    "speechText": "قَاف",
+    "audioContext": "Letter name: qāf (not the sound of a syllable).",
+    "usage": "Two dots above. This course usually reads ق as the glottal stop ʾ in urban Palestinian speech. Other local varieties use q, g or k; the letter stays ق. Read right to left. Letter dots belong to the letter; vowel marks are added separately.",
+    "letterForms": {
+      "isolated": "ق",
+      "initial": "قـ",
+      "medial": "ـقـ",
+      "final": "ـق"
+    }
+  },
+  {
+    "id": "ar-read-kaf",
+    "text": "ك",
+    "kind": "letter",
+    "pronunciation": "kāf",
+    "meaning": "k as in key",
+    "category": "Letters & shapes",
+    "speechText": "كَاف",
+    "audioContext": "Letter name: kāf (not the sound of a syllable).",
+    "usage": "Its small stroke in the isolated/final shape is part of the letter form. Compare the connected shapes below. Read right to left. Letter dots belong to the letter; vowel marks are added separately.",
+    "letterForms": {
+      "isolated": "ك",
+      "initial": "كـ",
+      "medial": "ـكـ",
+      "final": "ـك"
+    }
+  },
+  {
+    "id": "ar-read-lam",
+    "text": "ل",
+    "kind": "letter",
+    "pronunciation": "lām",
+    "meaning": "l as in light",
+    "category": "Letters & shapes",
+    "speechText": "لَام",
+    "audioContext": "Letter name: lām (not the sound of a syllable).",
+    "usage": "With alif it forms لا; that is a joined pair of letters, not an extra alphabet letter. Read right to left. Letter dots belong to the letter; vowel marks are added separately.",
+    "letterForms": {
+      "isolated": "ل",
+      "initial": "لـ",
+      "medial": "ـلـ",
+      "final": "ـل"
+    }
+  },
+  {
+    "id": "ar-read-hamza",
+    "text": "ء",
+    "kind": "letter",
+    "pronunciation": "hamza",
+    "meaning": "ʾ: glottal stop, as in uh-oh",
+    "category": "Extra letter forms",
+    "speechText": "هَمْزَة",
+    "audioContext": "Letter name: hamza (not the sound of a syllable).",
+    "usage": "Hamza is a consonant and does not join on its own. It can also sit on ا و ي as أ إ ؤ ئ. It is not ع. Read right to left. Letter dots belong to the letter; vowel marks are added separately.",
+    "letterForms": {
+      "isolated": "ء",
+      "initial": "ء",
+      "medial": "ء",
+      "final": "ء"
+    }
+  },
+  {
+    "id": "ar-read-alif-maqsura",
+    "text": "ى",
+    "kind": "letter",
+    "pronunciation": "alif maqṣūra",
+    "meaning": "word-final ā, without y dots",
+    "category": "Extra letter forms",
+    "speechText": "أَلِف مَقْصُورَة",
+    "audioContext": "Letter name: alif maqṣūra (not the sound of a syllable).",
+    "usage": "This final form is usually an ā vowel, not a y consonant. Compare ي, which has two dots. Read right to left. Letter dots belong to the letter; vowel marks are added separately.",
+    "letterForms": {
+      "isolated": "ى",
+      "initial": "—",
+      "medial": "—",
+      "final": "ـى"
+    }
+  },
+  {
+    "id": "ar-read-hamza-above",
+    "text": "أ",
+    "kind": "letter",
+    "pronunciation": "alif with hamza above",
+    "meaning": "ʾ plus the marked vowel",
+    "category": "Extra letter forms",
+    "speechText": "أَلِف هَمْزَة",
+    "audioContext": "Letter name: alif with hamza above (not the sound of a syllable).",
+    "usage": "The small ء is hamza. This shape can carry a fatḥa or ḍamma, for example أَ or أُ. A glottal stop may be omitted from the beginning of the learner’s Latin reading. Read right to left. Letter dots belong to the letter; vowel marks are added separately.",
+    "letterForms": {
+      "isolated": "أ",
+      "initial": "أ",
+      "medial": "ـأ",
+      "final": "ـأ"
+    }
+  },
+  {
+    "id": "ar-read-hamza-below",
+    "text": "إ",
+    "kind": "letter",
+    "pronunciation": "alif with hamza below",
+    "meaning": "ʾi at the start of many words",
+    "category": "Extra letter forms",
+    "speechText": "أَلِف هَمْزَة",
+    "audioContext": "Letter name: alif with hamza below (not the sound of a syllable).",
+    "usage": "The hamza is below the alif. The kasra gives the short i, as in إِنْتَ (inta). Read right to left. Letter dots belong to the letter; vowel marks are added separately.",
+    "letterForms": {
+      "isolated": "إ",
+      "initial": "إ",
+      "medial": "ـإ",
+      "final": "ـإ"
+    }
+  },
+  {
+    "id": "ar-read-alif-madda",
+    "text": "آ",
+    "kind": "letter",
+    "pronunciation": "alif madda",
+    "meaning": "ʾā: hamza plus long ā",
+    "category": "Extra letter forms",
+    "speechText": "أَلِف مَدَّة",
+    "audioContext": "Letter name: alif madda (not the sound of a syllable).",
+    "usage": "The wave above alif indicates hamza plus a long ā. Compare آسِف (āsef, sorry). Read right to left. Letter dots belong to the letter; vowel marks are added separately.",
+    "letterForms": {
+      "isolated": "آ",
+      "initial": "آ",
+      "medial": "ـآ",
+      "final": "ـآ"
+    }
+  },
+  {
+    "id": "ar-read-fathatan",
+    "text": "◌ً",
+    "kind": "mark",
+    "pronunciation": "fatḥatān / tanwīn -an",
+    "meaning": "an ending in a few common expressions",
+    "category": "Vowel marks · ḥarakāt",
+    "speechText": "فَتْحَتَان",
+    "audioContext": "Mark name: fatḥatān / tanwīn -an. The dotted circle is just a placeholder.",
+    "usage": "Two strokes above: شُكْرًا (shukran, thank you). Useful in set expressions. This Palestinian course does not add formal Arabic grammatical case endings to everyday words. The dotted circle shows where the mark sits; it is not an Arabic letter."
+  },
+  {
+    "id": "ar-read-syllable-ba",
+    "text": "بَ",
+    "kind": "syllable",
+    "pronunciation": "ba",
+    "meaning": "b + short a (practice syllable)",
+    "category": "Read simple syllables",
+    "usage": "This is a decoding exercise, not a vocabulary word. Start with the consonant, then read the vowel. A vowel letter extends the sound; it is not another short vowel.",
+    "requires": [
+      "ar-read-ba",
+      "ar-read-fatha"
+    ]
+  },
+  {
+    "id": "ar-read-syllable-bi",
+    "text": "بِ",
+    "kind": "syllable",
+    "pronunciation": "bi",
+    "meaning": "b + short i (practice syllable)",
+    "category": "Read simple syllables",
+    "usage": "This is a decoding exercise, not a vocabulary word. Start with the consonant, then read the vowel. A vowel letter extends the sound; it is not another short vowel.",
+    "requires": [
+      "ar-read-ba",
+      "ar-read-kasra"
+    ]
+  },
+  {
+    "id": "ar-read-syllable-bu",
+    "text": "بُ",
+    "kind": "syllable",
+    "pronunciation": "bu",
+    "meaning": "b + short u (practice syllable)",
+    "category": "Read simple syllables",
+    "usage": "This is a decoding exercise, not a vocabulary word. Start with the consonant, then read the vowel. A vowel letter extends the sound; it is not another short vowel.",
+    "requires": [
+      "ar-read-ba",
+      "ar-read-damma"
+    ]
+  },
+  {
+    "id": "ar-read-syllable-baa",
+    "text": "بَا",
+    "kind": "syllable",
+    "pronunciation": "bā",
+    "meaning": "b + long ā (practice syllable)",
+    "category": "Read simple syllables",
+    "usage": "This is a decoding exercise, not a vocabulary word. Start with the consonant, then read the vowel. A vowel letter extends the sound; it is not another short vowel.",
+    "requires": [
+      "ar-read-ba",
+      "ar-read-fatha",
+      "ar-read-alif"
+    ]
+  },
+  {
+    "id": "ar-read-syllable-bii",
+    "text": "بِي",
+    "kind": "syllable",
+    "pronunciation": "bī",
+    "meaning": "b + long ī (practice syllable)",
+    "category": "Read simple syllables",
+    "usage": "This is a decoding exercise, not a vocabulary word. Start with the consonant, then read the vowel. A vowel letter extends the sound; it is not another short vowel.",
+    "requires": [
+      "ar-read-ba",
+      "ar-read-kasra",
+      "ar-read-ya"
+    ]
+  },
+  {
+    "id": "ar-read-syllable-buu",
+    "text": "بُو",
+    "kind": "syllable",
+    "pronunciation": "bū",
+    "meaning": "b + long ū (practice syllable)",
+    "category": "Read simple syllables",
+    "usage": "This is a decoding exercise, not a vocabulary word. Start with the consonant, then read the vowel. A vowel letter extends the sound; it is not another short vowel.",
+    "requires": [
+      "ar-read-ba",
+      "ar-read-damma",
+      "ar-read-waw"
+    ]
+  },
+  {
+    "id": "ar-read-word-1",
+    "text": "بَاب",
+    "kind": "word",
+    "pronunciation": "bāb",
+    "meaning": "door",
+    "category": "Read familiar words",
+    "usage": "The same word is in the Palestinian vocabulary course. Recognize the joined letters and vowel marks, then recall the whole reading and meaning. The two courses keep separate progress.",
+    "requires": [
+      "ar-read-ba",
+      "ar-read-fatha",
+      "ar-read-alif"
+    ]
+  },
+  {
+    "id": "ar-read-word-2",
+    "text": "بَيْت",
+    "kind": "word",
+    "pronunciation": "bēt",
+    "meaning": "house / home",
+    "category": "Read familiar words",
+    "usage": "The same word is in the Palestinian vocabulary course. Recognize the joined letters and vowel marks, then recall the whole reading and meaning. The two courses keep separate progress. Here ـَيْ and ـَو can be ē and ō in local speech; they are not always ay and aw.",
+    "requires": [
+      "ar-read-ba",
+      "ar-read-fatha",
+      "ar-read-ya",
+      "ar-read-sukun",
+      "ar-read-ta"
+    ]
+  },
+  {
+    "id": "ar-read-word-3",
+    "text": "بِنْت",
+    "kind": "word",
+    "pronunciation": "bint",
+    "meaning": "daughter / girl",
+    "category": "Read familiar words",
+    "usage": "The same word is in the Palestinian vocabulary course. Recognize the joined letters and vowel marks, then recall the whole reading and meaning. The two courses keep separate progress.",
+    "requires": [
+      "ar-read-ba",
+      "ar-read-kasra",
+      "ar-read-nun",
+      "ar-read-sukun",
+      "ar-read-ta"
+    ]
+  },
+  {
+    "id": "ar-read-word-4",
+    "text": "مَيّ",
+    "kind": "word",
+    "pronunciation": "mayy",
+    "meaning": "water",
+    "category": "Read familiar words",
+    "usage": "The same word is in the Palestinian vocabulary course. Recognize the joined letters and vowel marks, then recall the whole reading and meaning. The two courses keep separate progress.",
+    "requires": [
+      "ar-read-mim",
+      "ar-read-fatha",
+      "ar-read-ya",
+      "ar-read-shadda"
+    ]
+  },
+  {
+    "id": "ar-read-word-5",
+    "text": "مِيِّة",
+    "kind": "word",
+    "pronunciation": "miyye",
+    "meaning": "one hundred",
+    "category": "Read familiar words",
+    "usage": "The same word is in the Palestinian vocabulary course. Recognize the joined letters and vowel marks, then recall the whole reading and meaning. The two courses keep separate progress. Final ة is heard as e here.",
+    "requires": [
+      "ar-read-mim",
+      "ar-read-kasra",
+      "ar-read-ya",
+      "ar-read-shadda",
+      "ar-read-ta-marbuta"
+    ]
+  },
+  {
+    "id": "ar-read-word-6",
+    "text": "شَاي",
+    "kind": "word",
+    "pronunciation": "shāy",
+    "meaning": "tea",
+    "category": "Read familiar words",
+    "usage": "The same word is in the Palestinian vocabulary course. Recognize the joined letters and vowel marks, then recall the whole reading and meaning. The two courses keep separate progress.",
+    "requires": [
+      "ar-read-shin",
+      "ar-read-fatha",
+      "ar-read-alif",
+      "ar-read-ya"
+    ]
+  },
+  {
+    "id": "ar-read-word-7",
+    "text": "شُو",
+    "kind": "word",
+    "pronunciation": "shū",
+    "meaning": "What?",
+    "category": "Read familiar words",
+    "usage": "The same word is in the Palestinian vocabulary course. Recognize the joined letters and vowel marks, then recall the whole reading and meaning. The two courses keep separate progress.",
+    "requires": [
+      "ar-read-shin",
+      "ar-read-damma",
+      "ar-read-waw"
+    ]
+  },
+  {
+    "id": "ar-read-word-8",
+    "text": "سُوق",
+    "kind": "word",
+    "pronunciation": "sūʾ",
+    "meaning": "market",
+    "category": "Read familiar words",
+    "usage": "The same word is in the Palestinian vocabulary course. Recognize the joined letters and vowel marks, then recall the whole reading and meaning. The two courses keep separate progress. In this urban reading ق is ʾ.",
+    "requires": [
+      "ar-read-sin",
+      "ar-read-damma",
+      "ar-read-waw",
+      "ar-read-qaf"
+    ]
+  },
+  {
+    "id": "ar-read-word-9",
+    "text": "جَاج",
+    "kind": "word",
+    "pronunciation": "jāj",
+    "meaning": "chicken (food / animal)",
+    "category": "Read familiar words",
+    "usage": "The same word is in the Palestinian vocabulary course. Recognize the joined letters and vowel marks, then recall the whole reading and meaning. The two courses keep separate progress.",
+    "requires": [
+      "ar-read-jim",
+      "ar-read-fatha",
+      "ar-read-alif"
+    ]
+  },
+  {
+    "id": "ar-read-word-10",
+    "text": "أَنَا",
+    "kind": "word",
+    "pronunciation": "ana",
+    "meaning": "I / me",
+    "category": "Read familiar words",
+    "usage": "The same word is in the Palestinian vocabulary course. Recognize the joined letters and vowel marks, then recall the whole reading and meaning. The two courses keep separate progress.",
+    "requires": [
+      "ar-read-hamza-above",
+      "ar-read-fatha",
+      "ar-read-nun",
+      "ar-read-alif"
+    ]
+  },
+  {
+    "id": "ar-read-word-11",
+    "text": "هَوْن",
+    "kind": "word",
+    "pronunciation": "hōn",
+    "meaning": "here",
+    "category": "Read familiar words",
+    "usage": "The same word is in the Palestinian vocabulary course. Recognize the joined letters and vowel marks, then recall the whole reading and meaning. The two courses keep separate progress. Here ـَيْ and ـَو can be ē and ō in local speech; they are not always ay and aw.",
+    "requires": [
+      "ar-read-ha",
+      "ar-read-fatha",
+      "ar-read-waw",
+      "ar-read-sukun",
+      "ar-read-nun"
+    ]
+  },
+  {
+    "id": "ar-read-word-12",
+    "text": "مِلْح",
+    "kind": "word",
+    "pronunciation": "milḥ",
+    "meaning": "salt",
+    "category": "Read familiar words",
+    "usage": "The same word is in the Palestinian vocabulary course. Recognize the joined letters and vowel marks, then recall the whole reading and meaning. The two courses keep separate progress.",
+    "requires": [
+      "ar-read-mim",
+      "ar-read-kasra",
+      "ar-read-lam",
+      "ar-read-sukun",
+      "ar-read-ha-deep"
+    ]
+  },
+  {
+    "id": "ar-read-word-13",
+    "text": "قَهْوِة",
+    "kind": "word",
+    "pronunciation": "ʾahwe",
+    "meaning": "coffee",
+    "category": "Read familiar words",
+    "usage": "The same word is in the Palestinian vocabulary course. Recognize the joined letters and vowel marks, then recall the whole reading and meaning. The two courses keep separate progress. Final ة is heard as e here. In this urban reading ق is ʾ.",
+    "requires": [
+      "ar-read-qaf",
+      "ar-read-fatha",
+      "ar-read-ha",
+      "ar-read-sukun",
+      "ar-read-waw",
+      "ar-read-kasra",
+      "ar-read-ta-marbuta"
+    ]
+  },
+  {
+    "id": "ar-read-word-14",
+    "text": "كَاسِة",
+    "kind": "word",
+    "pronunciation": "kāse",
+    "meaning": "glass / cup",
+    "category": "Read familiar words",
+    "usage": "The same word is in the Palestinian vocabulary course. Recognize the joined letters and vowel marks, then recall the whole reading and meaning. The two courses keep separate progress. Final ة is heard as e here.",
+    "requires": [
+      "ar-read-kaf",
+      "ar-read-fatha",
+      "ar-read-alif",
+      "ar-read-sin",
+      "ar-read-kasra",
+      "ar-read-ta-marbuta"
+    ]
+  },
+  {
+    "id": "ar-read-word-15",
+    "text": "سُكَّر",
+    "kind": "word",
+    "pronunciation": "sukkar",
+    "meaning": "sugar",
+    "category": "Read familiar words",
+    "usage": "The same word is in the Palestinian vocabulary course. Recognize the joined letters and vowel marks, then recall the whole reading and meaning. The two courses keep separate progress.",
+    "requires": [
+      "ar-read-sin",
+      "ar-read-damma",
+      "ar-read-kaf",
+      "ar-read-shadda",
+      "ar-read-fatha",
+      "ar-read-ra"
+    ]
+  },
+  {
+    "id": "ar-read-word-16",
+    "text": "مَرْحَبَا",
+    "kind": "word",
+    "pronunciation": "marḥaba",
+    "meaning": "hello",
+    "category": "Read familiar words",
+    "usage": "The same word is in the Palestinian vocabulary course. Recognize the joined letters and vowel marks, then recall the whole reading and meaning. The two courses keep separate progress.",
+    "requires": [
+      "ar-read-mim",
+      "ar-read-fatha",
+      "ar-read-ra",
+      "ar-read-sukun",
+      "ar-read-ha-deep",
+      "ar-read-ba",
+      "ar-read-alif"
+    ]
+  },
+  {
+    "id": "ar-read-word-17",
+    "text": "حَلِيب",
+    "kind": "word",
+    "pronunciation": "ḥalīb",
+    "meaning": "milk",
+    "category": "Read familiar words",
+    "usage": "The same word is in the Palestinian vocabulary course. Recognize the joined letters and vowel marks, then recall the whole reading and meaning. The two courses keep separate progress.",
+    "requires": [
+      "ar-read-ha-deep",
+      "ar-read-fatha",
+      "ar-read-lam",
+      "ar-read-kasra",
+      "ar-read-ya",
+      "ar-read-ba"
+    ]
+  },
+  {
+    "id": "ar-read-word-18",
+    "text": "حَمَّام",
+    "kind": "word",
+    "pronunciation": "ḥammām",
+    "meaning": "bathroom / toilet",
+    "category": "Read familiar words",
+    "usage": "The same word is in the Palestinian vocabulary course. Recognize the joined letters and vowel marks, then recall the whole reading and meaning. The two courses keep separate progress.",
+    "requires": [
+      "ar-read-ha-deep",
+      "ar-read-fatha",
+      "ar-read-mim",
+      "ar-read-shadda",
+      "ar-read-alif"
+    ]
+  }
+]

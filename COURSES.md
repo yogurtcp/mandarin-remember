@@ -54,6 +54,16 @@ New decks use language-neutral fields:
 
 `speechText` optionally specifies the exact target-language text sent to device and online speech. It does not replace displayed text, copy/translation text, sentence components, or the card ID. Use native-script readings rather than Latin transliteration: for example, `"text":"私","pronunciation":"watashi","speechText":"わたし"`. Japanese cards and examples containing kanji must provide a kana speech reading; the build rejects unresolved kanji in the speech input. Course audio-test text should likewise use the intended kana reading. The audio-error fallback link uses the speech reading so its speaker can reproduce the intended pronunciation.
 
+For an Arabic recognition course, use `studyMode: "reading"` and
+`readingScript: "arabic"`. Base card kinds are `letter` and `mark`; practice kinds
+are `syllable` and `word`. Letter cards have four `letterForms` keys: `isolated`,
+`initial`, `medial`, and `final`. Use ordinary letters and joining strokes, not
+presentation-form codepoints. A mark is displayed on a dotted-circle placeholder,
+for example `◌َ`. Practice `requires` must cover every letter and vowel mark in
+its text, referencing only base letter/mark cards. The build rejects incomplete
+and circular dependencies. The scheduler unlocks practice after successful
+recognition of all prerequisites, using a separate permanent course identity.
+
 ### Template forms in sentences
 
 For a sentence that realizes a learned word in another form, put the allowed surface form on the **word** card. The sentence system displays the base word, explains the form, and credits the base word's schedule; it does not create a separate card for the conjugation.

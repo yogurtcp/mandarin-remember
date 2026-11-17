@@ -89,7 +89,8 @@ def load_courses(root):
                 card['featured'] = featured_priority.get(raw['id'], len(featured_priority))
             if course.get('studyMode') == 'reading':
                 card['readingOnly'] = True
-                assert raw.get('kind') in ('character', 'compound'), 'Invalid reading card kind'
+                kinds = ('letter', 'mark', 'syllable', 'word') if course.get('readingScript') == 'arabic' else ('character', 'compound')
+                assert raw.get('kind') in kinds, 'Invalid reading card kind'
                 card['kind'] = raw['kind']
                 requirements = raw.get('requires', [])
                 assert isinstance(requirements, list) and all(isinstance(item, str) for item in requirements), 'Invalid character prerequisites'
@@ -98,6 +99,13 @@ def load_courses(root):
                 if raw.get('audioContext'):
                     assert isinstance(raw['audioContext'], str), 'Invalid audio context'
                     card['audioContext'] = raw['audioContext']
+                if 'letterForms' in raw:
+                    shapes = raw['letterForms']
+                    assert course.get('readingScript') == 'arabic' and card['kind'] == 'letter', 'Letter forms require an Arabic letter'
+                    assert isinstance(shapes, dict) and set(shapes) == {'isolated', 'initial', 'medial', 'final'}, 'Incomplete letter forms'
+                    assert all(isinstance(shape, str) and 1 <= len(shape) <= 5 for shape in shapes.values()), 'Invalid letter shape'
+                    assert shapes['isolated'] == card['text'], 'Letter shape must match the letter'
+                    card['letterForms'] = shapes
             if raw.get('usage'):
                 assert isinstance(raw['usage'], str), 'Invalid usage note'
                 card['usage'] = raw['usage']
@@ -109,7 +117,17 @@ def load_courses(root):
         if course.get('studyMode') == 'reading':
             by_id = {card['id']: card for card in cards}
             for card in cards:
-                if card['kind'] == 'character':
+                if course.get('readingScript') == 'arabic':
+                    if card['kind'] in ('letter', 'mark'):
+                        valid = (len(card['text']) == 1 and '\u0621' <= card['text'] <= '\u064a' and card.get('letterForms')) if card['kind'] == 'letter' else re.fullmatch('[◌][\u064b-\u0652]', card['text'])
+                        assert valid and not card.get('requires'), 'Arabic base letters and marks must be independent'
+                    else:
+                        requirements = card.get('requires', [])
+                        assert requirements and len(requirements) == len(set(requirements)), 'Missing/duplicate reading prerequisites'
+                        assert all(item in by_id and by_id[item]['kind'] in ('letter', 'mark') for item in requirements), 'Arabic reading must reference base letters and marks'
+                        symbols = {by_id[item]['text'].removeprefix('◌') for item in requirements}
+                        assert symbols == set(card['text']), 'Arabic reading must cover every letter and mark'
+                elif card['kind'] == 'character':
                     assert len(card['text']) == 1 and not card.get('requires'), 'Base characters must be independent'
                 else:
                     requirements = card.get('requires', [])
@@ -121,6 +139,7 @@ def load_courses(root):
     assert registry['defaultCourse'] in ids, 'Unknown default course'
     for course in courses:
         assert course.get('studyMode') in (None, 'reading'), 'Unknown study mode'
+        assert course.get('readingScript') in (None, 'arabic') and (not course.get('readingScript') or course.get('studyMode') == 'reading'), 'Invalid reading script'
         assert not course.get('characterCourse') or course['characterCourse'] in ids, 'Unknown linked reading course'
     return dict(defaultCourse=registry['defaultCourse'], courses=courses)
 

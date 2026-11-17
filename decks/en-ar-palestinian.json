@@ -1,7 +1,7 @@
 [
   {
     "id": "ar-80eff1a750bb5400",
-    "text": "مرحبا",
+    "text": "مَرْحَبَا",
     "pronunciation": "marḥaba",
     "meaning": "hello",
     "category": "Greetings & courtesy",
@@ -9,14 +9,14 @@
   },
   {
     "id": "ar-aad9828e7603e5a2",
-    "text": "أهلا وسهلا",
+    "text": "أَهْلًا وَسَهْلًا",
     "pronunciation": "ahlan wa sahlan",
     "meaning": "welcome",
     "category": "Greetings & courtesy"
   },
   {
     "id": "ar-b401a61a42e013c6",
-    "text": "صباح الخير",
+    "text": "صَبَاح اِلْخَيْر",
     "pronunciation": "ṣabāḥ il-khēr",
     "meaning": "good morning",
     "category": "Greetings & courtesy",
@@ -24,7 +24,7 @@
   },
   {
     "id": "ar-1ebe0087ffbb1114",
-    "text": "صباح النور",
+    "text": "صَبَاح اِلنُّور",
     "pronunciation": "ṣabāḥ in-nūr",
     "meaning": "good morning (reply)",
     "category": "Greetings & courtesy",
@@ -32,7 +32,7 @@
   },
   {
     "id": "ar-83f14fd73aad3b63",
-    "text": "مسا الخير",
+    "text": "مَسَا اِلْخَيْر",
     "pronunciation": "masa l-khēr",
     "meaning": "good evening",
     "category": "Greetings & courtesy",
@@ -40,7 +40,7 @@
   },
   {
     "id": "ar-8f839a293447bf6b",
-    "text": "مسا النور",
+    "text": "مَسَا اِلنُّور",
     "pronunciation": "masa n-nūr",
     "meaning": "good evening (reply)",
     "category": "Greetings & courtesy",
@@ -48,19 +48,19 @@
   },
   {
     "id": "ar-4c879a937cb1b582",
-    "text": "كيفَك؟",
+    "text": "كِيفَك؟",
     "pronunciation": "kīfak?",
     "meaning": "How are you? (to a man)",
     "category": "Greetings & courtesy",
     "usage": "The ending follows the person you address: -ak for a man, -ik for a woman. It does not depend on your own gender.",
     "examples": [
       {
-        "text": "كيفَك؟",
+        "text": "كِيفَك؟",
         "pronunciation": "kīfak?",
         "meaning": "How are you? (to a man)"
       },
       {
-        "text": "كيفِك؟",
+        "text": "كِيفِك؟",
         "pronunciation": "kīfik?",
         "meaning": "How are you? (to a woman)"
       }
@@ -68,19 +68,19 @@
   },
   {
     "id": "ar-24937e609556fbb0",
-    "text": "كيفِك؟",
+    "text": "كِيفِك؟",
     "pronunciation": "kīfik?",
     "meaning": "How are you? (to a woman)",
     "category": "Greetings & courtesy",
     "usage": "The ending follows the person you address: -ak for a man, -ik for a woman. It does not depend on your own gender.",
     "examples": [
       {
-        "text": "كيفَك؟",
+        "text": "كِيفَك؟",
         "pronunciation": "kīfak?",
         "meaning": "How are you? (to a man)"
       },
       {
-        "text": "كيفِك؟",
+        "text": "كِيفِك؟",
         "pronunciation": "kīfik?",
         "meaning": "How are you? (to a woman)"
       }
@@ -88,14 +88,14 @@
   },
   {
     "id": "ar-65d25b44502393bc",
-    "text": "تمام",
+    "text": "تَمَام",
     "pronunciation": "tamām",
     "meaning": "fine / all good",
     "category": "Greetings & courtesy"
   },
   {
     "id": "ar-64d2fd2e2ac9ee8c",
-    "text": "الحمد لله",
+    "text": "اِلْحَمْدُ لِلّٰه",
     "pronunciation": "il-ḥamdu lillāh",
     "meaning": "thank God / thankfully",
     "category": "Greetings & courtesy",
@@ -103,21 +103,21 @@
   },
   {
     "id": "ar-45b1fc73e6a13cbe",
-    "text": "شكرا",
+    "text": "شُكْرًا",
     "pronunciation": "shukran",
     "meaning": "thank you",
     "category": "Greetings & courtesy"
   },
   {
     "id": "ar-2f6790951b482b7f",
-    "text": "شكرا كتير",
+    "text": "شُكْرًا كْتِير",
     "pronunciation": "shukran ktīr",
     "meaning": "thank you very much",
     "category": "Greetings & courtesy"
   },
   {
     "id": "ar-3380f3aec5fabde1",
-    "text": "عفوا",
+    "text": "عَفْوًا",
     "pronunciation": "ʿafwan",
     "meaning": "you're welcome / excuse me",
     "category": "Greetings & courtesy",
@@ -125,14 +125,14 @@
   },
   {
     "id": "ar-e0a4b64166d1ee52",
-    "text": "لو سمحت",
+    "text": "لَوْ سَمَحْت",
     "pronunciation": "law samaḥt",
     "meaning": "please / excuse me (to a man)",
     "category": "Greetings & courtesy",
     "usage": "Use before a request or to get someone’s attention. Samaḥt addresses a man; samaḥti addresses a woman.",
     "examples": [
       {
-        "text": "الحساب لو سمحت",
+        "text": "اِلْحْسَاب لَوْ سَمَحْت",
         "pronunciation": "il-ḥsāb law samaḥt",
         "meaning": "The bill, please. (to a man)"
       }
@@ -140,14 +140,14 @@
   },
   {
     "id": "ar-e6af2b01adb1adf8",
-    "text": "لو سمحتي",
+    "text": "لَوْ سَمَحْتِي",
     "pronunciation": "law samaḥti",
     "meaning": "please / excuse me (to a woman)",
     "category": "Greetings & courtesy",
     "usage": "Use before a request or to get someone’s attention. Samaḥt addresses a man; samaḥti addresses a woman.",
     "examples": [
       {
-        "text": "الحساب لو سمحت",
+        "text": "اِلْحْسَاب لَوْ سَمَحْت",
         "pronunciation": "il-ḥsāb law samaḥt",
         "meaning": "The bill, please. (to a man)"
       }
@@ -155,7 +155,7 @@
   },
   {
     "id": "ar-19ce59eeb0188ac4",
-    "text": "آسف",
+    "text": "آسِف",
     "pronunciation": "āsef",
     "meaning": "sorry (male speaker)",
     "category": "Greetings & courtesy",
@@ -163,7 +163,7 @@
   },
   {
     "id": "ar-43ef7a75519389ec",
-    "text": "آسفة",
+    "text": "آسْفِة",
     "pronunciation": "āsfe",
     "meaning": "sorry (female speaker)",
     "category": "Greetings & courtesy",
@@ -171,126 +171,126 @@
   },
   {
     "id": "ar-95ebffa890fc8cd4",
-    "text": "ولا يهمّك",
+    "text": "وَلَا يْهِمَّك",
     "pronunciation": "wala yhimmak",
     "meaning": "don't worry about it (to a man)",
     "category": "Greetings & courtesy"
   },
   {
     "id": "ar-2f525c79a122d756",
-    "text": "مع السلامة",
+    "text": "مَع اِلسَّلَامِة",
     "pronunciation": "maʿ is-salāme",
     "meaning": "goodbye",
     "category": "Greetings & courtesy"
   },
   {
     "id": "ar-bab8a674b9c56a96",
-    "text": "بشوفك بكرا",
+    "text": "بَشُوفَك بُكْرَا",
     "pronunciation": "bashūfak bukra",
     "meaning": "see you tomorrow (to a man)",
     "category": "Greetings & courtesy"
   },
   {
     "id": "ar-f648c3a0fad7c0f0",
-    "text": "أنا",
+    "text": "أَنَا",
     "pronunciation": "ana",
     "meaning": "I / me",
     "category": "People & introductions"
   },
   {
     "id": "ar-5cb5725a700b2377",
-    "text": "إنتَ",
+    "text": "إِنْتَ",
     "pronunciation": "inta",
     "meaning": "you (one man)",
     "category": "People & introductions"
   },
   {
     "id": "ar-e8c5937c91437fc8",
-    "text": "إنتِ",
+    "text": "إِنْتِ",
     "pronunciation": "inti",
     "meaning": "you (one woman)",
     "category": "People & introductions"
   },
   {
     "id": "ar-82376ab5417bcfa0",
-    "text": "هو",
+    "text": "هُوَّ",
     "pronunciation": "huwwe",
     "meaning": "he / him",
     "category": "People & introductions"
   },
   {
     "id": "ar-9fc06f72c26a660e",
-    "text": "هي",
+    "text": "هِيَّ",
     "pronunciation": "hiyye",
     "meaning": "she / her",
     "category": "People & introductions"
   },
   {
     "id": "ar-7206a05923e37c32",
-    "text": "إحنا",
+    "text": "إِحْنَا",
     "pronunciation": "iḥna",
     "meaning": "we / us",
     "category": "People & introductions"
   },
   {
     "id": "ar-a293094f50094029",
-    "text": "إنتو",
+    "text": "إِنْتُو",
     "pronunciation": "intu",
     "meaning": "you (plural)",
     "category": "People & introductions"
   },
   {
     "id": "ar-a6e92c178fc76ca9",
-    "text": "همّه",
+    "text": "هُمِّه",
     "pronunciation": "humme",
     "meaning": "they / them",
     "category": "People & introductions"
   },
   {
     "id": "ar-8e3fb43b4c7a31b1",
-    "text": "شو اسمَك؟",
+    "text": "شُو اِسْمَك؟",
     "pronunciation": "shū ismak?",
     "meaning": "What's your name? (to a man)",
     "category": "People & introductions"
   },
   {
     "id": "ar-0d5ab466b8f5ff86",
-    "text": "شو اسمِك؟",
+    "text": "شُو اِسْمِك؟",
     "pronunciation": "shū ismik?",
     "meaning": "What's your name? (to a woman)",
     "category": "People & introductions"
   },
   {
     "id": "ar-6859d1c2eb23b730",
-    "text": "اسمي أليكس",
+    "text": "اِسْمِي أَلِيكْس",
     "pronunciation": "ismi aliks",
     "meaning": "My name is Alex.",
     "category": "People & introductions"
   },
   {
     "id": "ar-8e874a68fe775570",
-    "text": "من وين إنتَ؟",
+    "text": "مِن وَيْن إِنْتَ؟",
     "pronunciation": "min wēn inta?",
     "meaning": "Where are you from? (to a man)",
     "category": "People & introductions"
   },
   {
     "id": "ar-c003814ff15a5d18",
-    "text": "من وين إنتِ؟",
+    "text": "مِن وَيْن إِنْتِ؟",
     "pronunciation": "min wēn inti?",
     "meaning": "Where are you from? (to a woman)",
     "category": "People & introductions"
   },
   {
     "id": "ar-0446aea26665b237",
-    "text": "أنا من هون",
+    "text": "أَنَا مِن هَوْن",
     "pronunciation": "ana min hōn",
     "meaning": "I'm from here.",
     "category": "People & introductions"
   },
   {
     "id": "ar-0b4c8bc9a344da6e",
-    "text": "أنا ساكن هون",
+    "text": "أَنَا سَاكِن هَوْن",
     "pronunciation": "ana sāken hōn",
     "meaning": "I live here. (male speaker)",
     "category": "People & introductions",
@@ -298,7 +298,7 @@
   },
   {
     "id": "ar-af78ae6c8d5fee85",
-    "text": "أنا ساكنة هون",
+    "text": "أَنَا سَاكْنِة هَوْن",
     "pronunciation": "ana sākne hōn",
     "meaning": "I live here. (female speaker)",
     "category": "People & introductions",
@@ -306,14 +306,14 @@
   },
   {
     "id": "ar-8c883d85ff9d8269",
-    "text": "تشرفنا",
+    "text": "تْشَرَّفْنَا",
     "pronunciation": "tsharrafna",
     "meaning": "nice to meet you",
     "category": "People & introductions"
   },
   {
     "id": "ar-db88c4377ebef829",
-    "text": "صاحبي",
+    "text": "صَاحْبِي",
     "pronunciation": "ṣāḥbi",
     "meaning": "my friend (male)",
     "category": "People & introductions",
@@ -321,7 +321,7 @@
   },
   {
     "id": "ar-f7ef6c289c31cc79",
-    "text": "صاحبتي",
+    "text": "صَاحِبْتِي",
     "pronunciation": "ṣāḥibti",
     "meaning": "my friend (female)",
     "category": "People & introductions",
@@ -329,63 +329,63 @@
   },
   {
     "id": "ar-d5c98a706f0d2a32",
-    "text": "جار",
+    "text": "جَار",
     "pronunciation": "jār",
     "meaning": "neighbor (male)",
     "category": "People & introductions"
   },
   {
     "id": "ar-874867474610aa32",
-    "text": "جارة",
+    "text": "جَارَة",
     "pronunciation": "jāra",
     "meaning": "neighbor (female)",
     "category": "People & introductions"
   },
   {
     "id": "ar-97d33d7ff3697bf5",
-    "text": "شو؟",
+    "text": "شُو؟",
     "pronunciation": "shū?",
     "meaning": "What?",
     "category": "Questions & understanding"
   },
   {
     "id": "ar-b73a7e6ba2ab2193",
-    "text": "مين؟",
+    "text": "مِين؟",
     "pronunciation": "mīn?",
     "meaning": "Who?",
     "category": "Questions & understanding"
   },
   {
     "id": "ar-0fdb0fbe10ef6aab",
-    "text": "وين؟",
+    "text": "وَيْن؟",
     "pronunciation": "wēn?",
     "meaning": "Where?",
     "category": "Questions & understanding"
   },
   {
     "id": "ar-929f5b21e1634a99",
-    "text": "إيمتى؟",
+    "text": "إِيمْتَى؟",
     "pronunciation": "ēmta?",
     "meaning": "When?",
     "category": "Questions & understanding"
   },
   {
     "id": "ar-201363a67739e1d2",
-    "text": "ليش؟",
+    "text": "لَيْش؟",
     "pronunciation": "lēsh?",
     "meaning": "Why?",
     "category": "Questions & understanding"
   },
   {
     "id": "ar-810cda7f63829eb6",
-    "text": "كيف؟",
+    "text": "كِيف؟",
     "pronunciation": "kīf?",
     "meaning": "How?",
     "category": "Questions & understanding"
   },
   {
     "id": "ar-878d57c8add890cd",
-    "text": "قدّيش؟",
+    "text": "قَدَّيْش؟",
     "pronunciation": "ʾaddēsh?",
     "meaning": "How much? / How many?",
     "category": "Questions & understanding",
@@ -393,14 +393,14 @@
   },
   {
     "id": "ar-c1848be8f744b69a",
-    "text": "أي واحد؟",
+    "text": "أَيّ وَاحَد؟",
     "pronunciation": "ayy wāḥad?",
     "meaning": "Which one? (masculine)",
     "category": "Questions & understanding"
   },
   {
     "id": "ar-cdac85445cb9c2f7",
-    "text": "شو يعني؟",
+    "text": "شُو يَعْنِي؟",
     "pronunciation": "shū yaʿni?",
     "meaning": "What does it mean?",
     "category": "Questions & understanding",
@@ -408,19 +408,19 @@
   },
   {
     "id": "ar-cac3254aa0bf7fc2",
-    "text": "ما فهمت",
+    "text": "مَا فْهِمْت",
     "pronunciation": "ma fhimt",
     "meaning": "I didn't understand.",
     "category": "Questions & understanding",
     "usage": "Ma fhimt reports a past failure to understand. Mish fāhem / fāhme describes your present state: “I don’t understand.”",
     "examples": [
       {
-        "text": "ما فهمت",
+        "text": "مَا فْهِمْت",
         "pronunciation": "ma fhimt",
         "meaning": "I didn't understand."
       },
       {
-        "text": "مش فاهم",
+        "text": "مِش فَاهِم",
         "pronunciation": "mish fāhem",
         "meaning": "I don't understand. (male speaker)"
       }
@@ -428,19 +428,19 @@
   },
   {
     "id": "ar-a0500edbd755e5f2",
-    "text": "مش فاهم",
+    "text": "مِش فَاهِم",
     "pronunciation": "mish fāhem",
     "meaning": "I don't understand. (male speaker)",
     "category": "Questions & understanding",
     "usage": "Ma fhimt reports a past failure to understand. Mish fāhem / fāhme describes your present state: “I don’t understand.”",
     "examples": [
       {
-        "text": "ما فهمت",
+        "text": "مَا فْهِمْت",
         "pronunciation": "ma fhimt",
         "meaning": "I didn't understand."
       },
       {
-        "text": "مش فاهم",
+        "text": "مِش فَاهِم",
         "pronunciation": "mish fāhem",
         "meaning": "I don't understand. (male speaker)"
       }
@@ -448,19 +448,19 @@
   },
   {
     "id": "ar-28e51f21b44cab35",
-    "text": "مش فاهمة",
+    "text": "مِش فَاهْمِة",
     "pronunciation": "mish fāhme",
     "meaning": "I don't understand. (female speaker)",
     "category": "Questions & understanding",
     "usage": "Ma fhimt reports a past failure to understand. Mish fāhem / fāhme describes your present state: “I don’t understand.”",
     "examples": [
       {
-        "text": "ما فهمت",
+        "text": "مَا فْهِمْت",
         "pronunciation": "ma fhimt",
         "meaning": "I didn't understand."
       },
       {
-        "text": "مش فاهم",
+        "text": "مِش فَاهِم",
         "pronunciation": "mish fāhem",
         "meaning": "I don't understand. (male speaker)"
       }
@@ -468,7 +468,7 @@
   },
   {
     "id": "ar-563f9c31c49d1d2b",
-    "text": "احكي شوي شوي",
+    "text": "اِحْكِي شْوَيّ شْوَيّ",
     "pronunciation": "iḥki shwayy shwayy",
     "meaning": "Speak slowly, please. (to one person)",
     "category": "Questions & understanding",
@@ -476,54 +476,54 @@
   },
   {
     "id": "ar-a1d954270e48dea4",
-    "text": "كمان مرّة",
+    "text": "كَمَان مَرَّة",
     "pronunciation": "kamān marra",
     "meaning": "one more time / again",
     "category": "Questions & understanding"
   },
   {
     "id": "ar-4d0d936e6b65a0b9",
-    "text": "كيف بنحكي هاد بالعربي؟",
+    "text": "كِيف بْنِحْكِي هَاد بِالْعَرَبِي؟",
     "pronunciation": "kīf bniḥki hād bil-ʿarabi?",
     "meaning": "How do we say this in Arabic?",
     "category": "Questions & understanding"
   },
   {
     "id": "ar-77cd316860159b2d",
-    "text": "أنا بتعلّم عربي",
+    "text": "أَنَا بَتْعَلَّم عَرَبِي",
     "pronunciation": "ana batʿallam ʿarabi",
     "meaning": "I'm learning Arabic.",
     "category": "Questions & understanding"
   },
   {
     "id": "ar-62d4243ea2d93c18",
-    "text": "بتحكي إنجليزي؟",
+    "text": "بْتِحْكِي إِنْجْلِيزِي؟",
     "pronunciation": "btiḥki inglīzi?",
     "meaning": "Do you speak English? (to one person)",
     "category": "Questions & understanding"
   },
   {
     "id": "ar-a522bdf72a62775a",
-    "text": "بتحكي عبري؟",
+    "text": "بْتِحْكِي عِبْرِي؟",
     "pronunciation": "btiḥki ʿibri?",
     "meaning": "Do you speak Hebrew? (to one person)",
     "category": "Questions & understanding"
   },
   {
     "id": "ar-158a36de69aa6e8b",
-    "text": "بعرف",
+    "text": "بَعْرَف",
     "pronunciation": "baʿraf",
     "meaning": "I know / know how",
     "category": "Questions & understanding",
     "usage": "Used for knowing information, a person, or how to do something. Bafham means “I understand”.",
     "examples": [
       {
-        "text": "ما بعرف",
+        "text": "مَا بَعْرَف",
         "pronunciation": "ma baʿraf",
         "meaning": "I don't know."
       },
       {
-        "text": "بفهم",
+        "text": "بَفْهَم",
         "pronunciation": "bafham",
         "meaning": "I understand"
       }
@@ -531,19 +531,19 @@
   },
   {
     "id": "ar-7e0cdbf36010c0e8",
-    "text": "ما بعرف",
+    "text": "مَا بَعْرَف",
     "pronunciation": "ma baʿraf",
     "meaning": "I don't know.",
     "category": "Questions & understanding",
     "usage": "Used for knowing information, a person, or how to do something. Bafham means “I understand”.",
     "examples": [
       {
-        "text": "ما بعرف",
+        "text": "مَا بَعْرَف",
         "pronunciation": "ma baʿraf",
         "meaning": "I don't know."
       },
       {
-        "text": "بفهم",
+        "text": "بَفْهَم",
         "pronunciation": "bafham",
         "meaning": "I understand"
       }
@@ -551,7 +551,7 @@
   },
   {
     "id": "ar-19e55f7f3719e8d3",
-    "text": "فهمت",
+    "text": "فْهِمْت",
     "pronunciation": "fhimt",
     "meaning": "I understood / got it.",
     "category": "Questions & understanding"
@@ -565,28 +565,28 @@
   },
   {
     "id": "ar-2bd073516a87c409",
-    "text": "لا",
+    "text": "لَا",
     "pronunciation": "laʾ",
     "meaning": "no",
     "category": "Requests & useful replies"
   },
   {
     "id": "ar-115821ec023ef0e6",
-    "text": "ممكن؟",
+    "text": "مُمْكِن؟",
     "pronunciation": "mumkin?",
     "meaning": "Is it possible? / May I?",
     "category": "Requests & useful replies"
   },
   {
     "id": "ar-c39ad644cd9d78ad",
-    "text": "أكيد",
+    "text": "أَكِيد",
     "pronunciation": "akīd",
     "meaning": "of course / certainly",
     "category": "Requests & useful replies"
   },
   {
     "id": "ar-fd01f5301089dff2",
-    "text": "ماشي",
+    "text": "مَاشِي",
     "pronunciation": "māshi",
     "meaning": "okay / agreed",
     "category": "Requests & useful replies",
@@ -594,7 +594,7 @@
   },
   {
     "id": "ar-bbadc80b0c13af0f",
-    "text": "هلّأ",
+    "text": "هَلَّأ",
     "pronunciation": "hallaʾ",
     "meaning": "now",
     "category": "Requests & useful replies",
@@ -602,40 +602,40 @@
   },
   {
     "id": "ar-dfa7b5ae10f4a4dc",
-    "text": "بعدين",
+    "text": "بَعْدَيْن",
     "pronunciation": "baʿdēn",
     "meaning": "later / afterwards",
     "category": "Requests & useful replies"
   },
   {
     "id": "ar-405d8eb60929096c",
-    "text": "استنّى شوي",
+    "text": "اِسْتَنَّى شْوَيّ",
     "pronunciation": "istanna shwayy",
     "meaning": "Wait a moment. (to a man)",
     "category": "Requests & useful replies"
   },
   {
     "id": "ar-d5e705856da78017",
-    "text": "استنّي شوي",
+    "text": "اِسْتَنِّي شْوَيّ",
     "pronunciation": "istanni shwayy",
     "meaning": "Wait a moment. (to a woman)",
     "category": "Requests & useful replies"
   },
   {
     "id": "ar-15d041a0aa5d2c58",
-    "text": "بِدّي",
+    "text": "بِدِّي",
     "pronunciation": "biddi",
     "meaning": "I want / I'd like",
     "category": "Requests & useful replies",
     "usage": "Follow with a thing or a verb: “I want …”. After biddi, the following verb drops the habitual b-: arūḥ, not barūḥ.",
     "examples": [
       {
-        "text": "بِدّي ميّ",
+        "text": "بِدِّي مَيّ",
         "pronunciation": "biddi mayy",
         "meaning": "I'd like some water."
       },
       {
-        "text": "بِدّي أروح عالبيت",
+        "text": "بِدِّي أَرُوح عَالْبَيْت",
         "pronunciation": "biddi arūḥ ʿal-bēt",
         "meaning": "I want to go home."
       }
@@ -659,19 +659,19 @@
   },
   {
     "id": "ar-538c0d636218fb7f",
-    "text": "ما بِدّي",
+    "text": "مَا بِدِّي",
     "pronunciation": "ma biddi",
     "meaning": "I don't want it.",
     "category": "Requests & useful replies",
     "usage": "Follow with a thing or a verb: “I want …”. After biddi, the following verb drops the habitual b-: arūḥ, not barūḥ.",
     "examples": [
       {
-        "text": "بِدّي ميّ",
+        "text": "بِدِّي مَيّ",
         "pronunciation": "biddi mayy",
         "meaning": "I'd like some water."
       },
       {
-        "text": "بِدّي أروح عالبيت",
+        "text": "بِدِّي أَرُوح عَالْبَيْت",
         "pronunciation": "biddi arūḥ ʿal-bēt",
         "meaning": "I want to go home."
       }
@@ -679,19 +679,19 @@
   },
   {
     "id": "ar-6d5d339c2f208e1d",
-    "text": "بِدّي هاد",
+    "text": "بِدِّي هَاد",
     "pronunciation": "biddi hād",
     "meaning": "I'd like this one. (masculine)",
     "category": "Requests & useful replies",
     "usage": "Hād refers to a masculine noun; hāy to a feminine noun. The object’s grammatical gender determines the choice.",
     "examples": [
       {
-        "text": "بِدّي هاد",
+        "text": "بِدِّي هَاد",
         "pronunciation": "biddi hād",
         "meaning": "I'd like this one. (masculine)"
       },
       {
-        "text": "بِدّي هاي",
+        "text": "بِدِّي هَاي",
         "pronunciation": "biddi hāy",
         "meaning": "I'd like this one. (feminine)"
       }
@@ -699,19 +699,19 @@
   },
   {
     "id": "ar-0e009e2dfebee563",
-    "text": "بِدّي هاي",
+    "text": "بِدِّي هَاي",
     "pronunciation": "biddi hāy",
     "meaning": "I'd like this one. (feminine)",
     "category": "Requests & useful replies",
     "usage": "Hād refers to a masculine noun; hāy to a feminine noun. The object’s grammatical gender determines the choice.",
     "examples": [
       {
-        "text": "بِدّي هاد",
+        "text": "بِدِّي هَاد",
         "pronunciation": "biddi hād",
         "meaning": "I'd like this one. (masculine)"
       },
       {
-        "text": "بِدّي هاي",
+        "text": "بِدِّي هَاي",
         "pronunciation": "biddi hāy",
         "meaning": "I'd like this one. (feminine)"
       }
@@ -719,19 +719,19 @@
   },
   {
     "id": "ar-941e545152304c1f",
-    "text": "في",
+    "text": "فِي",
     "pronunciation": "fī",
     "meaning": "there is / there are",
     "category": "Requests & useful replies",
     "usage": "Fī can introduce something that exists. Before a place it can also mean “in”. Ma fī negates existence.",
     "examples": [
       {
-        "text": "في ميّ؟",
+        "text": "فِي مَيّ؟",
         "pronunciation": "fī mayy?",
         "meaning": "Is there any water?"
       },
       {
-        "text": "ما في ميّ",
+        "text": "مَا فِي مَيّ",
         "pronunciation": "ma fī mayy",
         "meaning": "There is no water."
       }
@@ -739,19 +739,19 @@
   },
   {
     "id": "ar-14c9f710fcac00a9",
-    "text": "ما في",
+    "text": "مَا فِي",
     "pronunciation": "ma fī",
     "meaning": "there isn't / there aren't",
     "category": "Requests & useful replies",
     "usage": "Fī can introduce something that exists. Before a place it can also mean “in”. Ma fī negates existence.",
     "examples": [
       {
-        "text": "في ميّ؟",
+        "text": "فِي مَيّ؟",
         "pronunciation": "fī mayy?",
         "meaning": "Is there any water?"
       },
       {
-        "text": "ما في ميّ",
+        "text": "مَا فِي مَيّ",
         "pronunciation": "ma fī mayy",
         "meaning": "There is no water."
       }
@@ -759,19 +759,19 @@
   },
   {
     "id": "ar-853bd4212bf1841c",
-    "text": "عندي",
+    "text": "عِنْدِي",
     "pronunciation": "ʿindi",
     "meaning": "I have",
     "category": "Requests & useful replies",
     "usage": "Literally “at me/you”, used for having something. The ending identifies the possessor: -i me, -ak a man, -ik a woman.",
     "examples": [
       {
-        "text": "عندي وقت",
+        "text": "عِنْدِي وَقْت",
         "pronunciation": "ʿindi waʾt",
         "meaning": "I have time."
       },
       {
-        "text": "عندك أولاد؟",
+        "text": "عِنْدَك أَوْلَاد؟",
         "pronunciation": "ʿindak wlād?",
         "meaning": "Do you have children? (to a man)"
       }
@@ -779,19 +779,19 @@
   },
   {
     "id": "ar-f8e2151a11941da0",
-    "text": "ما عندي",
+    "text": "مَا عِنْدِي",
     "pronunciation": "ma ʿindi",
     "meaning": "I don't have any.",
     "category": "Requests & useful replies",
     "usage": "Literally “at me/you”, used for having something. The ending identifies the possessor: -i me, -ak a man, -ik a woman.",
     "examples": [
       {
-        "text": "عندي وقت",
+        "text": "عِنْدِي وَقْت",
         "pronunciation": "ʿindi waʾt",
         "meaning": "I have time."
       },
       {
-        "text": "عندك أولاد؟",
+        "text": "عِنْدَك أَوْلَاد؟",
         "pronunciation": "ʿindak wlād?",
         "meaning": "Do you have children? (to a man)"
       }
@@ -799,19 +799,19 @@
   },
   {
     "id": "ar-389e7f618055fca4",
-    "text": "عندَك؟",
+    "text": "عِنْدَك؟",
     "pronunciation": "ʿindak?",
     "meaning": "Do you have any? (to a man)",
     "category": "Requests & useful replies",
     "usage": "Literally “at me/you”, used for having something. The ending identifies the possessor: -i me, -ak a man, -ik a woman.",
     "examples": [
       {
-        "text": "عندي وقت",
+        "text": "عِنْدِي وَقْت",
         "pronunciation": "ʿindi waʾt",
         "meaning": "I have time."
       },
       {
-        "text": "عندك أولاد؟",
+        "text": "عِنْدَك أَوْلَاد؟",
         "pronunciation": "ʿindak wlād?",
         "meaning": "Do you have children? (to a man)"
       }
@@ -819,19 +819,19 @@
   },
   {
     "id": "ar-8ab2be90726152fd",
-    "text": "عندِك؟",
+    "text": "عِنْدِك؟",
     "pronunciation": "ʿindik?",
     "meaning": "Do you have any? (to a woman)",
     "category": "Requests & useful replies",
     "usage": "Literally “at me/you”, used for having something. The ending identifies the possessor: -i me, -ak a man, -ik a woman.",
     "examples": [
       {
-        "text": "عندي وقت",
+        "text": "عِنْدِي وَقْت",
         "pronunciation": "ʿindi waʾt",
         "meaning": "I have time."
       },
       {
-        "text": "عندك أولاد؟",
+        "text": "عِنْدَك أَوْلَاد؟",
         "pronunciation": "ʿindak wlād?",
         "meaning": "Do you have children? (to a man)"
       }
@@ -839,7 +839,7 @@
   },
   {
     "id": "ar-24158c00f3680faf",
-    "text": "لازم أروح",
+    "text": "لَازِم أَرُوح",
     "pronunciation": "lāzem arūḥ",
     "meaning": "I need to go.",
     "category": "Requests & useful replies",
@@ -847,21 +847,21 @@
   },
   {
     "id": "ar-174d79638c9ade06",
-    "text": "بقدر أساعدك؟",
+    "text": "بَقْدَر أَسَاعْدَك؟",
     "pronunciation": "baʾdar asāʿdak?",
     "meaning": "Can I help you? (to a man)",
     "category": "Requests & useful replies"
   },
   {
     "id": "ar-52eca52b6fcb42ae",
-    "text": "ساعدني لو سمحت",
+    "text": "سَاعِدْنِي لَوْ سَمَحْت",
     "pronunciation": "sāʿidni law samaḥt",
     "meaning": "Please help me. (to a man)",
     "category": "Requests & useful replies"
   },
   {
     "id": "ar-4684223810231cb7",
-    "text": "إمّ",
+    "text": "إِمّ",
     "pronunciation": "imm",
     "meaning": "mother",
     "category": "Family",
@@ -869,7 +869,7 @@
   },
   {
     "id": "ar-129ced5f3b938967",
-    "text": "إمّي",
+    "text": "إِمِّي",
     "pronunciation": "immi",
     "meaning": "my mother",
     "category": "Family",
@@ -877,14 +877,14 @@
   },
   {
     "id": "ar-10060f6f8a267282",
-    "text": "أب",
+    "text": "أَب",
     "pronunciation": "ab",
     "meaning": "father",
     "category": "Family",
     "usage": "Ab is “father”; abūy is a common spoken form of “my father”.",
     "examples": [
       {
-        "text": "هاد أبوي",
+        "text": "هَاد أَبُوي",
         "pronunciation": "hād abūy",
         "meaning": "This is my father."
       }
@@ -892,14 +892,14 @@
   },
   {
     "id": "ar-f6e01b5c6d878566",
-    "text": "أبوي",
+    "text": "أَبُوي",
     "pronunciation": "abūy",
     "meaning": "my father",
     "category": "Family",
     "usage": "Ab is “father”; abūy is a common spoken form of “my father”.",
     "examples": [
       {
-        "text": "هاد أبوي",
+        "text": "هَاد أَبُوي",
         "pronunciation": "hād abūy",
         "meaning": "This is my father."
       }
@@ -907,49 +907,49 @@
   },
   {
     "id": "ar-f8ac19d897aa1101",
-    "text": "أخ",
+    "text": "أَخ",
     "pronunciation": "akh",
     "meaning": "brother",
     "category": "Family"
   },
   {
     "id": "ar-1e150629d646bf2e",
-    "text": "أخت",
+    "text": "أُخْت",
     "pronunciation": "ukht",
     "meaning": "sister",
     "category": "Family"
   },
   {
     "id": "ar-a41a260689c5a530",
-    "text": "أخوي",
+    "text": "أَخُوي",
     "pronunciation": "akhūy",
     "meaning": "my brother",
     "category": "Family"
   },
   {
     "id": "ar-99c039a406e214b6",
-    "text": "أختي",
+    "text": "أُخْتِي",
     "pronunciation": "ukhti",
     "meaning": "my sister",
     "category": "Family"
   },
   {
     "id": "ar-cb8ea71541286d12",
-    "text": "ابن",
+    "text": "اِبِن",
     "pronunciation": "ibin",
     "meaning": "son",
     "category": "Family"
   },
   {
     "id": "ar-8f7d8bb5541ca56b",
-    "text": "بنت",
+    "text": "بِنْت",
     "pronunciation": "bint",
     "meaning": "daughter / girl",
     "category": "Family",
     "usage": "Bint can be daughter or girl. Walad can mean boy or child; wlād can mean boys or children, including a mixed group.",
     "examples": [
       {
-        "text": "عندك أولاد؟",
+        "text": "عِنْدَك أَوْلَاد؟",
         "pronunciation": "ʿindak wlād?",
         "meaning": "Do you have children? (to a man)"
       }
@@ -957,14 +957,14 @@
   },
   {
     "id": "ar-ce763e670b0e411d",
-    "text": "ولد",
+    "text": "وَلَد",
     "pronunciation": "walad",
     "meaning": "boy / child",
     "category": "Family",
     "usage": "Bint can be daughter or girl. Walad can mean boy or child; wlād can mean boys or children, including a mixed group.",
     "examples": [
       {
-        "text": "عندك أولاد؟",
+        "text": "عِنْدَك أَوْلَاد؟",
         "pronunciation": "ʿindak wlād?",
         "meaning": "Do you have children? (to a man)"
       }
@@ -972,14 +972,14 @@
   },
   {
     "id": "ar-d72c54363f76ca6e",
-    "text": "أولاد",
+    "text": "أوْلَاد",
     "pronunciation": "wlād",
     "meaning": "children / boys",
     "category": "Family",
-    "usage": "Bint can be daughter or girl. Walad can mean boy or child; wlād can mean boys or children, including a mixed group.",
+    "usage": "Bint can be daughter or girl. Walad can mean boy or child; wlād can mean boys or children, including a mixed group. The conventional initial أ is not heard in the course’s wlād reading; the Latin reading records the intended spoken form.",
     "examples": [
       {
-        "text": "عندك أولاد؟",
+        "text": "عِنْدَك أَوْلَاد؟",
         "pronunciation": "ʿindak wlād?",
         "meaning": "Do you have children? (to a man)"
       }
@@ -987,7 +987,7 @@
   },
   {
     "id": "ar-8d025af0eb055623",
-    "text": "جدّ",
+    "text": "جِدّ",
     "pronunciation": "jidd",
     "meaning": "grandfather (either side)",
     "category": "Family",
@@ -995,7 +995,7 @@
   },
   {
     "id": "ar-3cc2763532b2ad74",
-    "text": "ستّي",
+    "text": "سِتِّي",
     "pronunciation": "sitti",
     "meaning": "my grandmother (either side)",
     "category": "Family",
@@ -1003,14 +1003,14 @@
   },
   {
     "id": "ar-0ac18fd98ca8d24c",
-    "text": "عيلة",
+    "text": "عَيْلِة",
     "pronunciation": "ʿēle",
     "meaning": "family",
     "category": "Family"
   },
   {
     "id": "ar-c598bd71cb987ab5",
-    "text": "جوزي",
+    "text": "جَوْزِي",
     "pronunciation": "jōzi",
     "meaning": "my husband",
     "category": "Family",
@@ -1018,7 +1018,7 @@
   },
   {
     "id": "ar-3d9c6087655f332b",
-    "text": "مرتي",
+    "text": "مَرْتِي",
     "pronunciation": "marti",
     "meaning": "my wife",
     "category": "Family",
@@ -1026,7 +1026,7 @@
   },
   {
     "id": "ar-9ce2cafa74581dde",
-    "text": "عمّ",
+    "text": "عَمّ",
     "pronunciation": "ʿamm",
     "meaning": "uncle (father's brother)",
     "category": "Family",
@@ -1034,7 +1034,7 @@
   },
   {
     "id": "ar-50b2a3fefd1fc165",
-    "text": "عمّة",
+    "text": "عَمِّة",
     "pronunciation": "ʿamme",
     "meaning": "aunt (father's sister)",
     "category": "Family",
@@ -1042,7 +1042,7 @@
   },
   {
     "id": "ar-170abf36c0d837f2",
-    "text": "خال",
+    "text": "خَال",
     "pronunciation": "khāl",
     "meaning": "uncle (mother's brother)",
     "category": "Family",
@@ -1050,7 +1050,7 @@
   },
   {
     "id": "ar-ecafcf9b8123daba",
-    "text": "خالة",
+    "text": "خَالِة",
     "pronunciation": "khāle",
     "meaning": "aunt (mother's sister)",
     "category": "Family",
@@ -1058,42 +1058,43 @@
   },
   {
     "id": "ar-cd7e5c6d686fe5ca",
-    "text": "هاي أختي",
+    "text": "هَاي أُخْتِي",
     "pronunciation": "hāy ukhti",
     "meaning": "This is my sister.",
     "category": "Family"
   },
   {
     "id": "ar-30649f7c4ebe54f4",
-    "text": "هاد أخوي",
+    "text": "هَاد أَخُوي",
     "pronunciation": "hād akhūy",
     "meaning": "This is my brother.",
     "category": "Family"
   },
   {
     "id": "ar-1205c2d982c95e6b",
-    "text": "عندك أولاد؟",
+    "text": "عِنْدَك أوْلَاد؟",
     "pronunciation": "ʿindak wlād?",
     "meaning": "Do you have children? (to a man)",
-    "category": "Family"
+    "category": "Family",
+    "usage": " The conventional initial أ is not heard in the course’s wlād reading; the Latin reading records the intended spoken form."
   },
   {
     "id": "ar-ba0760495420202d",
-    "text": "ميّ",
+    "text": "مَيّ",
     "pronunciation": "mayy",
     "meaning": "water",
     "category": "Food & drink"
   },
   {
     "id": "ar-c75f5ba0788b8585",
-    "text": "بِدّي ميّ",
+    "text": "بِدِّي مَيّ",
     "pronunciation": "biddi mayy",
     "meaning": "I'd like some water.",
     "category": "Food & drink"
   },
   {
     "id": "ar-16279a3c895acf10",
-    "text": "قهوة",
+    "text": "قَهْوِة",
     "pronunciation": "ʾahwe",
     "meaning": "coffee",
     "category": "Food & drink",
@@ -1101,77 +1102,77 @@
   },
   {
     "id": "ar-f3f2370542cd038e",
-    "text": "شاي",
+    "text": "شَاي",
     "pronunciation": "shāy",
     "meaning": "tea",
     "category": "Food & drink"
   },
   {
     "id": "ar-efd3aeab5885d3dd",
-    "text": "حليب",
+    "text": "حَلِيب",
     "pronunciation": "ḥalīb",
     "meaning": "milk",
     "category": "Food & drink"
   },
   {
     "id": "ar-8f62fce509a4624f",
-    "text": "عصير",
+    "text": "عَصِير",
     "pronunciation": "ʿaṣīr",
     "meaning": "juice",
     "category": "Food & drink"
   },
   {
     "id": "ar-44f75e5909c92dcd",
-    "text": "سكّر",
+    "text": "سُكَّر",
     "pronunciation": "sukkar",
     "meaning": "sugar",
     "category": "Food & drink"
   },
   {
     "id": "ar-8627f8a22ef5bcb7",
-    "text": "بدون سكّر",
+    "text": "بِدُون سُكَّر",
     "pronunciation": "bidūn sukkar",
     "meaning": "without sugar",
     "category": "Food & drink"
   },
   {
     "id": "ar-2fc7c284ffeeb0fa",
-    "text": "ملح",
+    "text": "مِلْح",
     "pronunciation": "milḥ",
     "meaning": "salt",
     "category": "Food & drink"
   },
   {
     "id": "ar-382f8a16ed8a1730",
-    "text": "خبز",
+    "text": "خُبِز",
     "pronunciation": "khubiz",
     "meaning": "bread",
     "category": "Food & drink"
   },
   {
     "id": "ar-9208cbe80724574c",
-    "text": "رزّ",
+    "text": "رُزّ",
     "pronunciation": "ruzz",
     "meaning": "rice",
     "category": "Food & drink"
   },
   {
     "id": "ar-0c0c172c5cf4af50",
-    "text": "بيض",
+    "text": "بَيْض",
     "pronunciation": "bēḍ",
     "meaning": "eggs",
     "category": "Food & drink"
   },
   {
     "id": "ar-6930eebf4d6128a9",
-    "text": "جبنة",
+    "text": "جِبْنِة",
     "pronunciation": "jibne",
     "meaning": "cheese",
     "category": "Food & drink"
   },
   {
     "id": "ar-2f546c77fe53fc7c",
-    "text": "لبنة",
+    "text": "لَبَنِة",
     "pronunciation": "labane",
     "meaning": "labneh / strained yogurt",
     "category": "Food & drink",
@@ -1179,14 +1180,14 @@
   },
   {
     "id": "ar-ae0a7eca9058824c",
-    "text": "زيت زيتون",
+    "text": "زَيْت زَيْتُون",
     "pronunciation": "zēt zētūn",
     "meaning": "olive oil",
     "category": "Food & drink"
   },
   {
     "id": "ar-490ef9c270a13092",
-    "text": "زعتر",
+    "text": "زَعْتَر",
     "pronunciation": "zaʿtar",
     "meaning": "za'atar / thyme-and-spice mixture",
     "category": "Food & drink",
@@ -1194,7 +1195,7 @@
   },
   {
     "id": "ar-99dab5fcc2e9df63",
-    "text": "حمّص",
+    "text": "حُمُّص",
     "pronunciation": "ḥummuṣ",
     "meaning": "hummus / chickpeas",
     "category": "Food & drink",
@@ -1202,35 +1203,35 @@
   },
   {
     "id": "ar-b1621c412f1d384e",
-    "text": "فلافل",
+    "text": "فَلَافِل",
     "pronunciation": "falāfel",
     "meaning": "falafel",
     "category": "Food & drink"
   },
   {
     "id": "ar-6ef1faed18a4fa81",
-    "text": "سلطة",
+    "text": "سَلَطَة",
     "pronunciation": "salaṭa",
     "meaning": "salad",
     "category": "Food & drink"
   },
   {
     "id": "ar-f71f17923a075874",
-    "text": "شوربة",
+    "text": "شَوْرَبِة",
     "pronunciation": "shōrabe",
     "meaning": "soup",
     "category": "Food & drink"
   },
   {
     "id": "ar-a97a95b75d2c9a77",
-    "text": "لحمة",
+    "text": "لَحْمِة",
     "pronunciation": "laḥme",
     "meaning": "meat",
     "category": "Food & drink"
   },
   {
     "id": "ar-40c18f58dd144cb8",
-    "text": "جاج",
+    "text": "جَاج",
     "pronunciation": "jāj",
     "meaning": "chicken (food / animal)",
     "category": "Food & drink",
@@ -1238,56 +1239,56 @@
   },
   {
     "id": "ar-2b7d54ce3b204558",
-    "text": "سمك",
+    "text": "سَمَك",
     "pronunciation": "samak",
     "meaning": "fish",
     "category": "Food & drink"
   },
   {
     "id": "ar-e1bb084e2ac93d65",
-    "text": "خضرة",
+    "text": "خُضْرَة",
     "pronunciation": "khuḍra",
     "meaning": "vegetables / greens",
     "category": "Food & drink"
   },
   {
     "id": "ar-3ebd1d0cf1f0530f",
-    "text": "بندورة",
+    "text": "بَنَدَوْرَة",
     "pronunciation": "banadōra",
     "meaning": "tomatoes",
     "category": "Food & drink"
   },
   {
     "id": "ar-ea7e1328626560a3",
-    "text": "خيار",
+    "text": "خِيَار",
     "pronunciation": "khiyār",
     "meaning": "cucumber",
     "category": "Food & drink"
   },
   {
     "id": "ar-70e9ea675354f1fc",
-    "text": "بطاطا",
+    "text": "بَطَاطَا",
     "pronunciation": "baṭāṭa",
     "meaning": "potatoes",
     "category": "Food & drink"
   },
   {
     "id": "ar-b8e4557d1fca2202",
-    "text": "تفّاح",
+    "text": "تُفَّاح",
     "pronunciation": "tuffāḥ",
     "meaning": "apples",
     "category": "Food & drink"
   },
   {
     "id": "ar-97a91b07543f318c",
-    "text": "موز",
+    "text": "مَوْز",
     "pronunciation": "mōz",
     "meaning": "bananas",
     "category": "Food & drink"
   },
   {
     "id": "ar-01f26edb4795138c",
-    "text": "برتقان",
+    "text": "بُرُتُقَان",
     "pronunciation": "burutuʾān",
     "meaning": "oranges",
     "category": "Food & drink",
@@ -1295,28 +1296,28 @@
   },
   {
     "id": "ar-1109538706418888",
-    "text": "فطور",
+    "text": "فْطُور",
     "pronunciation": "fṭūr",
     "meaning": "breakfast",
     "category": "Food & drink"
   },
   {
     "id": "ar-78d42e65a9b221c7",
-    "text": "غدا",
+    "text": "غَدَا",
     "pronunciation": "ghada",
     "meaning": "lunch",
     "category": "Food & drink"
   },
   {
     "id": "ar-651d76e875dbe577",
-    "text": "عشا",
+    "text": "عَشَا",
     "pronunciation": "ʿasha",
     "meaning": "dinner / evening meal",
     "category": "Food & drink"
   },
   {
     "id": "ar-f102c9e60b20b885",
-    "text": "صحتين",
+    "text": "صَحْتَيْن",
     "pronunciation": "ṣaḥtēn",
     "meaning": "enjoy your meal / bon appétit",
     "category": "Food & drink",
@@ -1324,35 +1325,35 @@
   },
   {
     "id": "ar-9209e5540063046e",
-    "text": "مطعم",
+    "text": "مَطْعَم",
     "pronunciation": "maṭʿam",
     "meaning": "restaurant",
     "category": "Eating out"
   },
   {
     "id": "ar-f2d7aeaa2781ea91",
-    "text": "طاولة",
+    "text": "طَاوْلِة",
     "pronunciation": "ṭāwle",
     "meaning": "table",
     "category": "Eating out"
   },
   {
     "id": "ar-28d76d04d528adb8",
-    "text": "كرسي",
+    "text": "كُرْسِي",
     "pronunciation": "kursi",
     "meaning": "chair",
     "category": "Eating out"
   },
   {
     "id": "ar-b0cb2ede0e6c6094",
-    "text": "كاسة",
+    "text": "كَاسِة",
     "pronunciation": "kāse",
     "meaning": "glass / cup",
     "category": "Eating out",
     "usage": "Kāse is a drinking glass/cup. Before its contents the feminine ending becomes -et: kāset mayy.",
     "examples": [
       {
-        "text": "بِدّي كاسة ميّ",
+        "text": "بِدِّي كَاسِة مَيّ",
         "pronunciation": "biddi kāset mayy",
         "meaning": "I'd like a glass of water."
       }
@@ -1360,42 +1361,42 @@
   },
   {
     "id": "ar-a2118068ee41f62a",
-    "text": "صحن",
+    "text": "صَحِن",
     "pronunciation": "ṣaḥin",
     "meaning": "plate",
     "category": "Eating out"
   },
   {
     "id": "ar-debc42b60ecd322d",
-    "text": "معلقة",
+    "text": "مَعْلَقَة",
     "pronunciation": "maʿlaʾa",
     "meaning": "spoon",
     "category": "Eating out"
   },
   {
     "id": "ar-144e2c8fd9544227",
-    "text": "شوكة",
+    "text": "شَوْكِة",
     "pronunciation": "shōke",
     "meaning": "fork",
     "category": "Eating out"
   },
   {
     "id": "ar-702f5ef34dc0a7b6",
-    "text": "سكّينة",
+    "text": "سِكِّينِة",
     "pronunciation": "sikkīne",
     "meaning": "knife",
     "category": "Eating out"
   },
   {
     "id": "ar-160e731bcbaaec4c",
-    "text": "بِدّي كاسة ميّ",
+    "text": "بِدِّي كَاسِة مَيّ",
     "pronunciation": "biddi kāset mayy",
     "meaning": "I'd like a glass of water.",
     "category": "Eating out",
     "usage": "Kāse is a drinking glass/cup. Before its contents the feminine ending becomes -et: kāset mayy.",
     "examples": [
       {
-        "text": "بِدّي كاسة ميّ",
+        "text": "بِدِّي كَاسِة مَيّ",
         "pronunciation": "biddi kāset mayy",
         "meaning": "I'd like a glass of water."
       }
@@ -1403,40 +1404,40 @@
   },
   {
     "id": "ar-8d8d7b61fd1d6ea9",
-    "text": "شو بتنصحني؟",
+    "text": "شُو بْتِنْصَحْنِي؟",
     "pronunciation": "shū btinṣaḥni?",
     "meaning": "What do you recommend? (to a man)",
     "category": "Eating out"
   },
   {
     "id": "ar-39dfac4de2f53683",
-    "text": "بدون بصل",
+    "text": "بِدُون بَصَل",
     "pronunciation": "bidūn baṣal",
     "meaning": "without onion",
     "category": "Eating out"
   },
   {
     "id": "ar-593c13974e10ae72",
-    "text": "بدون لحمة",
+    "text": "بِدُون لَحْمِة",
     "pronunciation": "bidūn laḥme",
     "meaning": "without meat",
     "category": "Eating out"
   },
   {
     "id": "ar-f3d36bf3464c22a7",
-    "text": "مش حارّ",
+    "text": "مِش حَارّ",
     "pronunciation": "mish ḥārr",
     "meaning": "not spicy",
     "category": "Eating out",
     "usage": "Ḥārr describes spicy food and can also mean hot. Sukhn describes temperature: a drink or dish can be hot without being spicy.",
     "examples": [
       {
-        "text": "القهوة سخنة",
+        "text": "اِلْقَهْوِة سُخْنِة",
         "pronunciation": "il-ʾahwe sukhne",
         "meaning": "The coffee is hot."
       },
       {
-        "text": "مش حارّ",
+        "text": "مِش حَارّ",
         "pronunciation": "mish ḥārr",
         "meaning": "not spicy"
       }
@@ -1444,19 +1445,19 @@
   },
   {
     "id": "ar-4f5a08f0a003ac58",
-    "text": "حارّ",
+    "text": "حَارّ",
     "pronunciation": "ḥārr",
     "meaning": "spicy / hot (masculine)",
     "category": "Eating out",
     "usage": "Ḥārr describes spicy food and can also mean hot. Sukhn describes temperature: a drink or dish can be hot without being spicy.",
     "examples": [
       {
-        "text": "القهوة سخنة",
+        "text": "اِلْقَهْوِة سُخْنِة",
         "pronunciation": "il-ʾahwe sukhne",
         "meaning": "The coffee is hot."
       },
       {
-        "text": "مش حارّ",
+        "text": "مِش حَارّ",
         "pronunciation": "mish ḥārr",
         "meaning": "not spicy"
       }
@@ -1464,7 +1465,7 @@
   },
   {
     "id": "ar-dbcdd59033671d91",
-    "text": "زاكي",
+    "text": "زَاكِي",
     "pronunciation": "zāki",
     "meaning": "tasty / delicious (masculine)",
     "category": "Eating out",
@@ -1472,7 +1473,7 @@
   },
   {
     "id": "ar-73c0b50590e43786",
-    "text": "كتير زاكي",
+    "text": "كْتِير زَاكِي",
     "pronunciation": "ktīr zāki",
     "meaning": "It's very tasty. (masculine)",
     "category": "Eating out",
@@ -1480,28 +1481,28 @@
   },
   {
     "id": "ar-43e08dd14d149d44",
-    "text": "الحساب لو سمحت",
+    "text": "اِلْحْسَاب لَوْ سَمَحْت",
     "pronunciation": "il-ḥsāb law samaḥt",
     "meaning": "The bill, please. (to a man)",
     "category": "Eating out"
   },
   {
     "id": "ar-22e3339d2712629f",
-    "text": "بِدّي آخده معي",
+    "text": "بِدِّي آخْدُه مَعِي",
     "pronunciation": "biddi ākhdo maʿi",
     "meaning": "I'd like to take it with me. (masculine item)",
     "category": "Eating out"
   },
   {
     "id": "ar-18397c9958d51f6a",
-    "text": "دكّان",
+    "text": "دُكَّان",
     "pronunciation": "dukkān",
     "meaning": "small shop",
     "category": "Shopping & money"
   },
   {
     "id": "ar-5880ddc87bb178bc",
-    "text": "سوق",
+    "text": "سُوق",
     "pronunciation": "sūʾ",
     "meaning": "market",
     "category": "Shopping & money",
@@ -1509,21 +1510,21 @@
   },
   {
     "id": "ar-0ca2091fe0d240f8",
-    "text": "مصاري",
+    "text": "مَصَارِي",
     "pronunciation": "maṣāri",
     "meaning": "money",
     "category": "Shopping & money"
   },
   {
     "id": "ar-e48f8883159469f8",
-    "text": "شيكل",
+    "text": "شَيْكِل",
     "pronunciation": "shēkel",
     "meaning": "shekel",
     "category": "Shopping & money"
   },
   {
     "id": "ar-a7bdcef130779bd2",
-    "text": "قدّيش حقّه؟",
+    "text": "قَدَّيْش حَقُّه؟",
     "pronunciation": "ʾaddēsh ḥaʾʾo?",
     "meaning": "How much is it? (masculine item)",
     "category": "Shopping & money",
@@ -1531,7 +1532,7 @@
   },
   {
     "id": "ar-f7292a5c3651ae7d",
-    "text": "قدّيش حقّها؟",
+    "text": "قَدَّيْش حَقّهَا؟",
     "pronunciation": "ʾaddēsh ḥaʾʾha?",
     "meaning": "How much is it? (feminine item)",
     "category": "Shopping & money",
@@ -1539,14 +1540,14 @@
   },
   {
     "id": "ar-2d14a5d969aa595a",
-    "text": "غالي",
+    "text": "غَالِي",
     "pronunciation": "ghāli",
     "meaning": "expensive (masculine)",
     "category": "Shopping & money",
     "usage": "Expensive when talking about price; also dear/precious when talking about someone you value.",
     "examples": [
       {
-        "text": "كتير غالي",
+        "text": "كْتِير غَالِي",
         "pronunciation": "ktīr ghāli",
         "meaning": "It's very expensive. (masculine)"
       }
@@ -1554,42 +1555,42 @@
   },
   {
     "id": "ar-1b52f0bdc1e98ba1",
-    "text": "رخيص",
+    "text": "رْخِيص",
     "pronunciation": "rkhīṣ",
     "meaning": "inexpensive / cheap (masculine)",
     "category": "Shopping & money"
   },
   {
     "id": "ar-ca2ecfd08df8eac6",
-    "text": "كتير غالي",
+    "text": "كْتِير غَالِي",
     "pronunciation": "ktīr ghāli",
     "meaning": "It's very expensive. (masculine)",
     "category": "Shopping & money"
   },
   {
     "id": "ar-cdf7f45f1a9f0a7e",
-    "text": "في أرخص؟",
+    "text": "فِي أَرْخَص؟",
     "pronunciation": "fī arkhaṣ?",
     "meaning": "Is there a cheaper one?",
     "category": "Shopping & money"
   },
   {
     "id": "ar-ac1a015feec82924",
-    "text": "بِدّي أشوف",
+    "text": "بِدِّي أَشُوف",
     "pronunciation": "biddi ashūf",
     "meaning": "I'd like to have a look.",
     "category": "Shopping & money"
   },
   {
     "id": "ar-1ee8af52439fa449",
-    "text": "بس بتفرّج",
+    "text": "بَسّ بَتْفَرَّج",
     "pronunciation": "bass batfarraj",
     "meaning": "I'm just looking.",
     "category": "Shopping & money"
   },
   {
     "id": "ar-89e2f096fa1aa360",
-    "text": "كيس",
+    "text": "كِيس",
     "pronunciation": "kīs",
     "meaning": "bag (shopping / plastic bag)",
     "category": "Shopping & money",
@@ -1597,49 +1598,49 @@
   },
   {
     "id": "ar-dba4444b5d6128ad",
-    "text": "معك فراطة؟",
+    "text": "مَعَك فْرَاطَة؟",
     "pronunciation": "maʿak frāṭa?",
     "meaning": "Do you have change? (to a man)",
     "category": "Shopping & money"
   },
   {
     "id": "ar-1881ccb334215fb3",
-    "text": "كاش",
+    "text": "كَاش",
     "pronunciation": "kāsh",
     "meaning": "cash",
     "category": "Shopping & money"
   },
   {
     "id": "ar-6132aa21d07dde61",
-    "text": "ممكن أدفع بالبطاقة؟",
+    "text": "مُمْكِن أَدْفَع بِالْبِطَاقَة؟",
     "pronunciation": "mumkin adfaʿ bil-biṭāʾa?",
     "meaning": "Can I pay by card?",
     "category": "Shopping & money"
   },
   {
     "id": "ar-674a00cf6bc67335",
-    "text": "هون",
+    "text": "هَوْن",
     "pronunciation": "hōn",
     "meaning": "here",
     "category": "Places & directions"
   },
   {
     "id": "ar-989c6523779fb249",
-    "text": "هناك",
+    "text": "هِنَاك",
     "pronunciation": "hināk",
     "meaning": "there",
     "category": "Places & directions"
   },
   {
     "id": "ar-96cc85ff2c99daba",
-    "text": "يمين",
+    "text": "يَمِين",
     "pronunciation": "yamīn",
     "meaning": "right (direction)",
     "category": "Places & directions"
   },
   {
     "id": "ar-5cbbfccea6e86596",
-    "text": "شمال",
+    "text": "شْمَال",
     "pronunciation": "shmāl",
     "meaning": "left (direction)",
     "category": "Places & directions",
@@ -1647,84 +1648,84 @@
   },
   {
     "id": "ar-8947f33a8e1d8585",
-    "text": "دغري",
+    "text": "دُغْرِي",
     "pronunciation": "dughri",
     "meaning": "straight ahead",
     "category": "Places & directions"
   },
   {
     "id": "ar-027ea1355212dc9a",
-    "text": "قريب",
+    "text": "قَرِيب",
     "pronunciation": "ʾarīb",
     "meaning": "near / close (masculine)",
     "category": "Places & directions"
   },
   {
     "id": "ar-27bc9a94a51475eb",
-    "text": "بعيد",
+    "text": "بْعِيد",
     "pronunciation": "bʿīd",
     "meaning": "far (masculine)",
     "category": "Places & directions"
   },
   {
     "id": "ar-9936255d7762d208",
-    "text": "قدّام",
+    "text": "قُدَّام",
     "pronunciation": "ʾuddām",
     "meaning": "in front / ahead",
     "category": "Places & directions"
   },
   {
     "id": "ar-a6a973b3e0b005d1",
-    "text": "ورا",
+    "text": "وَرَا",
     "pronunciation": "wara",
     "meaning": "behind / at the back",
     "category": "Places & directions"
   },
   {
     "id": "ar-2a34d7b720b04294",
-    "text": "جنب",
+    "text": "جَنْب",
     "pronunciation": "janb",
     "meaning": "next to / beside",
     "category": "Places & directions"
   },
   {
     "id": "ar-40c0f8d20ae8c548",
-    "text": "شارع",
+    "text": "شَارِع",
     "pronunciation": "shāreʿ",
     "meaning": "street",
     "category": "Places & directions"
   },
   {
     "id": "ar-f143470efeb1147c",
-    "text": "محطّة",
+    "text": "مَحَطَّة",
     "pronunciation": "maḥaṭṭa",
     "meaning": "station / stop",
     "category": "Places & directions"
   },
   {
     "id": "ar-8b2da1ef7d51858b",
-    "text": "باص",
+    "text": "بَاص",
     "pronunciation": "bāṣ",
     "meaning": "bus",
     "category": "Places & directions"
   },
   {
     "id": "ar-78e5f0bf3dd5460d",
-    "text": "تاكسي",
+    "text": "تَاكْسِي",
     "pronunciation": "tāksi",
     "meaning": "taxi",
     "category": "Places & directions"
   },
   {
     "id": "ar-76c31e560a7831f2",
-    "text": "سيّارة",
+    "text": "سَيَّارَة",
     "pronunciation": "sayyāra",
     "meaning": "car",
     "category": "Places & directions"
   },
   {
     "id": "ar-fcb734b90c09c0c5",
-    "text": "موقف",
+    "text": "مَوْقَف",
     "pronunciation": "mawʾaf",
     "meaning": "parking place / stop (context dependent)",
     "category": "Places & directions",
@@ -1732,49 +1733,49 @@
   },
   {
     "id": "ar-4770cf253a8fd7ba",
-    "text": "مستشفى",
+    "text": "مُسْتَشْفَى",
     "pronunciation": "mustashfa",
     "meaning": "hospital",
     "category": "Places & directions"
   },
   {
     "id": "ar-292918bc4f4ea843",
-    "text": "صيدليّة",
+    "text": "صَيْدَلِيِّة",
     "pronunciation": "ṣēdaliyye",
     "meaning": "pharmacy",
     "category": "Places & directions"
   },
   {
     "id": "ar-4363f467b9971bda",
-    "text": "مدرسة",
+    "text": "مَدْرَسِة",
     "pronunciation": "madrase",
     "meaning": "school",
     "category": "Places & directions"
   },
   {
     "id": "ar-37cd979527809da3",
-    "text": "وين الحمّام؟",
+    "text": "وَيْن اِلْحَمَّام؟",
     "pronunciation": "wēn il-ḥammām?",
     "meaning": "Where is the bathroom?",
     "category": "Places & directions"
   },
   {
     "id": "ar-f58f0b38fbbfb444",
-    "text": "وين المحطّة؟",
+    "text": "وَيْن اِلْمَحَطَّة؟",
     "pronunciation": "wēn il-maḥaṭṭa?",
     "meaning": "Where is the station / stop?",
     "category": "Places & directions"
   },
   {
     "id": "ar-666085edcac5271f",
-    "text": "كيف بروح عالسوق؟",
+    "text": "كِيف بَرُوح عَالسُّوق؟",
     "pronunciation": "kīf barūḥ ʿas-sūʾ?",
     "meaning": "How do I get to the market?",
     "category": "Places & directions"
   },
   {
     "id": "ar-643b21f2e4069e78",
-    "text": "بِدّي أنزل هون",
+    "text": "بِدِّي أَنْزَل هَوْن",
     "pronunciation": "biddi anzal hōn",
     "meaning": "I'd like to get off here.",
     "category": "Places & directions",
@@ -1782,70 +1783,70 @@
   },
   {
     "id": "ar-b13100b9a1f27789",
-    "text": "أنا ضايع",
+    "text": "أَنَا ضَايِع",
     "pronunciation": "ana ḍāyeʿ",
     "meaning": "I'm lost. (male speaker)",
     "category": "Places & directions"
   },
   {
     "id": "ar-3ee5fbb7151bc550",
-    "text": "أنا ضايعة",
+    "text": "أَنَا ضَايْعَة",
     "pronunciation": "ana ḍāyʿa",
     "meaning": "I'm lost. (female speaker)",
     "category": "Places & directions"
   },
   {
     "id": "ar-7db0b0bcae065188",
-    "text": "بيت",
+    "text": "بَيْت",
     "pronunciation": "bēt",
     "meaning": "house / home",
     "category": "Home & daily routine"
   },
   {
     "id": "ar-c38ede7cfd89ce68",
-    "text": "غرفة",
+    "text": "غُرْفِة",
     "pronunciation": "ghurfe",
     "meaning": "room",
     "category": "Home & daily routine"
   },
   {
     "id": "ar-12706fd4063acdcf",
-    "text": "باب",
+    "text": "بَاب",
     "pronunciation": "bāb",
     "meaning": "door",
     "category": "Home & daily routine"
   },
   {
     "id": "ar-25023d598e4ceffe",
-    "text": "شبّاك",
+    "text": "شُبَّاك",
     "pronunciation": "shubbāk",
     "meaning": "window",
     "category": "Home & daily routine"
   },
   {
     "id": "ar-db1bae91859e9403",
-    "text": "تخت",
+    "text": "تَخْت",
     "pronunciation": "takht",
     "meaning": "bed",
     "category": "Home & daily routine"
   },
   {
     "id": "ar-5eed69891b42fcbe",
-    "text": "مطبخ",
+    "text": "مَطْبَخ",
     "pronunciation": "maṭbakh",
     "meaning": "kitchen",
     "category": "Home & daily routine"
   },
   {
     "id": "ar-c853d6439c09a979",
-    "text": "حمّام",
+    "text": "حَمَّام",
     "pronunciation": "ḥammām",
     "meaning": "bathroom / toilet",
     "category": "Home & daily routine",
     "usage": "In daily conversation this often means the bathroom/toilet. You can use the question to ask where the toilets are.",
     "examples": [
       {
-        "text": "وين الحمّام؟",
+        "text": "وَيْن اِلْحَمَّام؟",
         "pronunciation": "wēn il-ḥammām?",
         "meaning": "Where is the bathroom?"
       }
@@ -1853,54 +1854,54 @@
   },
   {
     "id": "ar-8a9d0e6c56ececec",
-    "text": "مفتاح",
+    "text": "مِفْتَاح",
     "pronunciation": "miftāḥ",
     "meaning": "key",
     "category": "Home & daily routine"
   },
   {
     "id": "ar-6c97fbef73a576c0",
-    "text": "تلفون",
+    "text": "تَلَفَوْن",
     "pronunciation": "talafōn",
     "meaning": "phone",
     "category": "Home & daily routine"
   },
   {
     "id": "ar-44222134434a9c01",
-    "text": "بِدّي أروح عالبيت",
+    "text": "بِدِّي أَرُوح عَالْبَيْت",
     "pronunciation": "biddi arūḥ ʿal-bēt",
     "meaning": "I want to go home.",
     "category": "Home & daily routine"
   },
   {
     "id": "ar-b7c96fdfc7d7bded",
-    "text": "أنا بالبيت",
+    "text": "أَنَا بِالْبَيْت",
     "pronunciation": "ana bil-bēt",
     "meaning": "I'm at home.",
     "category": "Home & daily routine"
   },
   {
     "id": "ar-d37d0d7171df00ef",
-    "text": "بِدّي أنام",
+    "text": "بِدِّي أَنَام",
     "pronunciation": "biddi anām",
     "meaning": "I want to sleep.",
     "category": "Home & daily routine"
   },
   {
     "id": "ar-de4c9aebad9fc249",
-    "text": "صحيت",
+    "text": "صْحِيت",
     "pronunciation": "ṣḥīt",
     "meaning": "I woke up.",
     "category": "Home & daily routine",
     "usage": "Ṣḥīt means I woke up; ʾumt means I got up or stood up. The command is ʾūm to a man, ʾūmi to a woman.",
     "examples": [
       {
-        "text": "قمت من التخت",
+        "text": "قُمْت مِن اِلتَّخْت",
         "pronunciation": "ʾumt min it-takht",
         "meaning": "I got out of bed."
       },
       {
-        "text": "قوم!",
+        "text": "قُوم!",
         "pronunciation": "ʾūm!",
         "meaning": "Get up! / Stand up! (to a man)"
       }
@@ -1908,19 +1909,19 @@
   },
   {
     "id": "ar-af09290369ec3ccf",
-    "text": "قمت",
+    "text": "قُمْت",
     "pronunciation": "ʾumt",
     "meaning": "I got up / stood up.",
     "category": "Home & daily routine",
     "usage": "Ṣḥīt means I woke up; ʾumt means I got up or stood up. The command is ʾūm to a man, ʾūmi to a woman.",
     "examples": [
       {
-        "text": "قمت من التخت",
+        "text": "قُمْت مِن اِلتَّخْت",
         "pronunciation": "ʾumt min it-takht",
         "meaning": "I got out of bed."
       },
       {
-        "text": "قوم!",
+        "text": "قُوم!",
         "pronunciation": "ʾūm!",
         "meaning": "Get up! / Stand up! (to a man)"
       }
@@ -1928,19 +1929,19 @@
   },
   {
     "id": "ar-45f28d1a5c5cf217",
-    "text": "قمت من التخت",
+    "text": "قُمْت مِن اِلتَّخْت",
     "pronunciation": "ʾumt min it-takht",
     "meaning": "I got out of bed.",
     "category": "Home & daily routine",
     "usage": "Ṣḥīt means I woke up; ʾumt means I got up or stood up. The command is ʾūm to a man, ʾūmi to a woman.",
     "examples": [
       {
-        "text": "قمت من التخت",
+        "text": "قُمْت مِن اِلتَّخْت",
         "pronunciation": "ʾumt min it-takht",
         "meaning": "I got out of bed."
       },
       {
-        "text": "قوم!",
+        "text": "قُوم!",
         "pronunciation": "ʾūm!",
         "meaning": "Get up! / Stand up! (to a man)"
       }
@@ -1948,19 +1949,19 @@
   },
   {
     "id": "ar-e159bb1230779a92",
-    "text": "قوم!",
+    "text": "قُوم!",
     "pronunciation": "ʾūm!",
     "meaning": "Get up! / Stand up! (to a man)",
     "category": "Home & daily routine",
     "usage": "Ṣḥīt means I woke up; ʾumt means I got up or stood up. The command is ʾūm to a man, ʾūmi to a woman.",
     "examples": [
       {
-        "text": "قمت من التخت",
+        "text": "قُمْت مِن اِلتَّخْت",
         "pronunciation": "ʾumt min it-takht",
         "meaning": "I got out of bed."
       },
       {
-        "text": "قوم!",
+        "text": "قُوم!",
         "pronunciation": "ʾūm!",
         "meaning": "Get up! / Stand up! (to a man)"
       }
@@ -1968,19 +1969,19 @@
   },
   {
     "id": "ar-1efbbeba2c3c7714",
-    "text": "قومي!",
+    "text": "قُومِي!",
     "pronunciation": "ʾūmi!",
     "meaning": "Get up! / Stand up! (to a woman)",
     "category": "Home & daily routine",
     "usage": "Ṣḥīt means I woke up; ʾumt means I got up or stood up. The command is ʾūm to a man, ʾūmi to a woman.",
     "examples": [
       {
-        "text": "قمت من التخت",
+        "text": "قُمْت مِن اِلتَّخْت",
         "pronunciation": "ʾumt min it-takht",
         "meaning": "I got out of bed."
       },
       {
-        "text": "قوم!",
+        "text": "قُوم!",
         "pronunciation": "ʾūm!",
         "meaning": "Get up! / Stand up! (to a man)"
       }
@@ -1988,110 +1989,110 @@
   },
   {
     "id": "ar-25e292e70cce04a4",
-    "text": "نمت منيح",
+    "text": "نِمْت مْنِيح",
     "pronunciation": "nimt mnīḥ",
     "meaning": "I slept well.",
     "category": "Home & daily routine"
   },
   {
     "id": "ar-8e902bdadccff697",
-    "text": "افتح الباب",
+    "text": "اِفْتَح اِلْبَاب",
     "pronunciation": "iftaḥ il-bāb",
     "meaning": "Open the door. (to a man)",
     "category": "Home & daily routine"
   },
   {
     "id": "ar-af564dbacf68e0e3",
-    "text": "سكّر الباب",
+    "text": "سَكِّر اِلْبَاب",
     "pronunciation": "sakkir il-bāb",
     "meaning": "Close the door. (to a man)",
     "category": "Home & daily routine"
   },
   {
     "id": "ar-4fd03b54eb37f208",
-    "text": "وين المفتاح؟",
+    "text": "وَيْن اِلْمِفْتَاح؟",
     "pronunciation": "wēn il-miftāḥ?",
     "meaning": "Where is the key?",
     "category": "Home & daily routine"
   },
   {
     "id": "ar-a717553997ddf13e",
-    "text": "نسيت المفتاح",
+    "text": "نْسِيت اِلْمِفْتَاح",
     "pronunciation": "nsīt il-miftāḥ",
     "meaning": "I forgot the key.",
     "category": "Home & daily routine"
   },
   {
     "id": "ar-2422f71e7f4eadec",
-    "text": "اليوم",
+    "text": "اِلْيَوْم",
     "pronunciation": "il-yōm",
     "meaning": "today",
     "category": "Time & plans"
   },
   {
     "id": "ar-43bd353983715aaf",
-    "text": "بكرا",
+    "text": "بُكْرَا",
     "pronunciation": "bukra",
     "meaning": "tomorrow",
     "category": "Time & plans"
   },
   {
     "id": "ar-d0f1ebccdc1e0553",
-    "text": "مبارح",
+    "text": "مْبَارِح",
     "pronunciation": "mbāreḥ",
     "meaning": "yesterday",
     "category": "Time & plans"
   },
   {
     "id": "ar-6f4fc9629e8ef364",
-    "text": "الصبح",
+    "text": "اِلصُّبْح",
     "pronunciation": "iṣ-ṣubḥ",
     "meaning": "in the morning / the morning",
     "category": "Time & plans"
   },
   {
     "id": "ar-084d2df3594a6011",
-    "text": "بالليل",
+    "text": "بِاللَّيْل",
     "pronunciation": "bil-lēl",
     "meaning": "at night",
     "category": "Time & plans"
   },
   {
     "id": "ar-139d42093cd9146b",
-    "text": "بعد شوي",
+    "text": "بَعْد شْوَيّ",
     "pronunciation": "baʿd shwayy",
     "meaning": "in a little while",
     "category": "Time & plans"
   },
   {
     "id": "ar-52e897d4df3af46a",
-    "text": "قبل",
+    "text": "قَبْل",
     "pronunciation": "ʾabl",
     "meaning": "before",
     "category": "Time & plans"
   },
   {
     "id": "ar-3dc3397bee390bea",
-    "text": "بعد",
+    "text": "بَعْد",
     "pronunciation": "baʿd",
     "meaning": "after",
     "category": "Time & plans"
   },
   {
     "id": "ar-44c3abfb7720d08f",
-    "text": "ساعة",
+    "text": "سَاعَة",
     "pronunciation": "sāʿa",
     "meaning": "hour / clock / watch",
     "category": "Time & plans",
     "usage": "Can mean an hour, a clock or a watch. With the definite article, asking about is-sāʿa asks the time.",
     "examples": [
       {
-        "text": "نصّ ساعة",
+        "text": "نُصّ سَاعَة",
         "pronunciation": "nuṣṣ sāʿa",
         "meaning": "half an hour"
       },
       {
-        "text": "قدّيش الساعة؟",
+        "text": "قَدَّيْش اِلسَّاعَة؟",
         "pronunciation": "ʾaddēsh is-sāʿa?",
         "meaning": "What time is it?"
       }
@@ -2099,98 +2100,98 @@
   },
   {
     "id": "ar-0b7ecae98e6900e2",
-    "text": "دقيقة",
+    "text": "دَقِيقَة",
     "pronunciation": "daʾīʾa",
     "meaning": "minute",
     "category": "Time & plans"
   },
   {
     "id": "ar-4ca7f6fb39340c69",
-    "text": "نصّ ساعة",
+    "text": "نُصّ سَاعَة",
     "pronunciation": "nuṣṣ sāʿa",
     "meaning": "half an hour",
     "category": "Time & plans"
   },
   {
     "id": "ar-e416c08408d3e649",
-    "text": "أسبوع",
+    "text": "أُسْبُوع",
     "pronunciation": "usbūʿ",
     "meaning": "week",
     "category": "Time & plans"
   },
   {
     "id": "ar-418e78e480bd4252",
-    "text": "شهر",
+    "text": "شَهْر",
     "pronunciation": "shahr",
     "meaning": "month",
     "category": "Time & plans"
   },
   {
     "id": "ar-2d54bea33ed4a890",
-    "text": "سنة",
+    "text": "سَنِة",
     "pronunciation": "sane",
     "meaning": "year",
     "category": "Time & plans"
   },
   {
     "id": "ar-6e59f0b83cb162d5",
-    "text": "كل يوم",
+    "text": "كُلّ يَوْم",
     "pronunciation": "kull yōm",
     "meaning": "every day",
     "category": "Time & plans"
   },
   {
     "id": "ar-519ebcaa1856a282",
-    "text": "قدّيش الساعة؟",
+    "text": "قَدَّيْش اِلسَّاعَة؟",
     "pronunciation": "ʾaddēsh is-sāʿa?",
     "meaning": "What time is it?",
     "category": "Time & plans"
   },
   {
     "id": "ar-dde93f7079855473",
-    "text": "عندي وقت",
+    "text": "عِنْدِي وَقْت",
     "pronunciation": "ʿindi waʾt",
     "meaning": "I have time.",
     "category": "Time & plans"
   },
   {
     "id": "ar-8a50d5ca6bea9211",
-    "text": "ما عندي وقت",
+    "text": "مَا عِنْدِي وَقْت",
     "pronunciation": "ma ʿindi waʾt",
     "meaning": "I don't have time.",
     "category": "Time & plans"
   },
   {
     "id": "ar-9f284efde57fab6c",
-    "text": "بنشوفك بعدين",
+    "text": "بْنْشُوفَك بَعْدَيْن",
     "pronunciation": "bnshūfak baʿdēn",
     "meaning": "We'll see you later. (to a man)",
     "category": "Time & plans"
   },
   {
     "id": "ar-2d705176af50d50f",
-    "text": "شغل",
+    "text": "شُغْل",
     "pronunciation": "shughl",
     "meaning": "work / a job",
     "category": "Work & social life"
   },
   {
     "id": "ar-6dfedc9b52149640",
-    "text": "بشتغل هون",
+    "text": "بَشْتِغِل هَوْن",
     "pronunciation": "bashtighil hōn",
     "meaning": "I work here.",
     "category": "Work & social life"
   },
   {
     "id": "ar-fdfbd0c251049064",
-    "text": "وين بتشتغل؟",
+    "text": "وَيْن بْتِشْتِغِل؟",
     "pronunciation": "wēn btishtighil?",
     "meaning": "Where do you work? (to a man)",
     "category": "Work & social life"
   },
   {
     "id": "ar-1450294ee123f331",
-    "text": "مكتب",
+    "text": "مَكْتَب",
     "pronunciation": "maktab",
     "meaning": "office / desk",
     "category": "Work & social life",
@@ -2198,35 +2199,35 @@
   },
   {
     "id": "ar-1e11446cf0ac59bf",
-    "text": "موظّف",
+    "text": "مُوَظَّف",
     "pronunciation": "muwaẓẓaf",
     "meaning": "employee (male)",
     "category": "Work & social life"
   },
   {
     "id": "ar-864d07ca3a9dbe70",
-    "text": "موظّفة",
+    "text": "مُوَظَّفِة",
     "pronunciation": "muwaẓẓafe",
     "meaning": "employee (female)",
     "category": "Work & social life"
   },
   {
     "id": "ar-6260288d69238234",
-    "text": "دكتور",
+    "text": "دُكْتَوْر",
     "pronunciation": "duktōr",
     "meaning": "doctor (male)",
     "category": "Work & social life"
   },
   {
     "id": "ar-940ea6ae00fd76dd",
-    "text": "دكتورة",
+    "text": "دُكْتَوْرَة",
     "pronunciation": "duktōra",
     "meaning": "doctor (female)",
     "category": "Work & social life"
   },
   {
     "id": "ar-ea740157db85988d",
-    "text": "معلّم",
+    "text": "مْعَلِّم",
     "pronunciation": "mʿallim",
     "meaning": "teacher / skilled tradesman (male)",
     "category": "Work & social life",
@@ -2234,7 +2235,7 @@
   },
   {
     "id": "ar-0fbe1b53c932334f",
-    "text": "معلّمة",
+    "text": "مْعَلّمِة",
     "pronunciation": "mʿallme",
     "meaning": "teacher (female)",
     "category": "Work & social life",
@@ -2242,35 +2243,35 @@
   },
   {
     "id": "ar-c64a2bdee8fac874",
-    "text": "مشغول",
+    "text": "مَشْغُول",
     "pronunciation": "mashghūl",
     "meaning": "busy (masculine)",
     "category": "Work & social life"
   },
   {
     "id": "ar-c703ab562aeb6a69",
-    "text": "مشغولة",
+    "text": "مَشْغُولِة",
     "pronunciation": "mashghūle",
     "meaning": "busy (feminine)",
     "category": "Work & social life"
   },
   {
     "id": "ar-7da402ad2c19ae63",
-    "text": "أنا مشغول هلّأ",
+    "text": "أَنَا مَشْغُول هَلَّأ",
     "pronunciation": "ana mashghūl hallaʾ",
     "meaning": "I'm busy now. (male speaker)",
     "category": "Work & social life"
   },
   {
     "id": "ar-530f3d4676f83044",
-    "text": "فاضي",
+    "text": "فَاضِي",
     "pronunciation": "fāḍi",
     "meaning": "free / available; empty (masculine)",
     "category": "Work & social life",
     "usage": "For a person: free/available. For a container or place: empty. Fāḍi is masculine, fāḍye feminine.",
     "examples": [
       {
-        "text": "إنتَ فاضي بكرا؟",
+        "text": "إِنْتَ فَاضِي بُكْرَا؟",
         "pronunciation": "inta fāḍi bukra?",
         "meaning": "Are you free tomorrow? (to a man)"
       }
@@ -2278,14 +2279,14 @@
   },
   {
     "id": "ar-1c5798779e5144fa",
-    "text": "فاضية",
+    "text": "فَاضْيِة",
     "pronunciation": "fāḍye",
     "meaning": "free / available; empty (feminine)",
     "category": "Work & social life",
     "usage": "For a person: free/available. For a container or place: empty. Fāḍi is masculine, fāḍye feminine.",
     "examples": [
       {
-        "text": "إنتَ فاضي بكرا؟",
+        "text": "إِنْتَ فَاضِي بُكْرَا؟",
         "pronunciation": "inta fāḍi bukra?",
         "meaning": "Are you free tomorrow? (to a man)"
       }
@@ -2293,63 +2294,63 @@
   },
   {
     "id": "ar-5dabd6a551a14a32",
-    "text": "إنتَ فاضي بكرا؟",
+    "text": "إِنْتَ فَاضِي بُكْرَا؟",
     "pronunciation": "inta fāḍi bukra?",
     "meaning": "Are you free tomorrow? (to a man)",
     "category": "Work & social life"
   },
   {
     "id": "ar-c5daa1bc20b46731",
-    "text": "تعال",
+    "text": "تَعَال",
     "pronunciation": "taʿāl",
     "meaning": "come here (to a man)",
     "category": "Work & social life"
   },
   {
     "id": "ar-c4a4af3f6aaa1739",
-    "text": "تعالي",
+    "text": "تَعَالِي",
     "pronunciation": "taʿāli",
     "meaning": "come here (to a woman)",
     "category": "Work & social life"
   },
   {
     "id": "ar-7fb3d872350e9064",
-    "text": "يلّا نروح",
+    "text": "يَلَّا نْرُوح",
     "pronunciation": "yalla nrūḥ",
     "meaning": "let's go",
     "category": "Work & social life"
   },
   {
     "id": "ar-12fc9f31856ff88f",
-    "text": "يلّا ناكل",
+    "text": "يَلَّا نَاكُل",
     "pronunciation": "yalla nākol",
     "meaning": "let's eat",
     "category": "Work & social life"
   },
   {
     "id": "ar-89dc0b4486fc9303",
-    "text": "انبسطت",
+    "text": "اِنْبَسَطْت",
     "pronunciation": "inbasaṭt",
     "meaning": "I had a good time.",
     "category": "Work & social life"
   },
   {
     "id": "ar-cc5a0249276ffb46",
-    "text": "عيد ميلاد سعيد",
+    "text": "عِيد مِيلَاد سَعِيد",
     "pronunciation": "ʿīd mīlād saʿīd",
     "meaning": "happy birthday",
     "category": "Work & social life"
   },
   {
     "id": "ar-9bf871d2c5e26300",
-    "text": "بروح",
+    "text": "بَرُوح",
     "pronunciation": "barūḥ",
     "meaning": "I go / I'm going",
     "category": "Useful actions",
     "usage": "These are first-person forms (“I …”), not infinitives. The b- form can express a habit or a current action, depending on context.",
     "examples": [
       {
-        "text": "بشرب قهوة كل يوم",
+        "text": "بَشْرَب قَهْوِة كُلّ يَوْم",
         "pronunciation": "bashrab ʾahwe kull yōm",
         "meaning": "I drink coffee every day."
       }
@@ -2357,14 +2358,14 @@
   },
   {
     "id": "ar-1598b35f888d4c21",
-    "text": "باجي",
+    "text": "بَاجِي",
     "pronunciation": "bāji",
     "meaning": "I come / I'm coming",
     "category": "Useful actions",
     "usage": "These are first-person forms (“I …”), not infinitives. The b- form can express a habit or a current action, depending on context.",
     "examples": [
       {
-        "text": "بشرب قهوة كل يوم",
+        "text": "بَشْرَب قَهْوِة كُلّ يَوْم",
         "pronunciation": "bashrab ʾahwe kull yōm",
         "meaning": "I drink coffee every day."
       }
@@ -2372,14 +2373,14 @@
   },
   {
     "id": "ar-5c11d3f71efc764d",
-    "text": "بآكل",
+    "text": "بَآكُل",
     "pronunciation": "bākol",
     "meaning": "I eat / I'm eating",
     "category": "Useful actions",
     "usage": "These are first-person forms (“I …”), not infinitives. The b- form can express a habit or a current action, depending on context.",
     "examples": [
       {
-        "text": "بشرب قهوة كل يوم",
+        "text": "بَشْرَب قَهْوِة كُلّ يَوْم",
         "pronunciation": "bashrab ʾahwe kull yōm",
         "meaning": "I drink coffee every day."
       }
@@ -2387,14 +2388,14 @@
   },
   {
     "id": "ar-bc9d6b161588c23c",
-    "text": "بشرب",
+    "text": "بَشْرَب",
     "pronunciation": "bashrab",
     "meaning": "I drink / I'm drinking",
     "category": "Useful actions",
     "usage": "These are first-person forms (“I …”), not infinitives. The b- form can express a habit or a current action, depending on context.",
     "examples": [
       {
-        "text": "بشرب قهوة كل يوم",
+        "text": "بَشْرَب قَهْوِة كُلّ يَوْم",
         "pronunciation": "bashrab ʾahwe kull yōm",
         "meaning": "I drink coffee every day."
       }
@@ -2402,14 +2403,14 @@
   },
   {
     "id": "ar-744076d71279ffa2",
-    "text": "بحكي",
+    "text": "بَحْكِي",
     "pronunciation": "baḥki",
     "meaning": "I speak / talk",
     "category": "Useful actions",
     "usage": "These are first-person forms (“I …”), not infinitives. The b- form can express a habit or a current action, depending on context.",
     "examples": [
       {
-        "text": "بشرب قهوة كل يوم",
+        "text": "بَشْرَب قَهْوِة كُلّ يَوْم",
         "pronunciation": "bashrab ʾahwe kull yōm",
         "meaning": "I drink coffee every day."
       }
@@ -2417,7 +2418,7 @@
   },
   {
     "id": "ar-0bf5f5fe14749c0a",
-    "text": "بسمع",
+    "text": "بَسْمَع",
     "pronunciation": "basmaʿ",
     "meaning": "I hear / listen",
     "category": "Useful actions",
@@ -2425,7 +2426,7 @@
   },
   {
     "id": "ar-b2972fe70f3fb62f",
-    "text": "بشوف",
+    "text": "بَشُوف",
     "pronunciation": "bashūf",
     "meaning": "I see / watch",
     "category": "Useful actions",
@@ -2433,14 +2434,14 @@
   },
   {
     "id": "ar-d753477f0c8d3ba6",
-    "text": "بكتب",
+    "text": "بَكْتُب",
     "pronunciation": "baktob",
     "meaning": "I write / I'm writing",
     "category": "Useful actions",
     "usage": "These are first-person forms (“I …”), not infinitives. The b- form can express a habit or a current action, depending on context.",
     "examples": [
       {
-        "text": "بشرب قهوة كل يوم",
+        "text": "بَشْرَب قَهْوِة كُلّ يَوْم",
         "pronunciation": "bashrab ʾahwe kull yōm",
         "meaning": "I drink coffee every day."
       }
@@ -2448,35 +2449,35 @@
   },
   {
     "id": "ar-c90556f70e260fab",
-    "text": "بقرأ",
+    "text": "بَقْرَأ",
     "pronunciation": "baʾra",
     "meaning": "I read / I'm reading",
     "category": "Useful actions"
   },
   {
     "id": "ar-52110ae15e28e68f",
-    "text": "بفهم",
+    "text": "بَفْهَم",
     "pronunciation": "bafham",
     "meaning": "I understand",
     "category": "Useful actions"
   },
   {
     "id": "ar-264c36eae54de062",
-    "text": "بستنى",
+    "text": "بَسْتَنَّى",
     "pronunciation": "bastanna",
     "meaning": "I wait / I'm waiting",
     "category": "Useful actions"
   },
   {
     "id": "ar-f00b61a0aa09d38a",
-    "text": "بقدر",
+    "text": "بَقْدَر",
     "pronunciation": "baʾdar",
     "meaning": "I can / am able to",
     "category": "Useful actions",
     "usage": "Ability or being able to do something. The reading baʾdar uses urban ق → ʾ.",
     "examples": [
       {
-        "text": "بقدر أساعدك؟",
+        "text": "بَقْدَر أَسَاعْدَك؟",
         "pronunciation": "baʾdar asāʿdak?",
         "meaning": "Can I help you? (to a man)"
       }
@@ -2484,14 +2485,14 @@
   },
   {
     "id": "ar-888b7e5b950a759d",
-    "text": "ما بقدر",
+    "text": "مَا بَقْدَر",
     "pronunciation": "ma baʾdar",
     "meaning": "I can't / am unable to",
     "category": "Useful actions",
     "usage": "Ability or being able to do something. The reading baʾdar uses urban ق → ʾ.",
     "examples": [
       {
-        "text": "بقدر أساعدك؟",
+        "text": "بَقْدَر أَسَاعْدَك؟",
         "pronunciation": "baʾdar asāʿdak?",
         "meaning": "Can I help you? (to a man)"
       }
@@ -2499,28 +2500,28 @@
   },
   {
     "id": "ar-d6d403fa2bc6c359",
-    "text": "بِدّي أشتري",
+    "text": "بِدِّي أَشْتَرِي",
     "pronunciation": "biddi ashtari",
     "meaning": "I'd like to buy.",
     "category": "Useful actions"
   },
   {
     "id": "ar-68555313e568faee",
-    "text": "بِدّي أتعلم",
+    "text": "بِدِّي أَتْعَلَّم",
     "pronunciation": "biddi atʿallam",
     "meaning": "I want to learn.",
     "category": "Useful actions"
   },
   {
     "id": "ar-6623bc29860a0361",
-    "text": "بِدّي أرتاح",
+    "text": "بِدِّي أَرْتَاح",
     "pronunciation": "biddi artāḥ",
     "meaning": "I want to rest.",
     "category": "Useful actions"
   },
   {
     "id": "ar-d199ac04a4feabaf",
-    "text": "خلّصت",
+    "text": "خَلَّصْت",
     "pronunciation": "khallaṣt",
     "meaning": "I finished / I'm done.",
     "category": "Useful actions",
@@ -2528,14 +2529,14 @@
   },
   {
     "id": "ar-94909613a4103659",
-    "text": "نسيت",
+    "text": "نْسِيت",
     "pronunciation": "nsīt",
     "meaning": "I forgot.",
     "category": "Useful actions"
   },
   {
     "id": "ar-ca878ac9c4861671",
-    "text": "لقيته",
+    "text": "لَقَيْتُه",
     "pronunciation": "laʾēto",
     "meaning": "I found it / him. (masculine)",
     "category": "Useful actions",
@@ -2543,56 +2544,56 @@
   },
   {
     "id": "ar-d4493acc41dfec41",
-    "text": "استنّاني",
+    "text": "اِسْتَنَّانِي",
     "pronunciation": "istannāni",
     "meaning": "Wait for me. (to a man)",
     "category": "Useful actions"
   },
   {
     "id": "ar-d3adfe7f4cc8b87b",
-    "text": "جوعان",
+    "text": "جُوعَان",
     "pronunciation": "jūʿān",
     "meaning": "hungry (masculine)",
     "category": "Feelings & health"
   },
   {
     "id": "ar-2c75bd58147171f3",
-    "text": "جوعانة",
+    "text": "جُوعَانِة",
     "pronunciation": "jūʿāne",
     "meaning": "hungry (feminine)",
     "category": "Feelings & health"
   },
   {
     "id": "ar-d08742451dd8af96",
-    "text": "أنا جوعان",
+    "text": "أَنَا جُوعَان",
     "pronunciation": "ana jūʿān",
     "meaning": "I'm hungry. (male speaker)",
     "category": "Feelings & health"
   },
   {
     "id": "ar-ca19b8b688896af9",
-    "text": "أنا جوعانة",
+    "text": "أَنَا جُوعَانِة",
     "pronunciation": "ana jūʿāne",
     "meaning": "I'm hungry. (female speaker)",
     "category": "Feelings & health"
   },
   {
     "id": "ar-9348fcfa1944bc03",
-    "text": "عطشان",
+    "text": "عَطْشَان",
     "pronunciation": "ʿaṭshān",
     "meaning": "thirsty (masculine)",
     "category": "Feelings & health"
   },
   {
     "id": "ar-d746507ca11c9674",
-    "text": "عطشانة",
+    "text": "عَطْشَانِة",
     "pronunciation": "ʿaṭshāne",
     "meaning": "thirsty (feminine)",
     "category": "Feelings & health"
   },
   {
     "id": "ar-0f025214f39b1e86",
-    "text": "تعبان",
+    "text": "تَعْبَان",
     "pronunciation": "taʿbān",
     "meaning": "tired / unwell (masculine)",
     "category": "Feelings & health",
@@ -2600,7 +2601,7 @@
   },
   {
     "id": "ar-592396911a0c069c",
-    "text": "تعبانة",
+    "text": "تَعْبَانِة",
     "pronunciation": "taʿbāne",
     "meaning": "tired / unwell (feminine)",
     "category": "Feelings & health",
@@ -2608,84 +2609,84 @@
   },
   {
     "id": "ar-7f2fcbe278669428",
-    "text": "مبسوط",
+    "text": "مَبْسُوط",
     "pronunciation": "mabsūṭ",
     "meaning": "happy / pleased (masculine)",
     "category": "Feelings & health"
   },
   {
     "id": "ar-4b9a22b19aee8cec",
-    "text": "مبسوطة",
+    "text": "مَبْسُوطَة",
     "pronunciation": "mabsūṭa",
     "meaning": "happy / pleased (feminine)",
     "category": "Feelings & health"
   },
   {
     "id": "ar-350bdc70e0d71e3e",
-    "text": "زعلان",
+    "text": "زَعْلَان",
     "pronunciation": "zaʿlān",
     "meaning": "upset / sad (masculine)",
     "category": "Feelings & health"
   },
   {
     "id": "ar-dd6da5a754cb20c5",
-    "text": "زعلانة",
+    "text": "زَعْلَانِة",
     "pronunciation": "zaʿlāne",
     "meaning": "upset / sad (feminine)",
     "category": "Feelings & health"
   },
   {
     "id": "ar-417a20e9afcebfb8",
-    "text": "خايف",
+    "text": "خَايِف",
     "pronunciation": "khāyef",
     "meaning": "afraid (masculine)",
     "category": "Feelings & health"
   },
   {
     "id": "ar-6646995713202cbd",
-    "text": "خايفة",
+    "text": "خَايْفِة",
     "pronunciation": "khāyfe",
     "meaning": "afraid (feminine)",
     "category": "Feelings & health"
   },
   {
     "id": "ar-b48165eee2809579",
-    "text": "مريض",
+    "text": "مَرِيض",
     "pronunciation": "marīḍ",
     "meaning": "ill / sick (masculine)",
     "category": "Feelings & health"
   },
   {
     "id": "ar-514578bbd94a3ca7",
-    "text": "مريضة",
+    "text": "مَرِيضَة",
     "pronunciation": "marīḍa",
     "meaning": "ill / sick (feminine)",
     "category": "Feelings & health"
   },
   {
     "id": "ar-557a4c222a58bd80",
-    "text": "مش منيح",
+    "text": "مِش مْنِيح",
     "pronunciation": "mish mnīḥ",
     "meaning": "not well / not good (masculine)",
     "category": "Feelings & health"
   },
   {
     "id": "ar-368d590554121e0b",
-    "text": "راسي بوجعني",
+    "text": "رَاسِي بِوْجَعْنِي",
     "pronunciation": "rāsi biwjaʿni",
     "meaning": "My head hurts.",
     "category": "Feelings & health"
   },
   {
     "id": "ar-1349fed7b70c1600",
-    "text": "بطني بوجعني",
+    "text": "بَطْنِي بِوْجَعْنِي",
     "pronunciation": "baṭni biwjaʿni",
     "meaning": "My stomach hurts.",
     "category": "Feelings & health"
   },
   {
     "id": "ar-ddcd532f0774cabf",
-    "text": "إيد",
+    "text": "إِيد",
     "pronunciation": "īd",
     "meaning": "hand / arm",
     "category": "Feelings & health",
@@ -2693,7 +2694,7 @@
   },
   {
     "id": "ar-7c56b3f2d5f5f467",
-    "text": "إجر",
+    "text": "إِجِر",
     "pronunciation": "ijir",
     "meaning": "foot / leg",
     "category": "Feelings & health",
@@ -2701,49 +2702,49 @@
   },
   {
     "id": "ar-b6d64deb9b294811",
-    "text": "ظهر",
+    "text": "ظَهْر",
     "pronunciation": "ḍahr",
     "meaning": "back (body part)",
     "category": "Feelings & health"
   },
   {
     "id": "ar-c639d14abb723ba3",
-    "text": "دوا",
+    "text": "دَوَا",
     "pronunciation": "dawa",
     "meaning": "medicine",
     "category": "Feelings & health"
   },
   {
     "id": "ar-0133cb79d1af23fd",
-    "text": "بِدّي دكتور",
+    "text": "بِدِّي دُكْتَوْر",
     "pronunciation": "biddi duktōr",
     "meaning": "I need a doctor.",
     "category": "Feelings & health"
   },
   {
     "id": "ar-ba2f9e41094ed575",
-    "text": "ساعدوني!",
+    "text": "سَاعِدُونِي!",
     "pronunciation": "sāʿidūni!",
     "meaning": "Help me! (to several people)",
     "category": "Feelings & health"
   },
   {
     "id": "ar-c423bb7d1c6fcb71",
-    "text": "منيح",
+    "text": "مْنِيح",
     "pronunciation": "mnīḥ",
     "meaning": "good / well (masculine)",
     "category": "Useful descriptions"
   },
   {
     "id": "ar-d33cb36e8a60e244",
-    "text": "منيحة",
+    "text": "مْنِيحَة",
     "pronunciation": "mnīḥa",
     "meaning": "good / well (feminine)",
     "category": "Useful descriptions"
   },
   {
     "id": "ar-fd52a3d1cdb7b8b4",
-    "text": "كبير",
+    "text": "كْبِير",
     "pronunciation": "kbīr",
     "meaning": "big / older (masculine)",
     "category": "Useful descriptions",
@@ -2751,42 +2752,44 @@
   },
   {
     "id": "ar-d1afbc5f1e30ab2a",
-    "text": "كبيرة",
+    "text": "كْبِيرِة",
     "pronunciation": "kbīre",
     "meaning": "big / older (feminine)",
     "category": "Useful descriptions"
   },
   {
     "id": "ar-560ef2b6869cbece",
-    "text": "صغير",
+    "text": "صْغِير",
     "pronunciation": "zghīr",
     "meaning": "small / young (masculine)",
-    "category": "Useful descriptions"
+    "category": "Useful descriptions",
+    "usage": " Conventional ص spelling is retained; this course’s local reading voices it as z. Follow the Latin reading for that difference."
   },
   {
     "id": "ar-b0965d8ef5ffec59",
-    "text": "صغيرة",
+    "text": "صْغِيرِة",
     "pronunciation": "zghīre",
     "meaning": "small / young (feminine)",
-    "category": "Useful descriptions"
+    "category": "Useful descriptions",
+    "usage": " Conventional ص spelling is retained; this course’s local reading voices it as z. Follow the Latin reading for that difference."
   },
   {
     "id": "ar-d51f9d8dbcc077ac",
-    "text": "جديد",
+    "text": "جْدِيد",
     "pronunciation": "jdīd",
     "meaning": "new (masculine)",
     "category": "Useful descriptions"
   },
   {
     "id": "ar-afd23299cb0648b0",
-    "text": "جديدة",
+    "text": "جْدِيدِة",
     "pronunciation": "jdīde",
     "meaning": "new (feminine)",
     "category": "Useful descriptions"
   },
   {
     "id": "ar-a61d4dde22d080bb",
-    "text": "قديم",
+    "text": "قَدِيم",
     "pronunciation": "ʾadīm",
     "meaning": "old / not new (masculine)",
     "category": "Useful descriptions",
@@ -2794,14 +2797,14 @@
   },
   {
     "id": "ar-9e8e520d541cf8d6",
-    "text": "حلو",
+    "text": "حِلْو",
     "pronunciation": "ḥilw",
     "meaning": "nice / beautiful / sweet (masculine)",
     "category": "Useful descriptions",
     "usage": "Can mean nice, beautiful or sweet. The intended sense depends on whether you describe an experience, a person or food.",
     "examples": [
       {
-        "text": "القهوة حلوة",
+        "text": "اِلْقَهْوِة حِلْوِة",
         "pronunciation": "il-ʾahwe ḥilwe",
         "meaning": "The coffee is sweet / nice. (context decides)"
       }
@@ -2809,14 +2812,14 @@
   },
   {
     "id": "ar-fa0cebf00af33ea3",
-    "text": "حلوة",
+    "text": "حِلْوِة",
     "pronunciation": "ḥilwe",
     "meaning": "nice / beautiful / sweet (feminine)",
     "category": "Useful descriptions",
     "usage": "Can mean nice, beautiful or sweet. The intended sense depends on whether you describe an experience, a person or food.",
     "examples": [
       {
-        "text": "القهوة حلوة",
+        "text": "اِلْقَهْوِة حِلْوِة",
         "pronunciation": "il-ʾahwe ḥilwe",
         "meaning": "The coffee is sweet / nice. (context decides)"
       }
@@ -2824,68 +2827,68 @@
   },
   {
     "id": "ar-073ebbcee9574b80",
-    "text": "سهل",
+    "text": "سَهْل",
     "pronunciation": "sahl",
     "meaning": "easy (masculine)",
     "category": "Useful descriptions"
   },
   {
     "id": "ar-8954120fb333c654",
-    "text": "صعب",
+    "text": "صَعْب",
     "pronunciation": "ṣaʿb",
     "meaning": "difficult (masculine)",
     "category": "Useful descriptions"
   },
   {
     "id": "ar-93863899b278049f",
-    "text": "سريع",
+    "text": "سَرِيع",
     "pronunciation": "sarīʿ",
     "meaning": "fast (masculine)",
     "category": "Useful descriptions"
   },
   {
     "id": "ar-cea9b08959aa1a0c",
-    "text": "بطيء",
+    "text": "بَطِيء",
     "pronunciation": "baṭīʾ",
     "meaning": "slow (masculine)",
     "category": "Useful descriptions"
   },
   {
     "id": "ar-9fb21edeef191775",
-    "text": "مهمّ",
+    "text": "مُهِمّ",
     "pronunciation": "muhimm",
     "meaning": "important (masculine)",
     "category": "Useful descriptions"
   },
   {
     "id": "ar-d314d743d08e73a9",
-    "text": "نظيف",
+    "text": "نْظِيف",
     "pronunciation": "nḍīf",
     "meaning": "clean (masculine)",
     "category": "Useful descriptions"
   },
   {
     "id": "ar-2e5b6f5f65f2a56c",
-    "text": "وسخ",
+    "text": "وِسِخ",
     "pronunciation": "wisikh",
     "meaning": "dirty (masculine)",
     "category": "Useful descriptions"
   },
   {
     "id": "ar-b81cfb99ad35cf67",
-    "text": "سخن",
+    "text": "سُخْن",
     "pronunciation": "sukhn",
     "meaning": "hot / warm (temperature; masculine)",
     "category": "Useful descriptions",
     "usage": "Ḥārr describes spicy food and can also mean hot. Sukhn describes temperature: a drink or dish can be hot without being spicy.",
     "examples": [
       {
-        "text": "القهوة سخنة",
+        "text": "اِلْقَهْوِة سُخْنِة",
         "pronunciation": "il-ʾahwe sukhne",
         "meaning": "The coffee is hot."
       },
       {
-        "text": "مش حارّ",
+        "text": "مِش حَارّ",
         "pronunciation": "mish ḥārr",
         "meaning": "not spicy"
       }
@@ -2893,26 +2896,26 @@
   },
   {
     "id": "ar-bb746d3993345d5b",
-    "text": "بارد",
+    "text": "بَارِد",
     "pronunciation": "bāred",
     "meaning": "cold (temperature; masculine)",
     "category": "Useful descriptions"
   },
   {
     "id": "ar-1a31bf1f7499dcf8",
-    "text": "كتير",
+    "text": "كْتِير",
     "pronunciation": "ktīr",
     "meaning": "very / a lot / many",
     "category": "Useful descriptions",
     "usage": "Ktīr can mean very, much or many. Shwayy means a little; shwayy shwayy means slowly or gradually.",
     "examples": [
       {
-        "text": "كتير غالي",
+        "text": "كْتِير غَالِي",
         "pronunciation": "ktīr ghāli",
         "meaning": "It's very expensive. (masculine)"
       },
       {
-        "text": "احكي شوي شوي",
+        "text": "اِحْكِي شْوَيّ شْوَيّ",
         "pronunciation": "iḥki shwayy shwayy",
         "meaning": "Speak slowly, please. (to one person)"
       }
@@ -2920,19 +2923,19 @@
   },
   {
     "id": "ar-0ec1db5a51e13035",
-    "text": "شوي",
+    "text": "شْوَيّ",
     "pronunciation": "shwayy",
     "meaning": "a little / a bit",
     "category": "Useful descriptions",
     "usage": "Ktīr can mean very, much or many. Shwayy means a little; shwayy shwayy means slowly or gradually.",
     "examples": [
       {
-        "text": "كتير غالي",
+        "text": "كْتِير غَالِي",
         "pronunciation": "ktīr ghāli",
         "meaning": "It's very expensive. (masculine)"
       },
       {
-        "text": "احكي شوي شوي",
+        "text": "اِحْكِي شْوَيّ شْوَيّ",
         "pronunciation": "iḥki shwayy shwayy",
         "meaning": "Speak slowly, please. (to one person)"
       }
@@ -2940,7 +2943,7 @@
   },
   {
     "id": "ar-9515528190c2eda5",
-    "text": "واحد",
+    "text": "وَاحَد",
     "pronunciation": "wāḥad",
     "meaning": "one",
     "category": "Numbers & quantities",
@@ -2948,7 +2951,7 @@
   },
   {
     "id": "ar-36f3bd09197a3207",
-    "text": "تنين",
+    "text": "تْنَيْن",
     "pronunciation": "tnēn",
     "meaning": "two",
     "category": "Numbers & quantities",
@@ -2956,7 +2959,7 @@
   },
   {
     "id": "ar-ec98ae1b62ff2adb",
-    "text": "تلاتة",
+    "text": "تْلَاتِة",
     "pronunciation": "tlāte",
     "meaning": "three",
     "category": "Numbers & quantities",
@@ -2964,63 +2967,63 @@
   },
   {
     "id": "ar-5322f6f60175ed76",
-    "text": "أربعة",
+    "text": "أَرْبَعَة",
     "pronunciation": "arbaʿa",
     "meaning": "four",
     "category": "Numbers & quantities"
   },
   {
     "id": "ar-1ba32ae2545bf97f",
-    "text": "خمسة",
+    "text": "خَمْسِة",
     "pronunciation": "khamse",
     "meaning": "five",
     "category": "Numbers & quantities"
   },
   {
     "id": "ar-914a1babde8a023a",
-    "text": "ستّة",
+    "text": "سِتِّة",
     "pronunciation": "sitte",
     "meaning": "six",
     "category": "Numbers & quantities"
   },
   {
     "id": "ar-339eaf337a4c78a0",
-    "text": "سبعة",
+    "text": "سَبْعَة",
     "pronunciation": "sabʿa",
     "meaning": "seven",
     "category": "Numbers & quantities"
   },
   {
     "id": "ar-36f6338462db54b9",
-    "text": "تمانية",
+    "text": "تَمَانْيِة",
     "pronunciation": "tamānye",
     "meaning": "eight",
     "category": "Numbers & quantities"
   },
   {
     "id": "ar-2a60e1e84b83f852",
-    "text": "تسعة",
+    "text": "تِسْعَة",
     "pronunciation": "tisʿa",
     "meaning": "nine",
     "category": "Numbers & quantities"
   },
   {
     "id": "ar-f2d35f5ab78606e9",
-    "text": "عشرة",
+    "text": "عَشَرَة",
     "pronunciation": "ʿashara",
     "meaning": "ten",
     "category": "Numbers & quantities"
   },
   {
     "id": "ar-501cc9ef8d7df5d1",
-    "text": "عشرين",
+    "text": "عِشْرِين",
     "pronunciation": "ʿishrīn",
     "meaning": "twenty",
     "category": "Numbers & quantities"
   },
   {
     "id": "ar-ba1780719c255ab4",
-    "text": "ميّة",
+    "text": "مِيِّة",
     "pronunciation": "miyye",
     "meaning": "one hundred",
     "category": "Numbers & quantities",
@@ -3028,35 +3031,35 @@
   },
   {
     "id": "ar-0bb7d837672800fe",
-    "text": "نصّ",
+    "text": "نُصّ",
     "pronunciation": "nuṣṣ",
     "meaning": "half",
     "category": "Numbers & quantities"
   },
   {
     "id": "ar-0d755bde91fb3179",
-    "text": "كيلو",
+    "text": "كِيلُو",
     "pronunciation": "kīlo",
     "meaning": "kilogram / kilo",
     "category": "Numbers & quantities"
   },
   {
     "id": "ar-494cd3e8df2f2f51",
-    "text": "كيلو بندورة",
+    "text": "كِيلُو بَنَدَوْرَة",
     "pronunciation": "kīlo banadōra",
     "meaning": "a kilo of tomatoes",
     "category": "Numbers & quantities"
   },
   {
     "id": "ar-51ac78aa08cc0cd7",
-    "text": "كمان شوي",
+    "text": "كَمَان شْوَيّ",
     "pronunciation": "kamān shwayy",
     "meaning": "a little more",
     "category": "Numbers & quantities"
   },
   {
     "id": "ar-8111be227bf6da74",
-    "text": "بكفّي",
+    "text": "بْكَفِّي",
     "pronunciation": "bkaffi",
     "meaning": "that's enough / it is sufficient",
     "category": "Numbers & quantities"

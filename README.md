@@ -1,6 +1,6 @@
 # Remember Languages
 
-A mobile learning app with English → Mandarin (1,121 cards), English → Japanese (60 starter cards), Chinese character reading (94 characters and 90 compounds), and Spoken Palestinian Arabic (350 cards). Select your course on the home screen.
+A mobile learning app with English → Mandarin (1,121 cards), English → Japanese (60 starter cards), Chinese character reading (94 characters and 90 compounds), Spoken Palestinian Arabic (350 cards with reading marks), and Arabic letter reading (64 items). Select your course on the home screen.
 
 ## Open on your phone
 
@@ -42,6 +42,7 @@ node verify-pwa.cjs
 node verify-courses.cjs
 node verify-recall.cjs
 node verify-reading.cjs
+node verify-arabic.cjs
 python3 verify-build.py
 python3 verify-voice.py
 ```
@@ -49,6 +50,12 @@ python3 verify-voice.py
 Preserve card IDs when correcting wording. Bump the service-worker cache version when changing cached assets. Publish GitHub Pages from the root of the `main` branch. No build service, API key or backend is needed.
 
 ## Reading and sentence practice (v1.6.13)
+
+**Arabic reading (v1.6.15):** On the Palestinian Arabic home screen, tap
+**Learn Arabic letters & vowel marks**. Learn the letters, connected shapes,
+and ḥarakāt, then unlock syllables and familiar words after successful reading
+recalls. Recognition only, with separate progress. The vocabulary course also
+shows reading marks on its cards and examples. See [ARABIC-READING.md](ARABIC-READING.md).
 
 The Mandarin home screen now has **Learn Chinese characters & compounds**.
 It opens a reading-only course: recognize 94 base characters, then unlock 90

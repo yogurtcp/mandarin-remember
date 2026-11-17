@@ -162,10 +162,10 @@
         "ar-YE"
       ],
       "preferVoiceOrder": true,
-      "testText": "مرحبا، كيفك؟ بدّي كاسة ميّ لو سمحت.",
+      "testText": "مَرْحَبَا، كِيفَك؟ بِدِّي كَاسِة مَيّ لَوْ سَمَحْت.",
       "pronunciationLabel": "Transliteration",
       "hintMode": "transliteration",
-      "pronunciationHelp": "Palestinian everyday speech, with an urban-leaning reading. ā/ī/ū/ē/ō are long vowels; sh, kh and gh are single sounds. ḥ is a deep, breathy h; ʿ is ع; ʾ is a glottal stop. ṣ/ḍ/ṭ/ẓ are emphatic consonants; doubled letters are held longer. The reading usually uses ʾ for ق; q, g and k occur in other local accents. Short vowels and j also vary locally. Arabic spelling is partly unvoweled: follow the Latin reading for the intended form. Speaker/addressee gender is labeled on cards. Device and Google voices may use formal Arabic; they are not verified Palestinian models. Ask a local speaker to check your pronunciation.",
+      "pronunciationHelp": "Palestinian everyday speech, with an urban-leaning reading. ā/ī/ū/ē/ō are long vowels; sh, kh and gh are single sounds. ḥ is a deep, breathy h; ʿ is ع; ʾ is a glottal stop. ṣ/ḍ/ṭ/ẓ are emphatic consonants; doubled letters are held longer. The reading usually uses ʾ for ق; q, g and k occur in other local accents. Short vowels and j also vary locally. Arabic spelling is partly unvoweled: follow the Latin reading for the intended form. Speaker/addressee gender is labeled on cards. Device and Google voices may use formal Arabic; they are not verified Palestinian models. Ask a local speaker to check your pronunciation. Ḥarakāt (vowel marks) are included as a reading aid. Kasra can stand for i/e and ḍamma for u/o; ـَيْ and ـَو can be ē and ō locally. Final ة can be a/e or t in a phrase. The Latin reading gives the intended Palestinian form; no formal case endings are added.",
       "audioNote": "Audio is synthetic and is not verified Palestinian pronunciation. Meaning reviews use Arabic text and the Latin reading; audio is available only for comparison. Ask a Palestinian speaker to check the reading.",
       "searchPlaceholder": "مي, mayy, water…",
       "localSpeechHelper": true,
@@ -174,7 +174,66 @@
         "provider": "google-translate",
         "language": "ar"
       },
-      "unverifiedSpeech": true
+      "unverifiedSpeech": true,
+      "characterCourse": "en-ar-reading",
+      "characterCourseLabel": "Learn Arabic letters & vowel marks"
+    },
+    {
+      "id": "en-ar-reading",
+      "label": "English → Arabic letters & vowel marks",
+      "deckFile": "decks/en-ar-reading.json",
+      "progressId": "palestinian-arabic-reading-1",
+      "studyMode": "reading",
+      "readingScript": "arabic",
+      "characterCourse": "en-ar-palestinian",
+      "characterCourseLabel": "Back to Palestinian Arabic vocabulary",
+      "source": {
+        "name": "English",
+        "lang": "en",
+        "dir": "ltr",
+        "translateCode": "en"
+      },
+      "target": {
+        "name": "Arabic reading",
+        "textLabel": "Arabic",
+        "lang": "ar-PS",
+        "dir": "rtl",
+        "translateCode": "ar"
+      },
+      "voiceLanguages": [
+        "ar-PS",
+        "ar-IL",
+        "ar-JO",
+        "ar-LB",
+        "ar-SY",
+        "ar",
+        "ar-SA",
+        "ar-EG",
+        "ar-AE",
+        "ar-BH",
+        "ar-DZ",
+        "ar-IQ",
+        "ar-KW",
+        "ar-LY",
+        "ar-MA",
+        "ar-OM",
+        "ar-QA",
+        "ar-TN",
+        "ar-YE"
+      ],
+      "preferVoiceOrder": true,
+      "testText": "بَاء، تَاء، أَلِف.",
+      "pronunciationLabel": "Reading",
+      "hintMode": "transliteration",
+      "pronunciationHelp": "Read right to left. Learn the letters, their connected shapes, and ḥarakāt (vowel marks), then read simple syllables and Palestinian words. Letter names are different from the sounds they make in words. No writing required. Meaning and Latin reading stay hidden until reveal.",
+      "audioNote": "Audio is optional synthetic comparison, not verified Palestinian pronunciation. On letter and mark cards it reads the name, not a word sound. The Latin reading guides the local vowels; learning does not require audio.",
+      "unverifiedSpeech": true,
+      "searchPlaceholder": "ب, fatḥa, bāʾ, door…",
+      "mark": "ب",
+      "onlineSpeech": {
+        "provider": "google-translate",
+        "language": "ar"
+      }
     }
   ]
 }
