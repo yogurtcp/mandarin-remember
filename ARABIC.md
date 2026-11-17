@@ -10,11 +10,11 @@ The new **Learn Arabic letters & vowel marks** button opens a separate 64-item r
 
 The course teaches Palestinian everyday speech with an urban-leaning transliteration. Previously its Arabic text was partly unvoweled. Device voices and the static app’s Google fallback chose their own vowels and pronunciation; a generic Arabic voice can read it as formal Arabic. Playback now receives the marked text, which reduces ambiguity but does not guarantee Palestinian vowels or accent. The optional local helper uses Jordanian `ar-JO-SanaNeural`, which is also not a verified Palestinian model. Locale preference is not a pronunciation guarantee.
 
-Meaning reviews now show Arabic and the Latin reading instead of requiring unverified listening. Comparison audio remains available on demand, with a visible limitation in practice, the phrasebook, and audio settings. Comparisons are logged as reading rather than listening practice. Production reviews, due dates, and saved settings remain unchanged. This does not correct the audio or independently validate every transliteration.
+In v1.6.16, vocabulary listening reviews again hide Arabic text and transliteration until reveal. The previous automatic switch to reading mode was a regression and has been removed. “Read instead” remains an explicit choice. Vowel marks appear on introductions, revealed answers, phrasebook entries, and an explicit reading prompt. The separate letter course continues to test reading. Synthetic audio limitations remain visible without changing the task type.
 
 ## Reliable audio path
 
-Use recordings of each word and phrase by a Palestinian speaker, following the intended local variety, then have another speaker check each recording against its meaning, transliteration, and gender labels. Record complete phrases as complete phrases. Enable listening practice only for reviewed recordings. Diacritized `speechText` can help a synthetic voice choose vowels, but cannot guarantee dialect, consonants, stress, or intonation. No native recordings are bundled yet.
+Use recordings of each word and phrase by a Palestinian speaker, following the intended local variety, then have another speaker check each recording against its meaning, transliteration, and gender labels. Record complete phrases as complete phrases. Keep synthetic audio clearly distinguished from reviewed recordings. Diacritized `speechText` can help a synthetic voice choose vowels, but cannot guarantee dialect, consonants, stress, or intonation. No native recordings are bundled yet.
 
 Microsoft’s [text-to-speech voice table](https://learn.microsoft.com/en-us/azure/ai-services/speech-service/language-support?tabs=tts) lists Jordanian, Lebanese and Syrian voices; Palestinian support elsewhere on that page includes speech recognition and must not be mistaken for a Palestinian TTS voice. Google Cloud explicitly describes its [Arabic `ar-XA` voices](https://docs.cloud.google.com/text-to-speech/docs/list-voices-and-types) as Modern Standard Arabic; this is a separate product from the app’s best-effort Google Translate fallback.
 
@@ -23,3 +23,7 @@ Microsoft’s [text-to-speech voice table](https://learn.microsoft.com/en-us/azu
 Original deck references: [Maknuune Palestinian Arabic Lexicon](https://www.palestine-lexicon.org/), [Dibas et al. (2022)](https://aclanthology.org/2022.wanlp-1.13/), and [Lingualism pronunciation guide](https://resources.lingualism.com/levantine-arabic/levantine-arabic-pronunciation/). These references are not a native-speaker sign-off on all app content.
 
 Course tests cover original progress restoration, Arabic RTL configuration, preferred Levantine voice routing, reading-mode meaning review, optional comparison audio, switching back to listening courses, backups, and helper isolation. Mock playback verifies routing, not accent quality on a physical phone.
+
+## Rendering and updates (v1.6.16)
+
+Noto Naskh Arabic is bundled with its SIL Open Font License, served locally and cached for offline use. Arabic text uses normal font weight with room for the vowel marks. Online page navigation revalidates HTML with the server; worker installation bypasses the browser HTTP cache when refreshing its offline assets. Update checks remain startup-only, with no focus/reconnect polling or forced reload of active lessons. Existing progress keys remain unchanged.

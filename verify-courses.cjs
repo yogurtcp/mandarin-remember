@@ -30,7 +30,7 @@ function boot(storage=new Map()){
  assert(a.run('switchCourse("ru-he-test")'));assert.equal(a.run('session'),null);assert.equal(a.run('current'),null);
  assert.equal(a.run('Object.keys(state.items).length'),0);assert.equal(a.run('state.settings.newLimit'),5);assert.equal(a.get('startedCount').textContent,0);
  assert.equal(a.get('targetText').dir,'rtl');assert.equal(a.get('targetText').lang,'he-IL');assert.equal(a.get('meaning').lang,'ru');
- assert.equal(a.get('copyTarget').textContent,'Copy Hebrew');assert.equal(a.get('appVersion').textContent,'2 cards · Русский → עברית · v1.6.15');
+ assert.equal(a.get('copyTarget').textContent,'Copy Hebrew');assert.equal(a.get('appVersion').textContent,'2 cards · Русский → עברית · v1.6.16');
  assert(a.get('category').innerHTML.includes('Test greetings'));assert(!a.get('category').innerHTML.includes('Family'));
  a.run('startExtra();studied();state.items[current.id].note="Hebrew cue";state.settings.voice="Hebrew";state.settings.newLimit=3;save()');
  assert.equal(a.run('state.deckId'),second.progressId);assert.equal(a.run('state.items[DECK[0].id].note'),'Hebrew cue');
@@ -86,11 +86,11 @@ function boot(storage=new Map()){
   assert.equal(t.run('current.direction'),'produce');assert(t.get('answer').hidden);
   t.run('help("pronunciation");reveal();rate(3)');assert.equal(t.run('state.logs.at(-1).grade'),0);
   t.run('home();state.items['+JSON.stringify(firstId)+'].produce.due=Date.now()+E.DAY;state.items['+JSON.stringify(firstId)+'].understand.due=Date.now()-1;start();reveal()');
-  assert.equal(t.run('current.direction'),'understand');assert.equal(t.run('revealed'),!!target.unverifiedSpeech);
+  assert.equal(t.run('current.direction'),'understand');assert.equal(t.run('revealed'),false);assert.equal(t.get('readingPrompt').hidden,true);
   t.run('readInstead();reveal();rate(2)');assert.equal(t.run('state.logs.at(-1).input'),'reading');
   t.run('home();state.items['+JSON.stringify(firstId)+'].understand.due=Date.now()-1;start();play(byId.get(current.id),false,true);reveal()');
   assert.equal(t.run('heard'),true);assert.equal(t.run('revealed'),true);
-  t.run('rate(2)');assert.equal(t.run('state.logs.at(-1).input'),target.unverifiedSpeech?'reading':'listening');
+  t.run('rate(2)');assert.equal(t.run('state.logs.at(-1).input'),'listening');
   t.run('home();start(true)');assert(t.run('current.practice'));const pausedId=t.run('current.id');
   t.get('memoryCue').value='My course-specific cue';t.run('saveCue();pauseCurrent();home()');
   assert.equal(t.run('state.items['+JSON.stringify(pausedId)+'].suspended'),true);
@@ -118,11 +118,11 @@ function boot(storage=new Map()){
  const oldArabicStore=new Map([['remember:active-course:v1',arabic.id],[arabic.storageKey,JSON.stringify(oldArabic)]]);
  const restored=boot(oldArabicStore);assert.equal(restored.run('state.items[DECK[0].id].note'),'Saved before Arabic was hidden');
  restored.run('beginSession([{id:DECK[0].id,direction:"understand",readyAt:Date.now()}],false)');
- assert.equal(restored.run('inputMode'),'reading');assert.equal(restored.spoken.length,0);assert.equal(restored.media.length,0);
- assert.equal(restored.get('readingPrompt').hidden,false);assert(restored.get('readingPrompt').innerHTML.includes('marḥaba'));
- assert(restored.get('courseAudioNote').textContent.includes('not verified'));assert.equal(restored.get('promptAudio').textContent,'▶ Compare audio');
+ assert.equal(restored.run('inputMode'),'listening');assert.equal(restored.spoken.length,0);assert.equal(restored.media.length,0);
+ assert.equal(restored.get('readingPrompt').hidden,true);assert.equal(restored.get('answer').hidden,true);assert.equal(restored.run('revealed'),false);
+ assert(restored.get('courseAudioNote').textContent.includes('not verified'));assert.equal(restored.get('promptAudio').textContent,'▶ Listen');
  restored.run('play(byId.get(current.id),false,true);reveal();rate(2)');assert.equal(restored.spoken.at(-1).voice.lang,'ar-JO');
- assert.equal(restored.run('state.logs.at(-1).input'),'reading');
+ assert.equal(restored.run('state.logs.at(-1).input'),'listening');
  restored.run('home();switchCourse("en-ja-japanese");beginSession([{id:DECK[0].id,direction:"understand",readyAt:Date.now()}],false)');
  assert.equal(restored.run('inputMode'),'listening');assert.equal(restored.get('promptAudio').textContent,'▶ Listen');assert.equal(restored.get('readingBtn').hidden,false);
  const sentence=japanese.cards.find(c=>c.id==='ja-sentence-drink-water'),parts=E.sentenceParts(sentence,japanese.cards);

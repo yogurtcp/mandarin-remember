@@ -78,7 +78,7 @@ class Handler(BaseHTTPRequestHandler):
             flags='window.ONLINE_VOICE_ENABLED=true;window.ONLINE_VOICE_COURSES='+json.dumps(list(TEXTS))+';'
             html=html.replace('<script>','<script>'+flags+'</script><script>',1)
             return self.send(200,html.encode(),'text/html; charset=utf-8')
-        assets={'/sw.js':'application/javascript','/manifest.webmanifest':'application/manifest+json','/icon.svg':'image/svg+xml','/icon-192.png':'image/png','/icon-512.png':'image/png'}
+        assets={'/sw.js':'application/javascript','/manifest.webmanifest':'application/manifest+json','/icon.svg':'image/svg+xml','/icon-192.png':'image/png','/icon-512.png':'image/png','/fonts/noto-naskh-arabic.ttf':'font/ttf','/fonts/OFL-NotoNaskhArabic.txt':'text/plain; charset=utf-8'}
         if url.path in assets:
             return self.send(200,(ROOT/url.path[1:]).read_bytes(),assets[url.path])
         if url.path=='/api/voice-status':

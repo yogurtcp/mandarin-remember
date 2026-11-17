@@ -64,7 +64,7 @@ function boot(storage=new Map()){
  assert.equal(ui.get('prompt').dir,'ltr','A new-card heading resets to the source language');
  ui.run('home();beginSession([{id:"ar-read-ba",direction:"understand",readyAt:Date.now()}],false);reveal()');
  assert(ui.get('characterBreakdown').innerHTML.includes('Beginning'));assert(ui.get('characterBreakdown').innerHTML.includes('ـبـ'));
- assert.equal(ui.get('answerAudio').textContent,'▶ Compare name audio');ui.run('play(byId.get(current.id))');assert.equal(ui.spoken.at(-1).text,'بَاء');
+ assert.equal(ui.get('answerAudio').textContent,'▶ Hear name');ui.run('play(byId.get(current.id))');assert.equal(ui.spoken.at(-1).text,'بَاء');
  ui.run('home();state.settings.newLimit=0;save();exportBackup()');
  const backup=JSON.parse(await ui.blob().text());assert.equal(backup.deckId,guide.progressId);assert.deepEqual(E.validate(backup,guide.cards,guide.progressId),backup);
  ui.box.backupFile={size:100,text:async()=>JSON.stringify(backup)};await ui.run('readImport(backupFile)');ui.run('confirmImport()');
@@ -81,6 +81,20 @@ function boot(storage=new Map()){
  ui.get('search').value='مرحبا';ui.run('renderLibrary()');assert(ui.get('libraryList').innerHTML.includes('مَرْحَبَا'));
  ui.get('search').value='مَرْحَبَا';ui.run('renderLibrary()');assert(ui.get('libraryList').innerHTML.includes('مَرْحَبَا'));
  let copied;ui.box.navigator.clipboard={writeText:async text=>copied=text};await ui.run('copyTarget(DECK[0])');assert.equal(copied,'مَرْحَبَا');
- ui.run('play(DECK[0])');assert.equal(ui.spoken.at(-1).text,'مَرْحَبَا');
+ // Listening must keep both Arabic and Latin answers hidden, including after playback starts.
+ for(const reading of ['marḥaba','biddi','ʾahwe','mayy','mʿallme']){
+  ui.box.testWordId=vocabulary.cards.find(c=>c.pronunciation===reading).id;
+  ui.run('home();E.introduce(state,testWordId,Date.now()-E.DAY);beginSession([{id:testWordId,direction:"understand",readyAt:Date.now()}],false)');
+  assert.equal(ui.run('inputMode'),'listening');assert(ui.get('readingPrompt').hidden);assert(ui.get('answer').hidden);
+  assert.equal(ui.get('readingBtn').hidden,false);assert.equal(ui.get('prompt').textContent,'What does it mean?');
+  ui.run('reveal()');assert.equal(ui.run('revealed'),false,'The audio gate must remain active');
+  ui.run('play(byId.get(current.id),false,true)');assert(ui.get('answer').hidden);assert(ui.get('readingPrompt').hidden);
+  assert.equal(ui.spoken.at(-1).text,vocabulary.cards.find(c=>c.id===ui.box.testWordId).text);
+  ui.run('reveal()');assert.equal(ui.run('revealed'),true);assert(!ui.get('answer').hidden);
+  assert(/[\u064b-\u0652]/u.test(ui.get('targetText').textContent));ui.run('rate(2)');assert.equal(ui.run('state.logs.at(-1).input'),'listening');
+ }
+ ui.run('home();beginSession([{id:DECK[0].id,direction:"understand",readyAt:Date.now()}],false);readInstead()');
+ assert.equal(ui.run('inputMode'),'reading');assert.equal(ui.get('readingPrompt').textContent,'مَرْحَبَا');assert(!ui.get('readingPrompt').hidden);
+ assert(html.includes("font-family:'Remember Arabic'"));assert(fs.statSync(__dirname+'/fonts/noto-naskh-arabic.ttf').size>10000);
  console.log('PASS Arabic: vowel marks, local reading examples, 64-item guide, RTL shapes, hidden reading answers, gated syllables/words, optional name audio, marked/unmarked search, stable vocabulary progress, isolated reading backups/import/restart.');
 })().catch(error=>{console.error(error);process.exitCode=1});

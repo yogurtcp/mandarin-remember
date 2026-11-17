@@ -28,7 +28,7 @@ Letter cards show isolated, initial, medial, and final shapes. Connecting
 strokes illustrate the join; they are not extra letters. The six common
 non-joiners ا د ذ ر ز و can attach to the preceding letter but do not join the
 following one. Word-final ة and ى are taught separately. Ordinary Unicode
-Arabic letters are used so the device font performs joining naturally.
+Arabic letters are used so the font performs joining naturally. Noto Naskh Arabic is bundled and cached offline, including glyphs for the vowel marks; its SIL Open Font License is included in `fonts/`.
 
 ## Vowel marks and Palestinian reading
 

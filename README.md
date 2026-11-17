@@ -8,7 +8,7 @@ Visit **https://yogurtcp.github.io/mandarin-remember/** in Chrome on Android. Ta
 
 Use **Menu → Audio & backup → Test normal / Test slow**. Automatic uses your device voice when available and Google speech when a voice is missing or fails. You can also select Online voice explicitly. Only the phrase you play is sent to Google; there is no bulk audio download. Device voice stays available for offline use when installed. The separate Linux helper is optional.
 
-After an initial successful online load and service-worker installation, lessons are available offline. Speech may still need internet or an installed voice. There are no prerecorded audio files. Palestinian Arabic audio is not dialect-verified: meaning reviews show Arabic and transliteration, with synthetic audio available for comparison. See [ARABIC.md](ARABIC.md).
+After an initial successful online load and service-worker installation, lessons are available offline. Speech may still need internet or an installed voice. There are no prerecorded audio files. Palestinian Arabic audio is not dialect-verified: listening reviews keep the word and transliteration hidden until reveal. Vowel marks appear on introductions, revealed answers, and phrasebook entries. See [ARABIC.md](ARABIC.md).
 
 ## Daily routine
 
@@ -146,7 +146,7 @@ The helper binds to the laptop’s loopback interface and is separate from GitHu
 
 ## Missing-voice audio fallback (v1.6.1)
 
-The published app has on-demand Google speech for Mandarin, Japanese, and Arabic (comparison only for Arabic). Automatic falls back when there is no suitable device voice or device playback fails. Online voice selects online playback directly; Device voice keeps playback device-only. Slow applies pitch-preserving playback at 0.65× for Google audio. The existing local helper retains its own synthesis rate and playback settings.
+The published app has on-demand Google speech for Mandarin, Japanese, and Arabic (synthetic pronunciation remains unverified). Automatic falls back when there is no suitable device voice or device playback fails. Online voice selects online playback directly; Device voice keeps playback device-only. Slow applies pitch-preserving playback at 0.65× for Google audio. The existing local helper retains its own synthesis rate and playback settings.
 
 Google’s Translate speech endpoint is undocumented and may change or throttle requests; it is not a guaranteed Google Cloud API. Failure or timeout shows a direct Google Translate link. No API keys, backend deployment, audio bundle or account is required. A no-referrer policy avoids sending this app’s page URL with audio requests. No phrase is requested until you press a playback control.
 

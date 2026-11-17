@@ -34,6 +34,8 @@ with TemporaryDirectory() as directory:
         assert status==200 and b'ONLINE_VOICE_COURSES=["en-zh", "en-ar-palestinian"]' in body
         status,body,_=request('/api/voice-status')
         assert status==200 and len(json.loads(body)['voices'])==2
+        status,font,headers=request('/fonts/noto-naskh-arabic.ttf')
+        assert status==200 and len(font)>10000 and headers['Content-Type']=='font/ttf'
         # Mandarin retains the local helper; Japanese uses the app's on-demand
         # Google fallback and must not be silently routed through this helper.
         _,zh,headers=request('/api/speech?id=test')
