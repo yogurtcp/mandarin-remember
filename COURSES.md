@@ -16,6 +16,7 @@ Add a record to `courses`, with these fields:
 - `pronunciationLabel`: for example `Pinyin` or `Transliteration`.
 - Optional `pronunciationHelp`, `searchPlaceholder`, and `mark` (a short header symbol).
 - Optional `onlineSpeech: {"provider": "google-translate", "language": "ar"}` enables on-demand Google fallback. Use the appropriate supported language code; keep card/test text under 200 characters. This endpoint is undocumented and best-effort, so retain device speech and error recovery. No requests run on startup.
+- Optional `unverifiedSpeech: true` keeps meaning reviews in reading mode with text and transliteration visible. Audio is labeled as comparison and does not count as listening practice. Use this when synthetic speech does not reliably represent the course dialect. Stored schedules and progress identities do not change.
 - Optional `audioNote`, shown in practice, phrasebook and audio settings for course-specific limitations.
 - Optional `hintMode`: `pinyin` uses the Mandarin syllable hint; other values/default use the first two pronunciation characters. A card without pronunciation has no pronunciation hint.
 

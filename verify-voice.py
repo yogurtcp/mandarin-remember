@@ -31,9 +31,9 @@ with TemporaryDirectory() as directory:
         headers=dict(response.getheaders());connection.close();return status,body,headers
     try:
         status,body,_=request('/')
-        assert status==200 and b'ONLINE_VOICE_COURSES=["en-zh"]' in body
+        assert status==200 and b'ONLINE_VOICE_COURSES=["en-zh", "en-ar-palestinian"]' in body
         status,body,_=request('/api/voice-status')
-        assert status==200 and len(json.loads(body)['voices'])==1
+        assert status==200 and len(json.loads(body)['voices'])==2
         # Mandarin retains the local helper; Japanese uses the app's on-demand
         # Google fallback and must not be silently routed through this helper.
         _,zh,headers=request('/api/speech?id=test')
@@ -44,6 +44,9 @@ with TemporaryDirectory() as directory:
         _,slow,_=request('/api/speech?id=test&slow=1')
         assert slow!=zh and calls[-1][2]=='-28%'
         assert len(list(helper.CACHE.glob('*.mp3')))==2
+        _,arabic,_=request('/api/speech?course=en-ar-palestinian&id=test')
+        assert calls[-1][1:] == ('ar-JO-SanaNeural','+0%') and arabic!=zh
+        assert calls[-1][0]==helper.TEXTS['en-ar-palestinian']['test']
         assert request('/api/speech?course=en-ja-japanese&id=test')[0]==400
         assert request('/api/speech?course=unknown&id=test')[0]==400
         assert request('/api/speech?course=unknown&id=unknown')[0]==400
@@ -52,4 +55,4 @@ with TemporaryDirectory() as directory:
         assert request('/courses.json')[0]==404
     finally:
         server.shutdown();server.server_close();thread.join()
-print('PASS helper: Mandarin helper routing, Japanese helper exclusion, cache, slow rate, input validation and loopback host restriction (mock speech).')
+print('PASS helper: Mandarin and Arabic helper routing, Japanese helper exclusion, cache, slow rate, input validation and loopback host restriction (mock speech).')

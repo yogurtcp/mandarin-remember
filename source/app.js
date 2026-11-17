@@ -83,6 +83,11 @@ function advance(){stopAudio();if(!session)return;session.queue=session.queue.fi
   if(c.audioContext)$('characterBreakdown').innerHTML+='<p class="small">Audio example: '+esc(c.audioContext)+'</p>';
   if(c.audioContext)$('characterBreakdown').hidden=false;
  }else $('answerAudio').textContent='▶ Listen';
+ if(course.unverifiedSpeech){
+  $('answerAudio').textContent='▶ Compare audio';$('promptAudio').textContent='▶ Compare audio';
+  if(task.direction==='intro')$('taskInstruction').textContent='Use the Latin reading for the intended Palestinian form. Synthetic audio is only a comparison.';
+  if(task.direction==='understand'){readInstead();$('readingPrompt').innerHTML='<bdi>'+esc(c.text)+'</bdi> <bdi dir="ltr">'+esc(c.pronunciation)+'</bdi>';$('taskInstruction').textContent='Recall the meaning from the text and Latin reading. Audio is not verified Palestinian pronunciation.';$('readingBtn').hidden=true}
+ }else{$('promptAudio').textContent='▶ Listen';$('readingBtn').hidden=false}
  if(task.sentenceRetry){$('taskType').textContent='TRY THE SENTENCE AGAIN';$('taskInstruction').textContent='Try the sentence again before revealing. This retry does not change review dates twice.'}
 }
 function renderWaiting(){if(!session||current)return;const next=Math.min(...session.queue.map(t=>t.readyAt));$('waitText').textContent=`Next review ${next<=Date.now()?'now':`in about ${Math.max(1,Math.ceil((next-Date.now())/60000))} minute(s)`}.`}
@@ -182,7 +187,7 @@ function configureCourse(){
  $('progressHelp').textContent=course.studyMode==='reading'?'Seen means you have started a character or compound. Remembered well means repeated reading success after delays, with an interval of at least a week. Reading progress is separate from Mandarin vocabulary progress.':'Seen means you have started the card. Remembered well means repeated success in both directions, with intervals of at least a week. Counts are for the selected course only.';
  $('courseSelect').innerHTML=COURSES.map(c=>`<option value="${esc(c.id)}">${esc(c.label)}</option>`).join('');$('courseSelect').value=course.id;
  $('brandMark').textContent=course.mark||'↻';$('brandLanguage').textContent=course.target.name;$('practiceHeading').textContent='Practise '+course.target.name;document.title=course.target.name+' · Remember';
- $('appVersion').textContent=`${DECK.length} cards · ${course.label} · v1.6.13`;$('voiceLabel').textContent=course.target.name+' voice';$('copyTarget').textContent='Copy '+course.target.textLabel;
+ $('appVersion').textContent=`${DECK.length} cards · ${course.label} · v1.6.14`;$('voiceLabel').textContent=course.target.name+' voice';$('copyTarget').textContent='Copy '+course.target.textLabel;
  $('pronunciationHelp').textContent=course.pronunciationHelp||'Listen to whole phrases. The app does not grade your pronunciation.';$('search').placeholder=course.searchPlaceholder||'Search words and meanings…';
  for(const id of ['targetText','readingPrompt','copyText']){$(id).lang=course.target.lang;$(id).dir=course.target.dir}
  for(const id of ['meaning','prompt']){$(id).lang=course.source.lang;$(id).dir=course.source.dir}

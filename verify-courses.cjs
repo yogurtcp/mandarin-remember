@@ -11,7 +11,7 @@ function boot(storage=new Map()){
  const get=id=>{if(!elements.has(id))elements.set(id,{value:'',hidden:false,innerHTML:'',textContent:'',dataset:{},events:{},addEventListener(type,fn){this.events[type]=fn},focus(){},select(){},scrollIntoView(){}});return elements.get(id)};
  get('courses-data').textContent=JSON.stringify(registry);
  const document={getElementById:get,querySelectorAll:()=>[],createElement:()=>({click(){downloads.push(this.download)}})};
- const speech={getVoices:()=>[{name:'Chinese',lang:'zh-CN'},{name:'Cantonese',lang:'zh-HK'},{name:'Japanese',lang:'ja-JP'},{name:'Hebrew',lang:'he-IL'}],addEventListener(){},resume(){},cancel(){},speak(u){spoken.push(u);u.onstart?.()}};
+ const speech={getVoices:()=>[{name:'Chinese',lang:'zh-CN'},{name:'Cantonese',lang:'zh-HK'},{name:'Japanese',lang:'ja-JP'},{name:'Saudi Arabic',lang:'ar-SA',default:true},{name:'Jordanian Arabic',lang:'ar-JO'},{name:'Hebrew',lang:'he-IL'}],addEventListener(){},resume(){},cancel(){},speak(u){spoken.push(u);u.onstart?.()}};
  const sandbox={document,console,URL:{createObjectURL(blob){created=blob;return 'blob:test'},revokeObjectURL(){}},Blob,Date,location:{protocol:'file:'},navigator:{},localStorage:{getItem:k=>storage.get(k)??null,setItem:(k,v)=>storage.set(k,v)},speechSynthesis:speech,SpeechSynthesisUtterance:function(text){this.text=text},Audio:function(url){media.push(url);audioObjects.push(this);this.play=()=>({catch(){}});this.pause=()=>{};this.removeAttribute=()=>{};this.load=()=>{}},setTimeout(fn){const id=Symbol();timers.set(id,fn);return id},clearTimeout(id){timers.delete(id)},setInterval(){},scrollTo(){},addEventListener:(type,fn)=>events[type]=fn};
  sandbox.window=sandbox;const context=vm.createContext(sandbox),run=s=>vm.runInContext(s,context);scripts.forEach(run);
  return {get,run,storage,events,sandbox,spoken,media,audioObjects,timers,downloads,blob:()=>created};
@@ -30,7 +30,7 @@ function boot(storage=new Map()){
  assert(a.run('switchCourse("ru-he-test")'));assert.equal(a.run('session'),null);assert.equal(a.run('current'),null);
  assert.equal(a.run('Object.keys(state.items).length'),0);assert.equal(a.run('state.settings.newLimit'),5);assert.equal(a.get('startedCount').textContent,0);
  assert.equal(a.get('targetText').dir,'rtl');assert.equal(a.get('targetText').lang,'he-IL');assert.equal(a.get('meaning').lang,'ru');
- assert.equal(a.get('copyTarget').textContent,'Copy Hebrew');assert.equal(a.get('appVersion').textContent,'2 cards · Русский → עברית · v1.6.13');
+ assert.equal(a.get('copyTarget').textContent,'Copy Hebrew');assert.equal(a.get('appVersion').textContent,'2 cards · Русский → עברית · v1.6.14');
  assert(a.get('category').innerHTML.includes('Test greetings'));assert(!a.get('category').innerHTML.includes('Family'));
  a.run('startExtra();studied();state.items[current.id].note="Hebrew cue";state.settings.voice="Hebrew";state.settings.newLimit=3;save()');
  assert.equal(a.run('state.deckId'),second.progressId);assert.equal(a.run('state.items[DECK[0].id].note'),'Hebrew cue');
@@ -61,7 +61,7 @@ function boot(storage=new Map()){
  assert.throws(()=>E.empty());assert.throws(()=>E.validate(legacy,original.cards,second.progressId));
 
  // Exercise the identical public feature paths with each actual course.
- const published=registry.courses.filter(c=>c.id!=='ru-he-test'&&c.studyMode!=='reading');assert.equal(published.length,2);
+ const published=registry.courses.filter(c=>c.id!=='ru-he-test'&&c.studyMode!=='reading');assert.equal(published.length,3);
  const japanese=published.find(c=>c.id==='en-ja-japanese');assert(japanese);
  assert.equal(japanese.cards.length,60);assert.equal(new Set(japanese.cards.map(c=>c.id)).size,60);
  assert.deepEqual(japanese.cards,JSON.parse(fs.readFileSync(__dirname+'/decks/en-ja-japanese.json','utf8')));
@@ -86,11 +86,11 @@ function boot(storage=new Map()){
   assert.equal(t.run('current.direction'),'produce');assert(t.get('answer').hidden);
   t.run('help("pronunciation");reveal();rate(3)');assert.equal(t.run('state.logs.at(-1).grade'),0);
   t.run('home();state.items['+JSON.stringify(firstId)+'].produce.due=Date.now()+E.DAY;state.items['+JSON.stringify(firstId)+'].understand.due=Date.now()-1;start();reveal()');
-  assert.equal(t.run('current.direction'),'understand');assert.equal(t.run('revealed'),false);
+  assert.equal(t.run('current.direction'),'understand');assert.equal(t.run('revealed'),!!target.unverifiedSpeech);
   t.run('readInstead();reveal();rate(2)');assert.equal(t.run('state.logs.at(-1).input'),'reading');
   t.run('home();state.items['+JSON.stringify(firstId)+'].understand.due=Date.now()-1;start();play(byId.get(current.id),false,true);reveal()');
   assert.equal(t.run('heard'),true);assert.equal(t.run('revealed'),true);
-  t.run('rate(2)');assert.equal(t.run('state.logs.at(-1).input'),'listening');
+  t.run('rate(2)');assert.equal(t.run('state.logs.at(-1).input'),target.unverifiedSpeech?'reading':'listening');
   t.run('home();start(true)');assert(t.run('current.practice'));const pausedId=t.run('current.id');
   t.get('memoryCue').value='My course-specific cue';t.run('saveCue();pauseCurrent();home()');
   assert.equal(t.run('state.items['+JSON.stringify(pausedId)+'].suspended'),true);
@@ -109,12 +109,28 @@ function boot(storage=new Map()){
   assert.deepEqual(JSON.parse(t.run('JSON.stringify(state)')),backup);
   assert.equal(boot(t.storage).run('course.id'),target.id);
  }
+ // Restoration must load progress from before the course was hidden.
+ const arabic=published.find(c=>c.id==='en-ar-palestinian');assert.equal(arabic.cards.length,350);
+ assert.deepEqual(arabic.cards,JSON.parse(fs.readFileSync(__dirname+'/decks/en-ar-palestinian.json','utf8')));
+ assert.equal(arabic.storageKey,'remember:progress:en-ar-palestinian:v1');assert.equal(arabic.progressId,'spoken-palestinian-arabic-1');
+ const oldArabic=E.empty(arabic.progressId),arabicWord=arabic.cards[0].id;
+ E.introduce(oldArabic,arabicWord,when);oldArabic.items[arabicWord].note='Saved before Arabic was hidden';
+ const oldArabicStore=new Map([['remember:active-course:v1',arabic.id],[arabic.storageKey,JSON.stringify(oldArabic)]]);
+ const restored=boot(oldArabicStore);assert.equal(restored.run('state.items[DECK[0].id].note'),'Saved before Arabic was hidden');
+ restored.run('beginSession([{id:DECK[0].id,direction:"understand",readyAt:Date.now()}],false)');
+ assert.equal(restored.run('inputMode'),'reading');assert.equal(restored.spoken.length,0);assert.equal(restored.media.length,0);
+ assert.equal(restored.get('readingPrompt').hidden,false);assert(restored.get('readingPrompt').innerHTML.includes('marḥaba'));
+ assert(restored.get('courseAudioNote').textContent.includes('not verified'));assert.equal(restored.get('promptAudio').textContent,'▶ Compare audio');
+ restored.run('play(byId.get(current.id),false,true);reveal();rate(2)');assert.equal(restored.spoken.at(-1).voice.lang,'ar-JO');
+ assert.equal(restored.run('state.logs.at(-1).input'),'reading');
+ restored.run('home();switchCourse("en-ja-japanese");beginSession([{id:DECK[0].id,direction:"understand",readyAt:Date.now()}],false)');
+ assert.equal(restored.run('inputMode'),'listening');assert.equal(restored.get('promptAudio').textContent,'▶ Listen');assert.equal(restored.get('readingBtn').hidden,false);
  const sentence=japanese.cards.find(c=>c.id==='ja-sentence-drink-water'),parts=E.sentenceParts(sentence,japanese.cards);
  assert.deepEqual(parts.words,['ja-i','ja-water','ja-drink']);assert.equal(parts.matches.find(m=>m.id==='ja-drink').text,'飲みます');assert.equal(parts.matches.find(m=>m.id==='ja-drink').form.label,'polite non-past form');
  assert(parts.connectors.some(c=>c.text==='は')&&parts.connectors.some(c=>c.text==='を'));
  const allJapaneseSentences=japanese.cards.filter(E.isSentence);assert.equal(allJapaneseSentences.length,15);assert(allJapaneseSentences.every(c=>E.sentenceParts(c,japanese.cards)),'Every Japanese sentence must have a complete validated composition');
  const known=E.empty(japanese.progressId);for(const id of parts.words)E.introduce(known,id,Date.now()-E.DAY);const planned=E.sentencePlan(known,Date.now(),japanese.cards,'',5).find(t=>t.id===sentence.id);assert(planned);assert(planned.frame.includes('___'));assert.equal(planned.matches.find(m=>m.id==='ja-drink').text,'飲みます');
- console.log('PASS published parity: Mandarin and 60 Japanese cards, isolated course state, audio/rates, examples, hints, categories, backups, and full sentence-component validation.');
+ console.log('PASS published parity: Mandarin, 60 Japanese cards and 350 restored Arabic cards, isolated course state, audio/rates, examples, hints, categories, backups, and full sentence-component validation.');
 
  // Exercise the actual bundled playback paths for every Japanese word and sentence.
  const ja=boot();ja.run('switchCourse("en-ja-japanese")');
@@ -166,6 +182,6 @@ function boot(storage=new Map()){
  }
  assert(html.includes('<meta name="referrer" content="no-referrer">'),'Cross-origin speech requests must not send the page referrer');
  assert(published.every(c=>c.cards.every(card=>card.text.length<=200)&&c.testText.length<=200));
- console.log('PASS online fallback: zero installed voices in both courses, exact phrase/locale, no eager requests, normal/slow rates, actual-playback gate, error/timeout recovery, cancellation, explicit source preferences and Translate escape hatch.');
+ console.log('PASS online fallback: zero installed voices in all vocabulary courses, exact phrase/locale, no eager requests, normal/slow rates, actual-playback gate, error/timeout recovery, cancellation, explicit source preferences and Translate escape hatch.');
  console.log('PASS courses: legacy progress, colliding-ID isolation, statistics/settings/notes, course switching, RTL, voice/translation selection, helper guard, restart, per-course exports/imports, async import races, quota/corrupt storage, and cross-tab events.');
 })().catch(error=>{console.error(error);process.exitCode=1});

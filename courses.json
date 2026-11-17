@@ -121,6 +121,60 @@
       "searchPlaceholder": "人, rén, person…",
       "mark": "字",
       "onlineSpeech": {"provider": "google-translate", "language": "zh-CN"}
+    },
+    {
+      "id": "en-ar-palestinian",
+      "label": "English → Spoken Palestinian Arabic",
+      "deckFile": "decks/en-ar-palestinian.json",
+      "progressId": "spoken-palestinian-arabic-1",
+      "source": {
+        "name": "English",
+        "lang": "en",
+        "dir": "ltr",
+        "translateCode": "en"
+      },
+      "target": {
+        "name": "Spoken Arabic",
+        "textLabel": "Arabic",
+        "lang": "ar-PS",
+        "dir": "rtl",
+        "translateCode": "ar"
+      },
+      "voiceLanguages": [
+        "ar-PS",
+        "ar-IL",
+        "ar-JO",
+        "ar-LB",
+        "ar-SY",
+        "ar",
+        "ar-SA",
+        "ar-EG",
+        "ar-AE",
+        "ar-BH",
+        "ar-DZ",
+        "ar-IQ",
+        "ar-KW",
+        "ar-LY",
+        "ar-MA",
+        "ar-OM",
+        "ar-QA",
+        "ar-TN",
+        "ar-YE"
+      ],
+      "preferVoiceOrder": true,
+      "testText": "مرحبا، كيفك؟ بدّي كاسة ميّ لو سمحت.",
+      "pronunciationLabel": "Transliteration",
+      "hintMode": "transliteration",
+      "pronunciationHelp": "Palestinian everyday speech, with an urban-leaning reading. ā/ī/ū/ē/ō are long vowels; sh, kh and gh are single sounds. ḥ is a deep, breathy h; ʿ is ع; ʾ is a glottal stop. ṣ/ḍ/ṭ/ẓ are emphatic consonants; doubled letters are held longer. The reading usually uses ʾ for ق; q, g and k occur in other local accents. Short vowels and j also vary locally. Arabic spelling is partly unvoweled: follow the Latin reading for the intended form. Speaker/addressee gender is labeled on cards. Device and Google voices may use formal Arabic; they are not verified Palestinian models. Ask a local speaker to check your pronunciation.",
+      "audioNote": "Audio is synthetic and is not verified Palestinian pronunciation. Meaning reviews use Arabic text and the Latin reading; audio is available only for comparison. Ask a Palestinian speaker to check the reading.",
+      "searchPlaceholder": "مي, mayy, water…",
+      "localSpeechHelper": true,
+      "mark": "ع",
+      "onlineSpeech": {
+        "provider": "google-translate",
+        "language": "ar"
+      },
+      "unverifiedSpeech": true
     }
   ]
 }
