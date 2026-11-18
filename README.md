@@ -43,6 +43,7 @@ node verify-courses.cjs
 node verify-recall.cjs
 node verify-reading.cjs
 node verify-arabic.cjs
+node verify-tones.cjs
 python3 verify-build.py
 python3 verify-voice.py
 ```
@@ -50,6 +51,13 @@ python3 verify-voice.py
 Preserve card IDs when correcting wording. Bump the service-worker cache version when changing cached assets. Publish GitHub Pages from the root of the `main` branch. No build service, API key or backend is needed.
 
 ## Reading and sentence practice (v1.6.13)
+
+**Mandarin tone choices (v1.6.18):** Regular Mandarin recall now includes
+automatically checked pinyin tone questions for all 826 vocabulary entries.
+Tap **Practise tones** for a focused batch, including words learned before
+this update. Choices differ only in tones, including neutral tones. Tone
+results have their own schedule, so a speaking self-grade cannot clear a
+tone mistake. Original progress and personal cues are preserved. See [TONES.md](TONES.md).
 
 **Chinese memory notes (v1.6.17):** All 94 reading characters and 90 compounds
 have individual shape, meaning, or composition explanations. Historical notes,

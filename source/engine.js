@@ -4,12 +4,12 @@
 const DAY=86400000,MIN=60000;
 const directions=['produce','understand'];
 const localDay=t=>{const d=new Date(t);return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`};
-function empty(deckId){if(typeof deckId!=='string'||!deckId)throw Error('A course progress ID is required');return {schema:1,deckId,items:{},logs:[],settings:{newLimit:5,reviewLimit:20,audioMode:'auto',voice:''}}}
+function empty(deckId){if(typeof deckId!=='string'||!deckId)throw Error('A course progress ID is required');return {schema:1,deckId,items:{},logs:[],toneProgress:{},settings:{newLimit:5,reviewLimit:20,audioMode:'auto',voice:''}}}
 const track=(due)=>({due,interval:0,lastAt:0,lastGrade:null,reviews:0,lapses:0,delayedPasses:0,phase:'learning'});
 function introduce(state,id,now,readingOnly=false){if(state.items[id])return false;state.items[id]={introducedAt:now,suspended:false,note:'',produce:track(now+MIN),understand:track(now+(readingOnly?MIN:DAY))};return true}
-function dueTasks(state,now,category,deck){const allowed=new Set(deck.filter(c=>!isSentence(c)&&(!category||c.category===category)).map(c=>c.id));const tasks=[];for(const [id,item] of Object.entries(state.items)){if(!allowed.has(id)||item.suspended)continue;for(const direction of (deck.find(c=>c.id===id)?.readingOnly?['understand']:directions))if(item[direction].due<=now)tasks.push({id,direction,due:item[direction].due})}return tasks.sort((a,b)=>a.due-b.due||a.id.localeCompare(b.id)||a.direction.localeCompare(b.direction))}
-function retention(state,now){const logs=state.logs.filter(e=>e.delayed&&e.at>=now-7*DAY&&e.at<=now&&!e.practice);return {total:logs.length,passed:logs.filter(e=>e.grade>0).length}}
-function newAllowance(state,now,deck){const used=Object.values(state.items).filter(i=>localDay(i.introducedAt)===localDay(now)).length;const r=retention(state,now);const backlog=dueTasks(state,now,null,deck).length;const paused=backlog>=20||(r.total>=10&&r.passed/r.total<.7);return {count:paused?0:Math.max(0,state.settings.newLimit-used),used,reason:backlog>=20?'Review backlog':paused?'Consolidate recent material':''}}
+function dueTasks(state,now,category,deck){const allowed=new Set(deck.filter(c=>!isSentence(c)&&(!category||c.category===category)).map(c=>c.id));const tasks=[];for(const [id,item] of Object.entries(state.items)){if(!allowed.has(id)||item.suspended)continue;for(const direction of (deck.find(c=>c.id===id)?.readingOnly?['understand']:directions))if(item[direction].due<=now)tasks.push({id,direction,due:item[direction].due})}return tasks.concat(toneTasks(state,now,deck,category)).sort((a,b)=>a.due-b.due||a.id.localeCompare(b.id)||a.direction.localeCompare(b.direction))}
+function retention(state,now){const logs=state.logs.filter(e=>e.direction!=='tones'&&e.delayed&&e.at>=now-7*DAY&&e.at<=now&&!e.practice);return {total:logs.length,passed:logs.filter(e=>e.grade>0).length}}
+function newAllowance(state,now,deck){const used=Object.values(state.items).filter(i=>localDay(i.introducedAt)===localDay(now)).length;const r=retention(state,now);const backlog=dueTasks(state,now,null,deck).filter(t=>t.direction!=='tones').length;const paused=backlog>=20||(r.total>=10&&r.passed/r.total<.7);return {count:paused?0:Math.max(0,state.settings.newLimit-used),used,reason:backlog>=20?'Review backlog':paused?'Consolidate recent material':''}}
 function schedule(previous,grade,now){const t={...previous};t.reviews++;t.lastAt=now;t.lastGrade=grade;
  if(grade===0){t.lapses++;t.interval=0;t.phase='relearning';t.due=now+(previous.phase==='review'?10:1)*MIN;t.delayedPasses=0;return t}
  if(previous.phase!=='review'){
@@ -28,10 +28,32 @@ function review(state,id,direction,grade,now,{assisted=false,practice=false,inpu
  const event={id,direction,grade:effective,requestedGrade:grade,at:now,assisted,practice,delayed,input};state.logs.push(event);state.logs=state.logs.slice(-5000);return event;
 }
 function newCards(state,deck,category=''){const rank=c=>c.readingOnly&&c.requires?.length?-1:Number.isInteger(c.featured)&&c.featured>=0?c.featured:Number.MAX_SAFE_INTEGER;return deck.filter(c=>!isSentence(c)&&!state.items[c.id]&&(!category||c.category===category)&&(c.requires||[]).every(id=>state.items[id]&&!state.items[id].suspended&&state.items[id].understand.lastGrade>0)).sort((a,b)=>rank(a)-rank(b))}
+function toneTasks(state,now,deck,category=''){
+ return deck.filter(c=>c.toneSyllables?.length&&!isSentence(c)&&!c.readingOnly&&state.items[c.id]&&!state.items[c.id].suspended&&(!category||c.category===category)).map(c=>({id:c.id,direction:'tones',due:(state.toneProgress?.[c.id]||{due:state.items[c.id].introducedAt+10*MIN}).due})).filter(t=>t.due<=now).sort((a,b)=>a.due-b.due||a.id.localeCompare(b.id));
+}
+function mixToneReviews(state,now,deck,ordinary,category,limit,practice){
+ const available=toneTasks(state,practice?1e15:now,deck,category);if(!available.length)return ordinary;
+ const wordIds=new Set(ordinary.map(t=>t.id)),missed=t=>t.due<=now&&state.toneProgress?.[t.id]?.lastGrade===0;
+ const pool=[...available.filter(missed),...available.filter(t=>!missed(t)&&!wordIds.has(t.id)),...available.filter(t=>!missed(t)&&wordIds.has(t.id))];
+ const tones=pool.slice(0,ordinary.length?Math.max(1,Math.floor(limit/3)):limit).map(t=>({...t,practice:!!practice,readyAt:now})),toneIds=new Set(tones.map(t=>t.id));
+ const words=ordinary.filter(t=>!toneIds.has(t.id)).slice(0,Math.max(0,limit-tones.length)),result=[];
+ while(words.length||tones.length){result.push(...words.splice(0,2));if(tones.length)result.push(tones.shift())}return result;
+}
+function tonePlan(state,now,deck,category='',limit=10){const missed=t=>t.due<=now&&state.toneProgress?.[t.id]?.lastGrade===0?0:1;return toneTasks(state,1e15,deck,category).sort((a,b)=>missed(a)-missed(b)||a.due-b.due||a.id.localeCompare(b.id)).slice(0,limit).map(t=>({...t,practice:t.due>now,readyAt:now}))}
+function reviewTone(state,id,correct,now,{practice=false}={}){
+ const item=state.items[id];if(!item||item.suspended||typeof correct!=='boolean')throw Error('Invalid tone review');
+ const previous=state.toneProgress?.[id]||track(item.introducedAt+10*MIN);practice=practice||previous.due>now;
+ const latest=state.logs.filter(e=>e.id===id).reduce((n,e)=>Math.max(n,e.at),Math.max(item.introducedAt,item.produce.lastAt,item.understand.lastAt,previous.lastAt));
+ const grade=correct?2:0,delayed=!practice&&now-latest>=20*60*MIN;
+ if(!practice){state.toneProgress||={};state.toneProgress[id]=schedule(previous,grade,now);if(delayed&&correct)state.toneProgress[id].delayedPasses++}
+ const event={id,direction:'tones',grade,requestedGrade:grade,at:now,assisted:false,practice,delayed,input:'tone-choice'};state.logs.push(event);state.logs=state.logs.slice(-5000);return event;
+}
+function toneStats(state,now,deck){const ids=new Set(deck.filter(c=>c.toneSyllables?.length&&!isSentence(c)&&state.items[c.id]&&!state.items[c.id].suspended).map(c=>c.id));const events=state.logs.filter(e=>e.direction==='tones'&&ids.has(e.id));const recent=events.filter(e=>e.at>=now-7*DAY&&e.at<=now);return {known:ids.size,checked:new Set([...events.map(e=>e.id),...Object.keys(state.toneProgress||{}).filter(id=>ids.has(id))]).size,due:toneTasks(state,now,deck).length,correct:recent.filter(e=>e.grade>0).length,attempts:recent.length}}
 function plan(state,now,deck,category='',practice=false){
- if(practice)return Object.entries(state.items).filter(([id,s])=>!s.suspended&&deck.some(c=>c.id===id&&!isSentence(c)&&(!category||c.category===category))).sort((a,b)=>(b[1].produce.lapses+b[1].understand.lapses)-(a[1].produce.lapses+a[1].understand.lapses)).slice(0,10).map(([id])=>({id,direction:deck.find(c=>c.id===id)?.readingOnly?'understand':'produce',practice:true,readyAt:now}));
+ if(practice){const ordinary=Object.entries(state.items).filter(([id,s])=>!s.suspended&&deck.some(c=>c.id===id&&!isSentence(c)&&(!category||c.category===category))).sort((a,b)=>(b[1].produce.lapses+b[1].understand.lapses)-(a[1].produce.lapses+a[1].understand.lapses)).slice(0,10).map(([id])=>({id,direction:deck.find(c=>c.id===id)?.readingOnly?'understand':'produce',practice:true,readyAt:now}));return mixToneReviews(state,now,deck,ordinary,category,10,true)}
  const usedIds=new Set();
- const tasks=dueTasks(state,now,category,deck).filter(t=>{if(usedIds.has(t.id))return false;usedIds.add(t.id);return true}).slice(0,state.settings.reviewLimit).map(t=>({...t,readyAt:now}));
+ const ordinary=dueTasks(state,now,category,deck).filter(t=>t.direction!=='tones').filter(t=>{if(usedIds.has(t.id))return false;usedIds.add(t.id);return true}).slice(0,state.settings.reviewLimit).map(t=>({...t,readyAt:now}));
+ const tasks=mixToneReviews(state,now,deck,ordinary,category,state.settings.reviewLimit,false);
  const n=newAllowance(state,now,deck).count;
  const fresh=newCards(state,deck,category).slice(0,n).map(c=>({id:c.id,direction:'intro',readyAt:now}));return tasks.concat(fresh);
 }
@@ -64,10 +86,10 @@ function sentencePlan(state,now,deck,category='',limit=5){const shownAt=new Map(
  return picked.map((t,i)=>({id:t.id,direction:i%2?'understand':'produce',sentence:true,words:t.words,connectors:t.connectors,matches:t.matches,frame:t.frame,readyAt:now}))}
 // Build a sentence recall at the moment a vocabulary recall is displayed.
 // Its anchor remains the scheduled word, so topic and recall direction carry over.
-function sentenceRecall(state,now,deck,task,excluded=[]){
+function sentenceRecall(state,now,deck,task,excluded=[],avoidWords=[]){
  if(!task||task.sentence||!directions.includes(task.direction)||!state.items[task.id]||state.items[task.id].suspended)return null;
  const skip=new Set(excluded);
- const candidate=sentencePlan(state,now,deck,'',deck.length).find(t=>t.words.includes(task.id)&&!skip.has(t.id));
+ const candidate=sentencePlan(state,now,deck,'',deck.length).find(t=>t.words.includes(task.id)&&!skip.has(t.id)&&!t.words.some(id=>avoidWords.includes(id)));
  return candidate?{...candidate,direction:task.direction,practice:!!task.practice,reviewWord:task.id}:null;
 }
 function validate(raw,deck,deckId){
@@ -75,6 +97,7 @@ function validate(raw,deck,deckId){
  if(!raw||raw.schema!==1||raw.deckId!==deckId||!raw.items||typeof raw.items!=='object'||Array.isArray(raw.items)||!Array.isArray(raw.logs))throw Error('Not a compatible backup for this course');
  const state=empty(deckId),ids=new Set(deck.map(c=>c.id));
  const num=(v,min,max)=>typeof v==='number'&&Number.isFinite(v)&&v>=min&&v<=max;
+ const copyTrack=t=>{if(!t||!['learning','relearning','review'].includes(t.phase)||!num(t.due,0,1e15)||!num(t.lastAt,0,1e15)||!num(t.interval,0,180)||![null,0,1,2,3].includes(t.lastGrade)||!['reviews','lapses','delayedPasses'].every(k=>Number.isInteger(t[k])&&t[k]>=0&&t[k]<=1e7))throw Error('Invalid schedule');return {due:t.due,interval:t.interval,lastAt:t.lastAt,lastGrade:t.lastGrade,reviews:t.reviews,lapses:t.lapses,delayedPasses:t.delayedPasses,phase:t.phase}};
  for(const [id,item] of Object.entries(raw.items)){
   if(!ids.has(id))throw Error('Backup contains unknown card IDs');
   if(!item||!num(item.introducedAt,0,1e15)||typeof item.suspended!=='boolean'||typeof item.note!=='string'||item.note.length>1000)throw Error('Invalid item');
@@ -82,9 +105,10 @@ function validate(raw,deck,deckId){
   for(const d of directions){const t=item[d];if(!t||!['learning','relearning','review'].includes(t.phase)||!num(t.due,0,1e15)||!num(t.lastAt,0,1e15)||!num(t.interval,0,180)||![null,0,1,2,3].includes(t.lastGrade)||!['reviews','lapses','delayedPasses'].every(k=>Number.isInteger(t[k])&&t[k]>=0&&t[k]<=1e7))throw Error('Invalid schedule');copy[d]={due:t.due,interval:t.interval,lastAt:t.lastAt,lastGrade:t.lastGrade,reviews:t.reviews,lapses:t.lapses,delayedPasses:t.delayedPasses,phase:t.phase}}
   state.items[id]=copy;
  }
+ if(raw.toneProgress!==undefined){if(!raw.toneProgress||typeof raw.toneProgress!=='object'||Array.isArray(raw.toneProgress))throw Error('Invalid tone progress');for(const [id,t] of Object.entries(raw.toneProgress)){if(!state.items[id]||!deck.some(c=>c.id===id&&c.toneSyllables?.length&&!isSentence(c)&&!c.readingOnly))throw Error('Unknown tone card');state.toneProgress[id]=copyTrack(t)}}
  if(raw.logs.length>5000)throw Error('Backup has too many log entries');
- for(const e of raw.logs){if(!e||!ids.has(e.id)||!directions.includes(e.direction)||!num(e.at,0,1e15)||![0,1,2,3].includes(e.grade)||![0,1,2,3].includes(e.requestedGrade)||!['assisted','practice','delayed'].every(k=>typeof e[k]==='boolean')||!['spoken','listening','reading'].includes(e.input))throw Error('Invalid review history');state.logs.push({id:e.id,direction:e.direction,at:e.at,grade:e.grade,requestedGrade:e.requestedGrade,assisted:e.assisted,practice:e.practice,delayed:e.delayed,input:e.input})}
+ for(const e of raw.logs){if(!e||!ids.has(e.id)||![...directions,'tones'].includes(e.direction)||!num(e.at,0,1e15)||![0,1,2,3].includes(e.grade)||![0,1,2,3].includes(e.requestedGrade)||!['assisted','practice','delayed'].every(k=>typeof e[k]==='boolean')||!['spoken','listening','reading','tone-choice'].includes(e.input))throw Error('Invalid review history');if(e.direction==='tones'?(e.input!=='tone-choice'||![0,2].includes(e.grade)||e.requestedGrade!==e.grade||e.assisted||!deck.some(c=>c.id===e.id&&c.toneSyllables?.length&&!isSentence(c))):e.input==='tone-choice')throw Error('Invalid tone history');state.logs.push({id:e.id,direction:e.direction,at:e.at,grade:e.grade,requestedGrade:e.requestedGrade,assisted:e.assisted,practice:e.practice,delayed:e.delayed,input:e.input})}
  const s=raw.settings||{};state.settings={newLimit:Number.isInteger(s.newLimit)&&s.newLimit>=0&&s.newLimit<=15?s.newLimit:5,reviewLimit:[10,20,30].includes(s.reviewLimit)?s.reviewLimit:20,audioMode:['auto','device','online'].includes(s.audioMode)?s.audioMode:'auto',voice:typeof s.voice==='string'?s.voice.slice(0,200):''};return state;
 }
-const api={DAY,MIN,directions,localDay,empty,introduce,dueTasks,retention,newAllowance,schedule,review,plan,extraPlan,holding,progress,isSentence,sentenceWords,sentenceParts,sentenceFrame,sentencePlan,sentenceRecall,validate};if(typeof module!=='undefined'&&module.exports)module.exports=api;else root.CoachEngine=api;
+const api={DAY,MIN,directions,localDay,empty,introduce,dueTasks,retention,newAllowance,schedule,review,plan,extraPlan,holding,progress,isSentence,sentenceWords,sentenceParts,sentenceFrame,sentencePlan,sentenceRecall,toneTasks,tonePlan,reviewTone,toneStats,validate};if(typeof module!=='undefined'&&module.exports)module.exports=api;else root.CoachEngine=api;
 })(typeof window!=='undefined'?window:globalThis);

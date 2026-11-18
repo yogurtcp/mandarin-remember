@@ -30,7 +30,7 @@ function boot(storage=new Map()){
  assert(a.run('switchCourse("ru-he-test")'));assert.equal(a.run('session'),null);assert.equal(a.run('current'),null);
  assert.equal(a.run('Object.keys(state.items).length'),0);assert.equal(a.run('state.settings.newLimit'),5);assert.equal(a.get('startedCount').textContent,0);
  assert.equal(a.get('targetText').dir,'rtl');assert.equal(a.get('targetText').lang,'he-IL');assert.equal(a.get('meaning').lang,'ru');
- assert.equal(a.get('copyTarget').textContent,'Copy Hebrew');assert.equal(a.get('appVersion').textContent,'2 cards · Русский → עברית · v1.6.17');
+ assert.equal(a.get('copyTarget').textContent,'Copy Hebrew');assert.equal(a.get('appVersion').textContent,'2 cards · Русский → עברית · v1.6.18');
  assert(a.get('category').innerHTML.includes('Test greetings'));assert(!a.get('category').innerHTML.includes('Family'));
  a.run('startExtra();studied();state.items[current.id].note="Hebrew cue";state.settings.voice="Hebrew";state.settings.newLimit=3;save()');
  assert.equal(a.run('state.deckId'),second.progressId);assert.equal(a.run('state.items[DECK[0].id].note'),'Hebrew cue');
@@ -91,7 +91,9 @@ function boot(storage=new Map()){
   t.run('home();state.items['+JSON.stringify(firstId)+'].understand.due=Date.now()-1;start();play(byId.get(current.id),false,true);reveal()');
   assert.equal(t.run('heard'),true);assert.equal(t.run('revealed'),true);
   t.run('rate(2)');assert.equal(t.run('state.logs.at(-1).input'),'listening');
-  t.run('home();start(true)');assert(t.run('current.practice'));const pausedId=t.run('current.id');
+  t.run('home();start(true)');assert(t.run('current.practice'));
+  while(t.run('!!current.sentence'))t.run('readInstead();reveal();rate(2);advance()');
+  const pausedId=t.run('current.id');
   t.get('memoryCue').value='My course-specific cue';t.run('saveCue();pauseCurrent();home()');
   assert.equal(t.run('state.items['+JSON.stringify(pausedId)+'].suspended'),true);
   assert.equal(t.run('state.items['+JSON.stringify(pausedId)+'].note'),'My course-specific cue');

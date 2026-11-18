@@ -61,9 +61,10 @@ rotate.logs.push({id:rotPlan[0].id,direction:'produce',grade:2,requestedGrade:2,
 assert.notEqual(E.sentencePlan(rotate,now,deck,'',2)[0].id,rotPlan[0].id,'Recently shown sentence rotates away');
 console.log('PASS sentence variety: explained connectors, frame signature, different frames per batch, least-recently-shown rotation.');
 // Execute the actual bundled UI script with a controlled clock, DOM, audio and storage.
-const html=fs.readFileSync(path.join(__dirname,'index.html'),'utf8');const scripts=[...html.matchAll(/<script>([\s\S]*?)<\/script>/g)].map(m=>m[1]);assert.equal(scripts.length,2);
+const html=fs.readFileSync(path.join(__dirname,'index.html'),'utf8');const scripts=[...html.matchAll(/<script>([\s\S]*?)<\/script>/g)].map(m=>m[1]);assert.equal(scripts.length,3);
 assert.equal(scripts[0].trim(),fs.readFileSync(path.join(__dirname,'source/engine.js'),'utf8').trim());
-assert.equal(scripts[1].trim(),fs.readFileSync(path.join(__dirname,'source/app.js'),'utf8').trim());
+assert.equal(scripts[1].trim(),fs.readFileSync(path.join(__dirname,'source/tones.js'),'utf8').trim());
+assert.equal(scripts[2].trim(),fs.readFileSync(path.join(__dirname,'source/app.js'),'utf8').trim());
 const registry=JSON.parse(html.match(/<script id="courses-data" type="application\/json">([\s\S]*?)<\/script>/)[1]);
 const elements=new Map(),timers=new Map(),storage=new Map();let tick=0,spoken=[];
 function el(id){return {id,hidden:false,disabled:false,textContent:'',innerHTML:'',value:'',dataset:{},files:[],events:{},addEventListener(n,fn){this.events[n]=fn},click(){this.events.click?.({preventDefault(){}})}}}
@@ -137,8 +138,8 @@ run('play({id:"test",text:"你想喝水吗？"},true,false,true)');wall+=5000;sp
 // Deck additions remain distinct and each new-card plan follows the edited topic order.
 assert.equal(new Set(deck.map(c=>c.text.replace(/[\s。？！?!，,.]/g,''))).size,deck.length,'No punctuation-only duplicate cards');
 for(const c of deck)for(const key of ['id','text','pronunciation','meaning','category'])assert(typeof c[key]==='string'&&c[key].trim(),`${c.text}: missing ${key}`);
-assert.deepEqual(registry.courses[0].cards,deck,'Built page must contain the current normalized deck');
-assert(html.includes(`${deck.length} cards · English → Mandarin · v1.6.17`));
+assert.deepEqual(registry.courses[0].cards.map(({toneSyllables,...card})=>card),deck,'Built page must preserve the current normalized deck while adding tone metadata');
+assert(html.includes(`${deck.length} cards · English → Mandarin · v1.6.18`));
 const family=deck.filter(c=>c.category==='Family'),grandparents=['奶奶','爷爷','外婆','外公'];
 assert.deepEqual(family.filter(c=>grandparents.includes(c.text)).map(c=>c.text),grandparents);
 assert(family.findIndex(c=>c.text==='外公')-family.findIndex(c=>c.text==='奶奶')<=5);

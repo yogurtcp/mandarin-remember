@@ -5,6 +5,7 @@ function initialCourse(){let id=REGISTRY.defaultCourse;try{id=localStorage.getIt
 let course=initialCourse(),DECK=course.cards,byId=new Map(DECK.map(c=>[c.id,c])),KEY=course.storageKey,importRevision=0;
 let storageLocked=false,state=load(),session=null,current=null,revealed=false,graded=false,assisted=false,inputMode='spoken',heard=false,importCandidate=null,libraryLimit=30,lastCardId=null;
 const voiceTimings=new Map();
+let activeToneQuestion=null;
 let audioToken=0,activeAudio=null,activeUtterance=null,audioTimer=null;
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const fmt=t=>new Date(t).toLocaleString([],{month:'short',day:'numeric',hour:'2-digit',minute:'2-digit'});
@@ -24,6 +25,8 @@ function renderProgress(){const p=E.progress(state,DECK,Date.now()),r=E.retentio
 function openProgress(){show('progress');renderProgress()}
 function home(){session=null;current=null;show('home');renderHome()}
 function renderHome(){const now=Date.now(),due=E.dueTasks(state,now,null,DECK),n=E.newAllowance(state,now,DECK),r=E.retention(state,now);
+ const tones=E.toneStats(state,now,DECK);$('tonePracticeBtn').hidden=!course.toneReview;$('tonePracticeBtn').disabled=!tones.known;$('toneSummary').hidden=!course.toneReview;
+ $('toneSummary').textContent=tones.known?tones.checked+' / '+tones.known+' learned words tone-checked · '+tones.due+' due'+(tones.attempts?' · '+tones.correct+' / '+tones.attempts+' correct in 7 days':''):'Learn a few words, then practise their pinyin tones. Older learned words are included automatically.';
  $('readingTrackNote').hidden=course.studyMode!=='reading';
  if(course.studyMode==='reading'){
   const characters=DECK.filter(c=>arabicReading()?['letter','mark'].includes(c.kind):c.kind==='character'),compounds=DECK.filter(c=>c.requires?.length);
@@ -41,6 +44,7 @@ function renderHome(){const now=Date.now(),due=E.dueTasks(state,now,null,DECK),n
 function updateMoreButtons(){const category=$('category').value,count=E.extraPlan(state,Date.now(),DECK,category).length,locked=course.studyMode==='reading'&&DECK.some(c=>!state.items[c.id]&&(!category||c.category===category));for(const id of ['learnMoreBtn','doneMoreBtn']){$(id).disabled=!count;$(id).textContent=count?`Learn ${count} more`:locked?(arabicReading()?'Learn the required letters & marks first':'Learn the required characters first'):'All cards started'}}
 function nextDue(){const times=E.dueTasks(state,1e15,null,DECK).map(t=>t.due);return times.length?Math.min(...times):null}
 function startExtra(){if(session)return;const tasks=E.extraPlan(state,Date.now(),DECK,$('category').value);if(!tasks.length){notice('No new cards left in this topic.');return}beginSession(tasks,false)}
+function startTones(){if(!course.toneReview)return;const tasks=E.tonePlan(state,Date.now(),DECK,$('category').value);if(!tasks.length){notice('Learn some words in this topic first.');return}beginSession(tasks,false)}
 function start(practice=false){const tasks=E.plan(state,Date.now(),DECK,$('category').value,practice);
  if(!tasks.length){notice(practice?'Learn some cards first.':'Nothing due in this topic. Try “Learn 5 more”.');renderHome();return}
  beginSession(tasks,practice);
@@ -58,9 +62,9 @@ function advance(){stopAudio();if(!session)return;session.queue=session.queue.fi
  if(task.direction==='intro'&&(state.items[task.id]||(!task.extra&&E.newAllowance(state,now,DECK).count===0))){advance();return}
  if(!session.learningOnly&&!task.sentence&&E.directions.includes(task.direction)){
   const useSentence=session.recalls++%2===0;
-  if(useSentence){const sentence=E.sentenceRecall(state,now,DECK,task,[...session.sentenceIds]);if(sentence){task=sentence;session.sentenceIds.add(task.id)}}
+  if(useSentence){const sentence=E.sentenceRecall(state,now,DECK,task,[...session.sentenceIds],session.queue.filter(t=>t.direction==='tones').map(t=>t.id));if(sentence){task=sentence;session.sentenceIds.add(task.id)}}
  }
- current=task;lastCardId=task.id;revealed=task.direction==='intro';graded=false;assisted=false;heard=false;inputMode=task.direction==='understand'?'listening':'spoken';
+ activeToneQuestion=null;current=task;lastCardId=task.id;revealed=task.direction==='intro';graded=false;assisted=false;heard=false;inputMode=task.direction==='understand'?'listening':'spoken';
  const c=byId.get(task.id);$('waiting').hidden=true;$('flashcard').hidden=false;$('sessionProgress').textContent=`${session.attempts} reviews · ${session.studied} new`;
  $('prompt').className=c.readingOnly?'readingCue':'';$('prompt').lang=course.source.lang;$('prompt').dir=course.source.dir;
  $('taskType').textContent=task.sentence?(task.direction==='produce'?'SAY THE SENTENCE':'WHAT DOES THE SENTENCE MEAN?'):task.direction==='intro'?'NEW':task.practice?'EXTRA REVIEW':task.direction==='produce'?`SAY IT IN ${course.target.name.toUpperCase()}`:'WHAT DOES IT MEAN?';
@@ -88,21 +92,42 @@ function advance(){stopAudio();if(!session)return;session.queue=session.queue.fi
   if(c.audioContext)$('characterBreakdown').hidden=false;
  }else $('answerAudio').textContent='▶ Listen';
  $('promptAudio').textContent='▶ Listen';$('readingBtn').hidden=false;
+ $('toneTask').hidden=task.direction!=='tones';$('toneChoices').innerHTML='';$('toneFeedback').textContent='';
+ if(task.direction==='tones')showToneQuestion(c);
  if(c.readingOnly&&['letter','mark'].includes(c.kind))$('answerAudio').textContent='▶ Hear name';
  if(task.sentenceRetry){$('taskType').textContent='TRY THE SENTENCE AGAIN';$('taskInstruction').textContent='Try the sentence again before revealing. This retry does not change review dates twice.'}
 }
 function renderWaiting(){if(!session||current)return;const next=Math.min(...session.queue.map(t=>t.readyAt));$('waitText').textContent=`Next review ${next<=Date.now()?'now':`in about ${Math.max(1,Math.ceil((next-Date.now())/60000))} minute(s)`}.`}
 function readInstead(){if(!current||current.direction!=='understand'||revealed)return;inputMode='reading';$('readingPrompt').textContent=byId.get(current.id).text;$('readingPrompt').hidden=false;$('taskInstruction').textContent='Read and recall the meaning.'}
-function reveal(){if(!current||revealed||graded)return;if(current.direction==='understand'&&!heard&&inputMode!=='reading'){audioStatus('Listen first, or tap “Read instead”.');return}
+function showToneQuestion(card){
+ activeToneQuestion=CoachTones.quiz(card.toneSyllables);if(!activeToneQuestion)throw Error('Missing tone question');inputMode='tone-choice';
+ $('taskType').textContent='CHOOSE THE PINYIN TONES';$('prompt').textContent=card.text;$('prompt').lang=course.target.lang;$('prompt').dir=course.target.dir;$('prompt').className='toneWord';
+ $('taskInstruction').textContent=card.meaning+' — Which pinyin matches this word?';
+ for(const id of ['listenTools','draftLabel','helpTools','revealBtn','readingPrompt','answer'])$(id).hidden=true;
+ renderToneChoices();
+}
+function renderToneChoices(){const q=activeToneQuestion;if(!q)return;const answered=Number.isInteger(q.selected);$('toneChoices').innerHTML=q.choices.map((choice,i)=>'<button type="button" class="toneOption'+(answered?(choice.text===q.answer?' correct':i===q.selected?' incorrect':''):'')+'" data-tone-choice="'+i+'"'+(answered?' disabled':'')+'>'+esc(choice.text)+'</button>').join('')}
+function chooseTone(index){
+ const q=activeToneQuestion;if(!session||current?.direction!=='tones'||!q||graded||!Number.isInteger(index)||!q.choices[index])return;
+ const correct=q.choices[index].text===q.answer,now=Date.now(),event=E.reviewTone(state,current.id,correct,now,{practice:!!current.practice});q.selected=index;graded=true;revealed=true;session.attempts++;if(!correct)session.missed++;
+ renderToneChoices();$('toneFeedback').textContent=(correct?'Correct. ':'Not quite. This card uses ')+(correct?'':q.answer+'. ')+'Tones: '+CoachTones.describe(q.tones)+'.';
+ if(q.tones.length===2&&q.tones.every(t=>t===3))$('toneFeedback').textContent+=' Written 3 + 3 is usually spoken with a rising first tone.';
+ $('answer').hidden=false;$('ratings').hidden=true;$('studiedBtn').hidden=true;$('nextBtn').hidden=false;$('ratingHelp').textContent='Automatically checked. This tests tone knowledge; it does not grade recorded speech.';
+ const next=state.toneProgress?.[current.id];$('scheduledResult').textContent=event.practice?'Extra tone check saved. Scheduled tone review unchanged.':'Tone check saved. Next tone review: '+fmt(next.due)+'.';
+ const key='tones/'+current.id,retries=session.retries[key]||0;
+ if(!correct&&!event.practice&&next.due-now<=10*E.MIN&&retries<2){session.retries[key]=retries+1;session.queue.push({...current,readyAt:next.due,afterAttempts:session.attempts+2});$('scheduledResult').textContent+=' Try the tones again after a short gap.'}
+ save();
+}
+function reveal(){if(!current||revealed||graded||current.direction==='tones')return;if(current.direction==='understand'&&!heard&&inputMode!=='reading'){audioStatus('Listen first, or tap “Read instead”.');return}
  revealed=true;$('answer').hidden=false;$('revealBtn').hidden=true;$('helpTools').hidden=true;$('ratings').hidden=false;
  $('ratingHelp').textContent=assisted?'Hint used → needed help.':'How did you do before revealing?';
  for(const b of document.querySelectorAll('[data-grade]'))b.disabled=assisted&&b.dataset.grade!=='0';
 }
-function help(kind){if(!current||revealed)return;assisted=true;const c=byId.get(current.id);$('hint').hidden=false;$('hint').textContent=kind==='cue'?state.items[current.id].note:current.direction==='produce'?firstSyllable(c.pronunciation):c.pronunciation;
+function help(kind){if(!current||revealed||current.direction==='tones')return;assisted=true;const c=byId.get(current.id);$('hint').hidden=false;$('hint').textContent=kind==='cue'?state.items[current.id].note:current.direction==='produce'?firstSyllable(c.pronunciation):c.pronunciation;
 }
 function firstSyllable(p){if(course.hintMode!=='pinyin')return Array.from(p).slice(0,2).join('')+'…';const match=p.match(/^([bpmfdtnlgkhjqxrzcswy]*[āáǎàēéěèīíǐìōóǒòūúǔùǖǘǚǜaeiouü]+(?:ng|n|r)?)/i);return (match?match[1]:p.split(' ')[0])+'…'}
 function studied(){if(!current||graded||current.direction!=='intro')return;graded=true;const now=Date.now();E.introduce(state,current.id,now,byId.get(current.id).readingOnly);session.studied++;save();session.queue.push({id:current.id,direction:byId.get(current.id).readingOnly?'understand':'produce',readyAt:now+E.MIN});$('studiedBtn').hidden=true;$('nextBtn').hidden=false;$('scheduledResult').textContent='Review in 1 minute; meaning tomorrow.';$('suspendBtn').hidden=false}
-function rate(grade){if(!current||!revealed||graded||current.direction==='intro')return;graded=true;const now=Date.now();
+function rate(grade){if(!current||!revealed||graded||['intro','tones'].includes(current.direction))return;graded=true;const now=Date.now();
  if(current.sentence){const words=current.words||E.sentenceWords(byId.get(current.id),DECK)||[];let credited=0;for(const id of words){const key=id+'/'+current.direction;if(session?.graded?.has(key))continue;const item=state.items[id];if(!item||item.suspended)continue;E.review(state,id,current.direction,grade,now,{assisted,practice:!!current.practice,force:!current.practice,input:inputMode});session?.graded?.add(key);credited++}state.logs.push({id:current.id,direction:current.direction,grade:assisted?0:grade,requestedGrade:grade,at:now,assisted,practice:true,delayed:false,input:inputMode});state.logs=state.logs.slice(-5000);session.attempts++;const retryQueued=queueSentenceRetry(current,assisted?0:grade,now);if((assisted?0:grade)===0)session.missed++;$('ratings').hidden=true;$('nextBtn').hidden=false;save();$('scheduledResult').textContent=current.practice?'Sentence extra review saved. Due dates unchanged.':credited?`Sentence credited to ${credited} word${credited===1?'':'s'} — their review dates were updated.`:'Sentence done. Its words were already practised in this session, so no dates changed twice.';if(retryQueued)$('scheduledResult').textContent+=' Try this sentence again after a short gap.';return}
  const alreadyGraded=session?.graded?.has(current.id+'/'+current.direction);const event=E.review(state,current.id,current.direction,grade,now,{assisted,practice:!!current.practice||alreadyGraded,input:inputMode});session?.graded?.add(current.id+'/'+current.direction);session.attempts++;if(event.grade===0)session.missed++;
  $('ratings').hidden=true;$('nextBtn').hidden=false;save();
@@ -174,6 +199,7 @@ function exportBackup(){const blob=new Blob([JSON.stringify(state,null,2)],{type
 async function readImport(file){const revision=++importRevision,startedIn=course.id;importCandidate=null;$('importPreview').hidden=true;if(!file)return;try{if(file.size>4000000)throw Error('Backup is too large');const text=await file.text();if(revision!==importRevision||course.id!==startedIn)return;importCandidate=E.validate(JSON.parse(text),DECK,course.progressId);$('importInfo').textContent=`${course.label} · ${Object.keys(importCandidate.items).length} cards · ${importCandidate.logs.length} attempts. Replaces this course’s progress only. Export a backup first to keep it.`;$('importPreview').hidden=false}catch(error){if(revision===importRevision&&course.id===startedIn)notice('Backup was not imported: '+error.message)}}
 function confirmImport(){if(!importCandidate)return;let candidate;try{candidate=E.validate(importCandidate,DECK,course.progressId)}catch(error){notice('Backup does not match this course.');return}try{localStorage.setItem(KEY+':before-import',JSON.stringify(state));localStorage.setItem(KEY,JSON.stringify(candidate))}catch(error){notice('Import cancelled: the browser could not save it. Existing progress is unchanged.');return}state=candidate;importCandidate=null;storageLocked=false;$('storageWarning').hidden=true;$('importPreview').hidden=true;notice('Backup restored.');home()}
 function bind(id,fn){$(id).addEventListener('click',fn)}
+bind('tonePracticeBtn',startTones);bind('toneChoices',event=>{const button=event.target?.closest('[data-tone-choice]');if(button)chooseTone(Number(button.dataset.toneChoice))});
 bind('audioFallback',stopAudio);bind('learnMoreBtn',startExtra);bind('doneMoreBtn',startExtra);bind('startBtn',()=>start());bind('weakBtn',()=>start(true));bind('brand',e=>{e.preventDefault();home()});bind('homeBtn',home);bind('guideBtn',()=>show('guide'));bind('guideBack',home);bind('settingsBtn',audioSettings);bind('settingsBack',home);bind('libraryBtn',()=>{show('library');renderLibrary()});bind('libraryBack',home);bind('moreBtn',()=>{libraryLimit+=30;renderLibrary()});$('search').addEventListener('input',()=>{libraryLimit=30;renderLibrary()});
 bind('readingMemoryNote',event=>{if(event.target?.closest('[data-reference]'))stopAudio()});
 bind('progressBtn',openProgress);bind('progressBack',home);bind('endBtn',finish);bind('continueBtn',advance);bind('nextBtn',advance);bind('studiedBtn',studied);bind('revealBtn',reveal);bind('hintBtn',()=>help('pinyin'));bind('cueBtn',()=>help('cue'));bind('readingBtn',readInstead);bind('saveCue',saveCue);bind('suspendBtn',pauseCurrent);
@@ -192,7 +218,7 @@ function configureCourse(){
  $('progressHelp').textContent=arabicReading()?'Seen means you have started a letter, mark, syllable or word. Remembered well means repeated reading success after delays, with an interval of at least a week. This guide keeps separate progress from Palestinian vocabulary.':course.studyMode==='reading'?'Seen means you have started a character or compound. Remembered well means repeated reading success after delays, with an interval of at least a week. Reading progress is separate from Mandarin vocabulary progress.':'Seen means you have started the card. Remembered well means repeated success in both directions, with intervals of at least a week. Counts are for the selected course only.';
  $('courseSelect').innerHTML=COURSES.map(c=>`<option value="${esc(c.id)}">${esc(c.label)}</option>`).join('');$('courseSelect').value=course.id;
  $('brandMark').textContent=course.mark||'↻';$('brandLanguage').textContent=course.target.name;$('practiceHeading').textContent='Practise '+course.target.name;document.title=course.target.name+' · Remember';
- $('appVersion').textContent=`${DECK.length} cards · ${course.label} · v1.6.17`;$('voiceLabel').textContent=course.target.name+' voice';$('copyTarget').textContent='Copy '+course.target.textLabel;
+ $('appVersion').textContent=`${DECK.length} cards · ${course.label} · v1.6.18`;$('voiceLabel').textContent=course.target.name+' voice';$('copyTarget').textContent='Copy '+course.target.textLabel;
  $('pronunciationHelp').textContent=course.pronunciationHelp||'Listen to whole phrases. The app does not grade your pronunciation.';$('search').placeholder=course.searchPlaceholder||'Search words and meanings…';
  for(const id of ['targetText','readingPrompt','copyText']){$(id).lang=course.target.lang;$(id).dir=course.target.dir}
  for(const id of ['meaning','prompt']){$(id).lang=course.source.lang;$(id).dir=course.source.dir}

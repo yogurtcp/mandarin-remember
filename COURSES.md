@@ -63,6 +63,20 @@ its text, referencing only base letter/mark cards. The build rejects incomplete
 and circular dependencies. The scheduler unlocks practice after successful
 recognition of all prerequisites, using a separate permanent course identity.
 
+### Mandarin tone questions
+
+`toneReadingFile` on a regular Mandarin course identifies a JSON mapping from
+every vocabulary card ID to its exact pinyin syllables. The build rejects missing
+or extra IDs and readings that differ from the original card; sentences and
+reading-course cards are excluded. It embeds `toneSyllables` on eligible cards
+and enables `toneReview` on the course. The local choice generator changes
+tone marks while preserving letters, ü, and fixed Latin tokens.
+
+Tone schedules live separately in optional `toneProgress` backup data. Tone
+history uses `direction: "tones"` and `input: "tone-choice"`; old backups remain
+valid without either. The two original word schedules and user memory cues
+are not overwritten. See [TONES.md](TONES.md) for the selection and grading rules.
+
 ### Reading memory explanations
 
 Chinese reading cards can provide `memoryNote` with `type`, `text`, and an

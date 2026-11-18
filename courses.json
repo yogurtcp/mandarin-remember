@@ -3,6 +3,7 @@
   "courses": [
     {
       "id": "en-zh",
+      "toneReadingFile": "decks/en-zh-tone-readings.json",
       "label": "English → Mandarin",
       "deckFile": "deck.json",
       "supplementDeckFiles": ["decks/en-zh-common-interactions.json", "decks/en-zh-sentence-practice.json"],

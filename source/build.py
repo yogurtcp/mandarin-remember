@@ -2,6 +2,7 @@
 from pathlib import Path
 import json
 import re
+import unicodedata
 from urllib.parse import urlsplit
 source = Path(__file__).resolve().parent
 root = source.parent
@@ -46,6 +47,15 @@ def load_courses(root):
             assert deck_path.is_relative_to(root.resolve()), 'Deck must be inside the project'
             raw_cards.extend(json.loads(deck_path.read_text(encoding='utf-8')))
         fields = course.pop('cardFields', {})
+        tone_file = course.pop('toneReadingFile', None)
+        tone_readings = None
+        if tone_file:
+            assert course['target']['lang'].startswith('zh') and not course.get('studyMode'), 'Tone questions require regular Mandarin vocabulary'
+            tone_path = (root / tone_file).resolve()
+            assert tone_path.is_relative_to(root.resolve()), 'Tone readings must be inside the project'
+            tone_readings = json.loads(tone_path.read_text(encoding='utf-8'))
+            assert isinstance(tone_readings, dict), 'Invalid tone readings'
+            course['toneReview'] = True
 
         def normalize_text(raw):
             text = raw[fields.get('text', 'text')]
@@ -131,6 +141,20 @@ def load_courses(root):
                 card['examples'] = [normalize_text(e) for e in raw['examples']]
             cards.append(card)
         assert cards, 'Empty course'
+        if tone_readings is not None:
+            words = {card['id']: card for card in cards if not card.get('sentence') and card['category'] != 'Everyday Sentences' and not re.search(r'[。？！.!?؟]$', card['text'])}
+            assert set(tone_readings) == set(words), 'Tone readings must cover every vocabulary word, and no sentences'
+            for card_id, syllables in tone_readings.items():
+                assert isinstance(syllables, list) and syllables and all(isinstance(s, str) and s for s in syllables), 'Invalid tone syllables'
+                for syllable in syllables:
+                    plain = re.sub('[\u0304\u0301\u030c\u0300]', '', unicodedata.normalize('NFD', syllable))
+                    assert re.fullmatch('[A-Za-züÜ]+', unicodedata.normalize('NFC', plain)), 'Invalid pinyin syllable'
+                    token = unicodedata.normalize('NFC', plain).lower()
+                    assert syllable == 'T' or re.fullmatch(r'(?:zh|ch|sh|[bpmfdtnlgkhjqxrzcswy])?(?:a|o|e|ai|ei|ao|ou|an|en|ang|eng|ong|i|ia|ie|iao|iu|ian|in|iang|ing|iong|u|ue|ua|uo|uai|ui|uan|un|uang|ueng|ü|üe|üan|ün)r?', token), 'Pinyin must be split into individual syllables'
+                    assert sum(c in '\u0304\u0301\u030c\u0300' for c in unicodedata.normalize('NFD', syllable)) <= 1, 'Multiple tones in one syllable'
+                original = re.sub(r"[\s']", '', unicodedata.normalize('NFC', words[card_id]['pronunciation']))
+                assert unicodedata.normalize('NFC', ''.join(syllables)) == original, 'Tone syllables must preserve the card reading'
+                words[card_id]['toneSyllables'] = syllables
         if course.get('studyMode') == 'reading':
             by_id = {card['id']: card for card in cards}
             for card in cards:
@@ -169,6 +193,7 @@ def build():
              'STYLE': (source / 'style.css').read_text(encoding='utf-8'),
              'COURSES': json.dumps(registry, ensure_ascii=False).replace('</', '<\\/'),
              'ENGINE': (source / 'engine.js').read_text(encoding='utf-8'),
+             'TONES': (source / 'tones.js').read_text(encoding='utf-8'),
              'APP': (source / 'app.js').read_text(encoding='utf-8')}
     for key, text in parts.items():
         page = page.replace('/*' + key + '*/', text)

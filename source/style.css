@@ -25,3 +25,12 @@
 .readingMemory h3{font-size:15px;margin:0 0 8px;line-height:1.4}
 .readingMemory p{font-size:15px;margin:0;line-height:1.65}
 .readingMemory .referenceLink{font-size:12px;margin-top:4px}
+
+.flash #prompt.toneWord{font-size:clamp(32px,7vw,46px)}
+.toneChoices{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:16px 0}
+.toneOption{background:var(--soft);border:2px solid var(--line);font-size:24px;font-weight:500;padding:14px 10px;overflow-wrap:anywhere}
+.toneOption:disabled{opacity:1;cursor:default}
+.toneOption.correct{background:#dcefe2;border-color:#27824a;color:#185539}
+.toneOption.incorrect{background:#ffebe5;border-color:#b34b39;color:#8b3121}
+#toneFeedback:not(:empty){font-weight:650}
+@media(max-width:400px){.toneChoices{grid-template-columns:1fr}.toneOption{font-size:23px;padding:11px}}

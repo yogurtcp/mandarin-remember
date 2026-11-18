@@ -13,7 +13,7 @@ registry = json.loads((root / 'courses.json').read_text())
 with TemporaryDirectory() as directory:
     folder = Path(directory)
     for course in registry['courses']:
-        for deck_file in [course['deckFile'], *course.get('supplementDeckFiles', [])]:
+        for deck_file in [course['deckFile'], *course.get('supplementDeckFiles', []), *([course['toneReadingFile']] if course.get('toneReadingFile') else [])]:
             dest = folder / deck_file
             dest.parent.mkdir(parents=True, exist_ok=True)
             dest.write_bytes((root / deck_file).read_bytes())
@@ -25,6 +25,7 @@ with TemporaryDirectory() as directory:
     second.pop('sentenceCardIds')
     second.pop('featuredCardIds')
     second.pop('localSpeechHelper')
+    second.pop('toneReadingFile', None)
     second.update(source=dict(name='Russian', lang='ru', dir='ltr', translateCode='ru'),
                   target=dict(name='Hebrew', lang='he-IL', dir='rtl', translateCode='iw'),
                   voiceLanguages=['he-IL'], testText='שלום')
@@ -46,6 +47,29 @@ with TemporaryDirectory() as directory:
     assert built['courses'][-1]['cards'][0]['pronunciation'] == ''
     assert built['courses'][-1]['cards'][0]['examples'][0]['pronunciation'] == ''
     assert built['courses'][-1]['target']['dir'] == 'rtl'
+    tone_path = folder / 'decks/en-zh-tone-readings.json'
+    tone_readings = json.loads(tone_path.read_text())
+    first_tone_id = next(iter(tone_readings))
+    for failure in ['missing-word', 'unknown-word', 'wrong-reading', 'invalid-syllable', 'joined-syllables']:
+        broken_tones = copy.deepcopy(tone_readings)
+        if failure == 'missing-word':
+            broken_tones.pop(first_tone_id)
+        elif failure == 'unknown-word':
+            broken_tones['unknown-word'] = ['mā']
+        elif failure == 'wrong-reading':
+            broken_tones[first_tone_id] = ['mǎ', 'ma']
+        elif failure == 'invalid-syllable':
+            broken_tones[first_tone_id] = ['ma1', 'ma']
+        else:
+            broken_tones[first_tone_id] = ['māma']
+        tone_path.write_text(json.dumps(broken_tones))
+        try:
+            load(test)
+        except AssertionError:
+            pass
+        else:
+            raise AssertionError('Build accepted invalid tone readings: ' + failure)
+    tone_path.write_text(json.dumps(tone_readings))
     japanese = next(course for course in built['courses'] if course['id'] == 'en-ja-japanese')
     watashi = next(card for card in japanese['cards'] if card['id'] == 'ja-i')
     assert watashi['text'] == '私' and watashi['pronunciation'] == 'watashi' and watashi['speechText'] == 'わたし'
