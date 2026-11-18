@@ -63,6 +63,21 @@ its text, referencing only base letter/mark cards. The build rejects incomplete
 and circular dependencies. The scheduler unlocks practice after successful
 recognition of all prerequisites, using a separate permanent course identity.
 
+### Reading memory explanations
+
+Chinese reading cards can provide `memoryNote` with `type`, `text`, and an
+optional HTTPS `source` URL. Types are `origin` (historical shape explanation),
+`components` (meaning/sound parts), `memory` (an authored modern mnemonic), and
+`compound` (the sense of a word's composition). Historical/component notes require
+a reference. The `compound` type belongs only to compound cards. Use the modern
+mnemonic label for invented visual stories; do not present them as etymology.
+
+Set `memoryNotesRequired: true` on a course to reject cards missing an explanation.
+Notes appear inside the answer on practice cards, and openly in the phrasebook,
+whose search includes their text. They are learning content and do not replace
+or overwrite a user's saved personal memory cue. Current Chinese reading content
+has complete coverage of its 94 characters and 90 compounds.
+
 ### Template forms in sentences
 
 For a sentence that realizes a learned word in another form, put the allowed surface form on the **word** card. The sentence system displays the base word, explains the form, and credits the base word's schedule; it does not create a separate card for the conjugation.

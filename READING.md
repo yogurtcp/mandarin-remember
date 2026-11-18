@@ -23,6 +23,36 @@ the answer. Some ambiguous characters use a clearly labeled audio example:
 校 is heard in 学校, 子 in 子女, 少 in 多少, 中 in 中国, and 分 in 分钟.
 The whole word can use a different reading or a neutral tone; follow its pinyin.
 
+## Shape, meaning, and memory notes (v1.6.17)
+
+Every one of the 94 characters and 90 compounds now has an individual memory
+explanation. It appears on the introduction and revealed answer, and directly
+in the phrasebook. The entire explanation is inside the hidden answer during
+recall; it does not supply an advance clue. Phrasebook search includes the notes.
+
+Character notes distinguish three kinds of explanation:
+
+- **Shape & meaning · historical explanation** summarizes an earlier form and
+  its relationship to the meaning, with a character-reference link. For example,
+  木 retains a tree image, while 生 relates to a sprout emerging from the ground.
+- **Meaning & sound clues** explains how components function. 女 contributes
+  meaning in 妈, while 马 supplies a sound clue. Sound relationships can be
+  historical and need not match modern Mandarin exactly.
+- **Memory aid · modern story** deliberately uses today's visible shape as a
+  memory device. The hand-over-eye story for 看 and sun-plus-moon story for 明
+  are labeled as modern mnemonics rather than presented as historical origins.
+
+Every compound has **How this word fits together**, explaining each constituent
+in that particular word. Examples include 电脑 (electricity + brain → computer),
+门口 (door + opening → doorway), and 大小 (big/small → size). Notes also explain
+figurative senses, respectful 老 in 老师, neutral-toned endings such as 子, and
+directional 来/去. This replaces the previous identical generic compound note.
+
+All explanations are embedded for offline use. Reference links need a connection
+only when opened. Existing card IDs, readings, meanings, prerequisites, schedules,
+and personal memory cues are preserved; previously learned cards gain the notes
+without having to be learned again.
+
 The reading course schedules only recognition reviews. The unused speaking
 track remains in the backup structure for schema compatibility but is never
 scheduled and is not required for the reading retention metric.
@@ -44,6 +74,20 @@ snapshot dated 2026-09-29, published by MDBG. The remaining ordinary-language
 choices include 小门 (small door, a transparent noun phrase) and colloquial
 neutral-tone readings for 来/去 directional complements and 面 position words.
 These are reading selections, not exhaustive character dictionaries.
+
+Shape and component explanations were authored and cross-checked against the
+[Dong Chinese Character Wiki](https://www.dong-chinese.com/wiki), including its
+earlier-form analyses and simplified-character notes. Each character explanation
+links to its own reference entry. Modern mnemonic stories and compound explanations
+are authored learning aids, not quotations from a dictionary or claims that every
+modern shape transparently records a word's history. The distinction between
+meaning, sound, and visual form is also discussed by
+[Outlier Linguistics](https://www.outlier-linguistics.com/post/three-attributes-three-functions).
+
+`verify-reading.cjs` checks coverage of all 184 explanations, type labels,
+compound constituents, answer-only display, phrasebook search, safe rendering,
+and the existing reading progression and progress restoration. The build rejects
+missing required explanations, unsupported types, and missing/unsafe references.
 
 Reference: [CC-CEDICT](https://cc-cedict.org/wiki/) and
 [MDBG distribution](https://www.mdbg.net/chinese/dictionary?page=cc-cedict).

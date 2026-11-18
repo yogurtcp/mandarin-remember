@@ -5,7 +5,12 @@
     "pronunciation": "rén",
     "meaning": "person",
     "category": "Base characters",
-    "kind": "character"
+    "kind": "character",
+    "memoryNote": {
+      "type": "origin",
+      "text": "The early shape showed a person seen from the side. Picture an upright body and a bent leg; the modern sloping strokes keep a simple human silhouette, linking the shape to “person.”",
+      "source": "https://www.dong-chinese.com/wiki/%E4%BA%BA"
+    }
   },
   {
     "id": "zh-read-53e3",
@@ -13,7 +18,12 @@
     "pronunciation": "kǒu",
     "meaning": "mouth; opening",
     "category": "Base characters",
-    "kind": "character"
+    "kind": "character",
+    "memoryNote": {
+      "type": "origin",
+      "text": "Began as the outline of a mouth. Its box-like opening helps you remember both a mouth and an opening, as in 门口, a doorway.",
+      "source": "https://www.dong-chinese.com/wiki/%E5%8F%A3"
+    }
   },
   {
     "id": "zh-read-5927",
@@ -21,7 +31,12 @@
     "pronunciation": "dà",
     "meaning": "big",
     "category": "Base characters",
-    "kind": "character"
+    "kind": "character",
+    "memoryNote": {
+      "type": "origin",
+      "text": "Early forms showed a person facing forward with arms spread. Imagine someone stretching out to show how big something is: 大 means big.",
+      "source": "https://www.dong-chinese.com/wiki/%E5%A4%A7"
+    }
   },
   {
     "id": "zh-read-5c0f",
@@ -29,7 +44,12 @@
     "pronunciation": "xiǎo",
     "meaning": "small",
     "category": "Base characters",
-    "kind": "character"
+    "kind": "character",
+    "memoryNote": {
+      "type": "origin",
+      "text": "Early forms used small specks. Imagine the three short marks as tiny scattered grains to remember small; they are a visual cue, not a number to count.",
+      "source": "https://www.dong-chinese.com/wiki/%E5%B0%8F"
+    }
   },
   {
     "id": "zh-read-591a",
@@ -37,7 +57,12 @@
     "pronunciation": "duō",
     "meaning": "many; much",
     "category": "Base characters",
-    "kind": "character"
+    "kind": "character",
+    "memoryNote": {
+      "type": "origin",
+      "text": "Early forms showed two portions of meat, suggesting plenty. The modern pieces look like 夕, but “two evenings” is not the historical explanation. Picture an extra helping: many or much.",
+      "source": "https://www.dong-chinese.com/wiki/%E5%A4%9A"
+    }
   },
   {
     "id": "zh-read-5c11",
@@ -48,7 +73,12 @@
     "kind": "character",
     "speechText": "多少",
     "audioContext": "多少 (duōshao, how many / how much)",
-    "usage": "The reading shown is the one used here. This character can have another reading or a neutral tone in other words. Audio demonstrates it in 多少 (duōshao, how many / how much)."
+    "usage": "The reading shown is the one used here. This character can have another reading or a neutral tone in other words. Audio demonstrates it in 多少 (duōshao, how many / how much).",
+    "memoryNote": {
+      "type": "origin",
+      "text": "Like 小, this developed from small specks. Use the longer slanting stroke to distinguish 少, few/little, from 小, small. Do not compare their stroke counts as arithmetic.",
+      "source": "https://www.dong-chinese.com/wiki/%E5%B0%91"
+    }
   },
   {
     "id": "zh-read-4e0a",
@@ -56,7 +86,12 @@
     "pronunciation": "shàng",
     "meaning": "up; above",
     "category": "Base characters",
-    "kind": "character"
+    "kind": "character",
+    "memoryNote": {
+      "type": "origin",
+      "text": "An early short mark above a longer baseline indicated above. In the modern shape, notice the small horizontal stroke above the long bottom line: up/above.",
+      "source": "https://www.dong-chinese.com/wiki/%E4%B8%8A"
+    }
   },
   {
     "id": "zh-read-4e0b",
@@ -64,7 +99,12 @@
     "pronunciation": "xià",
     "meaning": "down; below",
     "category": "Base characters",
-    "kind": "character"
+    "kind": "character",
+    "memoryNote": {
+      "type": "origin",
+      "text": "An early short mark below a longer baseline indicated below. The modern short stroke hangs beneath the top line: down/below. Compare 上.",
+      "source": "https://www.dong-chinese.com/wiki/%E4%B8%8B"
+    }
   },
   {
     "id": "zh-read-5de6",
@@ -72,7 +112,12 @@
     "pronunciation": "zuǒ",
     "meaning": "left",
     "category": "Base characters",
-    "kind": "character"
+    "kind": "character",
+    "memoryNote": {
+      "type": "memory",
+      "text": "Spot 工 under the hand-like upper strokes. Imagine doing a piece of work with your left hand. This distinguishes 左 from 右, which has a 口-shaped bottom.",
+      "source": "https://www.dong-chinese.com/wiki/%E5%B7%A6"
+    }
   },
   {
     "id": "zh-read-53f3",
@@ -80,7 +125,12 @@
     "pronunciation": "yòu",
     "meaning": "right",
     "category": "Base characters",
-    "kind": "character"
+    "kind": "character",
+    "memoryNote": {
+      "type": "memory",
+      "text": "Spot the 口-shaped bottom instead of 左’s 工. Imagine bringing food to your mouth with your right hand. Use this as a modern left/right reminder.",
+      "source": "https://www.dong-chinese.com/wiki/%E5%8F%B3"
+    }
   },
   {
     "id": "zh-read-4e2d",
@@ -91,7 +141,12 @@
     "kind": "character",
     "speechText": "中国",
     "audioContext": "中国 (Zhōngguó, China)",
-    "usage": "The reading shown is the one used here. This character can have another reading or a neutral tone in other words. Audio demonstrates it in 中国 (Zhōngguó, China)."
+    "usage": "The reading shown is the one used here. This character can have another reading or a neutral tone in other words. Audio demonstrates it in 中国 (Zhōngguó, China).",
+    "memoryNote": {
+      "type": "memory",
+      "text": "A vertical stroke passes through the middle of a box. Picture a line marking the center: 中 means middle/center. This cue uses the modern shape.",
+      "source": "https://www.dong-chinese.com/wiki/%E4%B8%AD"
+    }
   },
   {
     "id": "zh-read-65e5",
@@ -99,7 +154,12 @@
     "pronunciation": "rì",
     "meaning": "sun; day",
     "category": "Base characters",
-    "kind": "character"
+    "kind": "character",
+    "memoryNote": {
+      "type": "origin",
+      "text": "Began as a picture of the sun; the older rounded outline became more rectangular. Picture the inner stroke as a mark inside the sun. A sun’s daily cycle also links it to day.",
+      "source": "https://www.dong-chinese.com/wiki/%E6%97%A5"
+    }
   },
   {
     "id": "zh-read-6708",
@@ -107,7 +167,12 @@
     "pronunciation": "yuè",
     "meaning": "moon; month",
     "category": "Base characters",
-    "kind": "character"
+    "kind": "character",
+    "memoryNote": {
+      "type": "origin",
+      "text": "Began as a picture of the moon. Imagine a narrow crescent straightened into the modern outline. The moon’s cycle links the same character to month.",
+      "source": "https://www.dong-chinese.com/wiki/%E6%9C%88"
+    }
   },
   {
     "id": "zh-read-660e",
@@ -115,7 +180,12 @@
     "pronunciation": "míng",
     "meaning": "bright; clear",
     "category": "Base characters",
-    "kind": "character"
+    "kind": "character",
+    "memoryNote": {
+      "type": "memory",
+      "text": "In today’s shape, spot 日, sun, beside 月, moon. Imagine their light together to remember bright/clear. This is a modern memory aid; it does not claim that “sun + moon” explains every historical form.",
+      "source": "https://www.dong-chinese.com/wiki/%E6%98%8E"
+    }
   },
   {
     "id": "zh-read-5929",
@@ -123,7 +193,12 @@
     "pronunciation": "tiān",
     "meaning": "sky; day",
     "category": "Base characters",
-    "kind": "character"
+    "kind": "character",
+    "memoryNote": {
+      "type": "origin",
+      "text": "Early forms emphasized the head of a person. The sense extended upward to the top and sky. See a 大-like person with a line over the head: the sky above us.",
+      "source": "https://www.dong-chinese.com/wiki/%E5%A4%A9"
+    }
   },
   {
     "id": "zh-read-4eca",
@@ -131,7 +206,12 @@
     "pronunciation": "jīn",
     "meaning": "now; present (in compounds)",
     "category": "Base characters",
-    "kind": "character"
+    "kind": "character",
+    "memoryNote": {
+      "type": "memory",
+      "text": "There is no transparent picture of “now” in this modern shape. Imagine its roof-like top enclosing the present moment. Anchor the meaning with 今天, today, and 今年, this year.",
+      "source": "https://www.dong-chinese.com/wiki/%E4%BB%8A"
+    }
   },
   {
     "id": "zh-read-6628",
@@ -139,7 +219,12 @@
     "pronunciation": "zuó",
     "meaning": "yesterday (in compounds)",
     "category": "Base characters",
-    "kind": "character"
+    "kind": "character",
+    "memoryNote": {
+      "type": "components",
+      "text": "日, sun/day, supplies the time-related meaning. The right side 乍 is a historical sound component, although zhà and zuó are less alike today. Picture the day already behind you: yesterday.",
+      "source": "https://www.dong-chinese.com/wiki/%E6%98%A8"
+    }
   },
   {
     "id": "zh-read-65e9",
@@ -147,7 +232,12 @@
     "pronunciation": "zǎo",
     "meaning": "early; morning",
     "category": "Base characters",
-    "kind": "character"
+    "kind": "character",
+    "memoryNote": {
+      "type": "memory",
+      "text": "Spot 日 above the lower cross-like strokes. Imagine the sun rising above a low horizon to remember early/morning. This horizon story is a modern mnemonic, not a claim about the lower part’s origin.",
+      "source": "https://www.dong-chinese.com/wiki/%E6%97%A9"
+    }
   },
   {
     "id": "zh-read-665a",
@@ -155,7 +245,12 @@
     "pronunciation": "wǎn",
     "meaning": "late; evening",
     "category": "Base characters",
-    "kind": "character"
+    "kind": "character",
+    "memoryNote": {
+      "type": "components",
+      "text": "日 links the meaning to the day and its light. 免 is the historical sound component; its modern reading does not directly predict wǎn. Imagine the day’s light getting late: evening.",
+      "source": "https://www.dong-chinese.com/wiki/%E6%99%9A"
+    }
   },
   {
     "id": "zh-read-5e74",
@@ -163,7 +258,12 @@
     "pronunciation": "nián",
     "meaning": "year",
     "category": "Base characters",
-    "kind": "character"
+    "kind": "character",
+    "memoryNote": {
+      "type": "origin",
+      "text": "Earlier forms combined a grain plant and a person harvesting it. The returning harvest season links the image to a year. The modern straightened strokes no longer show that scene clearly.",
+      "source": "https://www.dong-chinese.com/wiki/%E5%B9%B4"
+    }
   },
   {
     "id": "zh-read-65f6",
@@ -171,7 +271,12 @@
     "pronunciation": "shí",
     "meaning": "time; hour",
     "category": "Base characters",
-    "kind": "character"
+    "kind": "character",
+    "memoryNote": {
+      "type": "components",
+      "text": "The 日 part ties the character to time and days. 时 is simplified from 時; its small 寸 part abbreviates a larger component. Remember a day divided into periods, rather than treating the shape as a picture of a clock.",
+      "source": "https://www.dong-chinese.com/wiki/%E6%97%B6"
+    }
   },
   {
     "id": "zh-read-5206",
@@ -182,7 +287,12 @@
     "kind": "character",
     "speechText": "分钟",
     "audioContext": "分钟 (fēnzhōng, minute)",
-    "usage": "The reading shown is the one used here. This character can have another reading or a neutral tone in other words. Audio demonstrates it in 分钟 (fēnzhōng, minute)."
+    "usage": "The reading shown is the one used here. This character can have another reading or a neutral tone in other words. Audio demonstrates it in 分钟 (fēnzhōng, minute).",
+    "memoryNote": {
+      "type": "origin",
+      "text": "The shape combines separation above with 刀, a knife, below: cutting things apart. That gives divide/portion. A minute is a small division of time, as in 分钟.",
+      "source": "https://www.dong-chinese.com/wiki/%E5%88%86"
+    }
   },
   {
     "id": "zh-read-95f4",
@@ -190,7 +300,12 @@
     "pronunciation": "jiān",
     "meaning": "between; room (in compounds)",
     "category": "Base characters",
-    "kind": "character"
+    "kind": "character",
+    "memoryNote": {
+      "type": "origin",
+      "text": "In the simplified shape, 日 sits inside 门: light through the gap in a doorway. Link that gap to a space or interval; the character also appears in words for a room.",
+      "source": "https://www.dong-chinese.com/wiki/%E9%97%B4"
+    }
   },
   {
     "id": "zh-read-949f",
@@ -198,7 +313,12 @@
     "pronunciation": "zhōng",
     "meaning": "clock; bell",
     "category": "Base characters",
-    "kind": "character"
+    "kind": "character",
+    "memoryNote": {
+      "type": "components",
+      "text": "钅 is the metal component, fitting bells and clocks. 中 is a sound reminder for zhōng, not the meaning “middle” here. Picture a metal bell marking clock time.",
+      "source": "https://www.dong-chinese.com/wiki/%E9%92%9F"
+    }
   },
   {
     "id": "zh-read-6bcf",
@@ -206,7 +326,12 @@
     "pronunciation": "měi",
     "meaning": "each; every",
     "category": "Base characters",
-    "kind": "character"
+    "kind": "character",
+    "memoryNote": {
+      "type": "memory",
+      "text": "Notice the small cap over a 母-shaped lower part. Use “every mother, every day” as a modern cue for each/every. The visible parts are not a literal translation of 每.",
+      "source": "https://www.dong-chinese.com/wiki/%E6%AF%8F"
+    }
   },
   {
     "id": "zh-read-4e00",
@@ -214,7 +339,12 @@
     "pronunciation": "yī",
     "meaning": "one",
     "category": "Base characters",
-    "kind": "character"
+    "kind": "character",
+    "memoryNote": {
+      "type": "origin",
+      "text": "One horizontal stroke represents one. The shape directly gives the number; its spoken tone can change in connected words.",
+      "source": "https://www.dong-chinese.com/wiki/%E4%B8%80"
+    }
   },
   {
     "id": "zh-read-4e8c",
@@ -222,7 +352,12 @@
     "pronunciation": "èr",
     "meaning": "two",
     "category": "Base characters",
-    "kind": "character"
+    "kind": "character",
+    "memoryNote": {
+      "type": "origin",
+      "text": "Two horizontal strokes represent two. Count the strokes and keep the pair separate from 三.",
+      "source": "https://www.dong-chinese.com/wiki/%E4%BA%8C"
+    }
   },
   {
     "id": "zh-read-4e09",
@@ -230,7 +365,12 @@
     "pronunciation": "sān",
     "meaning": "three",
     "category": "Base characters",
-    "kind": "character"
+    "kind": "character",
+    "memoryNote": {
+      "type": "origin",
+      "text": "Three horizontal strokes represent three. The longest bottom stroke gives the stack a clear base.",
+      "source": "https://www.dong-chinese.com/wiki/%E4%B8%89"
+    }
   },
   {
     "id": "zh-read-5341",
@@ -238,7 +378,12 @@
     "pronunciation": "shí",
     "meaning": "ten",
     "category": "Base characters",
-    "kind": "character"
+    "kind": "character",
+    "memoryNote": {
+      "type": "memory",
+      "text": "See a crossed tally mark and associate it with a complete set of ten. This is a recognition cue; do not infer that every cross-shaped character means ten.",
+      "source": "https://www.dong-chinese.com/wiki/%E5%8D%81"
+    }
   },
   {
     "id": "zh-read-5b50",
@@ -249,7 +394,12 @@
     "kind": "character",
     "speechText": "子女",
     "audioContext": "子女 (zǐnǚ, children)",
-    "usage": "The reading shown is the one used here. This character can have another reading or a neutral tone in other words. Audio demonstrates it in 子女 (zǐnǚ, children)."
+    "usage": "The reading shown is the one used here. This character can have another reading or a neutral tone in other words. Audio demonstrates it in 子女 (zǐnǚ, children).",
+    "memoryNote": {
+      "type": "origin",
+      "text": "Early forms showed a small child with outstretched arms. Picture a large head above the arms and a small body. In compounds, 子 can instead be a neutral-toned noun ending, not a separate child.",
+      "source": "https://www.dong-chinese.com/wiki/%E5%AD%90"
+    }
   },
   {
     "id": "zh-read-5973",
@@ -257,7 +407,12 @@
     "pronunciation": "nǚ",
     "meaning": "woman; female",
     "category": "Base characters",
-    "kind": "character"
+    "kind": "character",
+    "memoryNote": {
+      "type": "origin",
+      "text": "Early forms showed a seated or kneeling woman. The modern crossing and curved strokes are a compressed outline of that figure, linking the character to woman/female.",
+      "source": "https://www.dong-chinese.com/wiki/%E5%A5%B3"
+    }
   },
   {
     "id": "zh-read-7537",
@@ -265,7 +420,12 @@
     "pronunciation": "nán",
     "meaning": "man; male",
     "category": "Base characters",
-    "kind": "character"
+    "kind": "character",
+    "memoryNote": {
+      "type": "memory",
+      "text": "Spot 田, field, over 力, strength. Picture a farm worker to link these parts with nán, male/man. Use the stacked field-and-work image to recognize the whole character.",
+      "source": "https://www.dong-chinese.com/wiki/%E7%94%B7"
+    }
   },
   {
     "id": "zh-read-513f",
@@ -273,7 +433,12 @@
     "pronunciation": "ér",
     "meaning": "child; son",
     "category": "Base characters",
-    "kind": "character"
+    "kind": "character",
+    "memoryNote": {
+      "type": "memory",
+      "text": "Picture a small person standing on the two curved legs. In this course 儿 relates to child/son; it is the simplified writing used in 女儿 and 儿子. The modern silhouette alone does not tell you someone’s age.",
+      "source": "https://www.dong-chinese.com/wiki/%E5%84%BF"
+    }
   },
   {
     "id": "zh-read-5b69",
@@ -281,7 +446,12 @@
     "pronunciation": "hái",
     "meaning": "child (in compounds)",
     "category": "Base characters",
-    "kind": "character"
+    "kind": "character",
+    "memoryNote": {
+      "type": "components",
+      "text": "子 supplies the child-related meaning. 亥 is the sound component: compare hài with hái. The whole character means child, especially in 孩子.",
+      "source": "https://www.dong-chinese.com/wiki/%E5%AD%A9"
+    }
   },
   {
     "id": "zh-read-597d",
@@ -289,7 +459,12 @@
     "pronunciation": "hǎo",
     "meaning": "good; well",
     "category": "Base characters",
-    "kind": "character"
+    "kind": "character",
+    "memoryNote": {
+      "type": "memory",
+      "text": "Spot 女 and 子 together. Picture people caring for one another and connect that warm scene to good/well. Use the two familiar shapes as a visual reminder of that scene.",
+      "source": "https://www.dong-chinese.com/wiki/%E5%A5%BD"
+    }
   },
   {
     "id": "zh-read-5988",
@@ -297,7 +472,12 @@
     "pronunciation": "mā",
     "meaning": "mom",
     "category": "Base characters",
-    "kind": "character"
+    "kind": "character",
+    "memoryNote": {
+      "type": "components",
+      "text": "女 supplies the female/family meaning; 马 supplies a sound clue, mǎ → mā. 马 does not mean “horse” in this word’s meaning. The whole character is mom.",
+      "source": "https://www.dong-chinese.com/wiki/%E5%A6%88"
+    }
   },
   {
     "id": "zh-read-7238",
@@ -305,7 +485,12 @@
     "pronunciation": "bà",
     "meaning": "dad",
     "category": "Base characters",
-    "kind": "character"
+    "kind": "character",
+    "memoryNote": {
+      "type": "components",
+      "text": "父 gives the father-related meaning and 巴 gives the sound clue, bā → bà. Notice the upper father component over the lower 巴 shape; the whole character means dad.",
+      "source": "https://www.dong-chinese.com/wiki/%E7%88%B8"
+    }
   },
   {
     "id": "zh-read-5bb6",
@@ -313,7 +498,12 @@
     "pronunciation": "jiā",
     "meaning": "home; family",
     "category": "Base characters",
-    "kind": "character"
+    "kind": "character",
+    "memoryNote": {
+      "type": "memory",
+      "text": "Spot 宀, a roof, above the 豕-shaped lower part. Imagine a roof sheltering the whole household, including its animals, to remember home/family. This household scene is a modern mnemonic.",
+      "source": "https://www.dong-chinese.com/wiki/%E5%AE%B6"
+    }
   },
   {
     "id": "zh-read-95e8",
@@ -321,7 +511,12 @@
     "pronunciation": "mén",
     "meaning": "door; gate",
     "category": "Base characters",
-    "kind": "character"
+    "kind": "character",
+    "memoryNote": {
+      "type": "origin",
+      "text": "The traditional 門 pictured a gate with two leaves. The simplified 门 keeps a doorway-like outline. Imagine walking through that opening: door/gate.",
+      "source": "https://www.dong-chinese.com/wiki/%E9%97%A8"
+    }
   },
   {
     "id": "zh-read-51fa",
@@ -329,7 +524,12 @@
     "pronunciation": "chū",
     "meaning": "to go out; exit",
     "category": "Base characters",
-    "kind": "character"
+    "kind": "character",
+    "memoryNote": {
+      "type": "origin",
+      "text": "Early forms depicted a foot leaving an enclosure. That links the shape to go out/exit. Although the modern form resembles two stacked 山 shapes, “two mountains” is not its origin.",
+      "source": "https://www.dong-chinese.com/wiki/%E5%87%BA"
+    }
   },
   {
     "id": "zh-read-5165",
@@ -337,7 +537,12 @@
     "pronunciation": "rù",
     "meaning": "to enter",
     "category": "Base characters",
-    "kind": "character"
+    "kind": "character",
+    "memoryNote": {
+      "type": "origin",
+      "text": "The early form is explained as a forward-pointing sign for entering. Imagine its slanting strokes directing you inward. Keep it distinct from 人, person.",
+      "source": "https://www.dong-chinese.com/wiki/%E5%85%A5"
+    }
   },
   {
     "id": "zh-read-5f00",
@@ -345,7 +550,12 @@
     "pronunciation": "kāi",
     "meaning": "to open; turn on",
     "category": "Base characters",
-    "kind": "character"
+    "kind": "character",
+    "memoryNote": {
+      "type": "origin",
+      "text": "The older 開 showed hands releasing a bolt in a doorway. The simplified 开 drops the outer gate. Imagine a latch being opened to remember open/turn on.",
+      "source": "https://www.dong-chinese.com/wiki/%E5%BC%80"
+    }
   },
   {
     "id": "zh-read-5173",
@@ -353,7 +563,12 @@
     "pronunciation": "guān",
     "meaning": "to close; turn off",
     "category": "Base characters",
-    "kind": "character"
+    "kind": "character",
+    "memoryNote": {
+      "type": "memory",
+      "text": "Imagine the upper strokes folding together over the wider lower shape, shutting a gap. The simplified character means close/turn off; its modern strokes are not a literal picture of a door.",
+      "source": "https://www.dong-chinese.com/wiki/%E5%85%B3"
+    }
   },
   {
     "id": "zh-read-5c71",
@@ -361,7 +576,12 @@
     "pronunciation": "shān",
     "meaning": "mountain",
     "category": "Base characters",
-    "kind": "character"
+    "kind": "character",
+    "memoryNote": {
+      "type": "origin",
+      "text": "Began as a picture of mountain peaks. The taller middle peak and two lower sides make a skyline: mountain.",
+      "source": "https://www.dong-chinese.com/wiki/%E5%B1%B1"
+    }
   },
   {
     "id": "zh-read-6c34",
@@ -369,7 +589,12 @@
     "pronunciation": "shuǐ",
     "meaning": "water",
     "category": "Base characters",
-    "kind": "character"
+    "kind": "character",
+    "memoryNote": {
+      "type": "origin",
+      "text": "Early forms depicted flowing water. Imagine the middle stroke as the main stream and the side strokes as smaller currents. In other characters, 水 often takes the compact form 氵.",
+      "source": "https://www.dong-chinese.com/wiki/%E6%B0%B4"
+    }
   },
   {
     "id": "zh-read-706b",
@@ -377,7 +602,12 @@
     "pronunciation": "huǒ",
     "meaning": "fire",
     "category": "Base characters",
-    "kind": "character"
+    "kind": "character",
+    "memoryNote": {
+      "type": "origin",
+      "text": "Began as a picture of flames. Imagine the center rising and the side strokes flickering outward: fire. A related bottom component can look like 灬 in other characters.",
+      "source": "https://www.dong-chinese.com/wiki/%E7%81%AB"
+    }
   },
   {
     "id": "zh-read-6728",
@@ -385,7 +615,12 @@
     "pronunciation": "mù",
     "meaning": "wood; tree (in compounds)",
     "category": "Base characters",
-    "kind": "character"
+    "kind": "character",
+    "memoryNote": {
+      "type": "origin",
+      "text": "Began as a picture of a tree. The upright is a trunk; the spreading strokes suggest branches and roots. That links tree to the material wood.",
+      "source": "https://www.dong-chinese.com/wiki/%E6%9C%A8"
+    }
   },
   {
     "id": "zh-read-6797",
@@ -393,7 +628,12 @@
     "pronunciation": "lín",
     "meaning": "woods; grove",
     "category": "Base characters",
-    "kind": "character"
+    "kind": "character",
+    "memoryNote": {
+      "type": "origin",
+      "text": "Two 木 tree shapes stand together: a grove or stretch of woods. Recognize the repeated tree shape rather than learning the whole form as unrelated strokes.",
+      "source": "https://www.dong-chinese.com/wiki/%E6%9E%97"
+    }
   },
   {
     "id": "zh-read-68ee",
@@ -401,7 +641,12 @@
     "pronunciation": "sēn",
     "meaning": "dense woodland (in compounds)",
     "category": "Base characters",
-    "kind": "character"
+    "kind": "character",
+    "memoryNote": {
+      "type": "origin",
+      "text": "Three 木 tree shapes suggest a denser gathering of trees. Compare 林, two trees, with 森, more densely wooded. 森 commonly appears in compounds such as 森林.",
+      "source": "https://www.dong-chinese.com/wiki/%E6%A3%AE"
+    }
   },
   {
     "id": "zh-read-7530",
@@ -409,7 +654,12 @@
     "pronunciation": "tián",
     "meaning": "field",
     "category": "Base characters",
-    "kind": "character"
+    "kind": "character",
+    "memoryNote": {
+      "type": "origin",
+      "text": "Began as a picture of a cultivated field. The outer boundary and dividing lines resemble plots of farmland: field.",
+      "source": "https://www.dong-chinese.com/wiki/%E7%94%B0"
+    }
   },
   {
     "id": "zh-read-679c",
@@ -417,7 +667,12 @@
     "pronunciation": "guǒ",
     "meaning": "fruit; result",
     "category": "Base characters",
-    "kind": "character"
+    "kind": "character",
+    "memoryNote": {
+      "type": "origin",
+      "text": "Earlier forms showed fruit growing on a tree. The bottom 木 is the tree; the top represents fruit, despite looking like 田 today. A fruit is also what a plant produces, helping you remember the extended sense result.",
+      "source": "https://www.dong-chinese.com/wiki/%E6%9E%9C"
+    }
   },
   {
     "id": "zh-read-7535",
@@ -425,7 +680,12 @@
     "pronunciation": "diàn",
     "meaning": "electricity",
     "category": "Base characters",
-    "kind": "character"
+    "kind": "character",
+    "memoryNote": {
+      "type": "origin",
+      "text": "The older 電 included rain and a lightning shape. The simplified 电 drops the rain component. Imagine the bent tail as a flash of lightning, linking the shape to electricity.",
+      "source": "https://www.dong-chinese.com/wiki/%E7%94%B5"
+    }
   },
   {
     "id": "zh-read-624b",
@@ -433,7 +693,12 @@
     "pronunciation": "shǒu",
     "meaning": "hand",
     "category": "Base characters",
-    "kind": "character"
+    "kind": "character",
+    "memoryNote": {
+      "type": "origin",
+      "text": "Began as a picture of a hand. Imagine the strokes as fingers attached to a palm and wrist. The compact side component 扌 is another form of 手.",
+      "source": "https://www.dong-chinese.com/wiki/%E6%89%8B"
+    }
   },
   {
     "id": "zh-read-673a",
@@ -441,7 +706,12 @@
     "pronunciation": "jī",
     "meaning": "machine (in compounds)",
     "category": "Base characters",
-    "kind": "character"
+    "kind": "character",
+    "memoryNote": {
+      "type": "components",
+      "text": "木 connects the older character with wooden mechanisms; the simplified right side 几 helps you recognize the jī sound. Memorize the whole character as machine, not as the literal phrase “wooden table.”",
+      "source": "https://www.dong-chinese.com/wiki/%E6%9C%BA"
+    }
   },
   {
     "id": "zh-read-5934",
@@ -449,7 +719,12 @@
     "pronunciation": "tóu",
     "meaning": "head",
     "category": "Base characters",
-    "kind": "character"
+    "kind": "character",
+    "memoryNote": {
+      "type": "memory",
+      "text": "Use the two dots as small features on a tilted head above a broad body-like shape. This is a modern cue for the simplified 头, head; it is not a reconstruction of the older 頭.",
+      "source": "https://www.dong-chinese.com/wiki/%E5%A4%B4"
+    }
   },
   {
     "id": "zh-read-8111",
@@ -457,7 +732,12 @@
     "pronunciation": "nǎo",
     "meaning": "brain",
     "category": "Base characters",
-    "kind": "character"
+    "kind": "character",
+    "memoryNote": {
+      "type": "components",
+      "text": "The left 月-like component is a body/flesh component here, not the moon. It places 脑 among body-part words. Picture the brain inside a head; learn the whole nǎo sound rather than reading the parts separately.",
+      "source": "https://www.dong-chinese.com/wiki/%E8%84%91"
+    }
   },
   {
     "id": "zh-read-8bdd",
@@ -465,7 +745,12 @@
     "pronunciation": "huà",
     "meaning": "speech; words",
     "category": "Base characters",
-    "kind": "character"
+    "kind": "character",
+    "memoryNote": {
+      "type": "memory",
+      "text": "讠 marks speech. The right side looks like 舌, tongue, so picture words spoken by a tongue to remember speech/words. This tongue story is a modern cue, not the original sound analysis.",
+      "source": "https://www.dong-chinese.com/wiki/%E8%AF%9D"
+    }
   },
   {
     "id": "zh-read-5de5",
@@ -473,7 +758,12 @@
     "pronunciation": "gōng",
     "meaning": "work; worker (in compounds)",
     "category": "Base characters",
-    "kind": "character"
+    "kind": "character",
+    "memoryNote": {
+      "type": "origin",
+      "text": "Early forms depicted a tool. Its modern straight lines can remind you of a workpiece or a worker’s tool: work. In other characters 工 may supply sound instead, as in 红.",
+      "source": "https://www.dong-chinese.com/wiki/%E5%B7%A5"
+    }
   },
   {
     "id": "zh-read-5382",
@@ -481,7 +771,12 @@
     "pronunciation": "chǎng",
     "meaning": "factory",
     "category": "Base characters",
-    "kind": "character"
+    "kind": "character",
+    "memoryNote": {
+      "type": "memory",
+      "text": "Imagine the long top as a factory roof with a wall on the left. That gives a useful picture for the simplified factory character. The roof story is a modern cue, not its ancient origin.",
+      "source": "https://www.dong-chinese.com/wiki/%E5%8E%82"
+    }
   },
   {
     "id": "zh-read-4f5c",
@@ -489,7 +784,12 @@
     "pronunciation": "zuò",
     "meaning": "to do; make",
     "category": "Base characters",
-    "kind": "character"
+    "kind": "character",
+    "memoryNote": {
+      "type": "components",
+      "text": "亻 is a side form of 人, a person, fitting someone doing or making something. 乍 is the historical sound component, not the meaning “suddenly” here. Link the whole character to a person at work.",
+      "source": "https://www.dong-chinese.com/wiki/%E4%BD%9C"
+    }
   },
   {
     "id": "zh-read-5b66",
@@ -497,7 +797,12 @@
     "pronunciation": "xué",
     "meaning": "to study; learn",
     "category": "Base characters",
-    "kind": "character"
+    "kind": "character",
+    "memoryNote": {
+      "type": "origin",
+      "text": "The older 學 pictured a child in a teaching scene with hands and a roof. In simplified 学, 子, child, is still visible below. Imagine a child learning under a roof: study/learn.",
+      "source": "https://www.dong-chinese.com/wiki/%E5%AD%A6"
+    }
   },
   {
     "id": "zh-read-751f",
@@ -505,7 +810,12 @@
     "pronunciation": "shēng",
     "meaning": "to be born; life; student (in compounds)",
     "category": "Base characters",
-    "kind": "character"
+    "kind": "character",
+    "memoryNote": {
+      "type": "origin",
+      "text": "Began as a sprout emerging from the ground. Picture the upright growing through the horizontal base: birth, growth, life. In words such as 学生, 生 can refer to a person in a learning role.",
+      "source": "https://www.dong-chinese.com/wiki/%E7%94%9F"
+    }
   },
   {
     "id": "zh-read-6821",
@@ -516,7 +826,12 @@
     "kind": "character",
     "speechText": "学校",
     "audioContext": "学校 (xuéxiào, school)",
-    "usage": "The reading shown is the one used here. This character can have another reading or a neutral tone in other words. Audio demonstrates it in 学校 (xuéxiào, school)."
+    "usage": "The reading shown is the one used here. This character can have another reading or a neutral tone in other words. Audio demonstrates it in 学校 (xuéxiào, school).",
+    "memoryNote": {
+      "type": "components",
+      "text": "木 is the meaning component in the older word, and 交 is the sound component. The school sense is learned through words such as 学校; the modern shape does not literally depict a schoolhouse or trees crossing.",
+      "source": "https://www.dong-chinese.com/wiki/%E6%A0%A1"
+    }
   },
   {
     "id": "zh-read-8001",
@@ -524,7 +839,12 @@
     "pronunciation": "lǎo",
     "meaning": "old; elder",
     "category": "Base characters",
-    "kind": "character"
+    "kind": "character",
+    "memoryNote": {
+      "type": "origin",
+      "text": "Earlier forms depicted an older person bent over and leaning on a cane. That image links the character to old/elder. In titles such as 老师, 老 can convey respect rather than age.",
+      "source": "https://www.dong-chinese.com/wiki/%E8%80%81"
+    }
   },
   {
     "id": "zh-read-5e08",
@@ -532,7 +852,12 @@
     "pronunciation": "shī",
     "meaning": "teacher; master (in compounds)",
     "category": "Base characters",
-    "kind": "character"
+    "kind": "character",
+    "memoryNote": {
+      "type": "memory",
+      "text": "Imagine the left strokes as pupils and the right upright as a teacher beside a board. This is a modern story for the simplified 师, teacher/master; the older 師 has a more complicated history.",
+      "source": "https://www.dong-chinese.com/wiki/%E5%B8%88"
+    }
   },
   {
     "id": "zh-read-540c",
@@ -540,7 +865,12 @@
     "pronunciation": "tóng",
     "meaning": "same; together",
     "category": "Base characters",
-    "kind": "character"
+    "kind": "character",
+    "memoryNote": {
+      "type": "memory",
+      "text": "Imagine several people sharing one enclosure and speaking with one 口, mouth: together, the same. This scene is a modern recognition aid, not a literal translation of the parts.",
+      "source": "https://www.dong-chinese.com/wiki/%E5%90%8C"
+    }
   },
   {
     "id": "zh-read-670b",
@@ -548,7 +878,12 @@
     "pronunciation": "péng",
     "meaning": "friend (in compounds)",
     "category": "Base characters",
-    "kind": "character"
+    "kind": "character",
+    "memoryNote": {
+      "type": "origin",
+      "text": "Older forms are analyzed as paired strings of valuables. Picture a pair tied together to remember friend. The two modern 月-like shapes are not two moons; 朋 usually appears in compounds such as 朋友.",
+      "source": "https://www.dong-chinese.com/wiki/%E6%9C%8B"
+    }
   },
   {
     "id": "zh-read-53cb",
@@ -556,7 +891,12 @@
     "pronunciation": "yǒu",
     "meaning": "friend",
     "category": "Base characters",
-    "kind": "character"
+    "kind": "character",
+    "memoryNote": {
+      "type": "origin",
+      "text": "Early forms put two hand shapes together. Imagine hands reaching toward each other in friendship. The joined hands connect the shape to friend.",
+      "source": "https://www.dong-chinese.com/wiki/%E5%8F%8B"
+    }
   },
   {
     "id": "zh-read-6765",
@@ -564,7 +904,12 @@
     "pronunciation": "lái",
     "meaning": "to come",
     "category": "Base characters",
-    "kind": "character"
+    "kind": "character",
+    "memoryNote": {
+      "type": "origin",
+      "text": "The early shape depicted a grain plant; the word for come borrowed that writing for its sound. It is not originally a picture of someone walking toward you. Recognize the branching shape and anchor lái in 回来, come back.",
+      "source": "https://www.dong-chinese.com/wiki/%E6%9D%A5"
+    }
   },
   {
     "id": "zh-read-53bb",
@@ -572,7 +917,12 @@
     "pronunciation": "qù",
     "meaning": "to go",
     "category": "Base characters",
-    "kind": "character"
+    "kind": "character",
+    "memoryNote": {
+      "type": "memory",
+      "text": "Imagine something leaving the upper ground-like shape and moving away past the lower bend: go/leave. This is a modern picture cue. Compare 来, come toward a reference point, with 去, go away from it.",
+      "source": "https://www.dong-chinese.com/wiki/%E5%8E%BB"
+    }
   },
   {
     "id": "zh-read-56de",
@@ -580,7 +930,12 @@
     "pronunciation": "huí",
     "meaning": "to return",
     "category": "Base characters",
-    "kind": "character"
+    "kind": "character",
+    "memoryNote": {
+      "type": "origin",
+      "text": "Early forms depicted a turning or swirling motion. Follow the nested outline around and back toward where you started: return.",
+      "source": "https://www.dong-chinese.com/wiki/%E5%9B%9E"
+    }
   },
   {
     "id": "zh-read-8fdb",
@@ -588,7 +943,12 @@
     "pronunciation": "jìn",
     "meaning": "to enter; advance",
     "category": "Base characters",
-    "kind": "character"
+    "kind": "character",
+    "memoryNote": {
+      "type": "components",
+      "text": "辶 is a movement/walking component. The simplified right part 井 helps you recognize the jìn/jǐng sound relationship; it does not mean entering a well. Picture movement forward: enter/advance.",
+      "source": "https://www.dong-chinese.com/wiki/%E8%BF%9B"
+    }
   },
   {
     "id": "zh-read-8f66",
@@ -596,7 +956,12 @@
     "pronunciation": "chē",
     "meaning": "vehicle",
     "category": "Base characters",
-    "kind": "character"
+    "kind": "character",
+    "memoryNote": {
+      "type": "origin",
+      "text": "The older 車 pictured a wheeled vehicle viewed from above. The simplified 车 compresses the frame and axle-like strokes. Picture a vehicle’s body and wheels, not a particular modern car model.",
+      "source": "https://www.dong-chinese.com/wiki/%E8%BD%A6"
+    }
   },
   {
     "id": "zh-read-6c7d",
@@ -604,7 +969,12 @@
     "pronunciation": "qì",
     "meaning": "steam; vapor",
     "category": "Base characters",
-    "kind": "character"
+    "kind": "character",
+    "memoryNote": {
+      "type": "components",
+      "text": "氵 is the water component, while 气, air/gas, also supplies the qì sound. Water becoming vapor connects the parts with steam. Keep 汽 distinct from plain 气.",
+      "source": "https://www.dong-chinese.com/wiki/%E6%B1%BD"
+    }
   },
   {
     "id": "zh-read-7ad9",
@@ -612,7 +982,12 @@
     "pronunciation": "zhàn",
     "meaning": "station; to stand",
     "category": "Base characters",
-    "kind": "character"
+    "kind": "character",
+    "memoryNote": {
+      "type": "components",
+      "text": "立, stand, supplies meaning; 占 supplies a sound clue for zhàn. A place where people stand and wait is a helpful link to the station/stop sense.",
+      "source": "https://www.dong-chinese.com/wiki/%E7%AB%99"
+    }
   },
   {
     "id": "zh-read-53f0",
@@ -620,7 +995,12 @@
     "pronunciation": "tái",
     "meaning": "platform; stage",
     "category": "Base characters",
-    "kind": "character"
+    "kind": "character",
+    "memoryNote": {
+      "type": "memory",
+      "text": "Imagine the top shape as a performer above the lower box-like platform. This modern stage picture links 台 to platform/stage. It is not the ordinary word for a dining table.",
+      "source": "https://www.dong-chinese.com/wiki/%E5%8F%B0"
+    }
   },
   {
     "id": "zh-read-5916",
@@ -628,7 +1008,12 @@
     "pronunciation": "wài",
     "meaning": "outside",
     "category": "Base characters",
-    "kind": "character"
+    "kind": "character",
+    "memoryNote": {
+      "type": "memory",
+      "text": "There is no simple literal picture of outside in today’s two parts. Use the small stroke at the far right as something placed outside the main shape, and anchor the meaning in 外面, outside.",
+      "source": "https://www.dong-chinese.com/wiki/%E5%A4%96"
+    }
   },
   {
     "id": "zh-read-91cc",
@@ -636,7 +1021,12 @@
     "pronunciation": "lǐ",
     "meaning": "inside",
     "category": "Base characters",
-    "kind": "character"
+    "kind": "character",
+    "memoryNote": {
+      "type": "memory",
+      "text": "Picture the 田-like top enclosed within the lower ground-like strokes: a place inside a boundary. This is a cue for the inside sense used here. 里 also has a separate village/distance history; not every use means inside.",
+      "source": "https://www.dong-chinese.com/wiki/%E9%87%8C"
+    }
   },
   {
     "id": "zh-read-9762",
@@ -644,7 +1034,12 @@
     "pronunciation": "miàn",
     "meaning": "face; surface; noodles",
     "category": "Base characters",
-    "kind": "character"
+    "kind": "character",
+    "memoryNote": {
+      "type": "origin",
+      "text": "Earlier forms outlined a face with an eye inside. Link the modern enclosing outline to a face or front surface. The noodle sense shares this simplified spelling but is not a picture of noodles.",
+      "source": "https://www.dong-chinese.com/wiki/%E9%9D%A2"
+    }
   },
   {
     "id": "zh-read-56fd",
@@ -652,7 +1047,12 @@
     "pronunciation": "guó",
     "meaning": "country",
     "category": "Base characters",
-    "kind": "character"
+    "kind": "character",
+    "memoryNote": {
+      "type": "memory",
+      "text": "囗 forms an enclosing boundary. Imagine the 玉-shaped treasure inside protected by a country’s borders. This is a modern image for 国, not a historical claim that a country is “jade in a box.”",
+      "source": "https://www.dong-chinese.com/wiki/%E5%9B%BD"
+    }
   },
   {
     "id": "zh-read-6587",
@@ -660,7 +1060,12 @@
     "pronunciation": "wén",
     "meaning": "writing; language",
     "category": "Base characters",
-    "kind": "character"
+    "kind": "character",
+    "memoryNote": {
+      "type": "origin",
+      "text": "Early forms showed a person with markings on the torso. Link visible marks to writing and written culture. What those early markings depicted is uncertain; do not assume a detailed tattoo story.",
+      "source": "https://www.dong-chinese.com/wiki/%E6%96%87"
+    }
   },
   {
     "id": "zh-read-770b",
@@ -668,7 +1073,12 @@
     "pronunciation": "kàn",
     "meaning": "to look; watch",
     "category": "Base characters",
-    "kind": "character"
+    "kind": "character",
+    "memoryNote": {
+      "type": "memory",
+      "text": "In the modern shape, imagine a hand above 目, an eye, shading it so you can look into the distance. This is a modern visual mnemonic, not a claim about the character’s earliest construction.",
+      "source": "https://www.dong-chinese.com/wiki/%E7%9C%8B"
+    }
   },
   {
     "id": "zh-read-89c1",
@@ -676,7 +1086,12 @@
     "pronunciation": "jiàn",
     "meaning": "to see; meet",
     "category": "Base characters",
-    "kind": "character"
+    "kind": "character",
+    "memoryNote": {
+      "type": "origin",
+      "text": "The older 見 pictured a person with a prominent eye: someone seeing. Simplified 见 keeps a compact upper shape over legs. Link that eye-and-person image to see/meet.",
+      "source": "https://www.dong-chinese.com/wiki/%E8%A7%81"
+    }
   },
   {
     "id": "zh-read-5403",
@@ -684,7 +1099,12 @@
     "pronunciation": "chī",
     "meaning": "to eat",
     "category": "Base characters",
-    "kind": "character"
+    "kind": "character",
+    "memoryNote": {
+      "type": "components",
+      "text": "口, mouth, supplies meaning; 乞 is a historical sound component. Picture food entering a mouth to remember eat. The right part does not mean that eating is “begging.”",
+      "source": "https://www.dong-chinese.com/wiki/%E5%90%83"
+    }
   },
   {
     "id": "zh-read-559d",
@@ -692,7 +1112,12 @@
     "pronunciation": "hē",
     "meaning": "to drink",
     "category": "Base characters",
-    "kind": "character"
+    "kind": "character",
+    "memoryNote": {
+      "type": "components",
+      "text": "口, mouth, supplies meaning, and 曷 is the historical sound component. Picture a drink reaching the mouth. In this course 喝 is hē, drink; another reading is used for shouting.",
+      "source": "https://www.dong-chinese.com/wiki/%E5%96%9D"
+    }
   },
   {
     "id": "zh-read-7c73",
@@ -700,7 +1125,12 @@
     "pronunciation": "mǐ",
     "meaning": "rice (uncooked)",
     "category": "Base characters",
-    "kind": "character"
+    "kind": "character",
+    "memoryNote": {
+      "type": "origin",
+      "text": "Early forms pictured grains of rice. Imagine the small spreading strokes as grains scattered around a central line. 米 here is uncooked rice, before it becomes a cooked meal.",
+      "source": "https://www.dong-chinese.com/wiki/%E7%B1%B3"
+    }
   },
   {
     "id": "zh-read-996d",
@@ -708,7 +1138,12 @@
     "pronunciation": "fàn",
     "meaning": "cooked rice; meal",
     "category": "Base characters",
-    "kind": "character"
+    "kind": "character",
+    "memoryNote": {
+      "type": "components",
+      "text": "饣 is the food/eating component; 反 supplies a sound clue, fǎn → fàn. The whole character means cooked rice or a meal. It does not mean food served backward.",
+      "source": "https://www.dong-chinese.com/wiki/%E9%A5%AD"
+    }
   },
   {
     "id": "zh-read-8336",
@@ -716,7 +1151,12 @@
     "pronunciation": "chá",
     "meaning": "tea",
     "category": "Base characters",
-    "kind": "character"
+    "kind": "character",
+    "memoryNote": {
+      "type": "components",
+      "text": "艹 points to a plant. The lower part developed from a historical sound component, rather than being a literal person on a tree. Picture tea leaves to connect the plant clue with tea.",
+      "source": "https://www.dong-chinese.com/wiki/%E8%8C%B6"
+    }
   },
   {
     "id": "zh-read-725b",
@@ -724,7 +1164,12 @@
     "pronunciation": "niú",
     "meaning": "cow; ox",
     "category": "Base characters",
-    "kind": "character"
+    "kind": "character",
+    "memoryNote": {
+      "type": "origin",
+      "text": "Began as a picture of a cow or ox’s head. Imagine horns above a central face; the modern strokes are a compressed version of that head.",
+      "source": "https://www.dong-chinese.com/wiki/%E7%89%9B"
+    }
   },
   {
     "id": "zh-read-5976",
@@ -732,7 +1177,12 @@
     "pronunciation": "nǎi",
     "meaning": "milk",
     "category": "Base characters",
-    "kind": "character"
+    "kind": "character",
+    "memoryNote": {
+      "type": "components",
+      "text": "女 gives a female/nursing-related meaning clue, and 乃 supplies the nǎi sound. Link nursing with milk, while using the right side to remember the sound.",
+      "source": "https://www.dong-chinese.com/wiki/%E5%A5%B6"
+    }
   },
   {
     "id": "zh-read-767d",
@@ -740,7 +1190,12 @@
     "pronunciation": "bái",
     "meaning": "white",
     "category": "Base characters",
-    "kind": "character"
+    "kind": "character",
+    "memoryNote": {
+      "type": "memory",
+      "text": "Its ancient origin is uncertain. For a modern cue, imagine a bright white patch inside the outline with a small highlight at the top: white/light-colored. Do not treat that image as documented history.",
+      "source": "https://www.dong-chinese.com/wiki/%E7%99%BD"
+    }
   },
   {
     "id": "zh-read-7ea2",
@@ -748,7 +1203,12 @@
     "pronunciation": "hóng",
     "meaning": "red",
     "category": "Base characters",
-    "kind": "character"
+    "kind": "character",
+    "memoryNote": {
+      "type": "components",
+      "text": "纟 is the silk/thread component, while 工 is a historical sound component. Picture a piece of red thread to remember red. 工 is not contributing the meaning work here.",
+      "source": "https://www.dong-chinese.com/wiki/%E7%BA%A2"
+    }
   },
   {
     "id": "zh-read-82b1",
@@ -756,7 +1216,12 @@
     "pronunciation": "huā",
     "meaning": "flower",
     "category": "Base characters",
-    "kind": "character"
+    "kind": "character",
+    "memoryNote": {
+      "type": "components",
+      "text": "艹 supplies the plant meaning; 化 supplies a sound clue, huà → huā. Picture a flowering plant. The character means flower, not the phrase “grass changing.”",
+      "source": "https://www.dong-chinese.com/wiki/%E8%8A%B1"
+    }
   },
   {
     "id": "zh-read-5fc3",
@@ -764,7 +1229,12 @@
     "pronunciation": "xīn",
     "meaning": "heart; mind",
     "category": "Base characters",
-    "kind": "character"
+    "kind": "character",
+    "memoryNote": {
+      "type": "origin",
+      "text": "Began as a picture of a heart. Its modern dots and curved stroke are a stylized outline, not an anatomical diagram. Heart also extends to mind and feelings; the side form 忄 appears in other characters.",
+      "source": "https://www.dong-chinese.com/wiki/%E5%BF%83"
+    }
   },
   {
     "id": "zh-read-4eba-53e3",
@@ -777,7 +1247,10 @@
       "zh-read-4eba",
       "zh-read-53e3"
     ],
-    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+    "memoryNote": {
+      "type": "compound",
+      "text": "人, people + 口, mouths/openings. Think of counting the people in a community as mouths to feed: population. Here 口 does not turn the word into a kind of mouth."
+    }
   },
   {
     "id": "zh-read-5927-4eba",
@@ -790,7 +1263,10 @@
       "zh-read-5927",
       "zh-read-4eba"
     ],
-    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+    "memoryNote": {
+      "type": "compound",
+      "text": "大, big/grown + 人, person → a grown person, an adult. 人 is usually light and neutral-toned here: dàren."
+    }
   },
   {
     "id": "zh-read-5927-95e8",
@@ -803,7 +1279,10 @@
       "zh-read-5927",
       "zh-read-95e8"
     ],
-    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+    "memoryNote": {
+      "type": "compound",
+      "text": "大, big/main + 门, gate → the large or principal gate, hence a main entrance."
+    }
   },
   {
     "id": "zh-read-5c0f-95e8",
@@ -816,7 +1295,10 @@
       "zh-read-5c0f",
       "zh-read-95e8"
     ],
-    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+    "memoryNote": {
+      "type": "compound",
+      "text": "小, small + 门, door → a small door. This is a transparent descriptive combination, unlike compounds whose meaning cannot be guessed literally."
+    }
   },
   {
     "id": "zh-read-95e8-53e3",
@@ -829,7 +1311,10 @@
       "zh-read-95e8",
       "zh-read-53e3"
     ],
-    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+    "memoryNote": {
+      "type": "compound",
+      "text": "门, door + 口, opening → the opening at a door: doorway or entrance. The mouth/opening sense of 口 makes the connection."
+    }
   },
   {
     "id": "zh-read-5f00-95e8",
@@ -842,7 +1327,10 @@
       "zh-read-5f00",
       "zh-read-95e8"
     ],
-    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+    "memoryNote": {
+      "type": "compound",
+      "text": "开, open + 门, door → open the door. This is an action followed by the thing acted on, rather than a new kind of door."
+    }
   },
   {
     "id": "zh-read-5173-95e8",
@@ -855,7 +1343,10 @@
       "zh-read-5173",
       "zh-read-95e8"
     ],
-    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+    "memoryNote": {
+      "type": "compound",
+      "text": "关, close + 门, door → close the door. Compare 开门; changing the first character reverses the action."
+    }
   },
   {
     "id": "zh-read-51fa-95e8",
@@ -868,7 +1359,10 @@
       "zh-read-51fa",
       "zh-read-95e8"
     ],
-    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+    "memoryNote": {
+      "type": "compound",
+      "text": "出, go out + 门, door → go out through the door, hence leave home or go out. It need not describe just the instant of crossing the threshold."
+    }
   },
   {
     "id": "zh-read-5165-53e3",
@@ -881,7 +1375,10 @@
       "zh-read-5165",
       "zh-read-53e3"
     ],
-    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+    "memoryNote": {
+      "type": "compound",
+      "text": "入, enter + 口, opening → the opening used to enter: entrance. Contrast 出口, the way out."
+    }
   },
   {
     "id": "zh-read-51fa-53e3",
@@ -894,7 +1391,10 @@
       "zh-read-51fa",
       "zh-read-53e3"
     ],
-    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+    "memoryNote": {
+      "type": "compound",
+      "text": "出, go out + 口, opening → the opening used to go out: exit. Contrast 入口, the way in."
+    }
   },
   {
     "id": "zh-read-5927-5c0f",
@@ -907,7 +1407,10 @@
       "zh-read-5927",
       "zh-read-5c0f"
     ],
-    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+    "memoryNote": {
+      "type": "compound",
+      "text": "大, big + 小, small → the big-or-small dimension of something: size. Opposite adjectives together can name a scale, rather than describe two separate objects."
+    }
   },
   {
     "id": "zh-read-591a-5c11",
@@ -920,7 +1423,10 @@
       "zh-read-591a",
       "zh-read-5c11"
     ],
-    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+    "memoryNote": {
+      "type": "compound",
+      "text": "多, many/much + 少, few/little → asking where a quantity lies on that scale: how many or how much. 少 is usually neutral-toned in this question word."
+    }
   },
   {
     "id": "zh-read-5de6-53f3",
@@ -933,7 +1439,10 @@
       "zh-read-5de6",
       "zh-read-53f3"
     ],
-    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+    "memoryNote": {
+      "type": "compound",
+      "text": "左, left + 右, right → left and right. With a number, picture a little to either side of the exact figure: approximately/around that amount."
+    }
   },
   {
     "id": "zh-read-4e2d-5fc3",
@@ -946,7 +1455,10 @@
       "zh-read-4e2d",
       "zh-read-5fc3"
     ],
-    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+    "memoryNote": {
+      "type": "compound",
+      "text": "中, middle + 心, heart/core → the heart or core in the middle: center. 心 is figurative here, not necessarily a body part."
+    }
   },
   {
     "id": "zh-read-4e2d-5b66",
@@ -959,7 +1471,10 @@
       "zh-read-4e2d",
       "zh-read-5b66"
     ],
-    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+    "memoryNote": {
+      "type": "compound",
+      "text": "中, middle + 学, learning/school → the middle stage of schooling: secondary school. This does not mean studying in the middle of a room."
+    }
   },
   {
     "id": "zh-read-5c0f-5b66",
@@ -972,7 +1487,10 @@
       "zh-read-5c0f",
       "zh-read-5b66"
     ],
-    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+    "memoryNote": {
+      "type": "compound",
+      "text": "小, small/basic + 学, learning/school → the early/basic stage of schooling: primary school."
+    }
   },
   {
     "id": "zh-read-5b66-751f",
@@ -985,7 +1503,10 @@
       "zh-read-5b66",
       "zh-read-751f"
     ],
-    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+    "memoryNote": {
+      "type": "compound",
+      "text": "学, study/learn + 生, a person in a student role → someone who studies: student. 生 is not the verb “be born” here; it is usually neutral-toned in this word."
+    }
   },
   {
     "id": "zh-read-5b66-6821",
@@ -998,7 +1519,10 @@
       "zh-read-5b66",
       "zh-read-6821"
     ],
-    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+    "memoryNote": {
+      "type": "compound",
+      "text": "学, learning + 校, school/institution → the institution where learning happens: school. Use 校’s school sense here rather than trying to turn its internal 木 part into a literal tree story."
+    }
   },
   {
     "id": "zh-read-8001-5e08",
@@ -1011,7 +1535,10 @@
       "zh-read-8001",
       "zh-read-5e08"
     ],
-    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+    "memoryNote": {
+      "type": "compound",
+      "text": "老, an elder/respected person + 师, teacher/master → the respectful everyday word teacher. 老 does not say that the teacher must be old."
+    }
   },
   {
     "id": "zh-read-540c-5b66",
@@ -1024,7 +1551,10 @@
       "zh-read-540c",
       "zh-read-5b66"
     ],
-    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+    "memoryNote": {
+      "type": "compound",
+      "text": "同, same/together + 学, study → someone who studies with you: classmate or fellow student. The whole word refers to a person, not just the act of studying together."
+    }
   },
   {
     "id": "zh-read-660e-5929",
@@ -1037,7 +1567,10 @@
       "zh-read-660e",
       "zh-read-5929"
     ],
-    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+    "memoryNote": {
+      "type": "compound",
+      "text": "明 has a next/following-time sense here + 天, day → the next day: tomorrow. Picture daylight returning on the next day as a memory aid; do not translate it as “bright sky.”"
+    }
   },
   {
     "id": "zh-read-4eca-5929",
@@ -1050,7 +1583,10 @@
       "zh-read-4eca",
       "zh-read-5929"
     ],
-    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+    "memoryNote": {
+      "type": "compound",
+      "text": "今, now/current + 天, day → the current day: today. Compare 今年, the current year."
+    }
   },
   {
     "id": "zh-read-6628-5929",
@@ -1063,7 +1599,10 @@
       "zh-read-6628",
       "zh-read-5929"
     ],
-    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+    "memoryNote": {
+      "type": "compound",
+      "text": "昨, yesterday/past-day + 天, day → yesterday. 昨 already contains the day-related 日 shape; the compound makes the day meaning explicit."
+    }
   },
   {
     "id": "zh-read-5929-5929",
@@ -1075,7 +1614,10 @@
     "requires": [
       "zh-read-5929"
     ],
-    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+    "memoryNote": {
+      "type": "compound",
+      "text": "天, day, repeated → day after day: every day. Repetition gives an ongoing, repeated time pattern, not merely two days."
+    }
   },
   {
     "id": "zh-read-6bcf-5929",
@@ -1088,7 +1630,10 @@
       "zh-read-6bcf",
       "zh-read-5929"
     ],
-    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+    "memoryNote": {
+      "type": "compound",
+      "text": "每, each/every + 天, day → every day. Compare 天天, which expresses the repeated day-after-day pattern."
+    }
   },
   {
     "id": "zh-read-65e9-4e0a",
@@ -1101,7 +1646,10 @@
       "zh-read-65e9",
       "zh-read-4e0a"
     ],
-    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+    "memoryNote": {
+      "type": "compound",
+      "text": "早, early/morning + 上, a time-expression element here → morning. 上 is not the direction up in this word."
+    }
   },
   {
     "id": "zh-read-665a-4e0a",
@@ -1114,7 +1662,10 @@
       "zh-read-665a",
       "zh-read-4e0a"
     ],
-    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+    "memoryNote": {
+      "type": "compound",
+      "text": "晚, late/evening + 上, a time-expression element here → evening. Compare 早上; 上 does not mean that evening is above something."
+    }
   },
   {
     "id": "zh-read-65f6-95f4",
@@ -1127,7 +1678,10 @@
       "zh-read-65f6",
       "zh-read-95f4"
     ],
-    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+    "memoryNote": {
+      "type": "compound",
+      "text": "时, time + 间, interval/space → a span or stretch of time, and time in general. Imagine room between moments rather than a literal room between clocks."
+    }
   },
   {
     "id": "zh-read-5c0f-65f6",
@@ -1140,7 +1694,10 @@
       "zh-read-5c0f",
       "zh-read-65f6"
     ],
-    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+    "memoryNote": {
+      "type": "compound",
+      "text": "小, small + 时, period of time → the established time unit hour. Learn this as the unit, not as any short amount of time."
+    }
   },
   {
     "id": "zh-read-5206-949f",
@@ -1153,7 +1710,10 @@
       "zh-read-5206",
       "zh-read-949f"
     ],
-    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+    "memoryNote": {
+      "type": "compound",
+      "text": "分, a division/minute + 钟, clock time → a division of clock time: minute. Think of a small portion marked on a clock."
+    }
   },
   {
     "id": "zh-read-4eca-5e74",
@@ -1166,7 +1726,10 @@
       "zh-read-4eca",
       "zh-read-5e74"
     ],
-    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+    "memoryNote": {
+      "type": "compound",
+      "text": "今, current/now + 年, year → the current year: this year. Compare 今天, today."
+    }
   },
   {
     "id": "zh-read-660e-5e74",
@@ -1179,7 +1742,10 @@
       "zh-read-660e",
       "zh-read-5e74"
     ],
-    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+    "memoryNote": {
+      "type": "compound",
+      "text": "明, next/following in this time word + 年, year → next year. It follows the same calendar pattern as 明天, tomorrow."
+    }
   },
   {
     "id": "zh-read-53bb-5e74",
@@ -1192,7 +1758,10 @@
       "zh-read-53bb",
       "zh-read-5e74"
     ],
-    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+    "memoryNote": {
+      "type": "compound",
+      "text": "去, gone/past in this time word + 年, year → the year that has gone by: last year. 去 does not mean going into the future here."
+    }
   },
   {
     "id": "zh-read-5973-5b50",
@@ -1205,7 +1774,10 @@
       "zh-read-5973",
       "zh-read-5b50"
     ],
-    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+    "memoryNote": {
+      "type": "compound",
+      "text": "女, female + 子, a person-related ending here → woman, especially in formal or sports wording. 子 does not mean her child in this compound."
+    }
   },
   {
     "id": "zh-read-7537-5b50",
@@ -1218,7 +1790,10 @@
       "zh-read-7537",
       "zh-read-5b50"
     ],
-    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+    "memoryNote": {
+      "type": "compound",
+      "text": "男, male + 子, a person-related ending here → man, especially in formal or sports wording. It does not mean a man’s son."
+    }
   },
   {
     "id": "zh-read-5973-513f",
@@ -1231,7 +1806,10 @@
       "zh-read-5973",
       "zh-read-513f"
     ],
-    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+    "memoryNote": {
+      "type": "compound",
+      "text": "女, female + 儿, child → a female child in the family: daughter. The whole word names the family relationship."
+    }
   },
   {
     "id": "zh-read-513f-5b50",
@@ -1244,7 +1822,10 @@
       "zh-read-513f",
       "zh-read-5b50"
     ],
-    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+    "memoryNote": {
+      "type": "compound",
+      "text": "儿, child/son + 子, a noun-forming ending → son. These related child elements reinforce the family word; it does not mean a child’s son. 子 is neutral-toned here."
+    }
   },
   {
     "id": "zh-read-5b69-5b50",
@@ -1257,7 +1838,10 @@
       "zh-read-5b69",
       "zh-read-5b50"
     ],
-    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+    "memoryNote": {
+      "type": "compound",
+      "text": "孩, child + 子, a neutral-toned noun ending → child. 子 helps form the word; it is not a second child or a separate son."
+    }
   },
   {
     "id": "zh-read-5988-5988",
@@ -1269,7 +1853,10 @@
     "requires": [
       "zh-read-5988"
     ],
-    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+    "memoryNote": {
+      "type": "compound",
+      "text": "妈 repeated gives the familiar kinship word mom. This is one mother, not two; the second syllable is normally light and neutral-toned."
+    }
   },
   {
     "id": "zh-read-7238-7238",
@@ -1281,7 +1868,10 @@
     "requires": [
       "zh-read-7238"
     ],
-    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+    "memoryNote": {
+      "type": "compound",
+      "text": "爸 repeated gives the familiar kinship word dad. Repetition makes a familiar family word, not a count of two fathers; the second syllable is normally neutral-toned."
+    }
   },
   {
     "id": "zh-read-5bb6-4eba",
@@ -1294,7 +1884,10 @@
       "zh-read-5bb6",
       "zh-read-4eba"
     ],
-    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+    "memoryNote": {
+      "type": "compound",
+      "text": "家, family/home + 人, people → the people of your family: family members."
+    }
   },
   {
     "id": "zh-read-5927-5bb6",
@@ -1307,7 +1900,10 @@
       "zh-read-5927",
       "zh-read-5bb6"
     ],
-    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+    "memoryNote": {
+      "type": "compound",
+      "text": "大, big + 家, family/household → think of the whole large group as one household: everyone. This is an established collective word, not simply a large house."
+    }
   },
   {
     "id": "zh-read-5c71-6c34",
@@ -1320,7 +1916,10 @@
       "zh-read-5c71",
       "zh-read-6c34"
     ],
-    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+    "memoryNote": {
+      "type": "compound",
+      "text": "山, mountains + 水, water → mountains and streams taken together as scenery: landscape. The pair is also important in Chinese landscape painting."
+    }
   },
   {
     "id": "zh-read-6c34-7530",
@@ -1333,7 +1932,10 @@
       "zh-read-6c34",
       "zh-read-7530"
     ],
-    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+    "memoryNote": {
+      "type": "compound",
+      "text": "水, water + 田, field → a field kept flooded for growing rice: paddy field. Water describes the kind of field."
+    }
   },
   {
     "id": "zh-read-6c34-679c",
@@ -1346,7 +1948,10 @@
       "zh-read-6c34",
       "zh-read-679c"
     ],
-    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+    "memoryNote": {
+      "type": "compound",
+      "text": "水, water + 果, fruit → think of fresh, juicy fruit. The established word means fruit, not fruit juice."
+    }
   },
   {
     "id": "zh-read-706b-5c71",
@@ -1359,7 +1964,10 @@
       "zh-read-706b",
       "zh-read-5c71"
     ],
-    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+    "memoryNote": {
+      "type": "compound",
+      "text": "火, fire + 山, mountain → a mountain associated with fire and eruptions: volcano."
+    }
   },
   {
     "id": "zh-read-5c71-6797",
@@ -1372,7 +1980,10 @@
       "zh-read-5c71",
       "zh-read-6797"
     ],
-    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+    "memoryNote": {
+      "type": "compound",
+      "text": "山, mountain + 林, woods → woods or forest in mountain country: mountain forest."
+    }
   },
   {
     "id": "zh-read-6728-5934",
@@ -1385,7 +1996,10 @@
       "zh-read-6728",
       "zh-read-5934"
     ],
-    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+    "memoryNote": {
+      "type": "compound",
+      "text": "木, wood + 头, a neutral-toned noun ending here → wood/timber. 头 is not a literal head in this everyday material word."
+    }
   },
   {
     "id": "zh-read-6797-6728",
@@ -1398,7 +2012,10 @@
       "zh-read-6797",
       "zh-read-6728"
     ],
-    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+    "memoryNote": {
+      "type": "compound",
+      "text": "林, woods + 木, trees/wood → trees considered as woodland or forest trees. The related tree meanings reinforce the woodland sense."
+    }
   },
   {
     "id": "zh-read-68ee-6797",
@@ -1411,7 +2028,10 @@
       "zh-read-68ee",
       "zh-read-6797"
     ],
-    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+    "memoryNote": {
+      "type": "compound",
+      "text": "森, dense woodland + 林, woods → forest. Both characters gather 木 tree shapes; that visual repetition helps you remember a mass of trees, not an exact tree count."
+    }
   },
   {
     "id": "zh-read-7535-8f66",
@@ -1424,7 +2044,10 @@
       "zh-read-7535",
       "zh-read-8f66"
     ],
-    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+    "memoryNote": {
+      "type": "compound",
+      "text": "电, electricity + 车, vehicle → an electrically powered vehicle; in this lesson, a tram or trolleybus. The electricity part distinguishes it from 火车 and 汽车."
+    }
   },
   {
     "id": "zh-read-7535-8111",
@@ -1437,7 +2060,10 @@
       "zh-read-7535",
       "zh-read-8111"
     ],
-    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+    "memoryNote": {
+      "type": "compound",
+      "text": "电, electricity + 脑, brain → an “electric brain”: computer. This is a functional metaphor for processing information, not a literal brain."
+    }
   },
   {
     "id": "zh-read-7535-8bdd",
@@ -1450,7 +2076,10 @@
       "zh-read-7535",
       "zh-read-8bdd"
     ],
-    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+    "memoryNote": {
+      "type": "compound",
+      "text": "电, electricity + 话, speech → speech carried electrically: telephone. 话 gives the communication part of the meaning."
+    }
   },
   {
     "id": "zh-read-624b-673a",
@@ -1463,7 +2092,10 @@
       "zh-read-624b",
       "zh-read-673a"
     ],
-    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+    "memoryNote": {
+      "type": "compound",
+      "text": "手, hand + 机, machine/device → a handheld communication device: mobile phone. The established word specifically means a phone, not every machine you can hold."
+    }
   },
   {
     "id": "zh-read-5f00-673a",
@@ -1476,7 +2108,10 @@
       "zh-read-5f00",
       "zh-read-673a"
     ],
-    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+    "memoryNote": {
+      "type": "compound",
+      "text": "开, turn on + 机, machine/device → turn on a machine. 开 does not mean opening the physical case here."
+    }
   },
   {
     "id": "zh-read-5173-673a",
@@ -1489,7 +2124,10 @@
       "zh-read-5173",
       "zh-read-673a"
     ],
-    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+    "memoryNote": {
+      "type": "compound",
+      "text": "关, turn off + 机, machine/device → turn off a machine. Compare 开机, switching it on."
+    }
   },
   {
     "id": "zh-read-5de5-4eba",
@@ -1502,7 +2140,10 @@
       "zh-read-5de5",
       "zh-read-4eba"
     ],
-    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+    "memoryNote": {
+      "type": "compound",
+      "text": "工, work + 人, person → a person who works: worker, often in manual or industrial work."
+    }
   },
   {
     "id": "zh-read-5de5-5382",
@@ -1515,7 +2156,10 @@
       "zh-read-5de5",
       "zh-read-5382"
     ],
-    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+    "memoryNote": {
+      "type": "compound",
+      "text": "工, industrial work + 厂, factory → a factory, the place where industrial work is done. Both parts support the workplace meaning."
+    }
   },
   {
     "id": "zh-read-5de5-4f5c",
@@ -1528,7 +2172,10 @@
       "zh-read-5de5",
       "zh-read-4f5c"
     ],
-    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+    "memoryNote": {
+      "type": "compound",
+      "text": "工, work + 作, do/make → doing work, or the work/job itself. The two related meanings make a common word usable for both activity and employment."
+    }
   },
   {
     "id": "zh-read-670b-53cb",
@@ -1541,7 +2188,10 @@
       "zh-read-670b",
       "zh-read-53cb"
     ],
-    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+    "memoryNote": {
+      "type": "compound",
+      "text": "朋 and 友 both relate to friends → the everyday word friend. Related meanings combine into one word; do not interpret 朋’s 月-like shapes as moons."
+    }
   },
   {
     "id": "zh-read-53cb-4eba",
@@ -1554,7 +2204,10 @@
       "zh-read-53cb",
       "zh-read-4eba"
     ],
-    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+    "memoryNote": {
+      "type": "compound",
+      "text": "友, friend + 人, person → a friend. This person-word combination is more common in written or formal style than everyday 朋友."
+    }
   },
   {
     "id": "zh-read-53cb-597d",
@@ -1567,7 +2220,10 @@
       "zh-read-53cb",
       "zh-read-597d"
     ],
-    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+    "memoryNote": {
+      "type": "compound",
+      "text": "友, friendship + 好, good → having a good, friendly attitude: friendly. A good friend as a person is normally 好朋友, a different structure."
+    }
   },
   {
     "id": "zh-read-51fa-6765",
@@ -1580,7 +2236,10 @@
       "zh-read-51fa",
       "zh-read-6765"
     ],
-    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+    "memoryNote": {
+      "type": "compound",
+      "text": "出, out + 来, come toward a reference point → come out. Imagine someone emerging toward you; 来 adds the direction to the outward movement."
+    }
   },
   {
     "id": "zh-read-8fdb-53bb",
@@ -1593,7 +2252,10 @@
       "zh-read-8fdb",
       "zh-read-53bb"
     ],
-    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+    "memoryNote": {
+      "type": "compound",
+      "text": "进, enter + 去, go away from a reference point → go in. Imagine someone moving inside and away from where you are standing."
+    }
   },
   {
     "id": "zh-read-56de-5bb6",
@@ -1606,7 +2268,10 @@
       "zh-read-56de",
       "zh-read-5bb6"
     ],
-    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+    "memoryNote": {
+      "type": "compound",
+      "text": "回, return + 家, home → return home/go home. 家 supplies the destination."
+    }
   },
   {
     "id": "zh-read-56de-6765",
@@ -1619,7 +2284,10 @@
       "zh-read-56de",
       "zh-read-6765"
     ],
-    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+    "memoryNote": {
+      "type": "compound",
+      "text": "回, return + 来, toward a reference point → come back. The return is toward the speaker or another viewpoint established in context."
+    }
   },
   {
     "id": "zh-read-56de-53bb",
@@ -1632,7 +2300,10 @@
       "zh-read-56de",
       "zh-read-53bb"
     ],
-    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+    "memoryNote": {
+      "type": "compound",
+      "text": "回, return + 去, away from a reference point → go back. Compare 回来: the direction relative to the speaker or viewpoint changes."
+    }
   },
   {
     "id": "zh-read-4e0a-8f66",
@@ -1645,7 +2316,10 @@
       "zh-read-4e0a",
       "zh-read-8f66"
     ],
-    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+    "memoryNote": {
+      "type": "compound",
+      "text": "上, get onto/board + 车, vehicle → get on or into a vehicle. For a car, it means getting inside, not climbing onto its roof."
+    }
   },
   {
     "id": "zh-read-4e0b-8f66",
@@ -1658,7 +2332,10 @@
       "zh-read-4e0b",
       "zh-read-8f66"
     ],
-    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+    "memoryNote": {
+      "type": "compound",
+      "text": "下, get off/leave + 车, vehicle → get off or out of a vehicle. Compare 上车; you are not going underneath the vehicle."
+    }
   },
   {
     "id": "zh-read-8f66-7ad9",
@@ -1671,7 +2348,10 @@
       "zh-read-8f66",
       "zh-read-7ad9"
     ],
-    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+    "memoryNote": {
+      "type": "compound",
+      "text": "车, vehicle + 站, station/stop → a place where vehicles stop for passengers: station or stop."
+    }
   },
   {
     "id": "zh-read-706b-8f66",
@@ -1684,7 +2364,10 @@
       "zh-read-706b",
       "zh-read-8f66"
     ],
-    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+    "memoryNote": {
+      "type": "compound",
+      "text": "火, fire + 车, vehicle → picture a fire-powered steam locomotive to remember train. Modern trains may use electricity; the established name remains 火车."
+    }
   },
   {
     "id": "zh-read-6c7d-8f66",
@@ -1697,7 +2380,10 @@
       "zh-read-6c7d",
       "zh-read-8f66"
     ],
-    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+    "memoryNote": {
+      "type": "compound",
+      "text": "汽 relates to gas/vapor + 车, vehicle → the established word for car or motor vehicle. Use an engine-driven vehicle as your memory picture; it does not mean that today’s cars run on steam."
+    }
   },
   {
     "id": "zh-read-8f66-95e8",
@@ -1710,7 +2396,10 @@
       "zh-read-8f66",
       "zh-read-95e8"
     ],
-    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+    "memoryNote": {
+      "type": "compound",
+      "text": "车, vehicle + 门, door → a vehicle’s door. The first character tells you which kind of door."
+    }
   },
   {
     "id": "zh-read-7ad9-53f0",
@@ -1723,7 +2412,10 @@
       "zh-read-7ad9",
       "zh-read-53f0"
     ],
-    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+    "memoryNote": {
+      "type": "compound",
+      "text": "站, station/standing + 台, platform → the raised place where passengers stand and wait: station platform."
+    }
   },
   {
     "id": "zh-read-5916-9762",
@@ -1736,7 +2428,10 @@
       "zh-read-5916",
       "zh-read-9762"
     ],
-    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+    "memoryNote": {
+      "type": "compound",
+      "text": "外, outside + 面, side/area here → the outer side or area: outside. 面 is not face or noodles in this location word."
+    }
   },
   {
     "id": "zh-read-91cc-9762",
@@ -1749,7 +2444,10 @@
       "zh-read-91cc",
       "zh-read-9762"
     ],
-    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+    "memoryNote": {
+      "type": "compound",
+      "text": "里, inside + 面, side/area here → the inner side or area: inside. 面 helps form a location expression; it is often neutral-toned here."
+    }
   },
   {
     "id": "zh-read-5916-56fd",
@@ -1762,7 +2460,10 @@
       "zh-read-5916",
       "zh-read-56fd"
     ],
-    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+    "memoryNote": {
+      "type": "compound",
+      "text": "外, outside/foreign + 国, country → a foreign country, outside one’s home country. Foreign is relative to the context, not a fixed geographical direction."
+    }
   },
   {
     "id": "zh-read-4e2d-56fd",
@@ -1775,7 +2476,10 @@
       "zh-read-4e2d",
       "zh-read-56fd"
     ],
-    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+    "memoryNote": {
+      "type": "compound",
+      "text": "中, middle/central + 国, country → the established name China. “Middle country” is a memory gloss for the name, not a way to name any country near the center of a map."
+    }
   },
   {
     "id": "zh-read-4e2d-6587",
@@ -1788,7 +2492,10 @@
       "zh-read-4e2d",
       "zh-read-6587"
     ],
-    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+    "memoryNote": {
+      "type": "compound",
+      "text": "中 stands for China here + 文, language/writing → Chinese. 文 links the word to language and writing; 中文 can refer to spoken as well as written Chinese."
+    }
   },
   {
     "id": "zh-read-770b-89c1",
@@ -1801,7 +2508,10 @@
       "zh-read-770b",
       "zh-read-89c1"
     ],
-    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+    "memoryNote": {
+      "type": "compound",
+      "text": "看, look + 见, see → looking that achieves seeing: to see/notice. 见 gives the result; this is more than simply making the effort to look."
+    }
   },
   {
     "id": "zh-read-89c1-9762",
@@ -1814,7 +2524,10 @@
       "zh-read-89c1",
       "zh-read-9762"
     ],
-    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+    "memoryNote": {
+      "type": "compound",
+      "text": "见, see/meet + 面, face → meet face to face. The whole expression describes people meeting, not just spotting a face."
+    }
   },
   {
     "id": "zh-read-5403-996d",
@@ -1827,7 +2540,10 @@
       "zh-read-5403",
       "zh-read-996d"
     ],
-    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+    "memoryNote": {
+      "type": "compound",
+      "text": "吃, eat + 饭, meal/cooked rice → have a meal. 饭 has the broader meal sense here, so the food does not have to be rice."
+    }
   },
   {
     "id": "zh-read-7c73-996d",
@@ -1840,7 +2556,10 @@
       "zh-read-7c73",
       "zh-read-996d"
     ],
-    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+    "memoryNote": {
+      "type": "compound",
+      "text": "米, rice grains + 饭, cooked rice/meal → cooked rice. 米 identifies the grain; together the word distinguishes cooked rice from uncooked 米."
+    }
   },
   {
     "id": "zh-read-725b-5976",
@@ -1853,7 +2572,10 @@
       "zh-read-725b",
       "zh-read-5976"
     ],
-    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+    "memoryNote": {
+      "type": "compound",
+      "text": "牛, cow + 奶, milk → cow’s milk. 牛 specifies the source of the milk."
+    }
   },
   {
     "id": "zh-read-767d-5929",
@@ -1866,7 +2588,10 @@
       "zh-read-767d",
       "zh-read-5929"
     ],
-    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+    "memoryNote": {
+      "type": "compound",
+      "text": "白, white/light + 天, day → the light part of the day: daytime. It does not mean a whole 24-hour period."
+    }
   },
   {
     "id": "zh-read-7ea2-82b1",
@@ -1879,7 +2604,10 @@
       "zh-read-7ea2",
       "zh-read-82b1"
     ],
-    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+    "memoryNote": {
+      "type": "compound",
+      "text": "红, red + 花, flower → a red flower. 红花 can also name the safflower plant; context decides whether it is a description or the plant name."
+    }
   },
   {
     "id": "zh-read-5f00-5fc3",
@@ -1892,7 +2620,10 @@
       "zh-read-5f00",
       "zh-read-5fc3"
     ],
-    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+    "memoryNote": {
+      "type": "compound",
+      "text": "开, open + 心, heart/mind → picture the heart opening with delight: happy. The opening is figurative, describing a feeling."
+    }
   },
   {
     "id": "zh-read-597d-5fc3",
@@ -1905,7 +2636,10 @@
       "zh-read-597d",
       "zh-read-5fc3"
     ],
-    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+    "memoryNote": {
+      "type": "compound",
+      "text": "好, good + 心, heart/intention → a good heart or good intentions: kind-hearted/well-intentioned. It describes the intention, which does not guarantee a good outcome."
+    }
   },
   {
     "id": "zh-read-5fc3-91cc",
@@ -1918,7 +2652,10 @@
       "zh-read-5fc3",
       "zh-read-91cc"
     ],
-    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+    "memoryNote": {
+      "type": "compound",
+      "text": "心, heart/mind + 里, inside → inside one’s heart or mind: inner thoughts and feelings. The space is figurative, not only the physical heart."
+    }
   },
   {
     "id": "zh-read-4e0a-5b66",
@@ -1931,6 +2668,9 @@
       "zh-read-4e0a",
       "zh-read-5b66"
     ],
-    "usage": "Recognize these familiar characters together as a word. Learn the whole-word meaning and reading; a compound is not always the literal sum of its characters."
+    "memoryNote": {
+      "type": "compound",
+      "text": "上 has an attend/go-to-an-activity sense + 学, study/school → go to school or attend school. It is not the spatial phrase “above learning.”"
+    }
   }
 ]

@@ -2,6 +2,7 @@
 from pathlib import Path
 import json
 import re
+from urllib.parse import urlsplit
 source = Path(__file__).resolve().parent
 root = source.parent
 
@@ -17,6 +18,7 @@ def load_courses(root):
         assert course_id not in ids, 'Duplicate course ID'
         ids.add(course_id)
         progress_id = course['progressId']
+        assert isinstance(course.get('memoryNotesRequired', False), bool), 'Invalid memory-note requirement'
         storage_key = course.setdefault('storageKey', f'remember:progress:{course_id}:v1')
         assert isinstance(progress_id, str) and progress_id and progress_id not in progress_ids, 'Duplicate/empty progress ID'
         assert storage_key.startswith(('remember:progress:', 'mandarin-remember:reviewed:')), 'Invalid progress storage key'
@@ -106,6 +108,21 @@ def load_courses(root):
                     assert all(isinstance(shape, str) and 1 <= len(shape) <= 5 for shape in shapes.values()), 'Invalid letter shape'
                     assert shapes['isolated'] == card['text'], 'Letter shape must match the letter'
                     card['letterForms'] = shapes
+            if 'memoryNote' in raw:
+                note = raw['memoryNote']
+                assert card.get('readingOnly') and card.get('kind') in ('character', 'compound'), 'Memory explanation requires a Chinese reading card'
+                assert isinstance(note, dict) and note.get('type') in ('origin', 'components', 'memory', 'compound'), 'Invalid memory-note type'
+                assert (note['type'] == 'compound') == (card['kind'] == 'compound'), 'Memory-note type must match the card'
+                assert isinstance(note.get('text'), str) and 20 <= len(note['text'].strip()) <= 1500, 'Invalid memory-note text'
+                normalized_note = dict(type=note['type'], text=note['text'])
+                if 'source' in note:
+                    assert isinstance(note['source'], str), 'Invalid memory-note source'
+                    url = urlsplit(note['source'])
+                    assert url.scheme == 'https' and url.hostname and not url.username and not url.password, 'Memory-note source must be a public HTTPS URL'
+                    normalized_note['source'] = note['source']
+                assert note['type'] not in ('origin', 'components') or normalized_note.get('source'), 'Historical/component explanation needs a reference'
+                card['memoryNote'] = normalized_note
+            assert not course.get('memoryNotesRequired') or card.get('memoryNote'), 'Missing reading memory explanation'
             if raw.get('usage'):
                 assert isinstance(raw['usage'], str), 'Invalid usage note'
                 card['usage'] = raw['usage']

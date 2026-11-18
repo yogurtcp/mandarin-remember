@@ -20,3 +20,8 @@
 @font-face{font-family:'Remember Arabic';src:url('fonts/noto-naskh-arabic.ttf') format('truetype');font-style:normal;font-weight:400;font-display:swap}
 [lang|="ar"]{font-family:'Remember Arabic','Noto Naskh Arabic',serif;font-weight:400;font-synthesis:none}
 .phrase .targetText:lang(ar){font-size:32px;line-height:1.9}
+
+.readingMemory{background:#f1f5ec;border:1px solid var(--line);border-radius:12px;padding:14px;margin:14px 0;text-align:left}
+.readingMemory h3{font-size:15px;margin:0 0 8px;line-height:1.4}
+.readingMemory p{font-size:15px;margin:0;line-height:1.65}
+.readingMemory .referenceLink{font-size:12px;margin-top:4px}

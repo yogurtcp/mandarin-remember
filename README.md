@@ -51,6 +51,12 @@ Preserve card IDs when correcting wording. Bump the service-worker cache version
 
 ## Reading and sentence practice (v1.6.13)
 
+**Chinese memory notes (v1.6.17):** All 94 reading characters and 90 compounds
+have individual shape, meaning, or composition explanations. Historical notes,
+sound/meaning components, and modern memory stories are labeled separately.
+Notes appear on introductions, after Reveal, and in the phrasebook; existing
+progress and personal cues are preserved. See [READING.md](READING.md).
+
 **Arabic reading (v1.6.15):** On the Palestinian Arabic home screen, tap
 **Learn Arabic letters & vowel marks**. Learn the letters, connected shapes,
 and ḥarakāt, then unlock syllables and familiar words after successful reading

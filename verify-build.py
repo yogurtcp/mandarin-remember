@@ -76,6 +76,29 @@ with TemporaryDirectory() as directory:
         else:
             raise AssertionError('Build accepted incomplete or circular compound prerequisites')
     reading_path.write_text(json.dumps(reading_cards))
+    for failure in ['missing-note', 'empty-note', 'unknown-type', 'wrong-card-type', 'missing-reference', 'unsafe-reference']:
+        broken_notes = copy.deepcopy(reading_cards)
+        note = broken_notes[0]['memoryNote']
+        if failure == 'missing-note':
+            broken_notes[0].pop('memoryNote')
+        elif failure == 'empty-note':
+            note['text'] = ''
+        elif failure == 'unknown-type':
+            note['type'] = 'guessed-origin'
+        elif failure == 'wrong-card-type':
+            note['type'] = 'compound'
+        elif failure == 'missing-reference':
+            note.pop('source')
+        else:
+            note['source'] = 'javascript:alert(1)'
+        reading_path.write_text(json.dumps(broken_notes))
+        try:
+            load(test)
+        except AssertionError:
+            pass
+        else:
+            raise AssertionError('Build accepted invalid reading explanation: ' + failure)
+    reading_path.write_text(json.dumps(reading_cards))
     arabic_path = folder / 'decks/en-ar-reading.json'
     arabic_cards = json.loads(arabic_path.read_text())
     for failure in ['missing-vowel', 'circular', 'unknown', 'incomplete-shapes', 'bare-mark']:

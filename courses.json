@@ -108,6 +108,7 @@
       "label": "English → Chinese character reading",
       "deckFile": "decks/en-zh-reading.json",
       "progressId": "chinese-character-reading-1",
+      "memoryNotesRequired": true,
       "studyMode": "reading",
       "characterCourse": "en-zh",
       "characterCourseLabel": "Back to Mandarin vocabulary",
